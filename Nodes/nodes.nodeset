@@ -1,0 +1,49 @@
+{
+  "nodeList": [
+    {
+      "renderable": "$CONTENT_DATA/Nodes/Renderable/arrow.rend",
+      "color": [
+        0,
+        1,
+        0,
+        0.6
+      ],
+      "billboardColor": [
+        0,
+        0.8,
+        0,
+        1
+      ],
+      "useUnitBounds": true,
+      "name": "Force",
+      "params": [
+        {
+          "default": 5,
+          "name": "strength",
+          "type": "float"
+        }
+      ],
+      "tags": [
+        "FORCE"
+      ]
+    },
+    {
+      "name": "Water",
+      "tags": [
+        "WATER"
+      ],
+      "color": [
+        0.2,
+        0.7,
+        0.9,
+        0.6
+      ],
+      "billboardColor": [
+        0,
+        0,
+        1,
+        1
+      ]
+    }
+  ]
+}

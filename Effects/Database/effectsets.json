@@ -1,0 +1,8 @@
+{
+  "effectSetList": [
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/water.json",
+      "showInEditor": true
+    }
+  ]
+}
