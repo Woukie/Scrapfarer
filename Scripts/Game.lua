@@ -42,6 +42,10 @@ function Game.server_createPlayerCharacter(self, world, x, y, player, params)
   g_plotManager:server_respawnPlayer()
 end
 
+function Game.server_onPlayerLeft(self, player)
+  g_plotManager:server_onPlayerLeft(player)
+end
+
 -- Update the server with a clients progress (client authoritative)
 function Game.client_updateProgress(self, player)
 end

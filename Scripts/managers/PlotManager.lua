@@ -39,7 +39,7 @@ function PlotManager.server_respawnPlayer(self, player)
   print("Player could not be assigned to plot. Either something is wrong, or all plots are full!!")
 end
 
-function PlotManager.server_onPlayerLeave(self, player)
+function PlotManager.server_onPlayerLeft(self, player)
   print("Removing "..player.name.." from owned plots")
   for plotID, plot in pairs(self.plots) do
     if plot.playerId == player:getId() then
