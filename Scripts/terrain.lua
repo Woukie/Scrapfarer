@@ -1,3 +1,4 @@
+dofile( "$SURVIVAL_DATA/Scripts/terrain/terrain_util.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/terrain/terrain_util2.lua" )
 
 function Init()
@@ -174,4 +175,39 @@ function GetDecalsForCell( cellX, cellY, lod )
 		decal.rot = GetRotationQuat( cellX, cellY ) * decal.rot
 	end
 	return decals
+end
+
+-- Only difference with survival, this sets the height of edge verices to match the height of its adjacant non-edge-verices. (Necessary as the tile editor does not let you modify height of verices on the edge of the tile)
+function GetHeightAt(x, y, lod)
+  local cellX, cellY = math.floor(x / CELL_SIZE), math.floor(y / CELL_SIZE)
+  if insideCellBounds( cellX, cellY ) == true then
+    if not (y % lod == 0 or x % lod == 0) then
+      local edgingX = x / CELL_SIZE % 1 == 0
+      local edgingY = y / CELL_SIZE % 1 == 0
+      local vertexSize = CELL_SIZE / 32
+      if edgingX and edgingY then
+        local edge1 = GetHeightAt(x - vertexSize, y - vertexSize, lod)
+        local edge2 = GetHeightAt(x + vertexSize, y - vertexSize, lod)
+        local edge3 = GetHeightAt(x - vertexSize, y + vertexSize, lod)
+        local edge4 = GetHeightAt(x + vertexSize, y + vertexSize, lod)
+        return (edge1 + edge2 + edge3 + edge4) / 4
+      end
+
+      if edgingX then
+        local edge1 = GetHeightAt(x - vertexSize, y, lod)
+        local edge2 = GetHeightAt(x + vertexSize, y, lod)
+        return (edge1 + edge2) / 2
+      end
+
+      if edgingY then
+        local edge1 = GetHeightAt(x, y - vertexSize, lod)
+        local edge2 = GetHeightAt(x, y + vertexSize, lod)
+        return (edge1 + edge2) / 2
+      end
+    end
+
+  end
+  local uid, tileCellOffsetX, tileCellOffsetY = GetCellTileUidAndOffset( cellX, cellY )
+  local rx, ry = InverseRotateLocal(cellX, cellY, x - cellX * CELL_SIZE, y - cellY * CELL_SIZE)
+  return sm.terrainTile.getHeightAt(uid, tileCellOffsetX, tileCellOffsetY, lod, rx, ry)
 end
