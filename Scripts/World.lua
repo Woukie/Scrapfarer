@@ -3,10 +3,10 @@ dofile("$CONTENT_DATA/Scripts/managers/WaterManager.lua")
 
 World = class( nil )
 World.terrainScript = "$CONTENT_DATA/Scripts/terrain.lua"
-World.cellMinX = -2
-World.cellMaxX = 1
-World.cellMinY = -2
-World.cellMaxY = 1
+World.cellMinX = -8
+World.cellMaxX = 7
+World.cellMinY = -8
+World.cellMaxY = 7
 World.worldBorder = true
 
 World.groundMaterialSet = "$CONTENT_DATA/Terrain/Materials/cool_materialset.json"

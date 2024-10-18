@@ -419,7 +419,7 @@
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "",
+         "path" : "$CONTENT_DATA/Terrain/Tiles/boat_floor.tile",
          "rotation" : 0,
          "x" : 0,
          "y" : 2

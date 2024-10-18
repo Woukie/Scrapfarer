@@ -1,0 +1,21 @@
+{
+  "lodList": [
+    {
+      "minViewSize": 250,
+      "mesh": "$CONTENT_DATA/Terrain/Mesh/boat_floor.fbx",
+      "subMeshList": [
+        {
+          "custom": {
+            "color": "leaves"
+          },
+          "material": "Leaves",
+          "textureList": [
+            "$SURVIVAL_DATA/Terrain/Textures/Nature/Foliage/env_nature_foliage_reed_dif.tga",
+            "$SURVIVAL_DATA/Terrain/Textures/Nature/Foliage/env_nature_foliage_reed_asg.tga",
+            "$SURVIVAL_DATA/Terrain/Textures/Nature/Foliage/env_nature_foliage_reed_nor.tga"
+          ]
+        }
+      ]
+    }
+  ]
+}

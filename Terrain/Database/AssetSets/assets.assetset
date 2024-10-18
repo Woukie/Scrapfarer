@@ -1,0 +1,9 @@
+{
+   "assetListRenderable" : [
+      {
+         "name" : "Boat floor",
+         "renderable" : "$CONTENT_DATA/Terrain/Renderables/BoatFloor.rend",
+         "uuid" : "f017a1e0-0129-499f-9bbc-608c4d988a64"
+      }
+   ]
+}
