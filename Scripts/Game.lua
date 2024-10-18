@@ -1,4 +1,5 @@
 dofile("$CONTENT_DATA/Scripts/game/blocks.lua")
+dofile("$CONTENT_DATA/Scripts/managers/PlotManager.lua")
 
 Game = class( nil )
 
@@ -17,22 +18,28 @@ function Game.server_onCreate(self)
 		self.sv.saved.world = sm.world.createWorld( "$CONTENT_DATA/Scripts/World.lua", "World" )
 		self.storage:save(self.sv.saved)
 	end
+
+  g_plotManager = PlotManager()
+	g_plotManager:server_onCreate(self.sv.saved.world)
 end
 
--- Assign plot, setup player, load previous build if host (other clients load through)
+-- Let it play out as normal, we need to load plots before we can send players to them, which is handled by the world once it has loaded
 function Game.server_onPlayerJoined(self, player, isNewPlayer)
-    print("Game.server_onPlayerJoined")
-    if isNewPlayer then
-        if not sm.exists( self.sv.saved.world ) then
-            sm.world.loadWorld( self.sv.saved.world )
-        end
-        self.sv.saved.world:loadCell( 0, 0, player, "sv_createPlayerCharacter" )
+  print("Game.server_onPlayerJoined")
+
+  if isNewPlayer then
+    if not sm.exists(self.sv.saved.world) then
+      sm.world.loadWorld(self.sv.saved.world)
     end
+    self.sv.saved.world:loadCell( 0, 0, player, "server_createPlayerCharacter" )
+  end
 end
 
-function Game.sv_createPlayerCharacter(self, world, x, y, player, params)
-    local character = sm.character.createCharacter( player, world, sm.vec3.new( 32, 32, 5 ), 0, 0 )
-	player:setCharacter( character )
+function Game.server_createPlayerCharacter(self, world, x, y, player, params)
+  local character = sm.character.createCharacter( player, world, sm.vec3.new( 32, 32, 5 ), 0, 0 )
+	player:setCharacter(character)
+
+  g_plotManager:server_respawnPlayer()
 end
 
 -- Update the server with a clients progress (client authoritative)
