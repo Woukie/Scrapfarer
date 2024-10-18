@@ -4,21 +4,9 @@ dofile "$SURVIVAL_DATA/Scripts/util.lua"
 -- Plots ownership is needed for respawning players
 PlotManager = class(nil)
 
-function PlotManager.onCreate(self)
+function PlotManager.server_onCreate(self)
   self.plots = {}
   self.initialised = false
-end
-
-function PlotManager.server_onCreate(self)
-	if sm.isHost then
-		self:onCreate()
-	end
-end
-
-function PlotManager.client_onCreate(self)
-	if not sm.isHost then
-		self:onCreate()
-	end
 end
 
 -- Respawns a player at a known plot location, assigning them if necessary, skipping if plots are not loaded (once plots are loaded, players are automatically assigned to them with this method)
@@ -51,8 +39,8 @@ function PlotManager.server_respawnPlayer(self, player)
   print("Player could not be assigned to plot. Either something is wrong, or all plots are full!!")
 end
 
-function PlotManager.onCellLoaded(self, x, y)
-	local nodes = sm.cell.getNodesByTag(x, y, "PLOT")
+function PlotManager.server_onCellLoaded(self, x, y)
+  local nodes = sm.cell.getNodesByTag(x, y, "PLOT")
 
 	if #nodes > 0 then
     local idx = 1
@@ -78,23 +66,5 @@ function PlotManager.onCellLoaded(self, x, y)
 
       idx = idx + 1
     end
-	end
-end
-
-function PlotManager.server_onCellLoaded(self, x, y)
-	if sm.isHost then
-		self:onCellLoaded(x, y)
-	end
-end
-
-function PlotManager.server_onCellReloaded(self, x, y)
-	if sm.isHost then
-		self:onCellLoaded(x, y)
-	end
-end
-
-function PlotManager.client_onCellLoaded(self, x, y)
-	if not sm.isHost then
-		self:onCellLoaded(x, y)
 	end
 end

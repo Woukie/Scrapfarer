@@ -54,13 +54,12 @@ end
 function World.client_onCellLoaded(self, x, y)
   self.forceManager:client_onCellLoaded(x, y)
   self.waterManager:cl_onCellLoaded(x, y)
-  g_plotManager:client_onCellLoaded(x, y)
 end
 
 function World.server_onCellLoaded(self, x, y)
   self.forceManager:server_onCellReloaded(x, y)
   self.waterManager:sv_onCellReloaded(x, y)
-  g_plotManager:server_onCellReloaded(x, y)
+  g_plotManager:server_onCellLoaded(x, y)
 end
 
 function World.server_onCellUnloaded(self, x, y)
