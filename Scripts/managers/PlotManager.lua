@@ -58,17 +58,17 @@ function PlotManager.server_onCellLoaded(self, x, y)
       if not self.plots[plotID] then
         self.plots[plotID] = {}
         self.plots[plotID]["position"] = node.position
-      end
 
-      if not self.initialised then
-        local players = sm.player.getAllPlayers()
-
-        if #self.plots >= #players then
-          print("Enough plots loaded, respawning players")
-
-          self.initialised = true;
-          for _, player in ipairs(players) do
-            self:server_respawnPlayer(player)
+        if not self.initialised then
+          local players = sm.player.getAllPlayers()
+  
+          if #self.plots >= #players then
+            print("Enough plots loaded, respawning players")
+  
+            self.initialised = true;
+            for _, player in ipairs(players) do
+              self:server_respawnPlayer(player)
+            end
           end
         end
       end
