@@ -18,17 +18,17 @@ function PlotManager.server_respawnPlayer(self, player)
 
   print("Checking for plots owned by "..player.name)
   for plotID, plot in pairs(self.plots) do
-    if plot.playerId == player:getId() then
+    if plot["playerId"] == player:getId() then
       print(player.name.." owns plot "..plotID..", teleporting")
-
       player.character:setWorldPosition(plot.position)
+      return
     end
   end
-  
+
   print(player.name.." has no plot, assigning plot")
   for plotID, plot in pairs(self.plots) do
-    if not plot.playerId then
-      plot.playerId = player:getId()
+    if not plot["playerId"] then
+      plot["playerId"] = player:getId()
       print("Assigned plot "..plotID.." to "..player.name..", teleporting")
 
       player.character:setWorldPosition(plot.position)
@@ -42,8 +42,8 @@ end
 function PlotManager.server_onPlayerLeft(self, player)
   print("Removing "..player.name.." from owned plots")
   for plotID, plot in pairs(self.plots) do
-    if plot.playerId == player:getId() then
-      plot.playerId = nil
+    if plot["playerId"] == player:getId() then
+      plot["playerId"] = nil
     end
   end
 end
