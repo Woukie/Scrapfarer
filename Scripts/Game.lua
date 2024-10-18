@@ -42,6 +42,10 @@ function Game.server_createPlayerCharacter(self, world, x, y, player, params)
   g_plotManager:server_respawnPlayer()
 end
 
+function Game.client_onCreate()
+  sm.game.bindChatCommand("/respawn", {}, "client_onChatCommand", "Respawn")
+end
+
 function Game.server_onPlayerLeft(self, player)
   g_plotManager:server_onPlayerLeft(player)
 end
@@ -76,4 +80,23 @@ end
 
 -- Clears build, then loads the building, updaing the players inventory
 function Game.loadBuilding(self, player, building)
+end
+
+function Game.client_onClientDataUpdate(self, clientData, channel)
+	if channel == 2 then
+		self.cl.time = clientData.time
+	elseif channel == 1 then
+		g_survivalDev = clientData.dev
+		self:bindChatCommands()
+	end
+end
+
+function Game.client_onChatCommand(self, params)
+  if params[1] == "/respawn" then
+		self.network:sendToServer( "server_respawn", { player = sm.localPlayer.getPlayer() } )
+  end
+end
+
+function Game.server_respawn( self, params )
+	g_plotManager:server_respawnPlayer(params.player)
 end
