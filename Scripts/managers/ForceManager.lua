@@ -85,8 +85,15 @@ function ForceManager.trigger_onStay(self, trigger, results)
 	assert(ud)
 
   for _, result in ipairs(results) do
-    if type(result) == "Character" then
-      ApplyCharacterImpulse(result, ud.force, ud.force:length())
+    if type(result) == "Character" and sm.isHost then
+      
+      -- Only apply force if fully in force field (matches behaviour of water)
+      local characterFloatOffset = 0.2 + ( result:isCrouching() and 0.4 or 0.0 )
+      local characterFloatHeight = result.worldPosition.z + characterFloatOffset
+
+      if trigger:getWorldMax().z > characterFloatHeight then
+        ApplyCharacterImpulse(result, ud.force, ud.force:length())
+			end
     end
   end
 end
