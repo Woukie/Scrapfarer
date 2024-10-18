@@ -1,8 +1,9 @@
 {
-   "assetSetList" : [
-      {
-         "assetSet" : "$CONTENT_DATA/Terrain/Database/AssetSets/example.assetset",
-         "categories" : []
-      }
-   ]
+  "assetSetList" : [
+		{
+			"hidden": true,
+			"assetSet": "$SURVIVAL_DATA/Terrain/Database/AssetSets/Water.json",
+		    "categories": ["Type/Special/Water"]
+		}
+  ]
 }
