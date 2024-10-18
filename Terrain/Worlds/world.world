@@ -5,8 +5,24 @@
          "offsetY" : 0,
          "path" : "",
          "rotation" : 0,
+         "x" : -4,
+         "y" : -4
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : -3,
+         "y" : -4
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
          "x" : -2,
-         "y" : -2
+         "y" : -4
       },
       {
          "offsetX" : 0,
@@ -14,7 +30,7 @@
          "path" : "",
          "rotation" : 0,
          "x" : -1,
-         "y" : -2
+         "y" : -4
       },
       {
          "offsetX" : 0,
@@ -22,12 +38,140 @@
          "path" : "",
          "rotation" : 0,
          "x" : 0,
+         "y" : -4
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : 1,
+         "y" : -4
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : 2,
+         "y" : -4
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : 3,
+         "y" : -4
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : -4,
+         "y" : -3
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : -3,
+         "y" : -3
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : -2,
+         "y" : -3
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : -1,
+         "y" : -3
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : 0,
+         "y" : -3
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : 1,
+         "y" : -3
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : 2,
+         "y" : -3
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : 3,
+         "y" : -3
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : -4,
          "y" : -2
       },
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/DOWN.tile",
+         "path" : "",
+         "rotation" : 0,
+         "x" : -3,
+         "y" : -2
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
+         "rotation" : 0,
+         "x" : -2,
+         "y" : -2
+      },
+      {
+         "offsetX" : 1,
+         "offsetY" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
+         "rotation" : 0,
+         "x" : -1,
+         "y" : -2
+      },
+      {
+         "offsetX" : 2,
+         "offsetY" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
+         "rotation" : 0,
+         "x" : 0,
+         "y" : -2
+      },
+      {
+         "offsetX" : 3,
+         "offsetY" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
          "rotation" : 0,
          "x" : 1,
          "y" : -2
@@ -37,29 +181,61 @@
          "offsetY" : 0,
          "path" : "",
          "rotation" : 0,
-         "x" : -2,
-         "y" : -1
+         "x" : 2,
+         "y" : -2
       },
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/RiverStart.tile",
+         "path" : "",
          "rotation" : 0,
-         "x" : -1,
-         "y" : -1
+         "x" : 3,
+         "y" : -2
       },
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/RiverBody.tile",
-         "rotation" : 2,
-         "x" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : -4,
          "y" : -1
       },
       {
          "offsetX" : 0,
          "offsetY" : 0,
          "path" : "",
+         "rotation" : 0,
+         "x" : -3,
+         "y" : -1
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 1,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
+         "rotation" : 0,
+         "x" : -2,
+         "y" : -1
+      },
+      {
+         "offsetX" : 1,
+         "offsetY" : 1,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
+         "rotation" : 0,
+         "x" : -1,
+         "y" : -1
+      },
+      {
+         "offsetX" : 2,
+         "offsetY" : 1,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
+         "rotation" : 0,
+         "x" : 0,
+         "y" : -1
+      },
+      {
+         "offsetX" : 3,
+         "offsetY" : 1,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
          "rotation" : 0,
          "x" : 1,
          "y" : -1
@@ -69,16 +245,176 @@
          "offsetY" : 0,
          "path" : "",
          "rotation" : 0,
-         "x" : -2,
+         "x" : 2,
+         "y" : -1
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : 3,
+         "y" : -1
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : -4,
          "y" : 0
       },
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Water aaaa.tile",
+         "path" : "",
+         "rotation" : 0,
+         "x" : -3,
+         "y" : 0
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 2,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
+         "rotation" : 0,
+         "x" : -2,
+         "y" : 0
+      },
+      {
+         "offsetX" : 1,
+         "offsetY" : 2,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
          "rotation" : 0,
          "x" : -1,
          "y" : 0
+      },
+      {
+         "offsetX" : 2,
+         "offsetY" : 2,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
+         "rotation" : 0,
+         "x" : 0,
+         "y" : 0
+      },
+      {
+         "offsetX" : 3,
+         "offsetY" : 2,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
+         "rotation" : 0,
+         "x" : 1,
+         "y" : 0
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : 2,
+         "y" : 0
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : 3,
+         "y" : 0
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : -4,
+         "y" : 1
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : -3,
+         "y" : 1
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 3,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
+         "rotation" : 0,
+         "x" : -2,
+         "y" : 1
+      },
+      {
+         "offsetX" : 1,
+         "offsetY" : 3,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
+         "rotation" : 0,
+         "x" : -1,
+         "y" : 1
+      },
+      {
+         "offsetX" : 2,
+         "offsetY" : 3,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
+         "rotation" : 0,
+         "x" : 0,
+         "y" : 1
+      },
+      {
+         "offsetX" : 3,
+         "offsetY" : 3,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
+         "rotation" : 0,
+         "x" : 1,
+         "y" : 1
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : 2,
+         "y" : 1
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : 3,
+         "y" : 1
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : -4,
+         "y" : 2
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : -3,
+         "y" : 2
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : -2,
+         "y" : 2
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : -1,
+         "y" : 2
       },
       {
          "offsetX" : 0,
@@ -86,23 +422,55 @@
          "path" : "",
          "rotation" : 0,
          "x" : 0,
-         "y" : 0
+         "y" : 2
       },
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/RiverStart.tile",
-         "rotation" : 1,
+         "path" : "",
+         "rotation" : 0,
          "x" : 1,
-         "y" : 0
+         "y" : 2
       },
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/DOWN.tile",
+         "path" : "",
+         "rotation" : 0,
+         "x" : 2,
+         "y" : 2
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : 3,
+         "y" : 2
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : -4,
+         "y" : 3
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : -3,
+         "y" : 3
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
          "rotation" : 0,
          "x" : -2,
-         "y" : 1
+         "y" : 3
       },
       {
          "offsetX" : 0,
@@ -110,7 +478,7 @@
          "path" : "",
          "rotation" : 0,
          "x" : -1,
-         "y" : 1
+         "y" : 3
       },
       {
          "offsetX" : 0,
@@ -118,20 +486,136 @@
          "path" : "",
          "rotation" : 0,
          "x" : 0,
-         "y" : 1
+         "y" : 3
       },
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/RiverBody.tile",
-         "rotation" : 1,
+         "path" : "",
+         "rotation" : 0,
          "x" : 1,
-         "y" : 1
+         "y" : 3
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : 2,
+         "y" : 3
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
+         "x" : 3,
+         "y" : 3
       }
    ],
    "cornerData" : [
       {
          "type" : 0,
+         "x" : -4,
+         "y" : -4
+      },
+      {
+         "type" : 0,
+         "x" : -3,
+         "y" : -4
+      },
+      {
+         "type" : 0,
+         "x" : -2,
+         "y" : -4
+      },
+      {
+         "type" : 0,
+         "x" : -1,
+         "y" : -4
+      },
+      {
+         "type" : 0,
+         "x" : 0,
+         "y" : -4
+      },
+      {
+         "type" : 0,
+         "x" : 1,
+         "y" : -4
+      },
+      {
+         "type" : 0,
+         "x" : 2,
+         "y" : -4
+      },
+      {
+         "type" : 0,
+         "x" : 3,
+         "y" : -4
+      },
+      {
+         "type" : 0,
+         "x" : 4,
+         "y" : -4
+      },
+      {
+         "type" : 0,
+         "x" : -4,
+         "y" : -3
+      },
+      {
+         "type" : 0,
+         "x" : -3,
+         "y" : -3
+      },
+      {
+         "type" : 0,
+         "x" : -2,
+         "y" : -3
+      },
+      {
+         "type" : 0,
+         "x" : -1,
+         "y" : -3
+      },
+      {
+         "type" : 0,
+         "x" : 0,
+         "y" : -3
+      },
+      {
+         "type" : 0,
+         "x" : 1,
+         "y" : -3
+      },
+      {
+         "type" : 0,
+         "x" : 2,
+         "y" : -3
+      },
+      {
+         "type" : 0,
+         "x" : 3,
+         "y" : -3
+      },
+      {
+         "type" : 0,
+         "x" : 4,
+         "y" : -3
+      },
+      {
+         "type" : 0,
+         "x" : -4,
+         "y" : -2
+      },
+      {
+         "type" : 0,
+         "x" : -3,
+         "y" : -2
+      },
+      {
+         "type" : 0,
          "x" : -2,
          "y" : -2
       },
@@ -154,6 +638,26 @@
          "type" : 0,
          "x" : 2,
          "y" : -2
+      },
+      {
+         "type" : 0,
+         "x" : 3,
+         "y" : -2
+      },
+      {
+         "type" : 0,
+         "x" : 4,
+         "y" : -2
+      },
+      {
+         "type" : 0,
+         "x" : -4,
+         "y" : -1
+      },
+      {
+         "type" : 0,
+         "x" : -3,
+         "y" : -1
       },
       {
          "type" : 0,
@@ -182,6 +686,26 @@
       },
       {
          "type" : 0,
+         "x" : 3,
+         "y" : -1
+      },
+      {
+         "type" : 0,
+         "x" : 4,
+         "y" : -1
+      },
+      {
+         "type" : 0,
+         "x" : -4,
+         "y" : 0
+      },
+      {
+         "type" : 0,
+         "x" : -3,
+         "y" : 0
+      },
+      {
+         "type" : 0,
          "x" : -2,
          "y" : 0
       },
@@ -207,6 +731,26 @@
       },
       {
          "type" : 0,
+         "x" : 3,
+         "y" : 0
+      },
+      {
+         "type" : 0,
+         "x" : 4,
+         "y" : 0
+      },
+      {
+         "type" : 0,
+         "x" : -4,
+         "y" : 1
+      },
+      {
+         "type" : 0,
+         "x" : -3,
+         "y" : 1
+      },
+      {
+         "type" : 0,
          "x" : -2,
          "y" : 1
       },
@@ -232,6 +776,26 @@
       },
       {
          "type" : 0,
+         "x" : 3,
+         "y" : 1
+      },
+      {
+         "type" : 0,
+         "x" : 4,
+         "y" : 1
+      },
+      {
+         "type" : 0,
+         "x" : -4,
+         "y" : 2
+      },
+      {
+         "type" : 0,
+         "x" : -3,
+         "y" : 2
+      },
+      {
+         "type" : 0,
          "x" : -2,
          "y" : 2
       },
@@ -254,6 +818,106 @@
          "type" : 0,
          "x" : 2,
          "y" : 2
+      },
+      {
+         "type" : 0,
+         "x" : 3,
+         "y" : 2
+      },
+      {
+         "type" : 0,
+         "x" : 4,
+         "y" : 2
+      },
+      {
+         "type" : 0,
+         "x" : -4,
+         "y" : 3
+      },
+      {
+         "type" : 0,
+         "x" : -3,
+         "y" : 3
+      },
+      {
+         "type" : 0,
+         "x" : -2,
+         "y" : 3
+      },
+      {
+         "type" : 0,
+         "x" : -1,
+         "y" : 3
+      },
+      {
+         "type" : 0,
+         "x" : 0,
+         "y" : 3
+      },
+      {
+         "type" : 0,
+         "x" : 1,
+         "y" : 3
+      },
+      {
+         "type" : 0,
+         "x" : 2,
+         "y" : 3
+      },
+      {
+         "type" : 0,
+         "x" : 3,
+         "y" : 3
+      },
+      {
+         "type" : 0,
+         "x" : 4,
+         "y" : 3
+      },
+      {
+         "type" : 0,
+         "x" : -4,
+         "y" : 4
+      },
+      {
+         "type" : 0,
+         "x" : -3,
+         "y" : 4
+      },
+      {
+         "type" : 0,
+         "x" : -2,
+         "y" : 4
+      },
+      {
+         "type" : 0,
+         "x" : -1,
+         "y" : 4
+      },
+      {
+         "type" : 0,
+         "x" : 0,
+         "y" : 4
+      },
+      {
+         "type" : 0,
+         "x" : 1,
+         "y" : 4
+      },
+      {
+         "type" : 0,
+         "x" : 2,
+         "y" : 4
+      },
+      {
+         "type" : 0,
+         "x" : 3,
+         "y" : 4
+      },
+      {
+         "type" : 0,
+         "x" : 4,
+         "y" : 4
       }
    ],
    "dependencies" : [],

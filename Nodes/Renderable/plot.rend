@@ -1,0 +1,15 @@
+{
+   "lodList" : [
+      {
+         "includes" : [ "POSITION", "NORMAL", "UV0" ],
+         "mesh" : "$CONTENT_DATA/Nodes/house.fbx",
+         "minViewSize" : 500,
+         "subMeshList" : [
+            {
+               "material" : "Dif",
+               "textureList" : [ "$GAME_DATA/Textures/white.png" ]
+            }
+         ]
+      }
+   ]
+}
