@@ -59,7 +59,7 @@ function ForceManager.client_onCellLoaded(self, x, y)
 end
 
 function ForceManager.onCellUnloaded(self, x, y)
-	if self.cells[x] and self.cells[y] then
+	if self.cells[x] and self.cells[x][y] then
 		for _, trigger in ipairs(self.cells[x][y]) do
 			sm.areaTrigger.destroy(trigger)
 		end
