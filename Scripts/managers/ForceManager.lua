@@ -100,7 +100,7 @@ function ForceManager.trigger_onStay(self, trigger, results)
         ApplyCharacterImpulse(result, params.force, params.force:length())
 			end
     elseif type == "Body" then
-      sm.physics.applyImpulse(result, params.force * result.mass * 0.0001, true)
+      sm.physics.applyImpulse(result, params.force * result.mass * 0.0003, true)
     end
   end
 end
