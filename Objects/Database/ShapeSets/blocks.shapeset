@@ -1,15 +1,18 @@
 {
-  "blockList": [
-    {
-      "asg": "$SURVIVAL_DATA/Objects/Textures/Blocks/blk_scrapwood_asg.tga",
-      "color": "cd9d71",
-      "dif": "$SURVIVAL_DATA/Objects/Textures/Blocks/blk_scrapwood_dif.tga",
-      "flammable": true,
-      "name": "blk_wood",
-      "nor": "$SURVIVAL_DATA/Objects/Textures/Blocks/blk_scrapwood_nor.tga",
-      "physicsMaterial": "Wood",
-      "tiling": 8,
-      "uuid": "8216e887-8758-48b4-afa1-eea78cbbc3b0"
-    }
-  ]
+   "blockList" : [
+      {
+         "asg" : "$SURVIVAL_DATA/Objects/Textures/Blocks/blk_scrapwood_asg.tga",
+         "color" : "cd9d71",
+         "dif" : "$SURVIVAL_DATA/Objects/Textures/Blocks/blk_scrapwood_dif.tga",
+         "flammable" : true,
+         "name" : "blk_wood",
+         "nor" : "$SURVIVAL_DATA/Objects/Textures/Blocks/blk_scrapwood_nor.tga",
+         "physicsMaterial" : "Wood",
+         "ratings" : {
+            "buoyancy" : 6
+         },
+         "tiling" : 8,
+         "uuid" : "8216e887-8758-48b4-afa1-eea78cbbc3b0"
+      }
+   ]
 }
