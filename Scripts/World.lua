@@ -1,12 +1,15 @@
 dofile("$CONTENT_DATA/Scripts/managers/ForceManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/WaterManager.lua")
 
+-- We make it arbitrarily large because of 'createFloor' in PlotManager.lua
+local worldSize = 1024
+
 World = class( nil )
 World.terrainScript = "$CONTENT_DATA/Scripts/terrain.lua"
-World.cellMinX = -8
-World.cellMaxX = 7
-World.cellMinY = -8
-World.cellMaxY = 7
+World.cellMinX = -worldSize
+World.cellMaxX = worldSize - 1
+World.cellMinY = -worldSize
+World.cellMaxY = worldSize - 1
 World.worldBorder = true
 
 World.groundMaterialSet = "$CONTENT_DATA/Terrain/Materials/cool_materialset.json"
@@ -38,6 +41,8 @@ function World.client_onCreate(self)
 end
 
 function World.server_onFixedUpdate(self)
+  g_plotManager:server_onFixedUpdate()
+  
 	self.waterManager:sv_onFixedUpdate()
 end
 

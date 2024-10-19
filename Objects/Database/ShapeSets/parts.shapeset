@@ -3,14 +3,41 @@
     {
       "name": "obj_plot_floor",
       "uuid": "3f8f86b2-518e-4819-a4a5-37d9c7552f53",
+      "color": "df7f01",
       "box": {
-        "x": 20,
-        "y": 1,
-        "z": 20
+        "x": 165,
+        "y": 165,
+        "z": 2
       },
-      "physicsMaterial": "Grass",
-      "renderable": "$CONTENT_DATA/Terrain/Renderables/BoatFloor.rend",
-      "rotationSet": "Default"
+      "renderable": {
+        "lodList": [
+          {
+            "subMeshList": [
+              {
+                "textureList": [
+                  "$CONTENT_DATA/Terrain/Textures/gnd_grass_dif.png",
+                  "$CONTENT_DATA/Terrain/Textures/gnd_grass_asg.png",
+                  "$CONTENT_DATA/Terrain/Textures/gnd_grass_nor.png"
+                ],
+                "material": "DifAsgNor"
+              }
+            ],
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/boat_floor.fbx"
+          }
+        ]
+      },
+      "rotationSet": "PropYZ",
+      "physicsMaterial": "Metal",
+      "ratings": {
+        "density": 4,
+        "durability": 1000,
+        "friction": 3,
+        "buoyancy": 8
+      },
+      "flammable": false,
+      "restrictions": {
+        "erasable": false
+      }
     }
   ]
 }
