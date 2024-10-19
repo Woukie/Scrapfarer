@@ -1,5 +1,6 @@
 {
   "shapeSetList": [
-    "$CONTENT_DATA/Objects/Database/ShapeSets/blocks.shapeset"
+    "$CONTENT_DATA/Objects/Database/ShapeSets/blocks.shapeset",
+    "$CONTENT_DATA/Objects/Database/ShapeSets/parts.shapeset"
   ]
 }

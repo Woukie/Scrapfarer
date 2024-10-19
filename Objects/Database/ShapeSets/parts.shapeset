@@ -1,0 +1,16 @@
+{
+  "partList": [
+    {
+      "name": "obj_plot_floor",
+      "uuid": "3f8f86b2-518e-4819-a4a5-37d9c7552f53",
+      "box": {
+        "x": 20,
+        "y": 1,
+        "z": 20
+      },
+      "physicsMaterial": "Grass",
+      "renderable": "$CONTENT_DATA/Terrain/Renderables/BoatFloor.rend",
+      "rotationSet": "Default"
+    }
+  ]
+}

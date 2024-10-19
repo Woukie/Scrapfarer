@@ -1,10 +1,11 @@
-dofile("$CONTENT_DATA/Scripts/game/blocks.lua")
+dofile("$CONTENT_DATA/Scripts/game/shapes.lua")
 dofile("$CONTENT_DATA/Scripts/managers/PlotManager.lua")
+dofile("$CONTENT_DATA/Scripts/managers/GameManager.lua")
 
 Game = class( nil )
 
-Game.enableLimitedInventory = true
-Game.enableRestrictions = true
+Game.enableLimitedInventory = false
+Game.enableRestrictions = false
 Game.enableFuelConsumption = false
 Game.enableAmmoConsumption = false
 Game.enableUpgrade = true
