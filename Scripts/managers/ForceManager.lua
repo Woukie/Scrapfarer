@@ -81,19 +81,28 @@ function ForceManager.client_onCellUnloaded(self, x, y)
 end
 
 function ForceManager.trigger_onStay(self, trigger, results)
-  local ud = trigger:getUserData()
-	assert(ud)
+  local params = trigger:getUserData()
+	assert(params)
 
   for _, result in ipairs(results) do
-    if type(result) == "Character" and sm.isHost then
-      
+    local type = type(result)
+
+    -- if not sm.isHost then
+    --   return
+    -- end
+
+    if type == "Character" then
       -- Only apply force if fully in force field (matches behaviour of water)
       local characterFloatOffset = 0.2 + ( result:isCrouching() and 0.4 or 0.0 )
       local characterFloatHeight = result.worldPosition.z + characterFloatOffset
 
       if trigger:getWorldMax().z > characterFloatHeight then
-        ApplyCharacterImpulse(result, ud.force, ud.force:length())
+        ApplyCharacterImpulse(result, params.force, params.force:length())
 			end
+    elseif type == "Body" then
+      for _, shape in pairs(result:getShapes()) do
+        sm.physics.applyImpulse(shape, params.force * shape.mass * 0.0001, true)
+      end
     end
   end
 end
