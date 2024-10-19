@@ -30,6 +30,7 @@ end
 
 function GameManager.endRun(self, player)
   if not self.gameStates[player:getId()]["playing"] then
+    g_plotManager:server_respawnPlayer(player)
     return
   end
   
