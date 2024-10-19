@@ -52,16 +52,15 @@ end
 
 local function createFloor(self, plotId)
   if not self.plots[plotId]["floorAsset"] then
-    -- Kind of jank. Makes sure createFloor is always called within in a world environment, pushes the call to a queue, and executes in fixedUpdate (which has world environment)
+    -- Kind of jank. Makes sure createFloor is always called within in a world environment, pushes the call to a queue, and executes in fixedUpdate
     if not pcall(sm.world.getCurrentWorld) then
       self.createFloorQueue:push({self = self, plotId = plotId})
 
       return
     end
 
-    
     -- Spawn at approx center (off by .625 to align to grid)
-    self.plots[plotId]["floorAsset"] = sm.shape.createPart(obj_plot_floor, self.plots[plotId]["position"] + sm.vec3.new(-20, -20, -0.25), sm.quat.identity(), false)
+    self.plots[plotId]["floorAsset"] = sm.shape.createPart(obj_plot_floor, self.plots[plotId]["position"] + (self.plots[plotId]["rotation"] * sm.vec3.new(-20, -20, -0.25)), self.plots[plotId]["rotation"], false)
   end
 end
 
@@ -89,6 +88,7 @@ function PlotManager.server_onCellLoaded(self, x, y)
 
       self.plots[plotId] = {}
       self.plots[plotId]["position"] = node.position
+      self.plots[plotId]["rotation"] = node.rotation
       self.plots[plotId]["floorHidden"] = false
 
       if not self.initialised then
