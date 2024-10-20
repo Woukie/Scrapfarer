@@ -181,7 +181,7 @@ end
 function GetHeightAt(x, y, lod)
   local cellX, cellY = math.floor(x / CELL_SIZE), math.floor(y / CELL_SIZE)
   if insideCellBounds( cellX, cellY ) == true then
-    if not (y % lod == 0 or x % lod == 0) then
+    if lod == 0 then
       local edgingX = x / CELL_SIZE % 1 == 0
       local edgingY = y / CELL_SIZE % 1 == 0
       local vertexSize = CELL_SIZE / 32
