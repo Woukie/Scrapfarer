@@ -11,27 +11,33 @@ ServerPlotManager = class(nil)
 function ServerPlotManager.onCreate(self)
   self.plots = {}
   self.createFloorQueue = Queue()
+  self.respawnPlayerQueue = Queue()
   self.initialised = false
 end
 
 -- Respawns a player at a known plot location, assigning them if necessary, skipping if plots are not loaded (once plots are loaded, players are automatically assigned to them with this method)
--- World is optional if the player already has a character
 function ServerPlotManager.respawnPlayer(self, player)
   print("Respawning player "..player.name)
 
+  -- Ensure this is run in a world environment
+  if not pcall(sm.world.getCurrentWorld) then
+    -- Sometimes this is reached before onCreate
+    if not self.respawnPlayerQueue then
+      self.respawnPlayerQueue = Queue()
+    end
+
+    self.respawnPlayerQueue:push({self = self, player = player})
+    return
+  end
+
   if not self.initialised then
-    print("Skipping assigning player for now, plots enough not loaded yet")
+    print("Skipping assigning player for now, plots not loaded yet")
     return
   end
 
   local character = player:getCharacter()
   if not character then
     print("Player has no character yet, creating one")
-
-    if not pcall(sm.world.getCurrentWorld) then
-      print("Cannot create character outside world script")
-      return
-    end
 
     character = sm.character.createCharacter(player, sm.world.getCurrentWorld(), sm.vec3.new( 32, 32, 5 ), 0, 0)
     player:setCharacter(character)
@@ -152,6 +158,11 @@ function ServerPlotManager.onFixedUpdate(self, worldSelf)
   while self.createFloorQueue:size() > 0 do
     local params = self.createFloorQueue:pop()
     createFloor(params.self, params.plotId)
+  end
+
+  while self.respawnPlayerQueue:size() > 0 do
+    local params = self.respawnPlayerQueue:pop()
+    self.respawnPlayer(params.self, params.player)
   end
 
   -- We need a reference to the game or world to use network like this, and we can't just store a reference to the world on create as that triggers a sandbox violation
