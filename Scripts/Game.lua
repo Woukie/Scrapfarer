@@ -36,6 +36,8 @@ function Game.server_onPlayerJoined(self, player, isNewPlayer)
       sm.world.loadWorld(self.sv.world)
     end
     self.sv.world:loadCell( 0, 0, player, "server_createPlayerCharacter" )
+  else
+    g_serverPlotManager:respawnPlayer(player)
   end
 
   g_gameManager:server_onPlayerJoined(player)
