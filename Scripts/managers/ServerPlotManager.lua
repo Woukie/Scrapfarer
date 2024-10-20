@@ -67,7 +67,9 @@ end
 
 local function destroyFloor(self, plotId)
   if self.plots[plotId]["floorAsset"] then
-    self.plots[plotId]["floorAsset"]:destroyShape()
+    if sm.exists(self.plots[plotId]["floorAsset"]) then
+      self.plots[plotId]["floorAsset"]:destroyShape()
+    end
     self.plots[plotId]["floorAsset"] = nil
 
     self.syncClient = true
