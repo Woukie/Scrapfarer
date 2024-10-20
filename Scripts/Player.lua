@@ -75,6 +75,8 @@ function Player.client_onFixedUpdate(self)
   self.cl.lastThrob = math.min( self.cl.lastThrob + 1, self.cl.throbDuration)
 
   if g_hud then
+    local alpha = self.cl.lastThrob / self.cl.throbDuration
+    alpha = math.sin((math.pi * alpha) / 2)
     g_hud:setColor("Throb", sm.color.new(1, 1, 1, 1 - self.cl.lastThrob / self.cl.throbDuration))
   end
 end
