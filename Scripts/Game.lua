@@ -1,5 +1,6 @@
 dofile("$CONTENT_DATA/Scripts/game/shapes.lua")
-dofile("$CONTENT_DATA/Scripts/managers/PlotManager.lua")
+dofile("$CONTENT_DATA/Scripts/managers/ServerPlotManager.lua")
+dofile("$CONTENT_DATA/Scripts/managers/ClientPlotManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/GameManager.lua")
 
 Game = class( nil )
@@ -13,22 +14,17 @@ Game.enableUpgrade = true
 function Game.server_onCreate(self)
 	print("Game.server_onCreate")
     self.sv = {}
-	self.sv.saved = self.storage:load()
-    if self.sv.saved == nil then
-		self.sv.saved = {}
-		self.sv.saved.world = sm.world.createWorld( "$CONTENT_DATA/Scripts/World.lua", "World" )
-		self.storage:save(self.sv.saved)
+	self.sv.world = self.storage:load()
+    if self.sv.world == nil then
+		self.sv.world = {}
+		self.sv.world = sm.world.createWorld( "$CONTENT_DATA/Scripts/World.lua", "World" )
 	end
 
-  g_plotManager = PlotManager()
-	g_plotManager:server_onCreate(self.sv.saved.world)
+  g_serverPlotManager = ServerPlotManager()
+	g_serverPlotManager:onCreate(self)
 
   g_gameManager = GameManager()
-	g_gameManager:server_onCreate(self.sv.saved.world)
-end
-
-function GameManager.client_onCreate(self)
-	assert(g_hud)
+	g_gameManager:server_onCreate()
 end
 
 -- Let it play out as normal, we need to load plots before we can send players to them, which is handled by the world once it has loaded
@@ -36,10 +32,10 @@ function Game.server_onPlayerJoined(self, player, isNewPlayer)
   print("Game.server_onPlayerJoined")
 
   if isNewPlayer then
-    if not sm.exists(self.sv.saved.world) then
-      sm.world.loadWorld(self.sv.saved.world)
+    if not sm.exists(self.sv.world) then
+      sm.world.loadWorld(self.sv.world)
     end
-    self.sv.saved.world:loadCell( 0, 0, player, "server_createPlayerCharacter" )
+    self.sv.world:loadCell( 0, 0, player, "server_createPlayerCharacter" )
   end
 
   g_gameManager:server_onPlayerJoined(player)
@@ -49,26 +45,20 @@ function Game.server_createPlayerCharacter(self, world, x, y, player, params)
   local character = sm.character.createCharacter( player, world, sm.vec3.new( 32, 32, 5 ), 0, 0 )
 	player:setCharacter(character)
   
-  g_plotManager:server_respawnPlayer()
+  g_serverPlotManager:respawnPlayer()
 end
 
 function Game.client_onCreate()
+  g_clientPlotManager = ClientPlotManager()
+  g_clientPlotManager:onCreate()
+
   sm.game.bindChatCommand("/respawn", {}, "client_onChatCommand", "Respawn")
   sm.game.bindChatCommand("/start", {}, "client_onChatCommand", "Starts the game")
 end
 
 function Game.server_onPlayerLeft(self, player)
-  g_plotManager:server_onPlayerLeft(player)
+  g_serverPlotManager:onPlayerLeft(player)
   g_gameManager:server_onPlayerLeft(player)
-end
-
-function Game.client_onClientDataUpdate(self, clientData, channel)
-	if channel == 2 then
-		self.cl.time = clientData.time
-	elseif channel == 1 then
-		g_survivalDev = clientData.dev
-		self:bindChatCommands()
-	end
 end
 
 function Game.client_onChatCommand(self, params)

@@ -1,8 +1,7 @@
 dofile("$CONTENT_DATA/Scripts/managers/ForceManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/WaterManager.lua")
 
--- We make it arbitrarily large because of 'createFloor' in PlotManager.lua
-local worldSize = 1024
+local worldSize = 16
 
 World = class( nil )
 World.terrainScript = "$CONTENT_DATA/Scripts/terrain.lua"
@@ -41,8 +40,7 @@ function World.client_onCreate(self)
 end
 
 function World.server_onFixedUpdate(self)
-  g_plotManager:server_onFixedUpdate()
-  
+  g_serverPlotManager:onFixedUpdate(self)
 	self.waterManager:sv_onFixedUpdate()
 end
 
@@ -51,9 +49,9 @@ function World.client_onFixedUpdate(self)
 end
 
 function World.server_onCellCreated(self, x, y)
+  g_serverPlotManager:onCellLoaded(x, y)
   self.forceManager:server_onCellLoaded(x, y)
   self.waterManager:sv_onCellLoaded(x, y)
-  g_plotManager:server_onCellLoaded(x, y)
 end
 
 function World.client_onCellLoaded(self, x, y)
@@ -62,9 +60,9 @@ function World.client_onCellLoaded(self, x, y)
 end
 
 function World.server_onCellLoaded(self, x, y)
+  g_serverPlotManager:onCellLoaded(x, y)
   self.forceManager:server_onCellReloaded(x, y)
   self.waterManager:sv_onCellReloaded(x, y)
-  g_plotManager:server_onCellLoaded(x, y)
 end
 
 function World.server_onCellUnloaded(self, x, y)
@@ -75,4 +73,11 @@ end
 function World.client_onCellUnloaded(self, x, y)
   self.forceManager:client_onCellUnloaded(x, y)
   self.waterManager:cl_onCellUnloaded(x, y)
+end
+
+function World.client_syncPlots(self, data)
+  if g_clientPlotManager then
+    g_clientPlotManager:syncPlots(data)
+    return
+  end
 end

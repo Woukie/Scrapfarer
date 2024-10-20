@@ -4,17 +4,18 @@ dofile("$CONTENT_DATA/Scripts/game/util/Queue.lua")
 
 -- Keeps track of who owns what plots
 -- Plots ownership is needed for respawning players
--- Entire plot state stored on the server, it works the same either way and I cba to do the client
-PlotManager = class(nil)
+-- Plot state is synced with the client without prediction
+ServerPlotManager = class(nil)
 
-function PlotManager.server_onCreate(self)
+-- We need worldself to use networking so we can sync plots with clients
+function ServerPlotManager.onCreate(self)
   self.plots = {}
   self.createFloorQueue = Queue()
   self.initialised = false
 end
 
 -- Respawns a player at a known plot location, assigning them if necessary, skipping if plots are not loaded (once plots are loaded, players are automatically assigned to them with this method)
-function PlotManager.server_respawnPlayer(self, player)
+function ServerPlotManager.respawnPlayer(self, player)
   if not self.initialised then
     print("Skipping assigning player for now, plots not loaded yet")
     return
@@ -43,10 +44,12 @@ function PlotManager.server_respawnPlayer(self, player)
   print("Player could not be assigned to plot. Either something is wrong, or all plots are full!!")
 end
 
-local function destroyFloor(plot)
+local function destroyFloor(self, plot)
   if plot["floorAsset"] then
     plot["floorAsset"]:destroyPart()
     plot["floorAsset"] = nil
+
+    self.syncClient = true
   end
 end
 
@@ -55,28 +58,30 @@ local function createFloor(self, plotId)
     -- Kind of jank. Makes sure createFloor is always called within in a world environment, pushes the call to a queue, and executes in fixedUpdate
     if not pcall(sm.world.getCurrentWorld) then
       self.createFloorQueue:push({self = self, plotId = plotId})
-
       return
     end
 
     -- Spawn at approx center (off by .625 to align to grid)
     self.plots[plotId]["floorAsset"] = sm.shape.createPart(obj_plot_floor, self.plots[plotId]["position"] + (self.plots[plotId]["rotation"] * sm.vec3.new(-20, -20, -0.25)), self.plots[plotId]["rotation"], false)
+    self.syncClient = true
   end
 end
 
 -- 
-function PlotManager.server_onPlayerLeft(self, player)
+function ServerPlotManager.onPlayerLeft(self, player)
   print("Removing "..player.name.." from owned plots")
   for plotID, plot in pairs(self.plots) do
     if plot["playerId"] == player:getId() then
       plot["playerId"] = nil
-      self:server_showFloor(player)
+      self:showFloor(player)
     end
   end
+
+  self.syncClient = true
 end
 
 -- 
-function PlotManager.server_onCellLoaded(self, x, y)
+function ServerPlotManager.onCellLoaded(self, x, y)
   local nodes = sm.cell.getNodesByTag(x, y, "PLOT")
 
   for _, node in ipairs(nodes) do
@@ -99,7 +104,7 @@ function PlotManager.server_onCellLoaded(self, x, y)
 
           self.initialised = true;
           for _, player in ipairs(players) do
-            self:server_respawnPlayer(player)
+            self:respawnPlayer(player)
           end
         end
       end
@@ -110,28 +115,39 @@ function PlotManager.server_onCellLoaded(self, x, y)
       createFloor(self, plotId)
     end
   end
+
+  if #nodes > 0 then
+    self.syncClient = true
+  end
 end
 
-function PlotManager.server_oncellUnloaded(self, x, y)
+function ServerPlotManager.oncellUnloaded(self, x, y)
   local nodes = sm.cell.getNodesByTag(x, y, "PLOT")
 
   for _, node in ipairs( nodes ) do
     local plotId = node.params["Plot ID"]
 
     if self.plots[plotId] then
-      destroyFloor(self.plots[plotId])
+      destroyFloor(self, self.plots[plotId])
     end
   end
 end
 
-function PlotManager.server_onFixedUpdate(self)
+function ServerPlotManager.onFixedUpdate(self, worldSelf)
   while self.createFloorQueue:size() > 0 do
     local params = self.createFloorQueue:pop()
     createFloor(params.self, params.plotId)
   end
+
+  -- We need a reference to the game or world to use network like this, and we can't just store a reference to the world on create as that triggers a sandbox violation
+  -- This is caught by the clients world, which passes it to the clients plot manager
+  if self.syncClient then
+    worldSelf.network:sendToClients('client_syncPlots', self.plots)
+    self.syncClient = false
+  end
 end
 
-function PlotManager.server_showFloor(self, player)
+function ServerPlotManager.showFloor(self, player)
   for plotId, plot in pairs(self.plots) do
     if plot["playerId"] == player:getId() and plot["floorHidden"] then
       plot["floorHidden"] = false
@@ -141,11 +157,11 @@ function PlotManager.server_showFloor(self, player)
   end
 end
 
-function PlotManager.server_hideFloor(self, player)
+function ServerPlotManager.hideFloor(self, player)
   for plotId, plot in pairs(self.plots) do
     if plot["playerId"] == player:getId() and not plot["floorHidden"] then
       plot["floorHidden"] = true
-      destroyFloor(plot)
+      destroyFloor(self, plot)
       return
     end
   end

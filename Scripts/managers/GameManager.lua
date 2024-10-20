@@ -1,5 +1,3 @@
-dofile("$CONTENT_DATA/Scripts/managers/PlotManager.lua")
-
 -- Keeps track of game state for each player
 GameManager = class(nil)
 
@@ -25,16 +23,16 @@ function GameManager.startRun(self, player)
   end
 
   self.gameStates[player:getId()]["playing"] = true
-  g_plotManager:server_hideFloor(player)
+  g_serverPlotManager:hideFloor(player)
 end
 
 function GameManager.endRun(self, player)
   if not self.gameStates[player:getId()]["playing"] then
-    g_plotManager:server_respawnPlayer(player)
+    g_serverPlotManager:respawnPlayer(player)
     return
   end
   
   self.gameStates[player:getId()]["playing"] = false
-  g_plotManager:server_showFloor(player)
-  g_plotManager:server_respawnPlayer(player)
+  g_serverPlotManager:showFloor(player)
+  g_serverPlotManager:respawnPlayer(player)
 end
