@@ -13,7 +13,7 @@ function ClientPlotManager.hideHologram(self, plotId)
 end
 
 function ClientPlotManager.onCellLoaded(self, x, y)
-  if not self.cl or self.cl.plots then
+  if not self.cl or not self.cl.plots then
     return
   end
 
@@ -27,7 +27,7 @@ function ClientPlotManager.onCellLoaded(self, x, y)
 end
 
 function ClientPlotManager.onCellUnloaded(self, x, y)
-  if not self.cl or self.cl.plots then
+  if not self.cl or not self.cl.plots then
     return
   end
 
