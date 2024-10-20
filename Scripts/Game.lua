@@ -5,7 +5,7 @@ dofile("$CONTENT_DATA/Scripts/managers/GameManager.lua")
 Game = class( nil )
 
 Game.enableLimitedInventory = false
-Game.enableRestrictions = false
+Game.enableRestrictions = true
 Game.enableFuelConsumption = false
 Game.enableAmmoConsumption = false
 Game.enableUpgrade = true
@@ -25,6 +25,10 @@ function Game.server_onCreate(self)
 
   g_gameManager = GameManager()
 	g_gameManager:server_onCreate(self.sv.saved.world)
+end
+
+function GameManager.client_onCreate(self)
+	assert(g_hud)
 end
 
 -- Let it play out as normal, we need to load plots before we can send players to them, which is handled by the world once it has loaded
