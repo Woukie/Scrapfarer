@@ -5,5 +5,10 @@
         <Property key="NeedMouse" value="false"/>
         <Property key="NeedKey" value="false"/>
     </Widget>
+    <Widget type="ImageBox" skin="ImageBox" position_real="0 0 1 1" name="Throb">
+        <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/throb.png"/>
+        <Property key="NeedMouse" value="false"/>
+        <Property key="NeedKey" value="false"/>
+    </Widget>
     <CodeGeneratorSettings/>
 </MyGUI>

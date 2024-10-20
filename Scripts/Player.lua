@@ -66,8 +66,25 @@ function Player.client_onCreate( self )
 	end
 end
 
+function Player.client_onFixedUpdate(self)
+  if not self.cl.lastThrob then
+    self.cl.throbDuration = 10
+    self.cl.lastThrob = self.cl.throbDuration
+  end
+
+  self.cl.lastThrob = math.min( self.cl.lastThrob + 1, self.cl.throbDuration)
+
+  if g_hud then
+    g_hud:setColor("Throb", sm.color.new(1, 1, 1, 1 - self.cl.lastThrob / self.cl.throbDuration))
+  end
+end
+
 function Player.client_onClientDataUpdate( self, data )
 	if data and sm.localPlayer.getPlayer() == self.player then
+    if self.cl.stats and data.hp < self.cl.stats.hp then
+      self.cl.lastThrob = 0
+    end
+
     self.cl.stats = data
 
 		if g_hud then
