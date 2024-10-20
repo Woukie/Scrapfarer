@@ -121,10 +121,10 @@ function ServerPlotManager.onCellLoaded(self, x, y)
   end
 end
 
-function ServerPlotManager.oncellUnloaded(self, x, y)
+function ServerPlotManager.onCellUnloaded(self, x, y)
   local nodes = sm.cell.getNodesByTag(x, y, "PLOT")
 
-  for _, node in ipairs( nodes ) do
+  for _, node in ipairs(nodes) do
     local plotId = node.params["Plot ID"]
 
     if self.plots[plotId] then

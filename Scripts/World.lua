@@ -55,6 +55,7 @@ function World.server_onCellCreated(self, x, y)
 end
 
 function World.client_onCellLoaded(self, x, y)
+  g_clientPlotManager:onCellLoaded(x, y)
   self.forceManager:client_onCellLoaded(x, y)
   self.waterManager:cl_onCellLoaded(x, y)
 end
@@ -66,11 +67,13 @@ function World.server_onCellLoaded(self, x, y)
 end
 
 function World.server_onCellUnloaded(self, x, y)
+  g_serverPlotManager:onCellUnloaded(x, y)
   self.forceManager:server_onCellUnloaded(x, y)
   self.waterManager:sv_onCellUnloaded(x, y)
 end
 
 function World.client_onCellUnloaded(self, x, y)
+  g_clientPlotManager:onCellUnloaded(x, y)
   self.forceManager:client_onCellUnloaded(x, y)
   self.waterManager:cl_onCellUnloaded(x, y)
 end
