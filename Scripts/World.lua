@@ -1,7 +1,7 @@
 dofile("$CONTENT_DATA/Scripts/managers/ForceManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/WaterManager.lua")
 
-local worldSize = 16
+local worldSize = 1024
 
 World = class( nil )
 World.terrainScript = "$CONTENT_DATA/Scripts/terrain.lua"

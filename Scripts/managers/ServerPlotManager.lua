@@ -15,17 +15,33 @@ function ServerPlotManager.onCreate(self)
 end
 
 -- Respawns a player at a known plot location, assigning them if necessary, skipping if plots are not loaded (once plots are loaded, players are automatically assigned to them with this method)
+-- World is optional if the player already has a character
 function ServerPlotManager.respawnPlayer(self, player)
+  print("Respawning player "..player.name)
+
   if not self.initialised then
-    print("Skipping assigning player for now, plots not loaded yet")
+    print("Skipping assigning player for now, plots enough not loaded yet")
     return
+  end
+
+  local character = player:getCharacter()
+  if not character then
+    print("Player has no character yet, creating one")
+
+    if not pcall(sm.world.getCurrentWorld) then
+      print("Cannot create character outside world script")
+      return
+    end
+
+    character = sm.character.createCharacter(player, sm.world.getCurrentWorld(), sm.vec3.new( 32, 32, 5 ), 0, 0)
+    player:setCharacter(character)
   end
 
   print("Checking for plots owned by "..player.name)
   for plotID, plot in pairs(self.plots) do
     if plot["playerId"] == player:getId() then
       print(player.name.." owns plot "..plotID..", teleporting")
-      player.character:setWorldPosition(plot.position + sm.vec3.new(0, 0, 3))
+      character:setWorldPosition(plot.position + sm.vec3.new(0, 0, 3))
       return
     end
   end
@@ -35,8 +51,7 @@ function ServerPlotManager.respawnPlayer(self, player)
     if not plot["playerId"] then
       plot["playerId"] = player:getId()
       print("Assigned plot "..plotID.." to "..player.name..", teleporting")
-
-      player.character:setWorldPosition(plot.position + sm.vec3.new(0, 0, 3))
+      character:setWorldPosition(plot.position + sm.vec3.new(0, 0, 3))
       return
     end
   end
@@ -44,10 +59,10 @@ function ServerPlotManager.respawnPlayer(self, player)
   print("Player could not be assigned to plot. Either something is wrong, or all plots are full!!")
 end
 
-local function destroyFloor(self, plot)
-  if plot["floorAsset"] then
-    plot["floorAsset"]:destroyPart()
-    plot["floorAsset"] = nil
+local function destroyFloor(self, plotId)
+  if self.plots[plotId]["floorAsset"] then
+    self.plots[plotId]["floorAsset"]:destroyShape()
+    self.plots[plotId]["floorAsset"] = nil
 
     self.syncClient = true
   end
@@ -128,7 +143,7 @@ function ServerPlotManager.onCellUnloaded(self, x, y)
     local plotId = node.params["Plot ID"]
 
     if self.plots[plotId] then
-      destroyFloor(self, self.plots[plotId])
+      destroyFloor(self, plotId)
     end
   end
 end
@@ -161,7 +176,7 @@ function ServerPlotManager.hideFloor(self, player)
   for plotId, plot in pairs(self.plots) do
     if plot["playerId"] == player:getId() and not plot["floorHidden"] then
       plot["floorHidden"] = true
-      destroyFloor(self, plot)
+      destroyFloor(self, plotId)
       return
     end
   end

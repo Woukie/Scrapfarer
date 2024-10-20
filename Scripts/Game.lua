@@ -42,10 +42,7 @@ function Game.server_onPlayerJoined(self, player, isNewPlayer)
 end
 
 function Game.server_createPlayerCharacter(self, world, x, y, player, params)
-  local character = sm.character.createCharacter( player, world, sm.vec3.new( 32, 32, 5 ), 0, 0 )
-	player:setCharacter(character)
-  
-  g_serverPlotManager:respawnPlayer()
+  g_serverPlotManager:respawnPlayer(player)
 end
 
 function Game.client_onCreate()
