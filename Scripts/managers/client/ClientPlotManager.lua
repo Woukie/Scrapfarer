@@ -42,6 +42,5 @@ end
 
 -- Triggered by the world
 function ClientPlotManager.syncPlots(self, data)
-  print("Plots synced")
   self.cl = data
 end
