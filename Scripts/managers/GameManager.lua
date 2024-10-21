@@ -5,10 +5,6 @@ function GameManager.server_onCreate(self)
   self.gameStates = {}
 end
 
-function GameManager.getState(self, player)
-  return self.gameStates[player.getId()]
-end
-
 function GameManager.server_onPlayerJoined(self, player)
   self.gameStates[player:getId()] = {}
 end
@@ -31,7 +27,7 @@ function GameManager.endRun(self, player)
     g_serverPlotManager:respawnPlayer(player)
     return
   end
-  
+
   self.gameStates[player:getId()]["playing"] = false
   g_serverPlotManager:showFloor(player)
   g_serverPlotManager:respawnPlayer(player)
