@@ -89,9 +89,9 @@ function World.client_syncPlots(self, data)
   end
 end
 
-function World.client_earnCoins(self, coins)
+function World.client_syncGameData(self, coins)
   if g_clientGameManager then
-    g_clientGameManager:earnCoins(coins)
+    g_clientGameManager:syncData(coins)
     return
   end
 end

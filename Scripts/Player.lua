@@ -64,6 +64,8 @@ function Player.client_onCreate( self )
 			g_hud:open()
 		end
 	end
+
+  g_clientGameManager:onCreatePlayer()
 end
 
 function Player.client_onFixedUpdate(self)

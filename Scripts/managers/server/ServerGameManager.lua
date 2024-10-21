@@ -46,7 +46,7 @@ function ServerGameManager.endRun(self, player)
   g_serverPlotManager:showFloor(player)
   g_serverPlotManager:respawnPlayer(player)
 
-  self.sendToClientQueue:push({client = player, callback = "client_earnCoins", data = totalReward})
+  self.sendToClientQueue:push({client = player, callback = "client_syncGameData", data = totalReward})
 end
 
 function ServerGameManager.passCheckpoint(self, player, checkpointId, reward)
