@@ -1,5 +1,3 @@
-dofile "$SURVIVAL_DATA/Scripts/util.lua"
-
 ServerCheckpointManager = class(nil)
 
 
