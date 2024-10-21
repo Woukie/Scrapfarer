@@ -2,13 +2,21 @@
 <MyGUI type="Layout" version="3.2.0">
     <Widget type="ImageBox" skin="ImageBox" position_real="0 0 1 1" name="Health">
         <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/hurt.png"/>
-        <Property key="NeedMouse" value="false"/>
-        <Property key="NeedKey" value="false"/>
     </Widget>
     <Widget type="ImageBox" skin="ImageBox" position_real="0 0 1 1" name="Throb">
         <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/throb.png"/>
-        <Property key="NeedMouse" value="false"/>
-        <Property key="NeedKey" value="false"/>
+    </Widget>
+    <Widget type="ImageBox" skin="ImageBox" position="25 25 400 110" name="Black Fade">
+        <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/coin_background.png"/>
+    </Widget>
+    <Widget type="ImageBox" skin="ImageBox" position="30 30 100 100" name="Coin Image">
+        <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/coin.gif"/>
+    </Widget>
+    <Widget type="TextBox" skin="TextBox" position="130 42 195 75" name="Coin Text">
+        <Property key="Colour" value="0.216374 0.862253 1"/>
+        <Property key="FontName" value="SM_NumberHuge"/>
+        <Property key="Caption" value="0"/>
+        <Property key="FontHeight" value="75"/>
     </Widget>
     <CodeGeneratorSettings/>
 </MyGUI>
