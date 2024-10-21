@@ -7,6 +7,8 @@ function ServerCheckpointManager.onCreate(self)
 	self.areaTriggers = {}
 end
 
+-- Generates an ID for a node that's consistent between cell reloads
+-- TODO: test if this is actually consistent between cell reloads
 function ServerCheckpointManager.getCheckpointId(self, position)
   return position.x.."|"..position.y.."|"..position.z
 end
