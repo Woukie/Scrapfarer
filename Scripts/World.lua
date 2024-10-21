@@ -49,6 +49,7 @@ function World.client_onFixedUpdate(self)
 end
 
 function World.server_onCellCreated(self, x, y)
+  g_checkpointManager:onCellLoaded(x, y)
   g_serverPlotManager:onCellLoaded(x, y)
   self.forceManager:server_onCellLoaded(x, y)
   self.waterManager:sv_onCellLoaded(x, y)
@@ -61,12 +62,14 @@ function World.client_onCellLoaded(self, x, y)
 end
 
 function World.server_onCellLoaded(self, x, y)
+  g_checkpointManager:onCellLoaded(x, y)
   g_serverPlotManager:onCellLoaded(x, y)
   self.forceManager:server_onCellReloaded(x, y)
   self.waterManager:sv_onCellReloaded(x, y)
 end
 
 function World.server_onCellUnloaded(self, x, y)
+  g_checkpointManager:onCellUnloaded(x, y)
   g_serverPlotManager:onCellUnloaded(x, y)
   self.forceManager:server_onCellUnloaded(x, y)
   self.waterManager:sv_onCellUnloaded(x, y)

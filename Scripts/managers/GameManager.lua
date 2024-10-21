@@ -6,7 +6,10 @@ function GameManager.server_onCreate(self)
 end
 
 function GameManager.server_onPlayerJoined(self, player)
-  self.gameStates[player:getId()] = {}
+  self.gameStates[player:getId()] = {
+    playing = false,
+    checkpoints = {}
+  }
 end
 
 function GameManager.server_onPlayerLeft(self, player)
@@ -23,12 +26,34 @@ function GameManager.startRun(self, player)
 end
 
 function GameManager.endRun(self, player)
-  if not self.gameStates[player:getId()]["playing"] then
+  local gamestate = self.gameStates[player:getId()]
+  if not gamestate["playing"] then
     g_serverPlotManager:respawnPlayer(player)
     return
   end
 
-  self.gameStates[player:getId()]["playing"] = false
+  local totalReward = 0
+  for _, reward in pairs(gamestate["checkpoints"]) do
+    totalReward = totalReward + reward
+  end
+  print(player.name.." ended their run earning "..totalReward.." coins")
+
+  gamestate["playing"] = false
+  gamestate["checkpoints"] = {}
   g_serverPlotManager:showFloor(player)
   g_serverPlotManager:respawnPlayer(player)
+end
+
+function GameManager.passCheckpoint(self, player, checkpointId, reward)
+  local gameState = self.gameStates[player:getId()]
+  if not gameState["playing"] then
+    return
+  end
+
+  if gameState["checkpoints"][checkpointId] then
+    return
+  end
+
+  gameState["checkpoints"][checkpointId] = reward
+  print(player.name.." passed checkpoint "..checkpointId.." valued at "..reward.." coins")
 end

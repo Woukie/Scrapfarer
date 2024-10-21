@@ -1,4 +1,5 @@
 dofile("$CONTENT_DATA/Scripts/game/shapes.lua")
+dofile("$CONTENT_DATA/Scripts/managers/ServerCheckpointManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/ServerPlotManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/ClientPlotManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/GameManager.lua")
@@ -22,6 +23,9 @@ function Game.server_onCreate(self)
 
   g_serverPlotManager = ServerPlotManager()
 	g_serverPlotManager:onCreate(self)
+
+  g_checkpointManager = ServerCheckpointManager()
+	g_checkpointManager:onCreate()
 
   g_gameManager = GameManager()
 	g_gameManager:server_onCreate()
