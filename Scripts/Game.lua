@@ -1,8 +1,9 @@
 dofile("$CONTENT_DATA/Scripts/game/shapes.lua")
-dofile("$CONTENT_DATA/Scripts/managers/ServerCheckpointManager.lua")
-dofile("$CONTENT_DATA/Scripts/managers/ServerPlotManager.lua")
-dofile("$CONTENT_DATA/Scripts/managers/ClientPlotManager.lua")
-dofile("$CONTENT_DATA/Scripts/managers/GameManager.lua")
+dofile("$CONTENT_DATA/Scripts/managers/server/ServerCheckpointManager.lua")
+dofile("$CONTENT_DATA/Scripts/managers/server/ServerGameManager.lua")
+dofile("$CONTENT_DATA/Scripts/managers/server/ServerPlotManager.lua")
+dofile("$CONTENT_DATA/Scripts/managers/client/ClientPlotManager.lua")
+dofile("$CONTENT_DATA/Scripts/managers/client/ClientGameManager.lua")
 
 Game = class( nil )
 
@@ -27,8 +28,8 @@ function Game.server_onCreate(self)
   g_checkpointManager = ServerCheckpointManager()
 	g_checkpointManager:onCreate()
 
-  g_gameManager = GameManager()
-	g_gameManager:server_onCreate()
+  g_serverGameManager = ServerGameManager()
+	g_serverGameManager:onCreate()
 end
 
 -- Let it play out as normal, we need to load plots before we can send players to them, which is handled by the world once it has loaded
@@ -44,7 +45,7 @@ function Game.server_onPlayerJoined(self, player, isNewPlayer)
     g_serverPlotManager:respawnPlayer(player)
   end
 
-  g_gameManager:server_onPlayerJoined(player)
+  g_serverGameManager:onPlayerJoined(player)
 end
 
 function Game.server_createPlayerCharacter(self, world, x, y, player, params)
@@ -55,13 +56,16 @@ function Game.client_onCreate()
   g_clientPlotManager = ClientPlotManager()
   g_clientPlotManager:onCreate()
 
+  g_clientGameManager = ClientGameManager()
+  g_clientGameManager:onCreate()
+
   sm.game.bindChatCommand("/respawn", {}, "client_onChatCommand", "Respawn")
   sm.game.bindChatCommand("/start", {}, "client_onChatCommand", "Starts the game")
 end
 
 function Game.server_onPlayerLeft(self, player)
   g_serverPlotManager:onPlayerLeft(player)
-  g_gameManager:server_onPlayerLeft(player)
+  g_serverGameManager:onPlayerLeft(player)
 end
 
 function Game.client_onChatCommand(self, params)
@@ -73,9 +77,9 @@ function Game.client_onChatCommand(self, params)
 end
 
 function Game.server_respawn( self, params )
-  g_gameManager:endRun(params.player)
+  g_serverGameManager:endRun(params.player)
 end
 
 function Game.server_start( self, params )
-  g_gameManager:startRun(params.player)
+  g_serverGameManager:startRun(params.player)
 end

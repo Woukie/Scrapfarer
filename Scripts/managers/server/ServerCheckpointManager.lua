@@ -1,6 +1,5 @@
 ServerCheckpointManager = class(nil)
 
-
 function ServerCheckpointManager.onCreate(self)
 	self.areaTriggers = {}
 end
@@ -47,7 +46,7 @@ function ServerCheckpointManager.trigger_onEnter(self, trigger, results)
 
     if sm.exists(result) then
       if type == "Character" then
-        g_gameManager:passCheckpoint(result:getPlayer(), params.checkpointId, params.reward)
+        g_serverGameManager:passCheckpoint(result:getPlayer(), params.checkpointId, params.reward)
       end
     end
   end

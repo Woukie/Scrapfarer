@@ -41,6 +41,7 @@ end
 
 function World.server_onFixedUpdate(self)
   g_serverPlotManager:onFixedUpdate(self)
+  g_serverGameManager:onFixedUpdate(self)
 	self.waterManager:sv_onFixedUpdate()
 end
 
@@ -84,6 +85,13 @@ end
 function World.client_syncPlots(self, data)
   if g_clientPlotManager then
     g_clientPlotManager:syncPlots(data)
+    return
+  end
+end
+
+function World.client_earnCoins(self, coins)
+  if g_clientGameManager then
+    g_clientGameManager:earnCoins(coins)
     return
   end
 end

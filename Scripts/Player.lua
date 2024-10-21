@@ -39,7 +39,7 @@ function Player.server_takeDamage( self, damage, source )
   self.sv.stats.hp = math.max(self.sv.stats.hp - damage, 0)
 
   if self.sv.stats.hp <= 0 then
-    g_gameManager:endRun(self.player)
+    g_serverGameManager:endRun(self.player)
     self.sv.stats.hp = self.sv.stats.maxhp
   end
 

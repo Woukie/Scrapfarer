@@ -1,22 +1,25 @@
--- Keeps track of game state for each player
-GameManager = class(nil)
+dofile("$CONTENT_DATA/Scripts/game/util/Queue.lua")
 
-function GameManager.server_onCreate(self)
+-- Keeps track of game state for each player, a lot of data is stored on the client so this is mainly for game logic like respawning and keeping track of checkpoints
+ServerGameManager = class(nil)
+
+function ServerGameManager.onCreate(self)
   self.gameStates = {}
+  self.sendToClientQueue = Queue()
 end
 
-function GameManager.server_onPlayerJoined(self, player)
+function ServerGameManager.onPlayerJoined(self, player)
   self.gameStates[player:getId()] = {
     playing = false,
     checkpoints = {}
   }
 end
 
-function GameManager.server_onPlayerLeft(self, player)
+function ServerGameManager.onPlayerLeft(self, player)
   self.gameStates[player:getId()] = nil
 end
 
-function GameManager.startRun(self, player)
+function ServerGameManager.startRun(self, player)
   if self.gameStates[player:getId()]["playing"] then
     return
   end
@@ -25,7 +28,7 @@ function GameManager.startRun(self, player)
   g_serverPlotManager:hideFloor(player)
 end
 
-function GameManager.endRun(self, player)
+function ServerGameManager.endRun(self, player)
   local gamestate = self.gameStates[player:getId()]
   if not gamestate["playing"] then
     g_serverPlotManager:respawnPlayer(player)
@@ -42,9 +45,11 @@ function GameManager.endRun(self, player)
   gamestate["checkpoints"] = {}
   g_serverPlotManager:showFloor(player)
   g_serverPlotManager:respawnPlayer(player)
+
+  self.sendToClientQueue:push({client = player, callback = "client_earnCoins", data = totalReward})
 end
 
-function GameManager.passCheckpoint(self, player, checkpointId, reward)
+function ServerGameManager.passCheckpoint(self, player, checkpointId, reward)
   local gameState = self.gameStates[player:getId()]
   if not gameState["playing"] then
     return
@@ -56,4 +61,15 @@ function GameManager.passCheckpoint(self, player, checkpointId, reward)
 
   gameState["checkpoints"][checkpointId] = reward
   print(player.name.." passed checkpoint "..checkpointId.." valued at "..reward.." coins")
+end
+
+function ServerGameManager.onFixedUpdate(self, worldSelf)
+  if (not self.sendToClientQueue) then
+    return
+  end
+
+  while self.sendToClientQueue:size() > 0 do
+    local request = self.sendToClientQueue:pop()
+    worldSelf.network:sendToClient(request.client, request.callback, request.data)
+  end
 end
