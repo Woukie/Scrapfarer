@@ -8,11 +8,42 @@ function ServerGameManager.onCreate(self)
   self.sendToClientQueue = Queue()
 end
 
+local function loadPlayer(self, player)
+  local playerId = player:getId()
+  local playerData = sm.storage.load(playerId)
+
+  if playerData then
+    assert(playerData.coins)
+    self.gameStates[playerId].coins = playerData.coins
+    print("Loaded "..player.name.."'s player data from storage")
+    return true
+  end
+
+  return false
+end
+
+local function savePlayer(self, player)
+  local playerId = player:getId()
+  sm.storage.save(playerId, {coins = self.gameStates[playerId].coins})
+  print("Saved "..player.name.."'s player data to storage")
+end
+
 function ServerGameManager.onPlayerJoined(self, player)
-  self.gameStates[player:getId()] = {
+  local playerId = player:getId()
+
+  self.gameStates[playerId] = {
     playing = false,
-    checkpoints = {}
+    checkpoints = {},
+    coins = 0
   }
+
+  if not loadPlayer(self, player) then
+    savePlayer(self, player)
+  end
+
+  g_serverPlotManager:respawnPlayer(player)
+
+  self.sendToClientQueue:push({client = player, callback = "client_syncGameData", data = {coins = self.gameStates[playerId].coins}})
 end
 
 function ServerGameManager.onPlayerLeft(self, player)
@@ -21,8 +52,11 @@ end
 
 function ServerGameManager.startRun(self, player)
   if self.gameStates[player:getId()]["playing"] then
+    print(player.name.." cannot start their run as they are already in one")
     return
   end
+
+  print(player.name.." is starting a run")
 
   self.gameStates[player:getId()]["playing"] = true
   g_serverPlotManager:hideFloor(player)
@@ -40,13 +74,15 @@ function ServerGameManager.endRun(self, player)
     totalReward = totalReward + reward
   end
   print(player.name.." ended their run earning "..totalReward.." coins")
+  gamestate.coins = gamestate.coins + totalReward
 
   gamestate["playing"] = false
   gamestate["checkpoints"] = {}
   g_serverPlotManager:showFloor(player)
   g_serverPlotManager:respawnPlayer(player)
 
-  self.sendToClientQueue:push({client = player, callback = "client_syncGameData", data = totalReward})
+  savePlayer(self, player)
+  self.sendToClientQueue:push({client = player, callback = "client_syncGameData", data = {coins = gamestate.coins}})
 end
 
 function ServerGameManager.passCheckpoint(self, player, checkpointId, reward)

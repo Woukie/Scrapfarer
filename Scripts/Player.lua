@@ -43,7 +43,6 @@ function Player.server_takeDamage( self, damage, source )
     self.sv.stats.hp = self.sv.stats.maxhp
   end
 
-  self.storage:save(self.sv.stats)
   self.network:setClientData(self.sv.stats)
 end
 

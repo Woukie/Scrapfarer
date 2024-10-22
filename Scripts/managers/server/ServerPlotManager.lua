@@ -9,10 +9,48 @@ ServerPlotManager = class(nil)
 
 -- We need worldself to use networking so we can sync plots with clients
 function ServerPlotManager.onCreate(self)
-  self.plots = {}
+  print("ServerPlotManager.onCreate")
+
+  self.plots = sm.storage.load("plots")
   self.createFloorQueue = Queue()
   self.respawnPlayerQueue = Queue()
   self.initialised = false
+
+  if not self.plots then
+    self.plots = {}
+    print("Creating plots for the first time")
+  else
+    print("Loaded plots from storage")
+    for plotId, plot in pairs(self.plots) do
+      plot["floorHidden"] = false
+    end
+  end
+
+  self.plotsUpdated = true
+end
+
+local function destroyFloor(self, plotId)
+  if self.plots[plotId]["floorAsset"] then
+    if sm.exists(self.plots[plotId]["floorAsset"]) then
+      self.plots[plotId]["floorAsset"]:destroyShape()
+    end
+    self.plots[plotId]["floorAsset"] = nil
+    self.plotsUpdated = true
+  end
+end
+
+local function createFloor(self, plotId)
+  if not self.plots[plotId]["floorAsset"] then
+    -- Kind of jank. Makes sure createFloor is always called within in a world environment, pushes the call to a queue, and executes in fixedUpdate
+    if not pcall(sm.world.getCurrentWorld) then
+      self.createFloorQueue:push({self = self, plotId = plotId})
+      return
+    end
+
+    -- Spawn at approx center (off by .625 to align to grid)
+    self.plots[plotId]["floorAsset"] = sm.shape.createPart(obj_plot_floor, self.plots[plotId]["position"] + (self.plots[plotId]["rotation"] * sm.vec3.new(-20, -20, -0.25)), self.plots[plotId]["rotation"], false)
+    self.plotsUpdated = true
+  end
 end
 
 -- Respawns a player at a known plot location, assigning them if necessary, skipping if plots are not loaded (once plots are loaded, players are automatically assigned to them with this method)
@@ -44,50 +82,27 @@ function ServerPlotManager.respawnPlayer(self, player)
   end
 
   print("Checking for plots owned by "..player.name)
-  for plotID, plot in pairs(self.plots) do
+  for plotId, plot in pairs(self.plots) do
     if plot["playerId"] == player:getId() then
-      print(player.name.." owns plot "..plotID..", teleporting")
+      print(player.name.." owns plot "..plotId..", teleporting")
       character:setWorldPosition(plot.position + sm.vec3.new(0, 0, 3))
+      createFloor(self, plotId)
       return
     end
   end
 
   print(player.name.." has no plot, assigning plot")
-  for plotID, plot in pairs(self.plots) do
+  for plotId, plot in pairs(self.plots) do
     if not plot["playerId"] then
       plot["playerId"] = player:getId()
-      print("Assigned plot "..plotID.." to "..player.name..", teleporting")
+      print("Assigned plot "..plotId.." to "..player.name..", teleporting")
       character:setWorldPosition(plot.position + sm.vec3.new(0, 0, 3))
+      createFloor(self, plotId)
       return
     end
   end
 
   print("Player could not be assigned to plot. Either something is wrong, or all plots are full!!")
-end
-
-local function destroyFloor(self, plotId)
-  if self.plots[plotId]["floorAsset"] then
-    if sm.exists(self.plots[plotId]["floorAsset"]) then
-      self.plots[plotId]["floorAsset"]:destroyShape()
-    end
-    self.plots[plotId]["floorAsset"] = nil
-
-    self.syncClient = true
-  end
-end
-
-local function createFloor(self, plotId)
-  if not self.plots[plotId]["floorAsset"] then
-    -- Kind of jank. Makes sure createFloor is always called within in a world environment, pushes the call to a queue, and executes in fixedUpdate
-    if not pcall(sm.world.getCurrentWorld) then
-      self.createFloorQueue:push({self = self, plotId = plotId})
-      return
-    end
-
-    -- Spawn at approx center (off by .625 to align to grid)
-    self.plots[plotId]["floorAsset"] = sm.shape.createPart(obj_plot_floor, self.plots[plotId]["position"] + (self.plots[plotId]["rotation"] * sm.vec3.new(-20, -20, -0.25)), self.plots[plotId]["rotation"], false)
-    self.syncClient = true
-  end
 end
 
 -- 
@@ -100,7 +115,7 @@ function ServerPlotManager.onPlayerLeft(self, player)
     end
   end
 
-  self.syncClient = true
+  self.plotsUpdated = true
 end
 
 -- 
@@ -112,26 +127,27 @@ function ServerPlotManager.onCellLoaded(self, x, y)
 
     -- Register new plots
     if not self.plots[plotId] then
-      print("Registering plot "..plotId)
+      print("Registering plot "..plotId)  
 
       self.plots[plotId] = {}
       self.plots[plotId]["position"] = node.position
       self.plots[plotId]["rotation"] = node.rotation
       self.plots[plotId]["floorHidden"] = false
+    end
 
-      if not self.initialised then
-        local players = sm.player.getAllPlayers()
+    if not self.initialised then
+      local players = sm.player.getAllPlayers()
 
-        if #self.plots >= #players then
-          print("Enough plots registered, respawning players")
+      if #self.plots >= #players then
+        print("Enough plots loaded, respawning players")
 
-          self.initialised = true;
-          for _, player in ipairs(players) do
-            self:respawnPlayer(player)
-          end
+        self.initialised = true;
+        for _, player in ipairs(players) do
+          self:respawnPlayer(player)
         end
       end
     end
+
 
     -- load in floor
     if not self.plots[plotId]["floorHidden"] then
@@ -140,7 +156,7 @@ function ServerPlotManager.onCellLoaded(self, x, y)
   end
 
   if #nodes > 0 then
-    self.syncClient = true
+    self.plotsUpdated = true
   end
 end
 
@@ -169,9 +185,10 @@ function ServerPlotManager.onFixedUpdate(self, worldSelf)
 
   -- We need a reference to the game or world to use network like this, and we can't just store a reference to the world on create as that triggers a sandbox violation
   -- This is caught by the clients world, which passes it to the clients plot manager
-  if self.syncClient then
+  if self.plotsUpdated then
     worldSelf.network:sendToClients('client_syncPlots', self.plots)
-    self.syncClient = false
+    sm.storage.save("plots", self.plots)
+    self.plotsUpdated = false
   end
 end
 
