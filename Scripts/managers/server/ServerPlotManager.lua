@@ -2,6 +2,8 @@ dofile "$SURVIVAL_DATA/Scripts/util.lua"
 dofile("$CONTENT_DATA/Scripts/game/shapes.lua")
 dofile("$CONTENT_DATA/Scripts/game/util/Queue.lua")
 
+unpack = table.unpack or unpack
+
 -- Keeps track of who owns what plots
 -- Plots ownership is needed for respawning players
 -- Plot state is synced with the client without prediction
@@ -13,8 +15,7 @@ function ServerPlotManager.onCreate(self)
   self.plots = sm.storage.load("plots")
   self.plotAreaTriggers = {}
   self.currentShips = sm.storage.load("currentShips")
-  self.createFloorQueue = Queue()
-  self.respawnPlayerQueue = Queue()
+  self.worldFunctionQueue = Queue()
   self.initialised = false
 
   if not self.plots then
@@ -47,9 +48,8 @@ local function destroyFloor(self, plotId)
 end
 
 local function createFloor(self, plotId)
-  -- Kind of jank. Makes sure createFloor is always called within in a world environment, pushes the call to a queue, and executes in fixedUpdate
   if not pcall(sm.world.getCurrentWorld) then
-    self.createFloorQueue:push({self = self, plotId = plotId})
+    self.worldFunctionQueue:push({destination = "createFloor", params = {self, plotId}})
     return
   end
 
@@ -67,18 +67,48 @@ function ServerPlotManager.saveCurrentShip(self, player)
   for plotId, plot in pairs(self.plots) do
     local trigger = self.plotAreaTriggers[plotId]
     if plot["playerId"] == player:getId() and trigger then
-      print(trigger:getContents())
-      -- sm.body.getCreationsFromBodies( bodies )
-      -- then save those creations?
+      local bodies = {}
+      local idx = 1
+      for _, body in pairs(trigger:getContents()) do
+        if type(body) == "Body" then
+          bodies[idx] = body
+          idx = idx + 1
+        end
+      end
+
+      local creations = sm.body.getCreationsFromBodies(bodies)
+      local newCurrentShip = {}
+      for i, creation in ipairs(creations) do
+        newCurrentShip[i] = sm.creation.exportToString(creation[1], true, true)
+      end
+
+      self.currentShips[player:getId()] = newCurrentShip
+      sm.storage.save("currentShips", self.currentShips)
+      print("Saved "..player.name.."'s progress")
+
       return
     end
   end
+
+  print("Could not save "..player.name"'s progress")
 end
 
 -- Loads players current ship in the plot
 function ServerPlotManager.loadCurrentShip(self, player)
+  if not pcall(sm.world.getCurrentWorld) then
+    self.worldFunctionQueue:push({destination = "loadCurrentShip", params = {self, player}})
+    return
+  end
+
   print("Loading "..player.name.."'s current ship")
-  -- sm.creation.importFromString( world, jsonString, worldPosition, worldRotation, importTransforms, forceInactive )
+  for plotID, plot in pairs(self.plots) do
+    if plot["playerId"] == player:getId() then
+
+      for _, creation in ipairs(self.currentShips[player:getId()]) do
+        sm.creation.importFromString(self.world, creation, plot.position, plot.rotation, true, true)
+      end
+    end
+  end
 end
 
 -- Respawns a player at a known plot location, assigning them if necessary, skipping if plots are not loaded (once plots are loaded, players are automatically assigned to them with this method)
@@ -88,11 +118,11 @@ function ServerPlotManager.respawnPlayer(self, player)
   -- Ensure this is run in a world environment
   if not pcall(sm.world.getCurrentWorld) then
     -- Sometimes this is reached before onCreate
-    if not self.respawnPlayerQueue then
-      self.respawnPlayerQueue = Queue()
+    if not self.worldFunctionQueue then
+      self.worldFunctionQueue = Queue()
     end
 
-    self.respawnPlayerQueue:push({self = self, player = player})
+    self.worldFunctionQueue:push({destination = "respawnPlayer", params = {self, player}})
     return
   end
 
@@ -200,14 +230,9 @@ function ServerPlotManager.onCellUnloaded(self, x, y)
 end
 
 function ServerPlotManager.onFixedUpdate(self, worldSelf)
-  while self.createFloorQueue:size() > 0 do
-    local params = self.createFloorQueue:pop()
-    createFloor(params.self, params.plotId)
-  end
-
-  while self.respawnPlayerQueue:size() > 0 do
-    local params = self.respawnPlayerQueue:pop()
-    self.respawnPlayer(params.self, params.player)
+  while self.worldFunctionQueue:size() > 0 do
+    local request = self.worldFunctionQueue:pop()
+    self[request.destination](unpack(request.params))
   end
 
   -- We need a reference to the game or world to use network like this, and we can't just store a reference to the world on create as that triggers a sandbox violation
