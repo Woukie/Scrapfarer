@@ -7,11 +7,12 @@ dofile("$CONTENT_DATA/Scripts/game/util/Queue.lua")
 -- Plot state is synced with the client without prediction
 ServerPlotManager = class(nil)
 
--- We need worldself to use networking so we can sync plots with clients
 function ServerPlotManager.onCreate(self)
   print("ServerPlotManager.onCreate")
 
   self.plots = sm.storage.load("plots")
+  self.plotAreaTriggers = {}
+  self.currentShips = sm.storage.load("currentShips")
   self.createFloorQueue = Queue()
   self.respawnPlayerQueue = Queue()
   self.initialised = false
@@ -21,36 +22,63 @@ function ServerPlotManager.onCreate(self)
     print("Creating plots for the first time")
   else
     print("Loaded plots from storage")
-    for plotId, plot in pairs(self.plots) do
+    for _, plot in pairs(self.plots) do
       plot["floorHidden"] = false
+      plot["playerId"] = nil
     end
+  end
+
+  if not self.currentShips then
+    self.currentShips = {}
+    print("Initialised ships")
+  else
+    print("Loaded ships from storage")
   end
 
   self.plotsUpdated = true
 end
 
 local function destroyFloor(self, plotId)
-  if self.plots[plotId]["floorAsset"] then
-    if sm.exists(self.plots[plotId]["floorAsset"]) then
-      self.plots[plotId]["floorAsset"]:destroyShape()
-    end
-    self.plots[plotId]["floorAsset"] = nil
-    self.plotsUpdated = true
+  if sm.exists(self.plots[plotId]["floorAsset"]) then
+    self.plots[plotId]["floorAsset"]:destroyShape()
   end
+  self.plots[plotId]["floorAsset"] = nil
+  self.plotsUpdated = true
 end
 
 local function createFloor(self, plotId)
-  if not self.plots[plotId]["floorAsset"] then
-    -- Kind of jank. Makes sure createFloor is always called within in a world environment, pushes the call to a queue, and executes in fixedUpdate
-    if not pcall(sm.world.getCurrentWorld) then
-      self.createFloorQueue:push({self = self, plotId = plotId})
+  -- Kind of jank. Makes sure createFloor is always called within in a world environment, pushes the call to a queue, and executes in fixedUpdate
+  if not pcall(sm.world.getCurrentWorld) then
+    self.createFloorQueue:push({self = self, plotId = plotId})
+    return
+  end
+
+  destroyFloor(self, plotId)
+
+  -- Spawn at approx center (off by .625 to align to grid)
+  self.plots[plotId]["floorAsset"] = sm.shape.createPart(obj_plot_floor, self.plots[plotId]["position"] + (self.plots[plotId]["rotation"] * sm.vec3.new(-20, -20, -0.25)), self.plots[plotId]["rotation"], false)
+  self.plotsUpdated = true
+end
+
+-- Saves all shapes within the plot as the players current ship
+function ServerPlotManager.saveCurrentShip(self, player)
+  print("Saving "..player.name.."'s current ship")
+
+  for plotId, plot in pairs(self.plots) do
+    local trigger = self.plotAreaTriggers[plotId]
+    if plot["playerId"] == player:getId() and trigger then
+      print(trigger:getContents())
+      -- sm.body.getCreationsFromBodies( bodies )
+      -- then save those creations?
       return
     end
-
-    -- Spawn at approx center (off by .625 to align to grid)
-    self.plots[plotId]["floorAsset"] = sm.shape.createPart(obj_plot_floor, self.plots[plotId]["position"] + (self.plots[plotId]["rotation"] * sm.vec3.new(-20, -20, -0.25)), self.plots[plotId]["rotation"], false)
-    self.plotsUpdated = true
   end
+end
+
+-- Loads players current ship in the plot
+function ServerPlotManager.loadCurrentShip(self, player)
+  print("Loading "..player.name.."'s current ship")
+  -- sm.creation.importFromString( world, jsonString, worldPosition, worldRotation, importTransforms, forceInactive )
 end
 
 -- Respawns a player at a known plot location, assigning them if necessary, skipping if plots are not loaded (once plots are loaded, players are automatically assigned to them with this method)
@@ -86,7 +114,7 @@ function ServerPlotManager.respawnPlayer(self, player)
     if plot["playerId"] == player:getId() then
       print(player.name.." owns plot "..plotId..", teleporting")
       character:setWorldPosition(plot.position + sm.vec3.new(0, 0, 3))
-      createFloor(self, plotId)
+      self:showFloor(player)
       return
     end
   end
@@ -97,7 +125,7 @@ function ServerPlotManager.respawnPlayer(self, player)
       plot["playerId"] = player:getId()
       print("Assigned plot "..plotId.." to "..player.name..", teleporting")
       character:setWorldPosition(plot.position + sm.vec3.new(0, 0, 3))
-      createFloor(self, plotId)
+      self:showFloor(player)
       return
     end
   end
@@ -125,6 +153,8 @@ function ServerPlotManager.onCellLoaded(self, x, y)
   for _, node in ipairs(nodes) do
     local plotId = node.params["Plot ID"]
 
+    self.plotAreaTriggers[plotId] = sm.areaTrigger.createBox(node.scale * 0.5, node.position, node.rotation, nil, { plotId = plotId })
+
     -- Register new plots
     if not self.plots[plotId] then
       print("Registering plot "..plotId)  
@@ -148,8 +178,6 @@ function ServerPlotManager.onCellLoaded(self, x, y)
       end
     end
 
-
-    -- load in floor
     if not self.plots[plotId]["floorHidden"] then
       createFloor(self, plotId)
     end
@@ -166,9 +194,8 @@ function ServerPlotManager.onCellUnloaded(self, x, y)
   for _, node in ipairs(nodes) do
     local plotId = node.params["Plot ID"]
 
-    if self.plots[plotId] then
-      destroyFloor(self, plotId)
-    end
+    sm.areaTrigger.destroy(self.plotAreaTriggers[plotId])
+    self.plotAreaTriggers[plotId] = nil
   end
 end
 

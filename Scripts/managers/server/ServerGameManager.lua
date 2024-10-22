@@ -60,6 +60,7 @@ function ServerGameManager.startRun(self, player)
 
   self.gameStates[player:getId()]["playing"] = true
   g_serverPlotManager:hideFloor(player)
+  g_serverPlotManager:saveCurrentShip(player)
 end
 
 function ServerGameManager.endRun(self, player)
@@ -78,8 +79,8 @@ function ServerGameManager.endRun(self, player)
 
   gamestate["playing"] = false
   gamestate["checkpoints"] = {}
-  g_serverPlotManager:showFloor(player)
   g_serverPlotManager:respawnPlayer(player)
+  g_serverPlotManager:loadCurrentShip(player)
 
   savePlayer(self, player)
   self.sendToClientQueue:push({client = player, callback = "client_syncGameData", data = {coins = gamestate.coins}})

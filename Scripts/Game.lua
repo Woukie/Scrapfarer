@@ -37,9 +37,7 @@ end
 function Game.server_onPlayerJoined(self, player, isNewPlayer)
   print("Game.server_onPlayerJoined")
 
-  if isNewPlayer then
-    self.world:loadCell(0, 0, player)
-  end
+  self.world:loadCell(0, 0, player)
 
   g_serverGameManager:onPlayerJoined(player)
 end
