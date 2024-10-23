@@ -1,13 +1,13 @@
 {
   "partList": [
     {
-      "color": "df7f01",
-      "flammable": false,
       "box": {
         "x": 165,
         "y": 165,
         "z": 2
       },
+      "color": "df7f01",
+      "flammable": false,
       "name": "obj_plot_floor",
       "physicsMaterial": "Grass",
       "ratings": {
@@ -42,6 +42,41 @@
       "rotationSet": "PropYZ",
       "showInInventory": false,
       "uuid": "3f8f86b2-518e-4819-a4a5-37d9c7552f53"
+    },
+    {
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "color": "cd9d71",
+      "name": "obj_wood_block",
+      "physicsMaterial": "Wood",
+      "ratings": {
+        "buoyancy": 1,
+        "density": 1,
+        "durability": 1,
+        "friction": 10
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/box.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Objects/Textures/wood_dif.png",
+                  "$CONTENT_DATA/Objects/Textures/wood_asg.tga",
+                  "$CONTENT_DATA/Objects/Textures/wood_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "uuid": "c45be799-94d1-4ab1-8fb4-52c9bd3d94a9"
     }
   ]
 }
