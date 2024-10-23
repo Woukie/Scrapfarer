@@ -17,7 +17,7 @@ function Player.server_onFixedUpdate( self, dt )
   self.sv.waterDamageCooldown = math.max(self.sv.waterDamageCooldown - 1, 0)
 
   if character and character:isSwimming() and self.sv.waterDamageCooldown == 0 then
-    self.sv.waterDamageCooldown = 45
+    self.sv.waterDamageCooldown = 20
     self:server_takeDamage(10)
   end
 
