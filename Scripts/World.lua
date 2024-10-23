@@ -40,7 +40,7 @@ function World.client_onCreate(self)
 end
 
 function World.server_onFixedUpdate(self)
-  g_serverPlotManager:onFixedUpdate(self)
+  g_serverPlotManager:onFixedUpdate()
   g_serverGameManager:onFixedUpdate(self)
 	self.waterManager:sv_onFixedUpdate()
 end
@@ -71,7 +71,6 @@ end
 
 function World.server_onCellUnloaded(self, x, y)
   g_checkpointManager:onCellUnloaded(x, y)
-  g_serverPlotManager:onCellUnloaded(x, y)
   self.forceManager:server_onCellUnloaded(x, y)
   self.waterManager:sv_onCellUnloaded(x, y)
 end

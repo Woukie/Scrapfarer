@@ -51,6 +51,7 @@ function Game.client_onCreate()
 
   sm.game.bindChatCommand("/respawn", {}, "client_onChatCommand", "Respawn")
   sm.game.bindChatCommand("/start", {}, "client_onChatCommand", "Starts the game")
+  sm.game.bindChatCommand("/stop", {}, "client_onChatCommand", "Stops the game")
 end
 
 function Game.server_onPlayerLeft(self, player)
@@ -62,14 +63,20 @@ function Game.client_onChatCommand(self, params)
   if params[1] == "/respawn" then
 		self.network:sendToServer("server_respawn", {player = sm.localPlayer.getPlayer()})
   elseif params[1] == "/start" then
-		self.network:sendToServer("server_start", {player = sm.localPlayer.getPlayer()})
+		self.network:sendToServer("server_startRun", {player = sm.localPlayer.getPlayer()})
+  elseif params[1] == "/stop" then
+		self.network:sendToServer("server_stopRun", {player = sm.localPlayer.getPlayer()})
   end
 end
 
-function Game.server_respawn( self, params )
-  g_serverGameManager:endRun(params.player)
+function Game.server_respawn(self, params)
+  g_serverPlotManager:respawnPlayer(params.player)
 end
 
-function Game.server_start( self, params )
+function Game.server_startRun(self, params)
   g_serverGameManager:startRun(params.player)
+end
+
+function Game.server_stopRun(self, params)
+  g_serverGameManager:stopRun(params.player)
 end

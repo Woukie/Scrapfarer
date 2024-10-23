@@ -57,16 +57,15 @@ function ServerGameManager.startRun(self, player)
   end
 
   print(player.name.." is starting a run")
+  g_serverPlotManager:exitBuildMode(player)
 
   self.gameStates[player:getId()]["playing"] = true
-  g_serverPlotManager:hideFloor(player)
-  g_serverPlotManager:saveCurrentShip(player)
 end
 
-function ServerGameManager.endRun(self, player)
+function ServerGameManager.stopRun(self, player)
   local gamestate = self.gameStates[player:getId()]
   if not gamestate["playing"] then
-    g_serverPlotManager:respawnPlayer(player)
+    print(player.name.." cannot stop their run as they are not in one")
     return
   end
 
@@ -80,7 +79,7 @@ function ServerGameManager.endRun(self, player)
   gamestate["playing"] = false
   gamestate["checkpoints"] = {}
   g_serverPlotManager:respawnPlayer(player)
-  g_serverPlotManager:loadCurrentShip(player)
+  g_serverPlotManager:loadBuild(player)
 
   savePlayer(self, player)
   self.sendToClientQueue:push({client = player, callback = "client_syncGameData", data = {coins = gamestate.coins}})
