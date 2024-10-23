@@ -12,24 +12,26 @@ local function inWorldEnvironment()
   return pcall(sm.world.getCurrentWorld)
 end
 
--- Adjusts coordinates of parts in a bluerprint (the table one, not string) so that the floor sits at z=0
+-- Adjusts coordinates of parts in a bluerprint (the table one, not string) so that the floor sits at 0, 0, 0
 local function adjustBlueprintCoordinates(blueprint)
   -- Better than nesting loops, or using a goto
-  local function getFloorZ()
+  local function getFloorPos()
     for _, body in ipairs(blueprint.bodies) do
       for _, child in ipairs(body.childs) do
         if sm.uuid.new(child.shapeId) == floorShape then
-          return child.pos.z
+          return child.pos
         end
       end
     end
   end
 
-  local z = getFloorZ()
+  local floorPos = getFloorPos()
 
   for _, body in ipairs(blueprint.bodies) do
     for _, child in ipairs(body.childs) do
-      child.pos.z = child.pos.z - z
+      child.pos.x = child.pos.x - floorPos.x
+      child.pos.y = child.pos.y - floorPos.y
+      child.pos.z = child.pos.z - floorPos.z
     end
   end
 end
