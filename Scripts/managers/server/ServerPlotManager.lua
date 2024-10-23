@@ -12,8 +12,10 @@ local function inWorldEnvironment()
   return pcall(sm.world.getCurrentWorld)
 end
 
--- Adjusts coordinates of parts in a bluerprint (the table one, not string) so that the floor sits at 0, 0, 0
-local function adjustBlueprintCoordinates(blueprint)
+-- Gets a table blueprint from a string, and adjusts it so that the floor sits at 0, 0, 0
+local function getAdjustedBlueprint(blueprintString)
+  local blueprint = sm.json.parseJsonString(blueprintString)
+
   -- Better than nesting loops, or using a goto
   local function getFloorPos()
     for _, body in ipairs(blueprint.bodies) do
@@ -27,6 +29,8 @@ local function adjustBlueprintCoordinates(blueprint)
 
   local floorPos = getFloorPos()
 
+  -- Don't ask, it just needs to be re-parsed, ok? I don't know either...
+  local blueprint = sm.json.parseJsonString(blueprintString)
   for _, body in ipairs(blueprint.bodies) do
     for _, child in ipairs(body.childs) do
       child.pos.x = child.pos.x - floorPos.x
@@ -34,6 +38,8 @@ local function adjustBlueprintCoordinates(blueprint)
       child.pos.z = child.pos.z - floorPos.z
     end
   end
+
+  return blueprint
 end
 
 -- Saves plots to storage, call this whenever 'self.plots' changes
@@ -106,10 +112,8 @@ function ServerPlotManager:saveBuild(player)
   end
 
   local blueprintJsonString = sm.creation.exportToString(bodies[1])
-  local blueprint = sm.json.parseJsonString(blueprintJsonString)
-  adjustBlueprintCoordinates(blueprint)
+  self.savedBuilds[player:getId()] = blueprintJsonString
 
-  self.savedBuilds[player:getId()] = blueprint
   sm.storage.save("builds", self.savedBuilds)
   print("Saved "..player.name.."'s build")
 end
@@ -125,12 +129,14 @@ function ServerPlotManager:loadBuild(player)
   local plot = self.plots[plotId]
   destroyBuild(self, plotId)
 
-  local savedBuild = self.savedBuilds[player:getId()]
-  if savedBuild then
-    local blueprintJson = sm.json.writeJsonString(savedBuild)
+  local blueprintJson = self.savedBuilds[player:getId()]
+  if blueprintJson then
+    local blueprint = getAdjustedBlueprint(blueprintJson)
+    local blueprintJsonAdjusted = sm.json.writeJsonString(blueprint)
+
     local creation = sm.creation.importFromString(
       self.world,
-      blueprintJson,
+      blueprintJsonAdjusted,
       plot.position + (plot.rotation * sm.vec3.new(-20, -20, -0.25)),
       plot.rotation
     )
@@ -153,8 +159,18 @@ end
 -- Saves the players build and destroys the root part
 function ServerPlotManager:exitBuildMode(player)
   self:saveBuild(player)
-  local plot = self.plots[getPlotId(self, player)]
+  print("Exiting build mode")
+  local plotId = getPlotId(self, player)
+  local plot = self.plots[plotId]
   if sm.exists(plot.build) then
+    for _, body in pairs(getBuildBodies(self, plotId)) do
+      body:setBuildable(false)
+      body:setConnectable(false)
+      body:setDestructable(false)
+      body:setErasable(false)
+      body:setLiftable(false)
+      body:setPaintable(false)
+    end
     plot.build:destroyShape()
     plot.build = nil
   end
