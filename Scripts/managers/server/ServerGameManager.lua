@@ -53,20 +53,21 @@ end
 function ServerGameManager.startRun(self, player)
   if self.gameStates[player:getId()]["playing"] then
     print(player.name.." cannot start their run as they are already in one")
-    return
+    return false
   end
 
   print(player.name.." is starting a run")
   g_serverPlotManager:exitBuildMode(player)
 
   self.gameStates[player:getId()]["playing"] = true
+  return true
 end
 
 function ServerGameManager.stopRun(self, player)
   local gamestate = self.gameStates[player:getId()]
   if not gamestate["playing"] then
     print(player.name.." cannot stop their run as they are not in one")
-    return
+    return false
   end
 
   local totalReward = 0
@@ -83,6 +84,7 @@ function ServerGameManager.stopRun(self, player)
 
   savePlayer(self, player)
   self.sendToClientQueue:push({client = player, callback = "client_syncGameData", data = {coins = gamestate.coins}})
+  return true
 end
 
 function ServerGameManager.passCheckpoint(self, player, checkpointId, reward)
