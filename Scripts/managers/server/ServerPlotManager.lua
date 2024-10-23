@@ -12,6 +12,28 @@ local function inWorldEnvironment()
   return pcall(sm.world.getCurrentWorld)
 end
 
+-- Adjusts coordinates of parts in a bluerprint (the table one, not string) so that the floor sits at z=0
+local function adjustBlueprintCoordinates(blueprint)
+  -- Better than nesting loops, or using a goto
+  local function getFloorZ()
+    for _, body in ipairs(blueprint.bodies) do
+      for _, child in ipairs(body.childs) do
+        if sm.uuid.new(child.shapeId) == floorShape then
+          return child.pos.z
+        end
+      end
+    end
+  end
+
+  local z = getFloorZ()
+
+  for _, body in ipairs(blueprint.bodies) do
+    for _, child in ipairs(body.childs) do
+      child.pos.z = child.pos.z - z
+    end
+  end
+end
+
 -- Saves plots to storage, call this whenever 'self.plots' changes
 local function savePlots(self)
   sm.storage.save("plots", self.plots)
@@ -27,7 +49,7 @@ end
 local function getFloorInCreation(creation)
   for _, body in pairs(creation) do
     for _, shape in pairs(body:getShapes()) do
-      if shape:getShapeUuid() == obj_plot_floor then
+      if shape:getShapeUuid() == floorShape then
         return shape
       end
     end
@@ -43,7 +65,7 @@ local function getPlotId(self, player)
   end
 end
 
--- Destroys the build owned by the player. Everything attached to the base plate is destroyed and
+-- Destroys the build owned by the player
 local function destroyBuild(self, plotId)
   local bodies = getBuildBodies(self, plotId)
   if bodies then
@@ -54,6 +76,7 @@ local function destroyBuild(self, plotId)
     end
   end
 
+  print("Build at plot "..plotId.." destroyed")
   self.plots[plotId].build = nil
   savePlots(self)
 end
@@ -75,10 +98,18 @@ end
 function ServerPlotManager:saveBuild(player)
   local plotId = getPlotId(self, player)
   local bodies = getBuildBodies(self, plotId)
-  local blueprintJsonString = sm.creation.exportToString(bodies[1], true, false)
+  if not bodies then
+    print("Refusing to save "..player.name.."'s build as it doesn't exist")
+    return
+  end
+
+  local blueprintJsonString = sm.creation.exportToString(bodies[1])
   local blueprint = sm.json.parseJsonString(blueprintJsonString)
+  adjustBlueprintCoordinates(blueprint)
+
   self.savedBuilds[player:getId()] = blueprint
   sm.storage.save("builds", self.savedBuilds)
+  print("Saved "..player.name.."'s build")
 end
 
 -- Destroys the players currently active build, loads their previously saved build (or the default one), and updates the plot build property to point to the new floor part
@@ -89,15 +120,21 @@ function ServerPlotManager:loadBuild(player)
   end
 
   local plotId = getPlotId(self, player)
+  local plot = self.plots[plotId]
   destroyBuild(self, plotId)
 
   local savedBuild = self.savedBuilds[player:getId()]
   if savedBuild then
     local blueprintJson = sm.json.writeJsonString(savedBuild)
-    local creation = sm.creation.importFromString(self.world, blueprintJson, sm.vec3.zero(), sm.quat.identity(), true)
+    local creation = sm.creation.importFromString(
+      self.world,
+      blueprintJson,
+      plot.position + (plot.rotation * sm.vec3.new(-20, -20, -0.25)),
+      plot.rotation
+    )
     self.plots[plotId].build = getFloorInCreation(creation)
+    print("Loaded "..player.name.."'s latest build")
   else
-    local plot = self.plots[plotId]
     plot.build = sm.shape.createPart(
       floorShape,
       plot.position + (plot.rotation * sm.vec3.new(-20, -20, -0.25)),
@@ -105,6 +142,7 @@ function ServerPlotManager:loadBuild(player)
       false,
       true
     )
+    print("Loaded default build for "..player.name)
   end
 
   savePlots(self)
@@ -188,7 +226,7 @@ function ServerPlotManager:onCreate()
 end
 
 function ServerPlotManager:onPlayerLeft(player)
-  print("Removing "..player.name.." plot")
+  print("Removing "..player.name.."'s plot")
 
   local plotId = getPlotId(self, player)
   destroyBuild(self, plotId)
