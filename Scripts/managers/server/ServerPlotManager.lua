@@ -8,7 +8,7 @@ ServerPlotManager = class(nil)
 local floorShape = obj_plot_floor
 
 -- Checks if the script is running in the world environment
-local function inWorldEnvironment(self)
+local function inWorldEnvironment()
   return pcall(sm.world.getCurrentWorld)
 end
 
@@ -21,6 +21,16 @@ local function getBuildBodies(self, plotId)
   local plot = self.plots[plotId]
   if plot.build and sm.exists(plot.build) then
     return plot.build:getBody():getCreationBodies()
+  end
+end
+
+local function getFloorInCreation(creation)
+  for _, body in pairs(creation) do
+    for _, shape in pairs(body:getShapes()) do
+      if shape:getShapeUuid() == obj_plot_floor then
+        return shape
+      end
+    end
   end
 end
 
@@ -63,12 +73,17 @@ end
 
 -- Saves the players build
 function ServerPlotManager:saveBuild(player)
-
+  local plotId = getPlotId(self, player)
+  local bodies = getBuildBodies(self, plotId)
+  local blueprintJsonString = sm.creation.exportToString(bodies[1], true, false)
+  local blueprint = sm.json.parseJsonString(blueprintJsonString)
+  self.savedBuilds[player:getId()] = blueprint
+  sm.storage.save("builds", self.savedBuilds)
 end
 
 -- Destroys the players currently active build, loads their previously saved build (or the default one), and updates the plot build property to point to the new floor part
 function ServerPlotManager:loadBuild(player)
-  if not inWorldEnvironment(self) then
+  if not inWorldEnvironment() then
     self.worldFunctionQueue:push({destination = "loadBuild", params = {self, player}})
     return
   end
@@ -76,15 +91,22 @@ function ServerPlotManager:loadBuild(player)
   local plotId = getPlotId(self, player)
   destroyBuild(self, plotId)
 
-  -- If player has a previously saved build, load that (finding the floor piece and setting that as the build), ELSE:
-  local plot = self.plots[plotId]
-  plot.build = sm.shape.createPart(
-    floorShape,
-    plot.position + (plot.rotation * sm.vec3.new(-20, -20, -0.25)),
-    plot.rotation,
-    false,
-    true
-  )
+  local savedBuild = self.savedBuilds[player:getId()]
+  if savedBuild then
+    local blueprintJson = sm.json.writeJsonString(savedBuild)
+    local creation = sm.creation.importFromString(self.world, blueprintJson, sm.vec3.zero(), sm.quat.identity(), true)
+    self.plots[plotId].build = getFloorInCreation(creation)
+  else
+    local plot = self.plots[plotId]
+    plot.build = sm.shape.createPart(
+      floorShape,
+      plot.position + (plot.rotation * sm.vec3.new(-20, -20, -0.25)),
+      plot.rotation,
+      false,
+      true
+    )
+  end
+
   savePlots(self)
 end
 
@@ -101,7 +123,7 @@ end
 
 -- Teleports the player to their plot, assigning one if needed, and creating a character if Loads the players latest build if they are being assigned a plot
 function ServerPlotManager:respawnPlayer(player)
-  if not inWorldEnvironment(self) then
+  if not inWorldEnvironment() then
     self.worldFunctionQueue:push({destination = "respawnPlayer", params = {self, player}})
     return
   end
@@ -143,6 +165,14 @@ function ServerPlotManager:onCreate()
   self.worldFunctionQueue = Queue()
   self.plots = sm.storage.load("plots")
   self.initialised = false
+  self.savedBuilds = sm.storage.load("builds")
+
+  if not self.savedBuilds then
+    self.savedBuilds = {}
+    print("No saved builds found")
+  else
+    print("Loaded saved builds from storage")
+  end
 
   if not self.plots then
     self.plots = {}
