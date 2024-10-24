@@ -93,22 +93,22 @@
           "type": "string"
         },
         {
-          "default": 1,
+          "default": 100,
           "name": "spawnDelay",
           "type": "float"
         },
         {
-          "default": 30,
+          "default": 5,
           "name": "maxObstacles",
           "type": "float"
         },
         {
-          "default": 5,
+          "default": 10000,
           "name": "maxObstacleLife",
           "type": "float"
         },
         {
-          "default": 20,
+          "default": 5000,
           "name": "minObstacleLife",
           "type": "float"
         }

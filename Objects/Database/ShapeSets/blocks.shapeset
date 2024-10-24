@@ -9,7 +9,10 @@
          "nor" : "$CONTENT_DATA/Textures/wood_nor.tga",
          "physicsMaterial" : "Wood",
          "ratings" : {
-            "buoyancy" : 6
+            "buoyancy" : 6,
+            "density" : 3,
+            "durability" : 1,
+            "friction" : 3
          },
          "tiling" : 8,
          "uuid" : "8216e887-8758-48b4-afa1-eea78cbbc3b0"

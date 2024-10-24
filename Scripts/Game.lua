@@ -1,6 +1,7 @@
 dofile("$CONTENT_DATA/Scripts/game/shapes.lua")
 dofile("$CONTENT_DATA/Scripts/managers/server/ServerCheckpointManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/server/ServerGameManager.lua")
+dofile("$CONTENT_DATA/Scripts/managers/server/ServerObstacleManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/server/ServerPlotManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/client/ClientPlotManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/client/ClientGameManager.lua")
@@ -24,6 +25,9 @@ function Game.server_onCreate(self)
 
   g_serverGameManager = ServerGameManager()
   g_serverGameManager:onCreate()
+
+  g_serverObstacleManager = ServerObstacleManager()
+  g_serverObstacleManager:onCreate()
 
   self.world = self.storage:load()
 

@@ -77,16 +77,19 @@
       "name": "obj_rock_obstacle",
       "physicsMaterial": "Rock",
       "ratings": {
-        "buoyancy": 1,
-        "density": 1,
-        "durability": 1,
+        "buoyancy": 10,
+        "density": 5,
+        "durability": 10,
         "friction": 10
       },
       "scripted": {
         "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua",
         "classname": "Obstacle",
         "data": {
-          "damage": 1
+          "sizeX": 3,
+          "sizeY": 3,
+          "sizeZ": 2,
+          "damage": 10
         }
       },
       "renderable": {
