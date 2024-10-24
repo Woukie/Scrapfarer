@@ -44,6 +44,30 @@
       "uuid": "3f8f86b2-518e-4819-a4a5-37d9c7552f53"
     },
     {
+      "uuid": "4a1b886b-913e-4aad-b5b6-6e41b0db23a6",
+      "name": "jnt_bearing",
+      "legacyId": 100,
+      "renderable": "$GAME_DATA/Objects/Renderable/Interactive/obj_interactive_bearing.rend",
+      "color": "df7f01",
+      "cylinder": {
+        "diameter": 1,
+        "depth": 1,
+        "axis": "Z"
+      },
+      "bearing": {},
+      "rotationSet": "PropZ",
+      "sticky": "-Z",
+      "physicsMaterial": "Mechanical",
+      "ratings": {
+        "density": 4,
+        "durability": 1,
+        "friction": 4,
+        "buoyancy": 0
+      },
+      "flammable": false,
+      "stackSize": 10
+    },
+    {
       "box": {
         "x": 2,
         "y": 2,
