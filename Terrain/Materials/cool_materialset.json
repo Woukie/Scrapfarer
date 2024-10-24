@@ -1,62 +1,62 @@
 {
-  "groundMaterials": {
-    "height": 1024,
-    "width": 1024,
-    "textures": [
-      {
-        "name": "Concrete",
-        "asgMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_1_asg.tga",
-        "diffuse": "$GAME_DATA/Terrain/Textures/Ground/gnd_1_dif.tga",
-        "normalMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_1_nor.tga"
-      },
-      {
-        "name": "Sand",
-        "asgMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_1_asg.tga",
-        "diffuse": "$GAME_DATA/Terrain/Textures/Ground/gnd_1_dif.tga",
-        "normalMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_1_nor.tga"
-      },
-      {
-        "name": "Stone",
-        "asgMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_2_asg.tga",
-        "diffuse": "$GAME_DATA/Terrain/Textures/Ground/gnd_2_dif.tga",
-        "normalMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_2_nor.tga"
-      },
-      {
-        "name": "Dirt",
-        "asgMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_3_asg.tga",
-        "diffuse": "$GAME_DATA/Terrain/Textures/Ground/gnd_3_dif.tga",
-        "normalMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_3_nor.tga"
-      },
-      {
-        "name": "Weeds",
-        "asgMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_4_asg.tga",
-        "diffuse": "$GAME_DATA/Terrain/Textures/Ground/gnd_4_dif.tga",
-        "normalMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_4_nor.tga"
-      },
-      {
-        "name": "Rough Stone",
-        "asgMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_5_asg.tga",
-        "diffuse": "$GAME_DATA/Terrain/Textures/Ground/gnd_5_dif.tga",
-        "normalMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_5_nor.tga"
-      },
-      {
-        "name": "Hay",
-        "asgMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_6_asg.tga",
-        "diffuse": "$GAME_DATA/Terrain/Textures/Ground/gnd_6_dif.tga",
-        "normalMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_6_nor.tga"
-      },
-      {
-        "name": "Bright grass",
-        "asgMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_7_asg.tga",
-        "diffuse": "$GAME_DATA/Terrain/Textures/Ground/gnd_7_dif.tga",
-        "normalMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_7_nor.tga"
-      },
-      {
-        "name": "Grass",
-        "asgMap": "$CONTENT_DATA/Terrain/Textures/gnd_grass_asg.png",
-        "diffuse": "$CONTENT_DATA/Terrain/Textures/gnd_grass_dif.png",
-        "normalMap": "$CONTENT_DATA/Terrain/Textures/gnd_grass_nor.png"
-      }
-    ]
-  }
+   "groundMaterials" : {
+      "height" : 1024,
+      "textures" : [
+         {
+            "asgMap" : "$GAME_DATA/Terrain/Textures/Ground/gnd_1_asg.tga",
+            "diffuse" : "$GAME_DATA/Terrain/Textures/Ground/gnd_1_dif.tga",
+            "name" : "Concrete",
+            "normalMap" : "$GAME_DATA/Terrain/Textures/Ground/gnd_1_nor.tga"
+         },
+         {
+            "asgMap" : "$GAME_DATA/Terrain/Textures/Ground/gnd_1_asg.tga",
+            "diffuse" : "$GAME_DATA/Terrain/Textures/Ground/gnd_1_dif.tga",
+            "name" : "Sand",
+            "normalMap" : "$GAME_DATA/Terrain/Textures/Ground/gnd_1_nor.tga"
+         },
+         {
+            "asgMap" : "$GAME_DATA/Terrain/Textures/Ground/gnd_2_asg.tga",
+            "diffuse" : "$GAME_DATA/Terrain/Textures/Ground/gnd_2_dif.tga",
+            "name" : "Stone",
+            "normalMap" : "$GAME_DATA/Terrain/Textures/Ground/gnd_2_nor.tga"
+         },
+         {
+            "asgMap" : "$GAME_DATA/Terrain/Textures/Ground/gnd_3_asg.tga",
+            "diffuse" : "$GAME_DATA/Terrain/Textures/Ground/gnd_3_dif.tga",
+            "name" : "Dirt",
+            "normalMap" : "$GAME_DATA/Terrain/Textures/Ground/gnd_3_nor.tga"
+         },
+         {
+            "asgMap" : "$GAME_DATA/Terrain/Textures/Ground/gnd_4_asg.tga",
+            "diffuse" : "$GAME_DATA/Terrain/Textures/Ground/gnd_4_dif.tga",
+            "name" : "Weeds",
+            "normalMap" : "$GAME_DATA/Terrain/Textures/Ground/gnd_4_nor.tga"
+         },
+         {
+            "asgMap" : "$CONTENT_DATA/Textures/rock_asg.tga",
+            "diffuse" : "$CONTENT_DATA/Textures/rock_dif.png",
+            "name" : "Rough Stone",
+            "normalMap" : "$CONTENT_DATA/Textures/rock_nor.tga"
+         },
+         {
+            "asgMap" : "$GAME_DATA/Terrain/Textures/Ground/gnd_6_asg.tga",
+            "diffuse" : "$GAME_DATA/Terrain/Textures/Ground/gnd_6_dif.tga",
+            "name" : "Hay",
+            "normalMap" : "$GAME_DATA/Terrain/Textures/Ground/gnd_6_nor.tga"
+         },
+         {
+            "asgMap" : "$GAME_DATA/Terrain/Textures/Ground/gnd_7_asg.tga",
+            "diffuse" : "$GAME_DATA/Terrain/Textures/Ground/gnd_7_dif.tga",
+            "name" : "Bright grass",
+            "normalMap" : "$GAME_DATA/Terrain/Textures/Ground/gnd_7_nor.tga"
+         },
+         {
+            "asgMap" : "$CONTENT_DATA/Textures/grass_asg.png",
+            "diffuse" : "$CONTENT_DATA/Textures/grass_dif.png",
+            "name" : "Grass",
+            "normalMap" : "$CONTENT_DATA/Textures/grass_nor.png"
+         }
+      ],
+      "width" : 1024
+   }
 }

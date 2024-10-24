@@ -1,18 +1,18 @@
 {
-  "blockList": [
-    {
-      "dif": "$CONTENT_DATA/Objects/Textures/wood_dif.png",
-      "nor": "$CONTENT_DATA/Objects/Textures/wood_nor.tga",
-      "asg": "$CONTENT_DATA/Objects/Textures/wood_asg.tga",
-      "color": "cd9d71",
-      "name": "blk_wood",
-      "flammable": true,
-      "physicsMaterial": "Wood",
-      "ratings": {
-        "buoyancy": 6
-      },
-      "tiling": 8,
-      "uuid": "8216e887-8758-48b4-afa1-eea78cbbc3b0"
-    }
-  ]
+   "blockList" : [
+      {
+         "asg" : "$CONTENT_DATA/Textures/wood_asg.tga",
+         "color" : "cd9d71",
+         "dif" : "$CONTENT_DATA/Textures/wood_dif.png",
+         "flammable" : true,
+         "name" : "blk_wood",
+         "nor" : "$CONTENT_DATA/Textures/wood_nor.tga",
+         "physicsMaterial" : "Wood",
+         "ratings" : {
+            "buoyancy" : 6
+         },
+         "tiling" : 8,
+         "uuid" : "8216e887-8758-48b4-afa1-eea78cbbc3b0"
+      }
+   ]
 }

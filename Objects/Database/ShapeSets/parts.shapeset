@@ -1,106 +1,141 @@
 {
-  "partList": [
-    {
-      "box": {
-        "x": 165,
-        "y": 165,
-        "z": 2
-      },
-      "color": "df7f01",
-      "flammable": false,
-      "name": "obj_plot_floor",
-      "physicsMaterial": "Grass",
-      "ratings": {
-        "buoyancy": 8,
-        "density": 4,
-        "durability": 1000,
-        "friction": 3
-      },
-      "renderable": {
-        "lodList": [
-          {
-            "mesh": "$CONTENT_DATA/Terrain/Mesh/boat_floor.fbx",
-            "subMeshList": [
-              {
-                "material": "DifAsgNor",
-                "textureList": [
-                  "$CONTENT_DATA/Terrain/Textures/gnd_grass_dif.png",
-                  "$CONTENT_DATA/Terrain/Textures/gnd_grass_asg.png",
-                  "$CONTENT_DATA/Terrain/Textures/gnd_grass_nor.png"
-                ]
-              }
+   "partList" : [
+      {
+         "box" : {
+            "x" : 165,
+            "y" : 165,
+            "z" : 2
+         },
+         "color" : "df7f01",
+         "flammable" : false,
+         "name" : "obj_plot_floor",
+         "physicsMaterial" : "Grass",
+         "ratings" : {
+            "buoyancy" : 8,
+            "density" : 4,
+            "durability" : 1000,
+            "friction" : 3
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CONTENT_DATA/Terrain/Mesh/boat_floor.fbx",
+                  "subMeshList" : [
+                     {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$CONTENT_DATA/Textures/grass_dif.png",
+                           "$CONTENT_DATA/Textures/grass_asg.png",
+                           "$CONTENT_DATA/Textures/grass_nor.png"
+                        ]
+                     }
+                  ]
+               }
             ]
-          }
-        ]
+         },
+         "restrictions" : {
+            "buildable" : true,
+            "connectable" : false,
+            "destructable" : false,
+            "erasable" : false
+         },
+         "rotationSet" : "PropYZ",
+         "showInInventory" : false,
+         "uuid" : "3f8f86b2-518e-4819-a4a5-37d9c7552f53"
       },
-      "restrictions": {
-        "buildable": true,
-        "connectable": false,
-        "destructable": false,
-        "erasable": false
+      {
+         "bearing" : {},
+         "color" : "df7f01",
+         "cylinder" : {
+            "axis" : "Z",
+            "depth" : 1,
+            "diameter" : 1
+         },
+         "flammable" : false,
+         "legacyId" : 100,
+         "name" : "jnt_bearing",
+         "physicsMaterial" : "Mechanical",
+         "ratings" : {
+            "buoyancy" : 0,
+            "density" : 4,
+            "durability" : 1,
+            "friction" : 4
+         },
+         "renderable" : "$GAME_DATA/Objects/Renderable/Interactive/obj_interactive_bearing.rend",
+         "rotationSet" : "PropZ",
+         "stackSize" : 10,
+         "sticky" : "-Z",
+         "uuid" : "4a1b886b-913e-4aad-b5b6-6e41b0db23a6"
       },
-      "rotationSet": "PropYZ",
-      "showInInventory": false,
-      "uuid": "3f8f86b2-518e-4819-a4a5-37d9c7552f53"
-    },
-    {
-      "uuid": "4a1b886b-913e-4aad-b5b6-6e41b0db23a6",
-      "name": "jnt_bearing",
-      "legacyId": 100,
-      "renderable": "$GAME_DATA/Objects/Renderable/Interactive/obj_interactive_bearing.rend",
-      "color": "df7f01",
-      "cylinder": {
-        "diameter": 1,
-        "depth": 1,
-        "axis": "Z"
-      },
-      "bearing": {},
-      "rotationSet": "PropZ",
-      "sticky": "-Z",
-      "physicsMaterial": "Mechanical",
-      "ratings": {
-        "density": 4,
-        "durability": 1,
-        "friction": 4,
-        "buoyancy": 0
-      },
-      "flammable": false,
-      "stackSize": 10
-    },
-    {
-      "box": {
-        "x": 2,
-        "y": 2,
-        "z": 2
-      },
-      "color": "cd9d71",
-      "name": "obj_wood_block",
-      "physicsMaterial": "Wood",
-      "ratings": {
-        "buoyancy": 1,
-        "density": 1,
-        "durability": 1,
-        "friction": 10
-      },
-      "renderable": {
-        "lodList": [
-          {
-            "mesh": "$CONTENT_DATA/Terrain/Mesh/box.fbx",
-            "subMeshList": [
-              {
-                "material": "DifAsgNor",
-                "textureList": [
-                  "$CONTENT_DATA/Objects/Textures/wood_dif.png",
-                  "$CONTENT_DATA/Objects/Textures/wood_asg.tga",
-                  "$CONTENT_DATA/Objects/Textures/wood_nor.tga"
-                ]
-              }
+      {
+         "box" : {
+            "x" : 2,
+            "y" : 2,
+            "z" : 2
+         },
+         "color" : "cd9d71",
+         "name" : "obj_rock_obstacle",
+         "physicsMaterial" : "Rock",
+         "ratings" : {
+            "buoyancy" : 1,
+            "density" : 1,
+            "durability" : 1,
+            "friction" : 10
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/rock_01.fbx",
+                  "subMeshList" : [
+                     {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$CONTENT_DATA/Textures/rock_dif.png",
+                           "$CONTENT_DATA/Textures/rock_asg.tga",
+                           "$CONTENT_DATA/Textures/rock_nor.tga"
+                        ]
+                     }
+                  ]
+               }
             ]
-          }
-        ]
+         },
+         "rotationSet" : "Default",
+         "uuid" : "c7ae817b-dea4-4074-bd1a-c452025b3db5"
       },
-      "rotationSet": "Default",
-      "uuid": "c45be799-94d1-4ab1-8fb4-52c9bd3d94a9"
-    }
-  ]
+      {
+         "box" : {
+            "x" : 2,
+            "y" : 2,
+            "z" : 2
+         },
+         "color" : "cd9d71",
+         "name" : "obj_wood_block",
+         "physicsMaterial" : "Wood",
+         "ratings" : {
+            "buoyancy" : 1,
+            "density" : 1,
+            "durability" : 1,
+            "friction" : 10
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/box.fbx",
+                  "subMeshList" : [
+                     {
+                        "material" : "DifAsgNor",
+                        "textureList" : [
+                           "$CONTENT_DATA/Textures/wood_dif.png",
+                           "$CONTENT_DATA/Textures/wood_asg.tga",
+                           "$CONTENT_DATA/Textures/wood_nor.tga"
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         "rotationSet" : "Default",
+         "uuid" : "c45be799-94d1-4ab1-8fb4-52c9bd3d94a9"
+      }
+   ]
 }
