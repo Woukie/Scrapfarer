@@ -89,7 +89,7 @@
       "params": [
         {
           "default": "c7ae817b-dea4-4074-bd1a-c452025b3db5",
-          "name": "obstacle",
+          "name": "shapeUuid",
           "type": "string"
         },
         {
