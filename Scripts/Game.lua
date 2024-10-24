@@ -34,6 +34,17 @@ function Game.server_onCreate(self)
   self.storage:save(self.world)
 end
 
+-- Event triggered by the plot manager to make sure a plots cell is loaded
+function Game:loadPlotWhenReady(player)
+  local position = player.character.worldPosition
+  self.world:loadCell(math.floor(position.x / CELL_SIZE), math.floor(position.z / CELL_SIZE), player, "loadBuild", nil, self)
+end
+
+-- Soley used to pass on callback in loadPlotWhenReady
+function Game.loadBuild(self, world, x, y, player, params)
+  g_serverPlotManager:loadBuild(player, true)
+end
+
 function Game.server_onPlayerJoined(self, player, isNewPlayer)
   print("Game.server_onPlayerJoined")
 
@@ -52,6 +63,7 @@ function Game.client_onCreate()
   sm.game.bindChatCommand("/respawn", {}, "client_onChatCommand", "Respawn")
   sm.game.bindChatCommand("/start", {}, "client_onChatCommand", "Starts the game")
   sm.game.bindChatCommand("/stop", {}, "client_onChatCommand", "Stops the game")
+  sm.game.bindChatCommand("/load", {}, "client_onChatCommand", "Reloads the last build")
 end
 
 function Game.server_onPlayerLeft(self, player)
@@ -66,7 +78,13 @@ function Game.client_onChatCommand(self, params)
 		self.network:sendToServer("server_startRun", {player = sm.localPlayer.getPlayer()})
   elseif params[1] == "/stop" then
 		self.network:sendToServer("server_stopRun", {player = sm.localPlayer.getPlayer()})
+  elseif params[1] == "/load" then
+		self.network:sendToServer("server_reloadBuild", {player = sm.localPlayer.getPlayer()})
   end
+end
+
+function Game.server_reloadBuild(self, params)
+  g_serverPlotManager:loadBuild(params.player)
 end
 
 function Game.server_respawn(self, params)

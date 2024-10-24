@@ -41,7 +41,9 @@ function ServerGameManager.onPlayerJoined(self, player)
     savePlayer(self, player)
   end
 
-  g_serverPlotManager:respawnPlayer(player)
+  if g_serverPlotManager:respawnPlayer(player) then
+    sm.event.sendToGame("loadPlotWhenReady", player)
+  end
 
   self.sendToClientQueue:push({client = player, callback = "client_syncGameData", data = {coins = self.gameStates[playerId].coins}})
 end

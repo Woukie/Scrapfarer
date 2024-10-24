@@ -12,50 +12,34 @@ local function inWorldEnvironment()
   return pcall(sm.world.getCurrentWorld)
 end
 
--- Gets a table blueprint from a string, and adjusts it so that the floor sits at 0, 0, 0
-local function getAdjustedBlueprint(blueprintString)
-  local blueprint = sm.json.parseJsonString(blueprintString)
-
-  -- Better than nesting loops, or using a goto
-  local function getFloorPos()
-    for _, body in ipairs(blueprint.bodies) do
-      for _, child in ipairs(body.childs) do
-        if sm.uuid.new(child.shapeId) == floorShape then
-          return child.pos
-        end
-      end
-    end
-  end
-
-  local floorPos = getFloorPos()
-
-  -- Don't ask, it just needs to be re-parsed, ok? I don't know either...
-  local blueprint = sm.json.parseJsonString(blueprintString)
-  for _, body in ipairs(blueprint.bodies) do
-    for _, child in ipairs(body.childs) do
-      child.pos.x = child.pos.x - floorPos.x
-      child.pos.y = child.pos.y - floorPos.y
-      child.pos.z = child.pos.z - floorPos.z
-    end
-  end
-
-  return blueprint
-end
-
 -- Saves plots to storage, call this whenever 'self.plots' changes
 local function savePlots(self)
   sm.storage.save("plots", self.plots)
+  print("Saved plot state")
 end
 
-local function getBuildBodies(self, plotId)
-  local plot = self.plots[plotId]
-  if plot.build and sm.exists(plot.build) then
-    return plot.build:getBody():getCreationBodies()
+-- Gets a list of creations currently in the plot, each creation is a list of bodies
+local function getCreationsInPlot(self, plotId)
+  local bodies = {}
+  if not self.areaTriggers[plotId] then
+    return
   end
+
+  for _, body in ipairs(self.areaTriggers[plotId]:getContents()) do
+    if type(body) == "Body" then
+      bodies[#bodies + 1] = body
+    end
+  end
+
+  local creations = sm.body.getCreationsFromBodies(bodies)
+  return creations
 end
 
 local function getFloorInCreation(creation)
-  for _, body in pairs(creation) do
+  if not creation then
+    return
+  end
+  for _, body in ipairs(creation) do
     for _, shape in pairs(body:getShapes()) do
       if shape:getShapeUuid() == floorShape then
         return shape
@@ -75,44 +59,41 @@ end
 
 -- Destroys the build owned by the player
 local function destroyBuild(self, plotId)
-  local bodies = getBuildBodies(self, plotId)
-  if bodies then
-    for _, body in pairs(bodies) do
-      for _, shape in pairs(body:getShapes()) do
-        shape:destroyShape(0)
+  local creations = getCreationsInPlot(self, plotId)
+  if creations and #creations > 0 then
+    for _, creation in ipairs(creations) do
+      for _, body in pairs(creation) do
+        for _, shape in pairs(body:getShapes()) do
+          shape:destroyShape(0)
+        end
       end
     end
-  end
-
-  print("Build at plot "..plotId.." destroyed")
-  self.plots[plotId].build = nil
-  savePlots(self)
-end
-
-local function tryInitialize(self)
-  if not self.initialised then
-    local players = sm.player.getAllPlayers()
-    if #self.plots >= #players then
-      print("Enough plots loaded, respawning players")
-      self.initialised = true;
-      for _, player in ipairs(players) do
-        self:respawnPlayer(player)
-      end
-    end
+    print("Build at plot "..plotId.." destroyed")
+    self.plots[plotId].build = nil
+    savePlots(self)
+  else
+    print("Could not destroy plot "..plotId..", no bodies found")
   end
 end
 
 -- Saves the players build
 function ServerPlotManager:saveBuild(player)
   local plotId = getPlotId(self, player)
-  local bodies = getBuildBodies(self, plotId)
-  if not bodies then
+  if not self.plots[plotId].build then
     print("Refusing to save "..player.name.."'s build as it doesn't exist")
     return
   end
 
-  local blueprintJsonString = sm.creation.exportToString(bodies[1])
-  self.savedBuilds[player:getId()] = blueprintJsonString
+  local creations = getCreationsInPlot(self, plotId)
+
+  local blueprints = {}
+  for _, creation in ipairs(creations) do
+    local blueprintString = sm.creation.exportToString(creation[1], true)
+    local blueprint = sm.json.parseJsonString(blueprintString)
+    blueprints[#blueprints+1] = blueprint
+  end
+
+  self.savedBuilds[player:getId()] = {position = self.plots[plotId].position, rotation = self.plots[plotId].rotation, blueprints = blueprints}
 
   sm.storage.save("builds", self.savedBuilds)
   print("Saved "..player.name.."'s build")
@@ -125,22 +106,43 @@ function ServerPlotManager:loadBuild(player)
     return
   end
 
+  if not player then
+    print("Can't load build, no player specified")
+    return
+  end
+
   local plotId = getPlotId(self, player)
+  if not plotId then
+    print("Can't load build, player has not plot")
+    return
+  end
   local plot = self.plots[plotId]
+
   destroyBuild(self, plotId)
 
-  local blueprintJson = self.savedBuilds[player:getId()]
-  if blueprintJson then
-    local blueprint = getAdjustedBlueprint(blueprintJson)
-    local blueprintJsonAdjusted = sm.json.writeJsonString(blueprint)
+  local saveData = self.savedBuilds[player:getId()]
+  if saveData then
+    for _, blueprint in ipairs(saveData.blueprints) do
+      if blueprint then
+        local rotation = plot.rotation * sm.quat.inverse(saveData.rotation)
+        local offset = plot.position - (rotation * saveData.position)
 
-    local creation = sm.creation.importFromString(
-      self.world,
-      blueprintJsonAdjusted,
-      plot.position + (plot.rotation * sm.vec3.new(-20, -20, -0.25)),
-      plot.rotation
-    )
-    self.plots[plotId].build = getFloorInCreation(creation)
+        local creation = sm.creation.importFromString(
+          self.world,
+          sm.json.writeJsonString(blueprint),
+          offset,
+          rotation,
+          true
+        )
+
+        local floor = getFloorInCreation(creation)
+        if floor then
+          self.plots[plotId].build = floor
+        end
+      end
+
+    end
+
     print("Loaded "..player.name.."'s latest build")
   else
     plot.build = sm.shape.createPart(
@@ -163,29 +165,28 @@ function ServerPlotManager:exitBuildMode(player)
   local plotId = getPlotId(self, player)
   local plot = self.plots[plotId]
   if sm.exists(plot.build) then
-    for _, body in pairs(getBuildBodies(self, plotId)) do
-      body:setBuildable(false)
-      body:setConnectable(false)
-      body:setDestructable(false)
-      body:setErasable(false)
-      body:setLiftable(false)
-      body:setPaintable(false)
+    for _, creation in ipairs(getCreationsInPlot(self, plotId)) do
+      for _, body in ipairs(creation) do
+        body:setBuildable(false)
+        body:setConnectable(false)
+        body:setDestructable(false)
+        body:setErasable(false)
+        body:setLiftable(false)
+        body:setPaintable(false)
+      end
     end
+
     plot.build:destroyShape()
     plot.build = nil
   end
   savePlots(self)
 end
 
--- Teleports the player to their plot, assigning one if needed, and creating a character if Loads the players latest build if they are being assigned a plot
+-- Teleports the player to their plot, assigning one if needed, and creating a character if neede. 
+-- DOES NOT LOAD BUILDS FOR YOU, ensure the cell is properly loaded before loading a build, loading build will not delete old builds if the old build hasn't loaded yet, load builds with the loadCell callback!
 function ServerPlotManager:respawnPlayer(player)
   if not inWorldEnvironment() then
     self.worldFunctionQueue:push({destination = "respawnPlayer", params = {self, player}})
-    return
-  end
-
-  if not self.initialised then
-    print("Skipping respawning player, plots not loaded")
     return
   end
 
@@ -203,6 +204,7 @@ function ServerPlotManager:respawnPlayer(player)
     print(player.name.." owns plot "..plotId..", teleporting")
     local plot = self.plots[plotId]
     character:setWorldPosition(plot.position + sm.vec3.new(0, 0, 3))
+    return plotId
   else
     print(player.name.." has no plot, assigning plot")
     for plotId, plot in pairs(self.plots) do
@@ -210,17 +212,17 @@ function ServerPlotManager:respawnPlayer(player)
         plot.playerId = player:getId()
         print("Assigned plot "..plotId.." to "..player.name..", teleporting")
         character:setWorldPosition(plot.position + sm.vec3.new(0, 0, 3))
-        self:loadBuild(player)
-        return
+        return plotId
       end
     end
   end
+  print(player.name.." was not assigned a plot because not enough plots exist yet")
 end
 
 function ServerPlotManager:onCreate()
   self.worldFunctionQueue = Queue()
+  self.areaTriggers = {}
   self.plots = sm.storage.load("plots")
-  self.initialised = false
   self.savedBuilds = sm.storage.load("builds")
 
   if not self.savedBuilds then
@@ -243,20 +245,24 @@ function ServerPlotManager:onCreate()
   savePlots(self)
 end
 
+-- Does not actually change the world if the host is the one leaving, I guess the world has been saved by then? Really frustrating, means I can't destroy plots when a player leaves
 function ServerPlotManager:onPlayerLeft(player)
-  print("Removing "..player.name.."'s plot")
-
   local plotId = getPlotId(self, player)
-  destroyBuild(self, plotId)
   self.plots[plotId].playerId = nil
+  print("Removed "..player.name.."'s plot")
 end
 
--- Registers new plots, tries triggering initialization
+-- Registers new plots, creates areaTriggers, tries triggering initialization
 function ServerPlotManager:onCellLoaded(x, y)
   local nodes = sm.cell.getNodesByTag(x, y, "PLOT")
 
   for _, node in ipairs(nodes) do
     local plotId = node.params["Plot ID"]
+
+    local areaTrigger = sm.areaTrigger.createBox(node.scale * 0.5, node.position, node.rotation, nil, { plotId = plotId })
+    areaTrigger:bindOnExit("plot_onExit", self)
+
+    self.areaTriggers[plotId] = areaTrigger
 
     if not self.plots[plotId] then
       self.plots[plotId] = {
@@ -270,8 +276,30 @@ function ServerPlotManager:onCellLoaded(x, y)
 
       savePlots(self)
     end
+  end
 
-    tryInitialize(self)
+  if not self.initialised then
+    local players = sm.player.getAllPlayers()
+    if g_serverPlotManager:getPlotCount() >= #players then
+      print("Enough plots loaded, respawning players")
+      self.initialised = true;
+      for _, player in ipairs(players) do
+        self:respawnPlayer(player) -- We know this triggers immediately since we are in the world environment
+        sm.event.sendToGame("loadPlotWhenReady", player) -- Only load the build when we are sure the cell it's in has loaded (we use loadCell callback (which is only available to game script))
+      end
+    end
+  end
+end
+
+-- Removes areaTriggers
+function ServerPlotManager:onCellUnloaded(x, y)
+  local nodes = sm.cell.getNodesByTag(x, y, "PLOT")
+
+  for _, node in ipairs(nodes) do
+    local plotId = node.params["Plot ID"]
+
+    sm.areaTrigger.destroy(self.areaTriggers[plotId])
+    self.areaTriggers[plotId] = nil
   end
 end
 
@@ -283,5 +311,13 @@ function ServerPlotManager:onFixedUpdate()
   while self.worldFunctionQueue:size() > 0 do
     local request = self.worldFunctionQueue:pop()
     self[request.destination](unpack(request.params))
+  end
+end
+
+function ServerPlotManager:plot_onExit(trigger, results)
+  for _, result in ipairs(results) do
+    if (type(result) == "Character") then
+      print(getCreationsInPlot(self, getPlotId(self, result:getPlayer())))
+    end
   end
 end
