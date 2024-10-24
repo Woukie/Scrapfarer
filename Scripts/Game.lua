@@ -42,7 +42,7 @@ end
 
 -- Soley used to pass on callback in loadPlotWhenReady
 function Game.loadBuild(self, world, x, y, player, params)
-  g_serverPlotManager:loadBuild(player, true)
+  g_serverPlotManager:loadBuild(player, false)
 end
 
 function Game.server_onPlayerJoined(self, player, isNewPlayer)
@@ -84,7 +84,7 @@ function Game.client_onChatCommand(self, params)
 end
 
 function Game.server_reloadBuild(self, params)
-  g_serverPlotManager:loadBuild(params.player)
+  g_serverPlotManager:loadBuild(params.player, true)
 end
 
 function Game.server_respawn(self, params)

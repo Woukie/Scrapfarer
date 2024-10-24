@@ -100,9 +100,14 @@ function ServerPlotManager:saveBuild(player)
 end
 
 -- Destroys the players currently active build, loads their previously saved build (or the default one), and updates the plot build property to point to the new floor part
-function ServerPlotManager:loadBuild(player)
+function ServerPlotManager:loadBuild(player, waitForCellLoad)
+  if waitForCellLoad then
+    sm.event.sendToGame("loadPlotWhenReady", player)
+    return
+  end
+
   if not inWorldEnvironment() then
-    self.worldFunctionQueue:push({destination = "loadBuild", params = {self, player}})
+    self.worldFunctionQueue:push({destination = "loadBuild", params = {self, player, waitForCellLoad}})
     return
   end
 

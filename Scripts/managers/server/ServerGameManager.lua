@@ -82,7 +82,7 @@ function ServerGameManager.stopRun(self, player)
   gamestate["playing"] = false
   gamestate["checkpoints"] = {}
   g_serverPlotManager:respawnPlayer(player)
-  g_serverPlotManager:loadBuild(player)
+  g_serverPlotManager:loadBuild(player, true)
 
   savePlayer(self, player)
   self.sendToClientQueue:push({client = player, callback = "client_syncGameData", data = {coins = gamestate.coins}})
