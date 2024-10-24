@@ -290,7 +290,7 @@ function ServerPlotManager:onCellLoaded(x, y)
       self.initialised = true;
       for _, player in ipairs(players) do
         self:respawnPlayer(player) -- We know this triggers immediately since we are in the world environment
-        sm.event.sendToGame("loadPlotWhenReady", player) -- Only load the build when we are sure the cell it's in has loaded (we use loadCell callback (which is only available to game script))
+        self:loadBuild(player, true)
       end
     end
   end
