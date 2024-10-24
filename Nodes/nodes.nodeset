@@ -93,11 +93,23 @@
           "type": "string"
         },
         {
+          "default": 1,
           "name": "spawnRate",
           "type": "float"
         },
         {
+          "default": 30,
           "name": "maxObstacles",
+          "type": "float"
+        },
+        {
+          "default": 5,
+          "name": "maxObstacleLife",
+          "type": "float"
+        },
+        {
+          "default": 20,
+          "name": "minObstacleLife",
           "type": "float"
         }
       ],
