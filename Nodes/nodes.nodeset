@@ -94,7 +94,7 @@
         },
         {
           "default": 1,
-          "name": "spawnRate",
+          "name": "spawnDelay",
           "type": "float"
         },
         {
