@@ -245,7 +245,7 @@ function ServerPlotManager:onCreate()
   savePlots(self)
 end
 
--- Does not actually change the world if the host is the one leaving, I guess the world has been saved by then? Really frustrating, means I can't destroy plots when a player leaves
+-- Does not actually change the world if the host is the one leaving, I guess the world has been saved by then? Really frustrating, means I can't save and destroy plots when a player leaves
 function ServerPlotManager:onPlayerLeft(player)
   local plotId = getPlotId(self, player)
   self.plots[plotId].playerId = nil
