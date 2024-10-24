@@ -40,7 +40,7 @@ function Player.server_takeDamage( self, damage, source )
 
   if self.sv.stats.hp <= 0 then
     if not g_serverGameManager:stopRun(self.player) then
-      g_serverGameManager:respawnPlayer(self.player)
+      g_serverPlotManager:respawnPlayer(self.player)
     end
     self.sv.stats.hp = self.sv.stats.maxhp
   end
