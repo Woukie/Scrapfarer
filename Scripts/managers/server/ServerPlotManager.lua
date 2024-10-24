@@ -280,7 +280,7 @@ function ServerPlotManager:onCellLoaded(x, y)
 
   if not self.initialised then
     local players = sm.player.getAllPlayers()
-    if g_serverPlotManager:getPlotCount() >= #players then
+    if #self.plots >= #players then
       print("Enough plots loaded, respawning players")
       self.initialised = true;
       for _, player in ipairs(players) do
