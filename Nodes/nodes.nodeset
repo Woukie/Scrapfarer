@@ -1,71 +1,109 @@
 {
-   "nodeList" : [
-      {
-         "billboardColor" : [ 0.0, 0.0, 1.0, 1.0 ],
-         "color" : [ 0.8999999761581421, 0.50, 0.50, 0.6000000238418579 ],
-         "initYUp" : false,
-         "name" : "Plot",
-         "params" : [
-            {
-               "name" : "Plot ID",
-               "type" : "float"
-            }
-         ],
-         "renderable" : "$CONTENT_DATA/Nodes/Renderable/plot.rend",
-         "tags" : [ "PLOT" ],
-         "useUnitBounds" : true
-      },
-      {
-         "billboardColor" : [ 0.0, 0.0, 1.0, 1.0 ],
-         "color" : [
-            0.2000000029802322,
-            0.6999999880790710,
-            0.8999999761581421,
-            0.6000000238418579
-         ],
-         "name" : "Water",
-         "tags" : [ "WATER" ]
-      },
-      {
-         "billboardColor" : [ 0.0, 0.8000000119209290, 0.0, 1.0 ],
-         "color" : [ 0.0, 1.0, 0.0, 0.6000000238418579 ],
-         "name" : "Force",
-         "params" : [
-            {
-               "default" : 5,
-               "name" : "strength",
-               "type" : "float"
-            }
-         ],
-         "renderable" : "$CONTENT_DATA/Nodes/Renderable/arrow.rend",
-         "tags" : [ "FORCE" ],
-         "useUnitBounds" : true
-      },
-      {
-         "billboardColor" : [ 0.6999999880790710, 0.6999999880790710, 0.6999999880790710, 1.0 ],
-         "color" : [
-            0.6999999880790710,
-            0.6999999880790710,
-            0.6999999880790710,
-            0.6000000238418579
-         ],
-         "name" : "Checkpoint",
-         "params" : [
-            {
-               "default" : 7,
-               "name" : "obstacle",
-               "type" : "string"
-            },
-            {
-               "name" : "spawnRate",
-               "type" : "float"
-            },
-            {
-               "name" : "maxObstacles",
-               "type" : "float"
-            }
-         ],
-         "tags" : [ "CHECKPOINT" ]
-      }
-   ]
+  "nodeList": [
+    {
+      "billboardColor": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "color": [
+        0.8999999761581421,
+        0.5,
+        0.5,
+        0.6000000238418579
+      ],
+      "initYUp": false,
+      "name": "Plot",
+      "params": [
+        {
+          "name": "Plot ID",
+          "type": "float"
+        }
+      ],
+      "renderable": "$CONTENT_DATA/Nodes/Renderable/plot.rend",
+      "tags": [
+        "PLOT"
+      ],
+      "useUnitBounds": true
+    },
+    {
+      "billboardColor": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "color": [
+        0.2000000029802322,
+        0.699999988079071,
+        0.8999999761581421,
+        0.6000000238418579
+      ],
+      "name": "Water",
+      "tags": [
+        "WATER"
+      ]
+    },
+    {
+      "billboardColor": [
+        0,
+        0.800000011920929,
+        0,
+        1
+      ],
+      "color": [
+        0,
+        1,
+        0,
+        0.6000000238418579
+      ],
+      "name": "Force",
+      "params": [
+        {
+          "default": 5,
+          "name": "strength",
+          "type": "float"
+        }
+      ],
+      "renderable": "$CONTENT_DATA/Nodes/Renderable/arrow.rend",
+      "tags": [
+        "FORCE"
+      ],
+      "useUnitBounds": true
+    },
+    {
+      "billboardColor": [
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        1
+      ],
+      "color": [
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.6000000238418579
+      ],
+      "name": "Checkpoint",
+      "params": [
+        {
+          "default": "c7ae817b-dea4-4074-bd1a-c452025b3db5",
+          "name": "obstacle",
+          "type": "string"
+        },
+        {
+          "name": "spawnRate",
+          "type": "float"
+        },
+        {
+          "name": "maxObstacles",
+          "type": "float"
+        }
+      ],
+      "tags": [
+        "CHECKPOINT"
+      ]
+    }
+  ]
 }
