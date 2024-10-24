@@ -85,7 +85,7 @@
         0.699999988079071,
         0.6000000238418579
       ],
-      "name": "Checkpoint",
+      "name": "Obstacles",
       "params": [
         {
           "default": "c7ae817b-dea4-4074-bd1a-c452025b3db5",
@@ -98,6 +98,31 @@
         },
         {
           "name": "maxObstacles",
+          "type": "float"
+        }
+      ],
+      "tags": [
+        "OBSTACLES"
+      ]
+    },
+    {
+      "billboardColor": [
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        1
+      ],
+      "color": [
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.6000000238418579
+      ],
+      "name": "Checkpoint",
+      "params": [
+        {
+          "default": 7,
+          "name": "reward",
           "type": "float"
         }
       ],
