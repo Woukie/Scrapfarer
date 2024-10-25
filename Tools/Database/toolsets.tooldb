@@ -1,5 +1,6 @@
 {
   "toolSetList": [
-    "$GAME_DATA/Tools/ToolSets/tools.json"
+    "$GAME_DATA/Tools/ToolSets/tools.json",
+    "$GAME_DATA/Tools/ToolSets/core.json"
   ]
 }

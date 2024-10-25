@@ -26,7 +26,7 @@ local function getCreationsInPlot(self, plotId)
   end
 
   for _, body in ipairs(self.areaTriggers[plotId]:getContents()) do
-    if type(body) == "Body" then
+    if type(body) == "Body" and body:isBuildable() then
       bodies[#bodies + 1] = body
     end
   end
@@ -145,18 +145,18 @@ function ServerPlotManager:loadBuild(player, waitForCellLoad)
           self.plots[plotId].build = floor
         end
       end
-
     end
 
     print("Loaded "..player.name.."'s latest build")
   else
     plot.build = sm.shape.createPart(
       floorShape,
-      plot.position + (plot.rotation * sm.vec3.new(-20, -20, -0.25)),
+      plot.position + (plot.rotation * sm.vec3.new(-20.625, -20.625, -0.25)),
       plot.rotation,
       false,
       true
     )
+    local body = plot.build:getBody()
     print("Loaded default build for "..player.name)
   end
 
@@ -172,7 +172,6 @@ function ServerPlotManager:exitBuildMode(player)
   if sm.exists(plot.build) then
     for _, creation in ipairs(getCreationsInPlot(self, plotId)) do
       for _, body in ipairs(creation) do
-        body:setBuildable(false)
         body:setConnectable(false)
         body:setDestructable(false)
         body:setErasable(false)
