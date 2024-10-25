@@ -1,3 +1,4 @@
+dofile("$CONTENT_DATA/Scripts/game/tools.lua")
 dofile("$CONTENT_DATA/Scripts/game/util/Queue.lua")
 
 -- Keeps track of game state for each player, a lot of data is stored on the client so this is mainly for game logic like respawning and keeping track of checkpoints
@@ -39,6 +40,14 @@ function ServerGameManager.onPlayerJoined(self, player)
 
   if not loadPlayer(self, player) then
     savePlayer(self, player)
+  end
+
+  local inventory = player:getInventory()
+  local liftCount = sm.container.totalQuantity(inventory, tool_lift)
+  if liftCount == 0 then
+    sm.container.beginTransaction()
+    sm.container.collect(inventory, tool_lift, 1)
+    sm.container.endTransaction()
   end
 
   if g_serverPlotManager:respawnPlayer(player) then

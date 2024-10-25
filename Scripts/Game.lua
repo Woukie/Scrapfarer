@@ -1,4 +1,5 @@
 dofile("$CONTENT_DATA/Scripts/game/shapes.lua")
+dofile("$CONTENT_DATA/Scripts/game/tools.lua")
 dofile("$CONTENT_DATA/Scripts/managers/server/ServerCheckpointManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/server/ServerGameManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/server/ServerObstacleManager.lua")
