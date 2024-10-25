@@ -3,7 +3,6 @@ dofile( "$SURVIVAL_DATA/Scripts/game/util/Timer.lua" )
 Player = class( nil )
 
 function Player.server_onCreate( self )
-	print("Player.server_onCreate")
   self.sv = {}
   self.sv.waterDamageCooldown = 0
   self.sv.stats = {

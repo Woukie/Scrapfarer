@@ -14,8 +14,6 @@ World.worldBorder = true
 World.groundMaterialSet = "$CONTENT_DATA/Terrain/Materials/cool_materialset.json"
 
 function World.server_onCreate(self)
-  print("World.server_onCreate")
-
   self.forceManager = ForceManager()
 	self.forceManager:server_onCreate(self)
 
@@ -24,8 +22,6 @@ function World.server_onCreate(self)
 end
 
 function World.client_onCreate(self)
-  print("World.client_onCreate")
-
   if self.forceManager == nil then
 		assert(not sm.isHost)
 		self.forceManager = ForceManager()

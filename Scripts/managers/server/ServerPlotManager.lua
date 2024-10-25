@@ -321,7 +321,6 @@ end
 function ServerPlotManager:plot_onExit(trigger, results)
   for _, result in ipairs(results) do
     if (type(result) == "Character") then
-      print(getCreationsInPlot(self, getPlotId(self, result:getPlayer())))
     end
   end
 end

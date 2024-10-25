@@ -16,8 +16,6 @@ Game.enableAmmoConsumption = false
 Game.enableUpgrade = true
 
 function Game.server_onCreate(self)
-	print("Game.server_onCreate")
-
   g_serverPlotManager = ServerPlotManager()
   g_serverPlotManager:onCreate(self)
 
@@ -51,8 +49,6 @@ function Game.loadBuild(self, world, x, y, player, params)
 end
 
 function Game.server_onPlayerJoined(self, player, isNewPlayer)
-  print("Game.server_onPlayerJoined")
-
   self.world:loadCell(0, 0, player)
 
   g_serverGameManager:onPlayerJoined(player)
