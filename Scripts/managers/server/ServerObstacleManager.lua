@@ -94,7 +94,7 @@ function ServerObstacleManager:onFixedUpdate()
 
         local areaTrigger = sm.areaTrigger.createBox(obstacleSpawner.scale * 0.5, obstacleSpawner.position, obstacleSpawner.rotation, nil)
         local spawnPos = areaTrigger:getWorldMax() - areaTrigger:getWorldMin()
-        spawnPos = areaTrigger:getWorldMin() + sm.vec3.new(spawnPos.x * math.random(), spawnPos.y * math.random(), spawnPos.z * math.random() - 0.125)
+        spawnPos = areaTrigger:getWorldMin() + sm.vec3.new(spawnPos.x * math.random(), spawnPos.y * math.random(), spawnPos.z * math.random() - 0.25)
         sm.areaTrigger.destroy(areaTrigger)
 
         local part = sm.shape.createPart(
