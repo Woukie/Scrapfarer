@@ -5499,7 +5499,7 @@
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River End.tile",
          "rotation" : 0,
          "x" : -1,
          "y" : 5
@@ -5507,7 +5507,7 @@
       {
          "offsetX" : 1,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River End.tile",
          "rotation" : 0,
          "x" : 0,
          "y" : 5
@@ -5755,7 +5755,7 @@
       {
          "offsetX" : 0,
          "offsetY" : 1,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River End.tile",
          "rotation" : 0,
          "x" : -1,
          "y" : 6
@@ -5763,7 +5763,7 @@
       {
          "offsetX" : 1,
          "offsetY" : 1,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River End.tile",
          "rotation" : 0,
          "x" : 0,
          "y" : 6
@@ -6011,15 +6011,15 @@
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "path" : "",
          "rotation" : 0,
          "x" : -1,
          "y" : 7
       },
       {
-         "offsetX" : 1,
+         "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "path" : "",
          "rotation" : 0,
          "x" : 0,
          "y" : 7
@@ -6266,16 +6266,16 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 1,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "offsetY" : 0,
+         "path" : "",
          "rotation" : 0,
          "x" : -1,
          "y" : 8
       },
       {
-         "offsetX" : 1,
-         "offsetY" : 1,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
          "rotation" : 0,
          "x" : 0,
          "y" : 8
@@ -6523,15 +6523,15 @@
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "path" : "",
          "rotation" : 0,
          "x" : -1,
          "y" : 9
       },
       {
-         "offsetX" : 1,
+         "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "path" : "",
          "rotation" : 0,
          "x" : 0,
          "y" : 9
@@ -6778,16 +6778,16 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 1,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "offsetY" : 0,
+         "path" : "",
          "rotation" : 0,
          "x" : -1,
          "y" : 10
       },
       {
-         "offsetX" : 1,
-         "offsetY" : 1,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
          "rotation" : 0,
          "x" : 0,
          "y" : 10
@@ -7035,15 +7035,15 @@
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "path" : "",
          "rotation" : 0,
          "x" : -1,
          "y" : 11
       },
       {
-         "offsetX" : 1,
+         "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "path" : "",
          "rotation" : 0,
          "x" : 0,
          "y" : 11
@@ -7290,16 +7290,16 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 1,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "offsetY" : 0,
+         "path" : "",
          "rotation" : 0,
          "x" : -1,
          "y" : 12
       },
       {
-         "offsetX" : 1,
-         "offsetY" : 1,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
          "rotation" : 0,
          "x" : 0,
          "y" : 12
@@ -7547,15 +7547,15 @@
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "path" : "",
          "rotation" : 0,
          "x" : -1,
          "y" : 13
       },
       {
-         "offsetX" : 1,
+         "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "path" : "",
          "rotation" : 0,
          "x" : 0,
          "y" : 13
@@ -7802,16 +7802,16 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 1,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "offsetY" : 0,
+         "path" : "",
          "rotation" : 0,
          "x" : -1,
          "y" : 14
       },
       {
-         "offsetX" : 1,
-         "offsetY" : 1,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
          "rotation" : 0,
          "x" : 0,
          "y" : 14

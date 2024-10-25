@@ -2,6 +2,48 @@
   "partList": [
     {
       "box": {
+        "x": 2,
+        "y": 2,
+        "z": 4
+      },
+      "color": "ffee01",
+      "flammable": false,
+      "name": "obj_treasure_chest",
+      "physicsMaterial": "Wood",
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/treasure_chest.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/wood_dif.png",
+                  "$CONTENT_DATA/Textures/wood_asg.tga",
+                  "$CONTENT_DATA/Textures/wood_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "scripted": {
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/TreasureChest.lua",
+        "classname": "TreasureChest",
+        "data": {}
+      },
+      "restrictions": {
+        "buildable": false,
+        "connectable": false,
+        "destructable": false,
+        "erasable": false
+      },
+      "rotationSet": "PropYZ",
+      "showInInventory": true,
+      "uuid": "d14b7f0a-fce4-4785-9389-fabf763180f2"
+    },
+    {
+      "box": {
         "x": 165,
         "y": 165,
         "z": 2
