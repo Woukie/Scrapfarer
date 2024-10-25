@@ -92,6 +92,7 @@
           "damage": 10
         }
       },
+      "showInInventory": false,
       "renderable": {
         "lodList": [
           {
