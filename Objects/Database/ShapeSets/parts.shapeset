@@ -39,8 +39,51 @@
         "erasable": false
       },
       "rotationSet": "PropYZ",
-      "showInInventory": true,
+      "showInInventory": false,
       "uuid": "d14b7f0a-fce4-4785-9389-fabf763180f2"
+    },
+    {
+      "hull": {
+        "x": 2,
+        "y": 2,
+        "z": 2,
+        "col": "$CONTENT_DATA/Objects/Mesh/shop.fbx"
+      },
+      "color": "ffffff",
+      "flammable": false,
+      "name": "obj_shop",
+      "physicsMaterial": "Plastic",
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/shop.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/shop_dif.png",
+                  "$CONTENT_DATA/Textures/shop_asg.png",
+                  "$CONTENT_DATA/Textures/shop_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "scripted": {
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/Shop.lua",
+        "classname": "Shop",
+        "data": {}
+      },
+      "restrictions": {
+        "buildable": false,
+        "connectable": false,
+        "destructable": false,
+        "erasable": false
+      },
+      "rotationSet": "PropYZ",
+      "showInInventory": false,
+      "uuid": "bbab5b38-d9f0-4265-b267-e80b2d2b6bad"
     },
     {
       "box": {
