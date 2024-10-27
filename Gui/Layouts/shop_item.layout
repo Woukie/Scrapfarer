@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout" version="3.2.0">
+    <Widget type="ImageBox" skin="ImageBox" position_real="0 0 1 1" name="Icon">
+        <Property key="InheritsAlpha" value="false"/>
+        <Property key="NeedKey" value="false"/>
+        <Property key="NeedMouse" value="false"/>
+    </Widget>
+    <Widget type="TextBox" skin="TextBox" name="Quantity" position_real="0 0 0 0">
+        <Property key="NeedKey" value="false" />
+        <Property key="NeedMouse" value="false" />
+    </Widget>
+    <CodeGeneratorSettings/>
+</MyGUI>
