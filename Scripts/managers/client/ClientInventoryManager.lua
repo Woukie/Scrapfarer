@@ -1,8 +1,6 @@
 ClientInventoryManager = class(nil)
 
 local function reloadShopGrid(self)
-  self.shopGui:clearGrid("CatalogueGrid")
-
   local i = 0
   for _, item in ipairs(self.shopItems) do
     if self.category == "All" or self.category == item.category then
