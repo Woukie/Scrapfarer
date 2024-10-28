@@ -47,7 +47,7 @@ function ServerGameManager.onPlayerJoined(self, player)
   self.gameStates[playerId] = {
     playing = false,
     checkpoints = {},
-    coins = 0,
+    coins = 1000,
     inventory = {}
   }
 
@@ -114,7 +114,7 @@ function ServerGameManager:recalculateInventory(player)
   local gameState = self.gameStates[playerId]
 
   local initial = gameState.inventory
-  local buildCost = {} -- TODO: calculate from build
+  local buildCost = g_serverPlotManager:getBuildCost(player)
   local final = {}
 
   for id, quantity in pairs(initial) do

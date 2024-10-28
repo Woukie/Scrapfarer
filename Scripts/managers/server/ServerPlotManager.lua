@@ -188,6 +188,34 @@ function ServerPlotManager:exitBuildMode(player)
   savePlots(self)
 end
 
+function ServerPlotManager:getBuildCost(player)
+  local creations = getCreationsInPlot(self, getPlotId(self, player))
+
+  local cost = {}
+  for _, creation in ipairs(creations) do
+    for _, body in ipairs(creation) do
+      if type(body) == "Body" then
+        for _, joint in ipairs(body:getJoints()) do
+          local id = tostring(joint.uuid)
+          cost[id] = (cost[id] or 0) + 1
+        end
+        for _, shape in ipairs(body:getShapes()) do
+          local id = tostring(shape.uuid)
+          local increment = 1
+          if shape.isBlock then
+            local bounds = shape:getBoundingBox()
+            local volume = bounds.x * bounds.y * bounds.z * 4 * 4 * 4
+            increment = volume
+          end
+          cost[id] = (cost[id] or 0) + increment
+        end
+      end
+    end
+  end
+
+  return cost
+end
+
 -- Teleports the player to their plot, assigning one if needed, and creating a character if neede. 
 -- DOES NOT LOAD BUILDS FOR YOU, ensure the cell is properly loaded before loading a build, loading build will not delete old builds if the old build hasn't loaded yet, load builds with the loadCell callback!
 function ServerPlotManager:respawnPlayer(player)
