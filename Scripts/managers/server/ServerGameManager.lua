@@ -1,4 +1,5 @@
 dofile("$CONTENT_DATA/Scripts/game/tools.lua")
+dofile("$CONTENT_DATA/Scripts/game/shapes.lua")
 dofile("$CONTENT_DATA/Scripts/game/util/Queue.lua")
 
 -- Keeps track of game state for each player, a lot of data is stored on the client so this is mainly for game logic like respawning and keeping track of checkpoints
@@ -50,6 +51,8 @@ function ServerGameManager.onPlayerJoined(self, player)
     inventory = {}
   }
 
+  self.gameStates[playerId].inventory[tostring(blk_wood)] = 16
+
   if not loadPlayer(self, player) then
     savePlayer(self, player)
   end
@@ -94,10 +97,57 @@ function ServerGameManager:buyItem(player, itemId, quantity, cost)
   sm.container.endTransaction()
 end
 
+function ServerGameManager:disableInventory(player)
+  player:getInventory():setAllowCollect(false)
+  player:getInventory():setAllowSpend(false)
+end
+
+function ServerGameManager:enableInventory(player)
+  player:getInventory():setAllowCollect(true)
+  player:getInventory():setAllowSpend(true)
+end
+
 -- Modifies the players inventory to match their saved inventory minus their currently loaded build
 -- Prefer modifying inventory directly as this is costly (e.g when buying things, transfer items and update saved data)
-function ServerGameManager.recalculateInventory(self, player)
+function ServerGameManager:recalculateInventory(player)
+  local playerId = player:getId()
+  local gameState = self.gameStates[playerId]
 
+  local initial = gameState.inventory
+  local buildCost = {} -- TODO: calculate from build
+  local final = {}
+
+  for id, quantity in pairs(initial) do
+    if buildCost[id] then
+      final[id] = quantity - buildCost[id]
+    else
+      final[id] = quantity
+    end
+  end
+
+  -- Update final as the difference between the target and current inventory
+  local inventory = player:getInventory()
+
+  for i = 1, inventory:getSize() + 10, 1 do
+    local item = inventory:getItem(i)
+    if item then
+      local id = tostring(item.uuid)
+      if final[id] then
+        final[id] = final[id] - item.quantity
+      end
+    end
+  end
+
+  -- Update inventory with changes
+  sm.container.beginTransaction()
+  for id, quantity in pairs(final) do
+    if quantity > 0 then
+      sm.container.collect(inventory, sm.uuid.new(id), quantity)
+    elseif quantity < 0 then
+      sm.container.spend(inventory, sm.uuid.new(id), -quantity)
+    end
+  end
+  sm.container.endTransaction()
 end
 
 function ServerGameManager.startRun(self, player)

@@ -160,6 +160,8 @@ function ServerPlotManager:loadBuild(player, waitForCellLoad)
     print("Loaded default build for "..player.name)
   end
 
+  g_serverGameManager:recalculateInventory(player)
+
   savePlots(self)
 end
 
@@ -265,6 +267,7 @@ function ServerPlotManager:onCellLoaded(x, y)
 
     local areaTrigger = sm.areaTrigger.createBox(node.scale * 0.5, node.position, node.rotation, nil, { plotId = plotId })
     areaTrigger:bindOnExit("plot_onExit", self)
+    areaTrigger:bindOnEnter("plot_onEnter", self)
 
     self.areaTriggers[plotId] = areaTrigger
 
@@ -318,9 +321,18 @@ function ServerPlotManager:onFixedUpdate()
   end
 end
 
+function ServerPlotManager:plot_onEnter(trigger, results)
+  for _, result in ipairs(results) do
+    if (type(result) == "Character") then
+      g_serverGameManager:enableInventory(result:getPlayer())
+    end
+  end
+end
+
 function ServerPlotManager:plot_onExit(trigger, results)
   for _, result in ipairs(results) do
     if (type(result) == "Character") then
+      g_serverGameManager:disableInventory(result:getPlayer())
     end
   end
 end
