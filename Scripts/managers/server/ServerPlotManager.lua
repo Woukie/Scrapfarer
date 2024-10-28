@@ -361,8 +361,6 @@ function ServerPlotManager:plot_onEnter(trigger, results)
       local player = result:getPlayer()
       if plot and plot.playerId == player:getId() then
         g_serverGameManager:enableInventory(player)
-        -- May be expensive
-        g_serverGameManager:recalculateInventory(player)
       end
     end
   end
