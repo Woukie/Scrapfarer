@@ -15,7 +15,9 @@ local function loadPlayer(self, player)
 
   if playerData then
     assert(playerData.coins)
+    assert(playerData.inventory)
     self.gameStates[playerId].coins = playerData.coins
+    self.gameStates[playerId].inventory = playerData.inventory
     print("Loaded "..player.name.."'s player data from storage")
     return true
   end
@@ -25,7 +27,8 @@ end
 
 local function savePlayer(self, player)
   local playerId = player:getId()
-  sm.storage.save(playerId, {coins = self.gameStates[playerId].coins})
+  local gameState = self.gameStates[playerId]
+  sm.storage.save(playerId, {coins = gameState.coins, inventory = gameState.inventory})
   print("Saved "..player.name.."'s player data to storage")
 end
 
@@ -35,7 +38,8 @@ function ServerGameManager.onPlayerJoined(self, player)
   self.gameStates[playerId] = {
     playing = false,
     checkpoints = {},
-    coins = 0
+    coins = 0,
+    inventory = {}
   }
 
   if not loadPlayer(self, player) then
@@ -59,6 +63,29 @@ end
 
 function ServerGameManager.onPlayerLeft(self, player)
   self.gameStates[player:getId()] = nil
+end
+
+function ServerGameManager:buyItem(player, itemId, quantity, cost)
+  local gameState = self.gameStates[player:getId()]
+
+  gameState.coins = gameState.coins - cost
+  if not gameState.inventory[itemId] then
+    gameState.inventory[itemId] = quantity
+  else
+    gameState.inventory[itemId] = gameState.inventory[itemId] + quantity
+  end
+
+  savePlayer(self, player)
+
+  sm.container.beginTransaction()
+  sm.container.collect(player:getInventory(), sm.uuid.new(itemId), quantity)
+  sm.container.endTransaction()
+end
+
+-- Modifies the players inventory to match their saved inventory minus their currently loaded build
+-- Prefer modifying inventory directly as this is costly (e.g when buying things, transfer items and update saved data)
+function ServerGameManager.recalculateInventory(self, player)
+
 end
 
 function ServerGameManager.startRun(self, player)
