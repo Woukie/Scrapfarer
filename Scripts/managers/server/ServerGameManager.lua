@@ -25,10 +25,18 @@ local function loadPlayer(self, player)
   return false
 end
 
+local function syncPlayer(self, player)
+  local playerId = player:getId()
+  local gameState = self.gameStates[playerId]
+
+  self.sendToClientQueue:push({client = player, callback = "client_syncGameData", data = {coins = gameState.coins}})
+end
+
 local function savePlayer(self, player)
   local playerId = player:getId()
   local gameState = self.gameStates[playerId]
   sm.storage.save(playerId, {coins = gameState.coins, inventory = gameState.inventory})
+  syncPlayer(self, player)
   print("Saved "..player.name.."'s player data to storage")
 end
 
@@ -58,7 +66,7 @@ function ServerGameManager.onPlayerJoined(self, player)
     sm.event.sendToGame("loadPlotWhenReady", player)
   end
 
-  self.sendToClientQueue:push({client = player, callback = "client_syncGameData", data = {coins = self.gameStates[playerId].coins}})
+  syncPlayer(self, player)
 end
 
 function ServerGameManager.onPlayerLeft(self, player)
@@ -67,6 +75,10 @@ end
 
 function ServerGameManager:buyItem(player, itemId, quantity, cost)
   local gameState = self.gameStates[player:getId()]
+
+  if gameState.coins < cost then
+    return
+  end
 
   gameState.coins = gameState.coins - cost
   if not gameState.inventory[itemId] then
@@ -121,7 +133,6 @@ function ServerGameManager.stopRun(self, player)
   g_serverPlotManager:loadBuild(player, true)
 
   savePlayer(self, player)
-  self.sendToClientQueue:push({client = player, callback = "client_syncGameData", data = {coins = gamestate.coins}})
   return true
 end
 

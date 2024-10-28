@@ -100,12 +100,18 @@ function Game.server_stopRun(self, params)
   g_serverGameManager:stopRun(params.player)
 end
 
+function Game:server_buyShopItem(params)
+  local item = params.item
+  g_serverGameManager:buyItem(params.player, item.itemId, item.quantity, item.cost)
+end
+
 function Game:client_closeShop(_)
   g_clientShopManager:closeShop()
 end
 
 function Game:client_buyShopItem(_)
-  print("client_buyShopItem")
+  local item = g_clientShopManager:getSelectedItem()
+  self.network:sendToServer("server_buyShopItem", {item = item, player = sm.localPlayer.getPlayer()})
 end
 
 function Game:client_setShopCategory(name)

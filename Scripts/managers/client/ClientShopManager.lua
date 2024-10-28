@@ -79,6 +79,10 @@ function ClientShopManager:selectShopItem(item)
   self.shopGui:setText("ItemCost", tostring(item.cost))
 end
 
+function ClientShopManager:getSelectedItem()
+  return self.selectedShopItem
+end
+
 function ClientShopManager:refreshShopBuyButton()
   local coins = g_clientGameManager:getCoins()
   if self.selectedShopItem and coins and coins >= self.selectedShopItem.cost then
