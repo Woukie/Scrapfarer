@@ -189,26 +189,26 @@ function ServerPlotManager:exitBuildMode(player)
 end
 
 function ServerPlotManager:getBuildCost(player)
-  local creations = getCreationsInPlot(self, getPlotId(self, player))
+  local savedBuild = self.savedBuilds[player:getId()]
+  if not savedBuild then
+    return {}
+  end
 
   local cost = {}
-  for _, creation in ipairs(creations) do
-    for _, body in ipairs(creation) do
-      if type(body) == "Body" then
-        for _, joint in ipairs(body:getJoints()) do
-          local id = tostring(joint.uuid)
-          cost[id] = (cost[id] or 0) + 1
+  for _, blueprint in ipairs(savedBuild.blueprints) do
+    for _, joint in ipairs(blueprint.joints) do
+      local id = joint.shapeId
+      cost[id] = (cost[id] or 0) + 1
+    end
+    for _, body in ipairs(blueprint.bodies) do
+      for _, child in ipairs(body.childs) do
+        local id = child.shapeId
+        local count = 1
+        local bounds = child.bounds
+        if bounds then
+          count = bounds.x * bounds.y * bounds.z
         end
-        for _, shape in ipairs(body:getShapes()) do
-          local id = tostring(shape.uuid)
-          local increment = 1
-          if shape.isBlock then
-            local bounds = shape:getBoundingBox()
-            local volume = bounds.x * bounds.y * bounds.z * 4 * 4 * 4
-            increment = volume
-          end
-          cost[id] = (cost[id] or 0) + increment
-        end
+        cost[id] = (cost[id] or 0) + count
       end
     end
   end
@@ -359,6 +359,8 @@ function ServerPlotManager:plot_onEnter(trigger, results)
       local player = result:getPlayer()
       if plot and plot.playerId == player:getId() then
         g_serverGameManager:enableInventory(player)
+        -- May be expensive
+        g_serverGameManager:recalculateInventory(player)
       end
     end
   end

@@ -47,7 +47,7 @@ function ServerGameManager.onPlayerJoined(self, player)
   self.gameStates[playerId] = {
     playing = false,
     checkpoints = {},
-    coins = 0,
+    coins = 100000,
     inventory = {}
   }
 
@@ -157,6 +157,7 @@ function ServerGameManager.startRun(self, player)
   end
 
   print(player.name.." is starting a run")
+  player:removeLift()
   g_serverPlotManager:exitBuildMode(player)
 
   self.gameStates[player:getId()]["playing"] = true
