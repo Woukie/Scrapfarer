@@ -322,17 +322,31 @@ function ServerPlotManager:onFixedUpdate()
 end
 
 function ServerPlotManager:plot_onEnter(trigger, results)
+  local ud = trigger:getUserData()
+	assert(ud)
+
+  local plot = self.plots[ud.plotId]
   for _, result in ipairs(results) do
     if (type(result) == "Character") then
-      g_serverGameManager:enableInventory(result:getPlayer())
+      local player = result:getPlayer()
+      if plot and plot.playerId == player:getId() then
+        g_serverGameManager:enableInventory(player)
+      end
     end
   end
 end
 
 function ServerPlotManager:plot_onExit(trigger, results)
+  local ud = trigger:getUserData()
+	assert(ud)
+
+  local plot = self.plots[ud.plotId]
   for _, result in ipairs(results) do
     if (type(result) == "Character") then
-      g_serverGameManager:disableInventory(result:getPlayer())
+      local player = result:getPlayer()
+      if plot and plot.playerId == player:getId() then
+        g_serverGameManager:disableInventory(player)
+      end
     end
   end
 end
