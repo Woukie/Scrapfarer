@@ -69,11 +69,23 @@ function ClientInventoryManager:selectShopItem(item)
   if not item then
     return
   end
+  self.selectedShopItem = item
+  self:refreshShopBuyButton()
+
   local itemId = sm.uuid.new(item.itemId)
   self.shopGui:setIconImage("ItemImage", itemId)
   self.shopGui:setText("ItemName", "x"..item.quantity.." "..sm.shape.getShapeTitle(itemId))
   self.shopGui:setText("ItemDescription", sm.shape.getShapeDescription(itemId))
   self.shopGui:setText("ItemCost", tostring(item.cost))
+end
+
+function ClientInventoryManager:refreshShopBuyButton()
+  local coins = g_clientGameManager:getCoins()
+  if self.selectedShopItem and coins and coins >= self.selectedShopItem.cost then
+    self.shopGui:setImage("BuyImage", "$CONTENT_DATA/Gui/Textures/buy_button.png")
+  else
+    self.shopGui:setImage("BuyImage", "$CONTENT_DATA/Gui/Textures/buy_button_disabled.png")
+  end
 end
 
 function ClientInventoryManager:openShop()
