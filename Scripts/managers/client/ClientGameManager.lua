@@ -22,5 +22,5 @@ function ClientGameManager.syncData(self, data)
     g_hud:setText("Coin Text", ""..self.coins)
   end
 
-  g_clientInventoryManager:refreshShopBuyButton()
+  g_clientShopManager:refreshShopBuyButton()
 end

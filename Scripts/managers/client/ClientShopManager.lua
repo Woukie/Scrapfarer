@@ -1,4 +1,4 @@
-ClientInventoryManager = class(nil)
+ClientShopManager = class(nil)
 
 local function reloadShopGrid(self)
   local i = 0
@@ -27,7 +27,7 @@ local function reloadShopGrid(self)
   end
 end
 
-function ClientInventoryManager:onCreate()
+function ClientShopManager:onCreate()
   self.category = "All"
   self.shopItems = sm.json.open("$CONTENT_DATA/shop.json")
   self.selectedShopItem = nil
@@ -60,12 +60,12 @@ function ClientInventoryManager:onCreate()
   self.shopGui:setGridButtonCallback("SelectItem", "client_selectShopItem")
 end
 
-function ClientInventoryManager:selectShopCategory(category)
+function ClientShopManager:selectShopCategory(category)
   self.category = category
   reloadShopGrid(self)
 end
 
-function ClientInventoryManager:selectShopItem(item)
+function ClientShopManager:selectShopItem(item)
   if not item then
     return
   end
@@ -79,7 +79,7 @@ function ClientInventoryManager:selectShopItem(item)
   self.shopGui:setText("ItemCost", tostring(item.cost))
 end
 
-function ClientInventoryManager:refreshShopBuyButton()
+function ClientShopManager:refreshShopBuyButton()
   local coins = g_clientGameManager:getCoins()
   if self.selectedShopItem and coins and coins >= self.selectedShopItem.cost then
     self.shopGui:setImage("BuyImage", "$CONTENT_DATA/Gui/Textures/buy_button.png")
@@ -88,10 +88,10 @@ function ClientInventoryManager:refreshShopBuyButton()
   end
 end
 
-function ClientInventoryManager:openShop()
+function ClientShopManager:openShop()
   self.shopGui:open()
 end
 
-function ClientInventoryManager:closeShop()
+function ClientShopManager:closeShop()
   self.shopGui:close()
 end

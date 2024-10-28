@@ -5,7 +5,7 @@ dofile("$CONTENT_DATA/Scripts/managers/server/ServerGameManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/server/ServerObstacleManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/server/ServerPlotManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/client/ClientPlotManager.lua")
-dofile("$CONTENT_DATA/Scripts/managers/client/ClientInventoryManager.lua")
+dofile("$CONTENT_DATA/Scripts/managers/client/ClientShopManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/client/ClientGameManager.lua")
 
 Game = class(nil)
@@ -62,8 +62,8 @@ function Game:client_onCreate()
   g_clientGameManager = ClientGameManager()
   g_clientGameManager:onCreate()
 
-  g_clientInventoryManager = ClientInventoryManager()
-  g_clientInventoryManager:onCreate()
+  g_clientShopManager = ClientShopManager()
+  g_clientShopManager:onCreate()
 
   sm.game.bindChatCommand("/respawn", {}, "client_onChatCommand", "Respawn")
   sm.game.bindChatCommand("/start", {}, "client_onChatCommand", "Starts the game")
@@ -87,7 +87,7 @@ function Game.client_onChatCommand(self, params)
   elseif params[1] == "/load" then
 		self.network:sendToServer("server_reloadBuild", {player = sm.localPlayer.getPlayer()})
   elseif params[1] == "/shop" then
-		g_clientInventoryManager:openShop()
+		g_clientShopManager:openShop()
   end
 end
 
@@ -108,7 +108,7 @@ function Game.server_stopRun(self, params)
 end
 
 function Game:client_closeShop(_)
-  g_clientInventoryManager:closeShop()
+  g_clientShopManager:closeShop()
 end
 
 function Game:client_buyShopItem(_)
@@ -117,9 +117,9 @@ end
 
 function Game:client_setShopCategory(name)
   local category, _ = name:gsub("Button", "")
-  g_clientInventoryManager:selectShopCategory(category)
+  g_clientShopManager:selectShopCategory(category)
 end
 
 function Game:client_selectShopItem(_, _, item, _)
-  g_clientInventoryManager:selectShopItem(item)
+  g_clientShopManager:selectShopItem(item)
 end
