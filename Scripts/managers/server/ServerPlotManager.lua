@@ -190,15 +190,17 @@ end
 
 function ServerPlotManager:getBuildCost(player)
   local savedBuild = self.savedBuilds[player:getId()]
-  if not savedBuild then
+  if not (savedBuild and savedBuild.blueprints) then
     return {}
   end
 
   local cost = {}
   for _, blueprint in ipairs(savedBuild.blueprints) do
-    for _, joint in ipairs(blueprint.joints) do
-      local id = joint.shapeId
-      cost[id] = (cost[id] or 0) + 1
+    if blueprint.joints then
+      for _, joint in ipairs(blueprint.joints) do
+        local id = joint.shapeId
+        cost[id] = (cost[id] or 0) + 1
+      end
     end
     for _, body in ipairs(blueprint.bodies) do
       for _, child in ipairs(body.childs) do
