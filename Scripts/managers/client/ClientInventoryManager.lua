@@ -4,12 +4,13 @@ local function reloadShopGrid(self)
   local i = 0
   for _, item in ipairs(self.shopItems) do
     if self.category == "All" or self.category == item.category then
-      self.shopGui:setGridItem("CatalogueGrid", i, {quantity = item.quantity, itemId = item.itemId})
+      self.shopGui:setGridItem("CatalogueGrid", i, item)
+
       i = i + 1
     end
   end
 
-  for j = i, #self.shopItems, 1 do
+  for j = i, #self.shopItems - 1, 1 do
     self.shopGui:setGridItem("CatalogueGrid", j, nil)
   end
 
@@ -39,9 +40,8 @@ function ClientInventoryManager:onCreate()
     backgroundAlpha = 0.0,
   })
 
-
   self.shopGui:createGridFromJson("CatalogueGrid", {
-		type = "materialGrid",
+    type = "materialGrid",
 		layout = "$CONTENT_DATA/Gui/Layouts/shop_item.layout",
 		itemWidth = 784/16,
 		itemHeight = 784/16,
@@ -56,6 +56,8 @@ function ClientInventoryManager:onCreate()
   self.shopGui:setButtonCallback("ExitButton", "client_closeShop")
 
   reloadShopGrid(self)
+
+  self.shopGui:setGridButtonCallback("SelectItem", "client_selectShopItem")
 end
 
 function ClientInventoryManager:selectShopCategory(category)
@@ -63,8 +65,15 @@ function ClientInventoryManager:selectShopCategory(category)
   reloadShopGrid(self)
 end
 
-function ClientInventoryManager:selectShopItem(uuid)
-  self.shopGui:setIconImage("ItemImage", sm.uuid.new("8216e887-8758-48b4-afa1-eea78cbbc3b0"))
+function ClientInventoryManager:selectShopItem(item)
+  if not item then
+    return
+  end
+  local itemId = sm.uuid.new(item.itemId)
+  self.shopGui:setIconImage("ItemImage", itemId)
+  self.shopGui:setText("ItemName", "x"..item.quantity.." "..sm.shape.getShapeTitle(itemId))
+  self.shopGui:setText("ItemDescription", sm.shape.getShapeDescription(itemId))
+  self.shopGui:setText("ItemCost", tostring(item.cost))
 end
 
 function ClientInventoryManager:openShop()

@@ -1,45 +1,54 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout" version="3.2.0">
-    <Widget type="ImageBox" skin="ImageBox" position="0 0 1280 700" align="Center" name="BackgroundImage">
+    <Widget type="ImageBox" skin="ImageBox" position="320 190 1280 700" align="Center" name="BackgroundImage">
         <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/shop_background.png"/>
         <Widget type="ItemBox" skin="ItemBox" position="16 84 816 560" name="CatalogueGrid">
             <Property key="Alpha" value="0"/>
             <Property key="VisibleVScroll" value="false"/>
         </Widget>
-        <Widget type="ImageBox" skin="ImageBox" position="848 56 416 168" name="ItemImage">
-            <Widget type="TextBox" skin="TextBox" position="16 0 399 50" name="ItemName">
+        <Widget type="ImageBox" skin="ImageBox" position="972 56 168 168" name="ItemImage">
+            <Widget type="EditBox" skin="TextBox" position="0 0 168 168" name="ItemName">
                 <Property key="FontHeight" value="28"/>
-                <Property key="FontName" value="Default"/>
-                <Property key="Caption" value="Item name..."/>
+                <Property key="FontName" value="SM_Button"/>
+                <Property key="TextAlign" value="HCenter Bottom"/>
+                <Property key="MultiLine" value="true"/>
+                <Property key="WordWrap" value="true"/>
             </Widget>
         </Widget>
-        <Widget type="TextBox" skin="TextBox" position="865 250 384 280" name="ItemDescription">
+        <Widget type="EditBox" skin="TextBox" position="865 250 384 224" name="ItemDescription">
             <Property key="FontHeight" value="28"/>
-            <Property key="Caption" value="Item description..."/>
+            <Property key="FontName" value="SM_Button"/>
+            <Property key="MultiLine" value="true"/>
+            <Property key="WordWrap" value="true"/>
         </Widget>
         <Widget type="Button" skin="Button" position="864 560 384 84" name="BuyButton">
-            <Property key="Alpha" value="0"/>
-        </Widget>
-        <Widget type="Button" skin="Button" position="32 56 80 28" name="AllButton">
-            <Property key="Alpha" value="0"/>
-        </Widget>
-        <Widget type="Button" skin="Button" position="128 56 128 28" name="BlocksButton">
-            <Property key="Alpha" value="0"/>
-        </Widget>
-        <Widget type="Button" skin="Button" position="275 55 192 28" name="FunctionalButton">
-            <Property key="Alpha" value="0"/>
-        </Widget>
-        <Widget type="Button" skin="Button" position="1168 0 96 28" name="ExitButton">
             <Property key="Alpha" value="0"/>
         </Widget>
         <Widget type="ImageBox" skin="ImageBox" position="32 56 80 28" name="AllImage">
             <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/all_button_active.png"/>
         </Widget>
+        <Widget type="Button" skin="Button" position="32 56 80 28" name="AllButton">
+            <Property key="Alpha" value="0"/>
+        </Widget>
         <Widget type="ImageBox" skin="ImageBox" position="128 56 128 28" name="BlocksImage">
             <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/blocks_button.png"/>
         </Widget>
-        <Widget type="ImageBox" skin="ImageBox" position="275 56 192 28" name="FunctionalImage">
+        <Widget type="Button" skin="Button" position="128 56 128 28" name="BlocksButton">
+            <Property key="Alpha" value="0"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position="272 56 192 28" name="FunctionalImage">
             <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/functional_button.png"/>
+        </Widget>
+        <Widget type="Button" skin="Button" position="272 56 192 28" name="FunctionalButton">
+            <Property key="Alpha" value="0"/>
+        </Widget>
+        <Widget type="Button" skin="Button" position="1168 0 96 28" name="ExitButton">
+            <Property key="Alpha" value="0"/>
+        </Widget>
+        <Widget type="TextBox" skin="TextBox" position="944 504 304 28" name="ItemCost">
+            <Property key="FontHeight" value="28"/>
+            <Property key="FontName" value="SM_Button"/>
+            <Property key="TextAlign" value="Left Bottom"/>
         </Widget>
     </Widget>
     <CodeGeneratorSettings/>

@@ -120,8 +120,6 @@ function Game:client_setShopCategory(name)
   g_clientInventoryManager:selectShopCategory(category)
 end
 
-function Game:client_selectShopItem(name, id)
-  print("client_selectShopItem")
-  print(name)
-  print(id)
+function Game:client_selectShopItem(_, _, item, _)
+  g_clientInventoryManager:selectShopItem(item)
 end

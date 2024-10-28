@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout" version="3.2.0">
+    <Widget type="Button" skin="Button" name="SelectItem" position_real="0 0 1 1">
+        <Property key="NeedKey" value="true"/>
+        <Property key="NeedMouse" value="true"/>
+    </Widget>
     <Widget type="ImageBox" skin="ImageBox" position_real="0 0 1 1" name="Icon">
         <Property key="InheritsAlpha" value="false"/>
         <Property key="NeedKey" value="false"/>
