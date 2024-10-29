@@ -248,6 +248,7 @@ function ServerPlotManager:respawnPlayer(player)
         plot.playerId = player:getId()
         print("Assigned plot "..plotId.." to "..player.name..", teleporting")
         character:setWorldPosition(plot.position + sm.vec3.new(0, 0, 3))
+        self:loadBuild(player, true)
         return plotId
       end
     end
