@@ -1,20 +1,38 @@
+// Name property is purely so that developers know what the item is
 [
   {
-    "itemId": "8216e887-8758-48b4-afa1-eea78cbbc3b0",
-    "quantity": 16,
+    "name": "Wood",
+    "itemId": "c45be799-94d1-4ab1-8fb4-52c9bd3d94a9",
+    "quantity": 1,
     "category": "Blocks",
-    "cost": 10
+    "cost": 0
   },
   {
-    "itemId": "71aefe40-fc76-40ad-a6a1-3c5c9301378e",
-    "quantity": 16,
+    "name": "Rock",
+    "itemId": "a8ed08de-6bc8-4b8d-abdb-84f47b3fd32e",
+    "quantity": 1,
     "category": "Blocks",
-    "cost": 15
+    "cost": 0
   },
   {
+    "name": "Styrofoam",
+    "itemId": "21111cf8-3782-4f2f-8c3f-ff1bb5ec67df",
+    "quantity": 1,
+    "category": "Blocks",
+    "cost": 0
+  },
+  {
+    "name": "Aerogel",
+    "itemId": "d06ebc97-db48-45e4-a6b5-ccd57446e8e4",
+    "quantity": 1,
+    "category": "Blocks",
+    "cost": 0
+  },
+  {
+    "name": "Bearing",
     "itemId": "4a1b886b-913e-4aad-b5b6-6e41b0db23a6",
     "quantity": 1,
     "category": "Functional",
-    "cost": 60
+    "cost": 0
   }
 ]

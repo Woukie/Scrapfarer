@@ -129,30 +129,6 @@
       "uuid": "3f8f86b2-518e-4819-a4a5-37d9c7552f53"
     },
     {
-      "bearing": {},
-      "color": "df7f01",
-      "cylinder": {
-        "axis": "Z",
-        "depth": 1,
-        "diameter": 1
-      },
-      "flammable": false,
-      "legacyId": 100,
-      "name": "jnt_bearing",
-      "physicsMaterial": "Mechanical",
-      "ratings": {
-        "buoyancy": 0,
-        "density": 4,
-        "durability": 1,
-        "friction": 4
-      },
-      "renderable": "$GAME_DATA/Objects/Renderable/Interactive/obj_interactive_bearing.rend",
-      "rotationSet": "PropZ",
-      "stackSize": 10,
-      "sticky": "-Z",
-      "uuid": "4a1b886b-913e-4aad-b5b6-6e41b0db23a6"
-    },
-    {
       "box": {
         "x": 2,
         "y": 2,
@@ -199,19 +175,43 @@
       "uuid": "c7ae817b-dea4-4074-bd1a-c452025b3db5"
     },
     {
+      "bearing": {},
+      "color": "df7f01",
+      "cylinder": {
+        "axis": "Z",
+        "depth": 1,
+        "diameter": 1
+      },
+      "flammable": false,
+      "legacyId": 100,
+      "name": "jnt_bearing",
+      "physicsMaterial": "Mechanical",
+      "ratings": {
+        "buoyancy": 0,
+        "density": 4,
+        "durability": 1,
+        "friction": 4
+      },
+      "renderable": "$GAME_DATA/Objects/Renderable/Interactive/obj_interactive_bearing.rend",
+      "rotationSet": "PropZ",
+      "stackSize": 10000,
+      "sticky": "-Z",
+      "uuid": "4a1b886b-913e-4aad-b5b6-6e41b0db23a6"
+    },
+    {
       "box": {
         "x": 2,
         "y": 2,
         "z": 2
       },
       "color": "D15C05",
-      "name": "obj_wood_block",
+      "name": "obj_wood",
       "physicsMaterial": "Wood",
       "ratings": {
-        "buoyancy": 1,
-        "density": 1,
-        "durability": 1,
-        "friction": 10
+        "density": 2,
+        "durability": 3,
+        "friction": 5,
+        "buoyancy": 4
       },
       "renderable": {
         "lodList": [
@@ -231,7 +231,116 @@
         ]
       },
       "rotationSet": "Default",
+      "stackSize": 10000,
       "uuid": "c45be799-94d1-4ab1-8fb4-52c9bd3d94a9"
+    },
+    {
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "color": "777777",
+      "name": "obj_rock",
+      "physicsMaterial": "Rock",
+      "ratings": {
+        "density": 5,
+        "durability": 6,
+        "friction": 5,
+        "buoyancy": 2
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "stackSize": 10000,
+      "uuid": "a8ed08de-6bc8-4b8d-abdb-84f47b3fd32e"
+    },
+    {
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "color": "C0FFEE",
+      "name": "obj_aerogel",
+      "physicsMaterial": "Plastic",
+      "ratings": {
+        "density": 1,
+        "durability": 5,
+        "friction": 6,
+        "buoyancy": 9
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
+            "subMeshList": [
+              {
+                "material": "Glass",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Aerogel/aerogel_dif.png",
+                  "$CONTENT_DATA/Textures/Aerogel/aerogel_asg.png",
+                  "$CONTENT_DATA/Textures/Aerogel/aerogel_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "stackSize": 10000,
+      "uuid": "d06ebc97-db48-45e4-a6b5-ccd57446e8e4"
+    },
+    {
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "color": "ADADAD",
+      "name": "obj_styrofoam",
+      "physicsMaterial": "Plastic",
+      "ratings": {
+        "density": 1,
+        "durability": 2,
+        "friction": 4,
+        "buoyancy": 7
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Styrofoam/styrofoam_dif.png",
+                  "$CONTENT_DATA/Textures/Styrofoam/styrofoam_asg.png",
+                  "$CONTENT_DATA/Textures/Styrofoam/styrofoam_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "stackSize": 10000,
+      "uuid": "21111cf8-3782-4f2f-8c3f-ff1bb5ec67df"
     }
   ]
 }

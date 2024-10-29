@@ -323,7 +323,6 @@ function ServerPlotManager:onCellLoaded(x, y)
       self.initialised = true;
       for _, player in ipairs(players) do
         self:respawnPlayer(player) -- We know this triggers immediately since we are in the world environment
-        self:loadBuild(player, true)
       end
     end
   end
