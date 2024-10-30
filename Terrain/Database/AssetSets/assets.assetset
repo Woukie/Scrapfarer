@@ -6,7 +6,6 @@
       "uuid": "f017a1e0-0129-499f-9bbc-608c4d988a64"
     },
     {
-      "col": "$GAME_DATA/Terrain/Collision/Forest/env_forest_oak01_col.obj",
       "defaultColors": {
         "leaves": "6faf0a",
         "trunk": "804620"
@@ -29,8 +28,7 @@
             "subMeshMap": {
               "leaves": {
                 "custom": {
-                  "color": "leaves",
-                  "shadow": false
+                  "color": "leaves"
                 },
                 "material": "DifAsgAlpha",
                 "textureList": [
@@ -57,7 +55,6 @@
       "uuid": "a19ee016-8ca5-46b4-8ce7-f561d7fc1947"
     },
     {
-      "col": "$GAME_DATA/Terrain/Collision/Forest/env_forest_oak01_col.obj",
       "defaultColors": {
         "leaves": "6faf0a",
         "trunk": "804620"
@@ -80,8 +77,7 @@
             "subMeshMap": {
               "leaves": {
                 "custom": {
-                  "color": "leaves",
-                  "shadow": false
+                  "color": "leaves"
                 },
                 "material": "DifAsgAlpha",
                 "textureList": [
@@ -108,7 +104,6 @@
       "uuid": "f15bb9ee-7e64-494c-a23d-2c71d9df2cf1"
     },
     {
-      "col": "$GAME_DATA/Terrain/Collision/Forest/env_forest_oak01_col.obj",
       "defaultColors": {
         "leaves": "6faf0a",
         "trunk": "804620"
@@ -131,8 +126,7 @@
             "subMeshMap": {
               "leaves": {
                 "custom": {
-                  "color": "leaves",
-                  "shadow": false
+                  "color": "leaves"
                 },
                 "material": "DifAsgAlpha",
                 "textureList": [
