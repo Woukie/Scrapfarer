@@ -1,9 +1,162 @@
 {
-   "assetListRenderable" : [
-      {
-         "name" : "Boat floor",
-         "renderable" : "$CONTENT_DATA/Terrain/Renderables/BoatFloor.rend",
-         "uuid" : "f017a1e0-0129-499f-9bbc-608c4d988a64"
-      }
-   ]
+  "assetListRenderable": [
+    {
+      "name": "Boat floor",
+      "renderable": "$CONTENT_DATA/Terrain/Renderables/BoatFloor.rend",
+      "uuid": "f017a1e0-0129-499f-9bbc-608c4d988a64"
+    },
+    {
+      "col": "$GAME_DATA/Terrain/Collision/Forest/env_forest_oak01_col.obj",
+      "defaultColors": {
+        "leaves": "6faf0a",
+        "trunk": "804620"
+      },
+      "name": "env_tree_01",
+      "physics": {
+        "mass": 10000,
+        "material": "Wood"
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "includes": [
+              "POSITION",
+              "NORMAL",
+              "UV0",
+              "TANGENT"
+            ],
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/Tree 01.fbx",
+            "subMeshMap": {
+              "leaves": {
+                "custom": {
+                  "color": "leaves",
+                  "shadow": false
+                },
+                "material": "DifAsgAlpha",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Trees/leaves_dif.png",
+                  "$CONTENT_DATA/Textures/Trees/leaves_asg.png",
+                  ""
+                ]
+              },
+              "treetrunk": {
+                "custom": {
+                  "color": "trunk"
+                },
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Trees/bark_dif.png",
+                  "$GAME_DATA/Terrain/Textures/Forest/env_forest_oak_asg.tga",
+                  "$CONTENT_DATA/Textures/Trees/bark_nor.png"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "uuid": "a19ee016-8ca5-46b4-8ce7-f561d7fc1947"
+    },
+    {
+      "col": "$GAME_DATA/Terrain/Collision/Forest/env_forest_oak01_col.obj",
+      "defaultColors": {
+        "leaves": "6faf0a",
+        "trunk": "804620"
+      },
+      "name": "env_tree_02",
+      "physics": {
+        "mass": 10000,
+        "material": "Wood"
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "includes": [
+              "POSITION",
+              "NORMAL",
+              "UV0",
+              "TANGENT"
+            ],
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/Tree 02.fbx",
+            "subMeshMap": {
+              "leaves": {
+                "custom": {
+                  "color": "leaves",
+                  "shadow": false
+                },
+                "material": "DifAsgAlpha",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Trees/leaves_dif.png",
+                  "$CONTENT_DATA/Textures/Trees/leaves_asg.png",
+                  ""
+                ]
+              },
+              "treetrunk": {
+                "custom": {
+                  "color": "trunk"
+                },
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Trees/bark_dif.png",
+                  "$GAME_DATA/Terrain/Textures/Forest/env_forest_oak_asg.tga",
+                  "$CONTENT_DATA/Textures/Trees/bark_nor.png"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "uuid": "f15bb9ee-7e64-494c-a23d-2c71d9df2cf1"
+    },
+    {
+      "col": "$GAME_DATA/Terrain/Collision/Forest/env_forest_oak01_col.obj",
+      "defaultColors": {
+        "leaves": "6faf0a",
+        "trunk": "804620"
+      },
+      "name": "env_tree_03",
+      "physics": {
+        "mass": 10000,
+        "material": "Wood"
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "includes": [
+              "POSITION",
+              "NORMAL",
+              "UV0",
+              "TANGENT"
+            ],
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/Tree 03.fbx",
+            "subMeshMap": {
+              "leaves": {
+                "custom": {
+                  "color": "leaves",
+                  "shadow": false
+                },
+                "material": "DifAsgAlpha",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Trees/leaves_dif.png",
+                  "$CONTENT_DATA/Textures/Trees/leaves_asg.png",
+                  ""
+                ]
+              },
+              "treetrunk": {
+                "custom": {
+                  "color": "trunk"
+                },
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Trees/bark_dif.png",
+                  "$GAME_DATA/Terrain/Textures/Forest/env_forest_oak_asg.tga",
+                  "$CONTENT_DATA/Textures/Trees/bark_nor.png"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "uuid": "2d5092cf-a9fd-487b-baa6-d905fe2c493b"
+    }
+  ]
 }

@@ -4491,7 +4491,7 @@
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "",
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Asset Test.tile",
          "rotation" : 0,
          "x" : 1,
          "y" : 1
