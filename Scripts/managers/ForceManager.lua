@@ -101,10 +101,9 @@ function ForceManager.trigger_onStay(self, trigger, results)
           ApplyCharacterImpulse(result, params.force, params.force:length())
         end
       elseif type == "Body" then
-        if exclusions[tostring(result:getShapes()[1].uuid)] then
-          return
+        if not exclusions[tostring(result:getShapes()[1].uuid)] then
+          sm.physics.applyImpulse(result, params.force * result.mass * 0.0003, true)
         end
-        sm.physics.applyImpulse(result, params.force * result.mass * 0.0003, true)
       end
     end
   end
