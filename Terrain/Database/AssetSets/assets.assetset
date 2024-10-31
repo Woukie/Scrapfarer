@@ -4,6 +4,154 @@
       "defaultColors": {
         "stone": "f0f0f0"
       },
+      "name": "env_cliff_04",
+      "physics": {
+        "mass": 10000,
+        "material": "Stone"
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "includes": [
+              "POSITION",
+              "NORMAL",
+              "UV0",
+              "TANGENT"
+            ],
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/cliff_04.fbx",
+            "subMeshList": [
+              {
+                "custom": {
+                  "color": "stone"
+                },
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "uuid": "f7c5bda9-5509-4a55-beee-5712141dfb7a"
+    },
+    {
+      "defaultColors": {
+        "stone": "f0f0f0"
+      },
+      "name": "env_cliff_03",
+      "physics": {
+        "mass": 10000,
+        "material": "Stone"
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "includes": [
+              "POSITION",
+              "NORMAL",
+              "UV0",
+              "TANGENT"
+            ],
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/cliff_03.fbx",
+            "subMeshList": [
+              {
+                "custom": {
+                  "color": "stone"
+                },
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "uuid": "3b3e9b5a-1785-4429-9154-0242b819c8b9"
+    },
+    {
+      "defaultColors": {
+        "stone": "f0f0f0"
+      },
+      "name": "env_cliff_02",
+      "physics": {
+        "mass": 10000,
+        "material": "Stone"
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "includes": [
+              "POSITION",
+              "NORMAL",
+              "UV0",
+              "TANGENT"
+            ],
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/cliff_02.fbx",
+            "subMeshList": [
+              {
+                "custom": {
+                  "color": "stone"
+                },
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "uuid": "0bf524a2-5ab0-4298-b177-be4206e29823"
+    },
+    {
+      "defaultColors": {
+        "stone": "f0f0f0"
+      },
+      "name": "env_cliff_01",
+      "physics": {
+        "mass": 10000,
+        "material": "Stone"
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "includes": [
+              "POSITION",
+              "NORMAL",
+              "UV0",
+              "TANGENT"
+            ],
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/cliff_01.fbx",
+            "subMeshList": [
+              {
+                "custom": {
+                  "color": "stone"
+                },
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "uuid": "ac2e6056-6b88-4bd3-851c-eb9b55c1e8f0"
+    },
+    {
+      "defaultColors": {
+        "stone": "f0f0f0"
+      },
       "name": "env_rock_04",
       "physics": {
         "mass": 10000,
