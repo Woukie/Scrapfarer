@@ -3,6 +3,10 @@
     {
       "path": "$GAME_DATA/Effects/Database/EffectSets/water.json",
       "showInEditor": true
+    },
+    {
+      "path": "$CONTENT_DATA/Effects/Database/EffectSets/environment.effectset",
+      "showInEditor": true
     }
   ]
 }

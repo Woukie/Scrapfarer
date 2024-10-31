@@ -1,0 +1,11 @@
+{
+  "WaterfallMist": {
+    "effectList": [
+      {
+        "type": "particle",
+        "name": "waterfall_mist",
+        "delay": 0
+      }
+    ]
+  }
+}
