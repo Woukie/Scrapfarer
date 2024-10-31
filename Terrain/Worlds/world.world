@@ -4467,31 +4467,31 @@
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "",
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
          "x" : -2,
          "y" : 1
       },
       {
-         "offsetX" : 0,
+         "offsetX" : 1,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
          "x" : -1,
          "y" : 1
       },
       {
-         "offsetX" : 1,
+         "offsetX" : 2,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
          "x" : 0,
          "y" : 1
       },
       {
-         "offsetX" : 0,
+         "offsetX" : 3,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Asset Test.tile",
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
          "x" : 1,
          "y" : 1
@@ -4722,32 +4722,32 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
+         "offsetY" : 1,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
          "x" : -2,
          "y" : 2
       },
       {
-         "offsetX" : 0,
+         "offsetX" : 1,
          "offsetY" : 1,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
          "x" : -1,
          "y" : 2
       },
       {
-         "offsetX" : 1,
+         "offsetX" : 2,
          "offsetY" : 1,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
          "x" : 0,
          "y" : 2
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
+         "offsetX" : 3,
+         "offsetY" : 1,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
          "x" : 1,
          "y" : 2
@@ -4978,32 +4978,32 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
+         "offsetY" : 2,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
          "x" : -2,
          "y" : 3
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "offsetX" : 1,
+         "offsetY" : 2,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
          "x" : -1,
          "y" : 3
       },
       {
-         "offsetX" : 1,
-         "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "offsetX" : 2,
+         "offsetY" : 2,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
          "x" : 0,
          "y" : 3
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
+         "offsetX" : 3,
+         "offsetY" : 2,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
          "x" : 1,
          "y" : 3
@@ -5234,32 +5234,32 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
+         "offsetY" : 3,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
          "x" : -2,
          "y" : 4
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 1,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "offsetX" : 1,
+         "offsetY" : 3,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
          "x" : -1,
          "y" : 4
       },
       {
-         "offsetX" : 1,
-         "offsetY" : 1,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Body.tile",
+         "offsetX" : 2,
+         "offsetY" : 3,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
          "x" : 0,
          "y" : 4
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
+         "offsetX" : 3,
+         "offsetY" : 3,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
          "x" : 1,
          "y" : 4
