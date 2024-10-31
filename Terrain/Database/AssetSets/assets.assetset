@@ -42,7 +42,7 @@
       "defaultColors": {
         "leaves": "6faf0a"
       },
-      "name": "env_grass_patch",
+      "name": "env_grass_patch_01",
       "physics": {
         "mass": 10000,
         "material": "Wood"
@@ -56,7 +56,7 @@
               "UV0",
               "TANGENT"
             ],
-            "mesh": "$CONTENT_DATA/Terrain/Mesh/grass_patch.fbx",
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/grass_patch_01.fbx",
             "subMeshMap": {
               "grass": {
                 "custom": {
@@ -64,8 +64,8 @@
                 },
                 "material": "DifAsgAlpha",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/Grass Patch/grass_patch_dif.png",
-                  "$CONTENT_DATA/Textures/Grass Patch/grass_patch_asg.png",
+                  "$CONTENT_DATA/Textures/Grass Patch/grass_patch_01_dif.png",
+                  "$CONTENT_DATA/Textures/Grass Patch/grass_patch_01_asg.png",
                   ""
                 ]
               }
@@ -74,6 +74,43 @@
         ]
       },
       "uuid": "2dfc16c8-3c90-4a50-8073-a53ed601b207"
+    },
+    {
+      "defaultColors": {
+        "leaves": "6faf0a"
+      },
+      "name": "env_grass_patch_02",
+      "physics": {
+        "mass": 10000,
+        "material": "Wood"
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "includes": [
+              "POSITION",
+              "NORMAL",
+              "UV0",
+              "TANGENT"
+            ],
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/grass_patch_02.fbx",
+            "subMeshMap": {
+              "grass": {
+                "custom": {
+                  "color": "leaves"
+                },
+                "material": "DifAsgAlpha",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Grass Patch/grass_patch_02_dif.png",
+                  "$CONTENT_DATA/Textures/Grass Patch/grass_patch_02_asg.png",
+                  ""
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "uuid": "800094ea-0317-4d8a-bf7c-fccce5851b7a"
     },
     {
       "defaultColors": {
