@@ -1,3 +1,5 @@
+dofile("$SURVIVAL_DATA/Scripts/game/managers/EffectManager.lua" )
+
 dofile("$CONTENT_DATA/Scripts/game/shapes.lua")
 dofile("$CONTENT_DATA/Scripts/game/tools.lua")
 dofile("$CONTENT_DATA/Scripts/managers/server/ServerCheckpointManager.lua")
@@ -64,6 +66,9 @@ function Game:client_onCreate()
 
   g_clientShopManager = ClientShopManager()
   g_clientShopManager:onCreate()
+
+  g_effectManager = EffectManager()
+	g_effectManager:cl_onCreate()
 
   sm.game.bindChatCommand("/respawn", {}, "client_onChatCommand", "Respawn")
   sm.game.bindChatCommand("/start", {}, "client_onChatCommand", "Starts the game")

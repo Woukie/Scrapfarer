@@ -1,12 +1,181 @@
 {
   "effectSetList": [
     {
+      "path": "$CONTENT_DATA/Effects/Database/EffectSets/waterfall.effectset",
+      "showInEditor": true
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/interactive.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/collision.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/tools.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/environment.json",
+      "showInEditor": true
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/critter.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/tree.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/stone.json",
+      "showInEditor": true
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/lights.json",
+      "showInEditor": true,
+      "editorGizmo": "light"
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/fire.json",
+      "showInEditor": true
+    },
+    {
       "path": "$GAME_DATA/Effects/Database/EffectSets/water.json",
       "showInEditor": true
     },
     {
-      "path": "$CONTENT_DATA/Effects/Database/EffectSets/environment.effectset",
+      "path": "$GAME_DATA/Effects/Database/EffectSets/gasengines.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/thrusters.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/electricengines.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/suspensions.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/sensors.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/character.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/controllers.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/projectile.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/pistons.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/shipwreck.json",
       "showInEditor": true
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/fence.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/loot.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/plants.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/packingstation.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/craftbots.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/treeparts.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/treeparts_burntforest.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/glowgorp.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/powertools.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/vacuumpipe.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/haygrasspile.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/parteffects.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/spudgun.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/hideout.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/encryptor.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/watercannon.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/gui_2d.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/characterobject.json",
+      "showInEditor": true
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/painteffects.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/markers.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/robotparts.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/builderguide.json",
+      "showInEditor": false
+    },
+    {
+      "path": "$GAME_DATA/Effects/Database/EffectSets/horn.json",
+      "showInEditor": false
     }
   ]
 }

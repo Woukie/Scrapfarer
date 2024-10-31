@@ -120,14 +120,14 @@
     {
       "name": "Effect",
       "tags": [
-        "FIRE"
+        "EFFECT"
       ],
       "params": [
         {
           "name": "effect",
           "type": "effect",
           "default": {
-            "name": "Fire -medium01"
+            "name": "Fire - small01"
           }
         }
       ],
@@ -135,22 +135,18 @@
         {
           "name": "name",
           "type": "string"
-        },
-        {
-          "name": "connections",
-          "type": "connections"
         }
       ],
       "color": [
-        1,
-        0,
-        0,
+        0.7,
+        0.7,
+        0.7,
         0.6
       ],
       "billboardColor": [
         1,
-        0,
-        0,
+        1,
+        1,
         1
       ],
       "initYUp": false,

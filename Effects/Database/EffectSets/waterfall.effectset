@@ -3,8 +3,7 @@
     "effectList": [
       {
         "type": "particle",
-        "name": "waterfall_mist",
-        "delay": 0
+        "name": "waterfall_mist"
       }
     ]
   }

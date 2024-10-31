@@ -46,6 +46,10 @@ function World.client_onFixedUpdate(self)
   self.waterManager:cl_onFixedUpdate()
 end
 
+function World.client_onUpdate(self, _)
+	g_effectManager:cl_onWorldUpdate(self)
+end
+
 function World.server_onCellCreated(self, x, y)
   g_checkpointManager:onCellLoaded(x, y)
   g_serverPlotManager:onCellLoaded(x, y)
@@ -58,6 +62,7 @@ function World.client_onCellLoaded(self, x, y)
   g_clientPlotManager:onCellLoaded(x, y)
   self.forceManager:client_onCellLoaded(x, y)
   self.waterManager:cl_onCellLoaded(x, y)
+  g_effectManager:cl_onWorldCellLoaded(self, x, y)
 end
 
 function World.server_onCellLoaded(self, x, y)
@@ -78,6 +83,7 @@ function World.client_onCellUnloaded(self, x, y)
   g_clientPlotManager:onCellUnloaded(x, y)
   self.forceManager:client_onCellUnloaded(x, y)
   self.waterManager:cl_onCellUnloaded(x, y)
+  g_effectManager:cl_onWorldCellUnloaded(self, x, y)
 end
 
 function World.client_syncPlots(self, data)
