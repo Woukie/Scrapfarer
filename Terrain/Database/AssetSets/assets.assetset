@@ -1,9 +1,79 @@
 {
   "assetListRenderable": [
     {
-      "name": "Boat floor",
-      "renderable": "$CONTENT_DATA/Terrain/Renderables/BoatFloor.rend",
-      "uuid": "f017a1e0-0129-499f-9bbc-608c4d988a64"
+      "defaultColors": {
+        "leaves": "6faf0a",
+        "trunk": "804620"
+      },
+      "name": "env_leaf_pile",
+      "physics": {
+        "mass": 10000,
+        "material": "Wood"
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "includes": [
+              "POSITION",
+              "NORMAL",
+              "UV0",
+              "TANGENT"
+            ],
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/leaves.fbx",
+            "subMeshMap": {
+              "leaves": {
+                "custom": {
+                  "color": "leaves"
+                },
+                "material": "DifAsgAlpha",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Clutter/leaf_pile_dif.png",
+                  "$CONTENT_DATA/Textures/Clutter/leaf_pile_asg.png",
+                  ""
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "uuid": "d82087fa-4751-49e7-a221-e6cf0df85c70"
+    },
+    {
+      "defaultColors": {
+        "leaves": "6faf0a"
+      },
+      "name": "env_grass_patch",
+      "physics": {
+        "mass": 10000,
+        "material": "Wood"
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "includes": [
+              "POSITION",
+              "NORMAL",
+              "UV0",
+              "TANGENT"
+            ],
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/grass_patch.fbx",
+            "subMeshMap": {
+              "grass": {
+                "custom": {
+                  "color": "leaves"
+                },
+                "material": "DifAsgAlpha",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Grass Patch/grass_patch_dif.png",
+                  "$CONTENT_DATA/Textures/Grass Patch/grass_patch_asg.png",
+                  ""
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "uuid": "2dfc16c8-3c90-4a50-8073-a53ed601b207"
     },
     {
       "defaultColors": {
@@ -24,7 +94,7 @@
               "UV0",
               "TANGENT"
             ],
-            "mesh": "$CONTENT_DATA/Terrain/Mesh/Tree 01.fbx",
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/tree_01.fbx",
             "subMeshMap": {
               "leaves": {
                 "custom": {
@@ -73,7 +143,7 @@
               "UV0",
               "TANGENT"
             ],
-            "mesh": "$CONTENT_DATA/Terrain/Mesh/Tree 02.fbx",
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/tree_02.fbx",
             "subMeshMap": {
               "leaves": {
                 "custom": {
@@ -122,7 +192,7 @@
               "UV0",
               "TANGENT"
             ],
-            "mesh": "$CONTENT_DATA/Terrain/Mesh/Tree 03.fbx",
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/tree_03.fbx",
             "subMeshMap": {
               "leaves": {
                 "custom": {

@@ -104,7 +104,7 @@
       "renderable": {
         "lodList": [
           {
-            "mesh": "$CONTENT_DATA/Terrain/Mesh/boat_floor.fbx",
+            "mesh": "$CONTENT_DATA/Objects/Mesh/boat_floor.fbx",
             "subMeshList": [
               {
                 "material": "DifAsgNor",
