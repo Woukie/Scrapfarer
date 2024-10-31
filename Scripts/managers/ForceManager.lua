@@ -1,6 +1,10 @@
+dofile "$CONTENT_DATA/Scripts/game/shapes.lua"
 dofile "$SURVIVAL_DATA/Scripts/util.lua"
 
 ForceManager = class(nil)
+
+local exclusions = {}
+exclusions[tostring(obj_rock_obstacle)] = true
 
 function ForceManager.onCreate(self)
 	self.cells = {}
@@ -97,6 +101,9 @@ function ForceManager.trigger_onStay(self, trigger, results)
           ApplyCharacterImpulse(result, params.force, params.force:length())
         end
       elseif type == "Body" then
+        if exclusions[tostring(result:getShapes()[1].uuid)] then
+          return
+        end
         sm.physics.applyImpulse(result, params.force * result.mass * 0.0003, true)
       end
     end

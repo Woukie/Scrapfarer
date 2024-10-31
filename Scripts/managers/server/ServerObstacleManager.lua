@@ -101,7 +101,7 @@ function ServerObstacleManager:onFixedUpdate()
           obstacleSpawner.shapeUuid,
           spawnPos,
           sm.quat.identity(),
-          false,
+          true,
           false
         )
         part:getBody():setBuildable(false)
