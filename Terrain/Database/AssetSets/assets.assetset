@@ -2,6 +2,154 @@
   "assetListRenderable": [
     {
       "defaultColors": {
+        "stone": "f0f0f0"
+      },
+      "name": "env_rock_04",
+      "physics": {
+        "mass": 10000,
+        "material": "Wood"
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "includes": [
+              "POSITION",
+              "NORMAL",
+              "UV0",
+              "TANGENT"
+            ],
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/rock_04.fbx",
+            "subMeshList": [
+              {
+                "custom": {
+                  "color": "stone"
+                },
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "uuid": "bf711b42-c6bf-451a-b681-4ae015d8bbc9"
+    },
+    {
+      "defaultColors": {
+        "stone": "f0f0f0"
+      },
+      "name": "env_rock_03",
+      "physics": {
+        "mass": 10000,
+        "material": "Wood"
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "includes": [
+              "POSITION",
+              "NORMAL",
+              "UV0",
+              "TANGENT"
+            ],
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/rock_03.fbx",
+            "subMeshList": [
+              {
+                "custom": {
+                  "color": "stone"
+                },
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "uuid": "a6e8a37c-4130-433a-9842-2c1a82a0c1c7"
+    },
+    {
+      "defaultColors": {
+        "stone": "f0f0f0"
+      },
+      "name": "env_rock_02",
+      "physics": {
+        "mass": 10000,
+        "material": "Wood"
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "includes": [
+              "POSITION",
+              "NORMAL",
+              "UV0",
+              "TANGENT"
+            ],
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/rock_02.fbx",
+            "subMeshList": [
+              {
+                "custom": {
+                  "color": "stone"
+                },
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "uuid": "855fa4b1-a136-44e0-be6a-94b2d9a5266b"
+    },
+    {
+      "defaultColors": {
+        "stone": "f0f0f0"
+      },
+      "name": "env_rock_01",
+      "physics": {
+        "mass": 10000,
+        "material": "Wood"
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "includes": [
+              "POSITION",
+              "NORMAL",
+              "UV0",
+              "TANGENT"
+            ],
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/rock_01.fbx",
+            "subMeshList": [
+              {
+                "custom": {
+                  "color": "stone"
+                },
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "uuid": "1efda2b7-9769-49d2-a7db-f0b0e4e62614"
+    },
+    {
+      "defaultColors": {
         "leaves": "6faf0a",
         "trunk": "804620"
       },
