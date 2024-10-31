@@ -27,11 +27,6 @@
           }
         ]
       },
-      "scripted": {
-        "filename": "$CONTENT_DATA/Scripts/game/interactables/TreasureChest.lua",
-        "classname": "TreasureChest",
-        "data": {}
-      },
       "restrictions": {
         "buildable": false,
         "connectable": false,
@@ -39,18 +34,23 @@
         "erasable": false
       },
       "rotationSet": "PropYZ",
+      "scripted": {
+        "classname": "TreasureChest",
+        "data": {},
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/TreasureChest.lua"
+      },
       "showInInventory": false,
       "uuid": "d14b7f0a-fce4-4785-9389-fabf763180f2"
     },
     {
-      "hull": {
-        "x": 2,
-        "y": 2,
-        "z": 2,
-        "col": "$CONTENT_DATA/Objects/Mesh/shop.fbx"
-      },
       "color": "ffffff",
       "flammable": false,
+      "hull": {
+        "col": "$CONTENT_DATA/Objects/Mesh/shop.fbx",
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
       "name": "obj_shop",
       "physicsMaterial": "Plastic",
       "renderable": {
@@ -70,11 +70,6 @@
           }
         ]
       },
-      "scripted": {
-        "filename": "$CONTENT_DATA/Scripts/game/interactables/Shop.lua",
-        "classname": "Shop",
-        "data": {}
-      },
       "restrictions": {
         "buildable": false,
         "connectable": false,
@@ -82,6 +77,11 @@
         "erasable": false
       },
       "rotationSet": "PropYZ",
+      "scripted": {
+        "classname": "Shop",
+        "data": {},
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/Shop.lua"
+      },
       "showInInventory": false,
       "uuid": "bbab5b38-d9f0-4265-b267-e80b2d2b6bad"
     },
@@ -143,17 +143,6 @@
         "durability": 10,
         "friction": 10
       },
-      "scripted": {
-        "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua",
-        "classname": "Obstacle",
-        "data": {
-          "sizeX": 3,
-          "sizeY": 3,
-          "sizeZ": 2,
-          "damage": 10
-        }
-      },
-      "showInInventory": false,
       "renderable": {
         "lodList": [
           {
@@ -172,6 +161,17 @@
         ]
       },
       "rotationSet": "Default",
+      "scripted": {
+        "classname": "Obstacle",
+        "data": {
+          "damage": 10,
+          "sizeX": 3,
+          "sizeY": 3,
+          "sizeZ": 2
+        },
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
+      },
+      "showInInventory": false,
       "uuid": "c7ae817b-dea4-4074-bd1a-c452025b3db5"
     },
     {
@@ -208,10 +208,10 @@
       "name": "obj_wood",
       "physicsMaterial": "Wood",
       "ratings": {
+        "buoyancy": 4,
         "density": 2,
         "durability": 3,
-        "friction": 5,
-        "buoyancy": 4
+        "friction": 5
       },
       "renderable": {
         "lodList": [
@@ -244,10 +244,10 @@
       "name": "obj_rock",
       "physicsMaterial": "Rock",
       "ratings": {
+        "buoyancy": 2,
         "density": 5,
         "durability": 6,
-        "friction": 5,
-        "buoyancy": 2
+        "friction": 5
       },
       "renderable": {
         "lodList": [
@@ -280,10 +280,10 @@
       "name": "obj_aerogel",
       "physicsMaterial": "Plastic",
       "ratings": {
+        "buoyancy": 9,
         "density": 1,
         "durability": 5,
-        "friction": 6,
-        "buoyancy": 9
+        "friction": 6
       },
       "renderable": {
         "lodList": [
@@ -316,10 +316,10 @@
       "name": "obj_styrofoam",
       "physicsMaterial": "Plastic",
       "ratings": {
+        "buoyancy": 7,
         "density": 1,
         "durability": 2,
-        "friction": 4,
-        "buoyancy": 7
+        "friction": 4
       },
       "renderable": {
         "lodList": [
@@ -343,21 +343,21 @@
       "uuid": "21111cf8-3782-4f2f-8c3f-ff1bb5ec67df"
     },
     {
-      "box": {
-        "x": 6,
-        "y": 2,
-        "z": 6
-      },
-      "ratings": {
-        "density": 2,
-        "durability": 1,
-        "friction": 5,
-        "buoyancy": 6
-      },
       "color": "ffeeee",
+      "cylinder": {
+        "axis": "Y",
+        "depth": 2,
+        "diameter": 6
+      },
       "flammable": false,
       "name": "obj_donut",
       "physicsMaterial": "Plastic",
+      "ratings": {
+        "buoyancy": 6,
+        "density": 2,
+        "durability": 1,
+        "friction": 5
+      },
       "renderable": {
         "lodList": [
           {
