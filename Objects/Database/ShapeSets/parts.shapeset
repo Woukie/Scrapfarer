@@ -341,6 +341,43 @@
       "rotationSet": "Default",
       "stackSize": 10000,
       "uuid": "21111cf8-3782-4f2f-8c3f-ff1bb5ec67df"
+    },
+    {
+      "box": {
+        "x": 6,
+        "y": 2,
+        "z": 6
+      },
+      "ratings": {
+        "density": 2,
+        "durability": 1,
+        "friction": 5,
+        "buoyancy": 6
+      },
+      "color": "ffeeee",
+      "flammable": false,
+      "name": "obj_donut",
+      "physicsMaterial": "Plastic",
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/donut.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/donut_dif.png",
+                  "",
+                  "$CONTENT_DATA/Textures/donut_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "stackSize": 10000,
+      "uuid": "b5161316-7ed0-494d-a0d0-d830fc1aceae"
     }
   ]
 }

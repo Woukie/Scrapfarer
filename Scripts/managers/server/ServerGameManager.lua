@@ -51,7 +51,7 @@ function ServerGameManager.onPlayerJoined(self, player)
     inventory = {}
   }
 
-  self.gameStates[playerId].inventory[tostring(obj_wood)] = 2
+  self.gameStates[playerId].inventory[tostring(obj_donut)] = 1
 
   if not loadPlayer(self, player) then
     savePlayer(self, player)
