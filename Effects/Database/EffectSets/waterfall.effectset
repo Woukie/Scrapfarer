@@ -6,5 +6,13 @@
         "name": "waterfall_mist"
       }
     ]
+  },
+  "WaterfallWater": {
+    "effectList": [
+      {
+        "type": "particle",
+        "name": "waterfall_water"
+      }
+    ]
   }
 }

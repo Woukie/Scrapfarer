@@ -1,3 +1,6 @@
 {
-  "particleSystemList": ["Particles/environment/waterfall_mist.json"]
+  "particleSystemList": [
+    "Particles/environment/waterfall_mist.json",
+    "Particles/environment/waterfall_water.json"
+  ]
 }
