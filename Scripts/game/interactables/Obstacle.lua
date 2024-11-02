@@ -6,6 +6,10 @@ function Obstacle.server_onCollision(self, other, collisionPosition, selfPointVe
   end
 
 	if type(other) == "Shape" and sm.exists(other) then
+    if tostring(other:getShapeUuid()) == tostring(self.shape:getShapeUuid()) then
+      return
+    end
+
     local damage = math.random(self.data.attackLevelMin, self.data.attackLevelMax)
     if other.isBlock then
       other:destroyBlock(other:getClosestBlockLocalPosition(collisionPosition), sm.vec3.one(), damage)
