@@ -1,0 +1,113 @@
+{
+  "partList": [
+    {
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "color": "C0FFEE",
+      "name": "obj_aerogel",
+      "physicsMaterial": "Plastic",
+      "ratings": {
+        "buoyancy": 9,
+        "density": 1,
+        "durability": 5,
+        "friction": 6
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
+            "subMeshList": [
+              {
+                "material": "Glass",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Aerogel/aerogel_dif.png",
+                  "$CONTENT_DATA/Textures/Aerogel/aerogel_asg.png",
+                  "$CONTENT_DATA/Textures/Aerogel/aerogel_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "stackSize": 10000,
+      "uuid": "d06ebc97-db48-45e4-a6b5-ccd57446e8e4"
+    },
+    {
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "color": "ADADAD",
+      "name": "obj_styrofoam",
+      "physicsMaterial": "Plastic",
+      "ratings": {
+        "buoyancy": 7,
+        "density": 1,
+        "durability": 2,
+        "friction": 4
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Styrofoam/styrofoam_dif.png",
+                  "$CONTENT_DATA/Textures/Styrofoam/styrofoam_asg.png",
+                  "$CONTENT_DATA/Textures/Styrofoam/styrofoam_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "stackSize": 10000,
+      "uuid": "21111cf8-3782-4f2f-8c3f-ff1bb5ec67df"
+    },
+    {
+      "color": "ff6aff",
+      "cylinder": {
+        "axis": "Y",
+        "depth": 2,
+        "diameter": 6
+      },
+      "flammable": false,
+      "name": "obj_donut",
+      "physicsMaterial": "Plastic",
+      "ratings": {
+        "buoyancy": 6,
+        "density": 2,
+        "durability": 1,
+        "friction": 5
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/donut.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/donut_dif.png",
+                  "",
+                  "$CONTENT_DATA/Textures/donut_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "stackSize": 10000,
+      "uuid": "b5161316-7ed0-494d-a0d0-d830fc1aceae"
+    }
+  ]
+}
