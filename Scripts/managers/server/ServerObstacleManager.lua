@@ -104,7 +104,7 @@ function ServerObstacleManager:onFixedUpdate()
           spawnPos - sm.item.getShapeSize(obstacleSpawner.shapeUuid) * 0.5,
           sm.quat.fromEuler(sm.vec3.new(math.random(0, 360), math.random(0, 360), math.random(0, 360))),
           true,
-          false
+          true
         )
         local body = part:getBody()
         body:setBuildable(false)
