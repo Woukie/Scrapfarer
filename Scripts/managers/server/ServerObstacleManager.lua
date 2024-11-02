@@ -102,7 +102,7 @@ function ServerObstacleManager:onFixedUpdate()
         local part = sm.shape.createPart(
           obstacleSpawner.shapeUuid,
           spawnPos,
-          sm.quat.angleAxis(math.random(0, 360), sm.vec3.new(0, 1, 0)),
+          sm.quat.fromEuler(sm.vec3.new(math.random(0, 360), math.random(0, 360), math.random(0, 360))),
           true,
           false
         )
