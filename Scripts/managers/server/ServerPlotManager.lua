@@ -12,13 +12,13 @@ local function inWorldEnvironment()
   return pcall(sm.world.getCurrentWorld)
 end
 
--- Saves plots to storage, call this whenever 'self.plots' changes
+-- Saves plots to storage, intended to be called whenever 'self.plots' changes
 local function savePlots(self)
   sm.storage.save("plots", self.plots)
   print("Saved plot state")
 end
 
--- Gets a list of creations currently in the plot, each creation is a list of bodies
+-- Gets a list of creations currently in the plot, where each creation is a list of bodies
 local function getCreationsInPlot(self, plotId)
   local bodies = {}
   if not self.areaTriggers[plotId] then
@@ -35,6 +35,7 @@ local function getCreationsInPlot(self, plotId)
   return creations
 end
 
+-- Gets the shape representing the floor in the creation, returning nil if there isn't one
 local function getFloorInCreation(creation)
   if not creation then
     return
@@ -76,7 +77,7 @@ local function destroyBuild(self, plotId)
   end
 end
 
--- Saves the players build
+-- Saves the players build. Everything in the plots areaTrigger is saved. Save takes the form of a table with a list of blueprints (with world coordinates), along with the world position and rotation of the floor tile
 function ServerPlotManager:saveBuild(player)
   local plotId = getPlotId(self, player)
   if not self.plots[plotId].build then
@@ -156,7 +157,6 @@ function ServerPlotManager:loadBuild(player, waitForCellLoad)
       false,
       true
     )
-    local body = plot.build:getBody()
     print("Loaded default build for "..player.name)
   end
 
@@ -188,6 +188,7 @@ function ServerPlotManager:exitBuildMode(player)
   savePlots(self)
 end
 
+-- Gets a table of string shape uuids against their count for the users saved build blueprints
 function ServerPlotManager:getBuildCost(player)
   local savedBuild = self.savedBuilds[player:getId()]
   if not (savedBuild and savedBuild.blueprints) then
@@ -218,8 +219,7 @@ function ServerPlotManager:getBuildCost(player)
   return cost
 end
 
--- Teleports the player to their plot, assigning one if needed, and creating a character if neede. 
--- DOES NOT LOAD BUILDS FOR YOU, ensure the cell is properly loaded before loading a build, loading build will not delete old builds if the old build hasn't loaded yet, load builds with the loadCell callback!
+-- Teleports a player to their plot. Assigns plots to players and creates characters if needed, will re-call itself with world environment if not in one, loads builds for new players
 function ServerPlotManager:respawnPlayer(player)
   if not inWorldEnvironment() then
     self.worldFunctionQueue:push({destination = "respawnPlayer", params = {self, player}})
@@ -256,6 +256,7 @@ function ServerPlotManager:respawnPlayer(player)
   print(player.name.." was not assigned a plot because not enough plots exist yet")
 end
 
+-- Loads saved data from storage
 function ServerPlotManager:onCreate()
   self.worldFunctionQueue = Queue()
   self.areaTriggers = {}
@@ -282,14 +283,14 @@ function ServerPlotManager:onCreate()
   savePlots(self)
 end
 
--- Does not actually change the world if the host is the one leaving, I guess the world has been saved by then? Really frustrating, means I can't save and destroy plots when a player leaves
+-- Un-registers the plot
 function ServerPlotManager:onPlayerLeft(player)
   local plotId = getPlotId(self, player)
   self.plots[plotId].playerId = nil
   print("Removed "..player.name.."'s plot")
 end
 
--- Registers new plots, creates areaTriggers, tries triggering initialization
+-- Registers new plots, creates areaTriggers, triggers initialization when enough plots registered
 function ServerPlotManager:onCellLoaded(x, y)
   local nodes = sm.cell.getNodesByTag(x, y, "PLOT")
 
@@ -308,7 +309,7 @@ function ServerPlotManager:onCellLoaded(x, y)
         scale = node.scale,
         rotation = node.rotation,
         playerId = nil,
-        build = nil -- The root shape (floor) contained within the boat creation
+        build = nil -- The floor contained within the boat creation
       }
       print("Registered plot "..plotId)
 
