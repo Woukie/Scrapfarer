@@ -77,7 +77,7 @@ function ServerObstacleManager:onFixedUpdate()
     ArrayRemove(self.obstacleSpawners[id].obstacles, function (t, i, j)
       local v = t[i];
       v.ticks = v.ticks + 1
-      if not sm.exists(v.part) then
+      if not v.part then
         return false
       end
 
