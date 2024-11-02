@@ -164,10 +164,11 @@
       "scripted": {
         "classname": "Obstacle",
         "data": {
-          "damage": 10,
-          "sizeX": 3,
-          "sizeY": 3,
-          "sizeZ": 2
+          "health": 2,
+          "attackLevelMin": 1,
+          "attackLevelMax": 3,
+          "damageEffect": "DestroySmallRock",
+          "destroyEffect": "DamageSmallRock"
         },
         "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
       },

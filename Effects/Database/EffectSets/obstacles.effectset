@@ -1,0 +1,89 @@
+{
+  "DamageSmallRock": {
+    "parameterList": {
+      "shakeStrength": 0.5,
+      "shakeRadius": 10
+    },
+    "effectList": [
+      {
+        "type": "particle",
+        "name": "construct_hit_ground_big",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "attached": true,
+        "delay": 0
+      },
+      {
+        "type": "audio",
+        "name": "event:/coll/impact_debris",
+        "parameters": [
+          "Size",
+          "Velocity_max_50",
+          "Material"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.2,
+        "delay": 0
+      }
+    ]
+  },
+  "DestroySmallRock": {
+    "parameterList": {
+      "size": 0.5,
+      "shakeStrength": 0.5,
+      "shakeRadius": 10
+    },
+    "effectList": [
+      {
+        "type": "particle",
+        "name": "p_hvs_stones_big_destruct01",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "attached": true,
+        "delay": 0
+      },
+      {
+        "type": "audio",
+        "name": "event:/coll/collapse/stone",
+        "parameters": [
+          "size"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.2,
+        "delay": 0
+      }
+    ]
+  }
+}

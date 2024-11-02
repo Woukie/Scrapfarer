@@ -5,6 +5,10 @@
       "showInEditor": true
     },
     {
+      "path": "$CONTENT_DATA/Effects/Database/EffectSets/obstacles.effectset",
+      "showInEditor": true
+    },
+    {
       "path": "$GAME_DATA/Effects/Database/EffectSets/interactive.json",
       "showInEditor": false
     },
