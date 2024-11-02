@@ -1,0 +1,98 @@
+{
+  "partList": [
+    {
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "color": "cd9d71",
+      "name": "obj_rock_obstacle_01",
+      "physicsMaterial": "Rock",
+      "ratings": {
+        "buoyancy": 10,
+        "density": 5,
+        "durability": 10,
+        "friction": 10
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/rock_01.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "scripted": {
+        "classname": "Obstacle",
+        "data": {
+          "health": 1,
+          "attackLevelMin": 1,
+          "attackLevelMax": 3,
+          "damageEffect": "DestroySmallRock",
+          "destroyEffect": "DamageSmallRock"
+        },
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
+      },
+      "showInInventory": false,
+      "uuid": "c7ae817b-dea4-4074-bd1a-c452025b3db5"
+    },
+    {
+      "box": {
+        "x": 8,
+        "y": 8,
+        "z": 8
+      },
+      "color": "cd9d71",
+      "name": "obj_rock_obstacle_02",
+      "physicsMaterial": "Rock",
+      "ratings": {
+        "buoyancy": 10,
+        "density": 5,
+        "durability": 10,
+        "friction": 10
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/rock_02.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "scripted": {
+        "classname": "Obstacle",
+        "data": {
+          "health": 5,
+          "attackLevelMin": 1,
+          "attackLevelMax": 3,
+          "damageEffect": "DestroySmallRock",
+          "destroyEffect": "DamageSmallRock"
+        },
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
+      },
+      "showInInventory": false,
+      "uuid": "30d38531-6777-4a0f-bd84-9b9502f95be8"
+    }
+  ]
+}

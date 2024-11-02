@@ -129,53 +129,6 @@
       "uuid": "3f8f86b2-518e-4819-a4a5-37d9c7552f53"
     },
     {
-      "box": {
-        "x": 2,
-        "y": 2,
-        "z": 2
-      },
-      "color": "cd9d71",
-      "name": "obj_rock_obstacle",
-      "physicsMaterial": "Rock",
-      "ratings": {
-        "buoyancy": 10,
-        "density": 5,
-        "durability": 10,
-        "friction": 10
-      },
-      "renderable": {
-        "lodList": [
-          {
-            "mesh": "$CONTENT_DATA/Objects/Mesh/rock_01.fbx",
-            "subMeshList": [
-              {
-                "material": "DifAsgNor",
-                "textureList": [
-                  "$CONTENT_DATA/Textures/rock_dif.png",
-                  "$CONTENT_DATA/Textures/rock_asg.tga",
-                  "$CONTENT_DATA/Textures/rock_nor.tga"
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      "rotationSet": "Default",
-      "scripted": {
-        "classname": "Obstacle",
-        "data": {
-          "health": 2,
-          "attackLevelMin": 1,
-          "attackLevelMax": 3,
-          "damageEffect": "DestroySmallRock",
-          "destroyEffect": "DamageSmallRock"
-        },
-        "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
-      },
-      "showInInventory": false,
-      "uuid": "c7ae817b-dea4-4074-bd1a-c452025b3db5"
-    },
-    {
       "bearing": {},
       "color": "df7f01",
       "cylinder": {

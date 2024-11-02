@@ -1,9 +1,17 @@
+-- Blocks (misc)
 blk_wood = sm.uuid.new("8216e887-8758-48b4-afa1-eea78cbbc3b0")
 blk_concrete = sm.uuid.new("71aefe40-fc76-40ad-a6a1-3c5c9301378e")
-obj_rock_obstacle = sm.uuid.new("c7ae817b-dea4-4074-bd1a-c452025b3db5")
+
+-- Obstacles
+obj_rock_obstacle_01 = sm.uuid.new("c7ae817b-dea4-4074-bd1a-c452025b3db5")
+obj_rock_obstacle_02 = sm.uuid.new("30d38531-6777-4a0f-bd84-9b9502f95be8")
+
+-- Unobtainable
 obj_plot_floor = sm.uuid.new("3f8f86b2-518e-4819-a4a5-37d9c7552f53")
 obj_treasure_chest = sm.uuid.new("d14b7f0a-fce4-4785-9389-fabf763180f2")
 obj_shop = sm.uuid.new("bbab5b38-d9f0-4265-b267-e80b2d2b6bad")
+
+-- Obtainable
 obj_bearing = sm.uuid.new("4a1b886b-913e-4aad-b5b6-6e41b0db23a6")
 obj_wood = sm.uuid.new("c45be799-94d1-4ab1-8fb4-52c9bd3d94a9")
 obj_rock = sm.uuid.new("a8ed08de-6bc8-4b8d-abdb-84f47b3fd32e")
