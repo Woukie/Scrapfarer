@@ -96,19 +96,20 @@ function ServerObstacleManager:onFixedUpdate()
 
         local areaTrigger = sm.areaTrigger.createBox(obstacleSpawner.scale * 0.5, obstacleSpawner.position, obstacleSpawner.rotation, nil)
         local spawnPos = areaTrigger:getWorldMax() - areaTrigger:getWorldMin()
-        spawnPos = areaTrigger:getWorldMin() + sm.vec3.new(spawnPos.x * math.random(), spawnPos.y * math.random(), spawnPos.z * math.random() - 0.25)
+        spawnPos = areaTrigger:getWorldMin() + sm.vec3.new(spawnPos.x * math.random(), spawnPos.y * math.random(), spawnPos.z * math.random())
         sm.areaTrigger.destroy(areaTrigger)
 
         local part = sm.shape.createPart(
           obstacleSpawner.shapeUuid,
-          spawnPos,
+          spawnPos - sm.item.getShapeSize(obstacleSpawner.shapeUuid) * 0.5,
           sm.quat.fromEuler(sm.vec3.new(math.random(0, 360), math.random(0, 360), math.random(0, 360))),
           true,
           false
         )
-        part:getBody():setBuildable(false)
-        part:getBody():setErasable(false)
-        part:getBody():setLiftable(false)
+        local body = part:getBody()
+        body:setBuildable(false)
+        body:setErasable(false)
+        body:setLiftable(false)
         table.insert(self.obstacleSpawners[id].obstacles, {
           part = part,
           life = math.random(obstacleSpawner.minObstacleLife, obstacleSpawner.maxObstacleLife),
