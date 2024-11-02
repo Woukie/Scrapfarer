@@ -37,7 +37,7 @@
         "classname": "Obstacle",
         "data": {
           "health": 1,
-          "attackLevelMin": 1,
+          "attackLevelMin": 2,
           "attackLevelMax": 3,
           "damageEffect": "DestroySmallRock",
           "destroyEffect": "DamageSmallRock"
@@ -84,7 +84,7 @@
         "classname": "Obstacle",
         "data": {
           "health": 5,
-          "attackLevelMin": 1,
+          "attackLevelMin": 2,
           "attackLevelMax": 3,
           "damageEffect": "DestroySmallRock",
           "destroyEffect": "DamageSmallRock"
