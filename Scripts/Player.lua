@@ -4,6 +4,7 @@ Player = class( nil )
 
 function Player.server_onCreate( self )
   self.sv = {}
+  self.sv.tumbleTicks = 0
   self.sv.waterDamageCooldown = 0
   self.sv.stats = {
     hp = 100, maxhp = 100,
@@ -11,13 +12,21 @@ function Player.server_onCreate( self )
   self.network:setClientData(self.sv.stats)
 end
 
-function Player.server_onFixedUpdate( self, dt )
+function Player.server_onFixedUpdate(self, dt)
   local character = self.player:getCharacter()
   self.sv.waterDamageCooldown = math.max(self.sv.waterDamageCooldown - 1, 0)
 
-  if character and character:isSwimming() and self.sv.waterDamageCooldown == 0 then
-    self.sv.waterDamageCooldown = 20
-    self:server_takeDamage(10)
+  if character then
+    if character:isSwimming() and self.sv.waterDamageCooldown == 0 then
+      self.sv.waterDamageCooldown = 20
+      self:server_takeDamage(10)
+    end
+
+    if self.sv.tumbleTicks > 0 then
+      self.sv.tumbleTicks = self.sv.tumbleTicks - 1
+    elseif character:isTumbling() then
+      character:setTumbling(false)
+    end
   end
 
   self.sv.stats.hp = math.min(self.sv.stats.hp + 0.03, self.sv.stats.maxhp)
@@ -81,6 +90,11 @@ function Player.client_onFixedUpdate(self)
     alpha = math.sin((math.pi * alpha) / 2)
     g_hud:setColor("Throb", sm.color.new(1, 1, 1, 1 - self.cl.lastThrob / self.cl.throbDuration))
   end
+end
+
+function Player:server_tumble()
+  self.sv.tumbleTicks = 200
+  self.player:getCharacter():setTumbling(true)
 end
 
 function Player.client_onClientDataUpdate( self, data )

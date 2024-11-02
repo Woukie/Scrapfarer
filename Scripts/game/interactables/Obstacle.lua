@@ -25,6 +25,6 @@ function Obstacle.server_onCollision(self, other, collisionPosition, selfPointVe
       self.shape:destroyShape()
     end
   elseif type(other) == "Character" then
-    other:setDowned(true)
+    sm.event.sendToPlayer(other:getPlayer(), "server_tumble")
 	end
 end
