@@ -81,7 +81,7 @@ function ServerObstacleManager:onFixedUpdate()
         return false
       end
 
-      if v.ticks >= v.life then
+      if v.ticks >= v.life and sm.exists(v.part) then
         v.part:destroyShape()
         return false
       end
