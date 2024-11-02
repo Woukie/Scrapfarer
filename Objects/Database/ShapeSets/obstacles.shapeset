@@ -49,9 +49,9 @@
     },
     {
       "box": {
-        "x": 8,
-        "y": 8,
-        "z": 8
+        "x": 16,
+        "y": 16,
+        "z": 16
       },
       "color": "cd9d71",
       "name": "obj_rock_obstacle_02",
