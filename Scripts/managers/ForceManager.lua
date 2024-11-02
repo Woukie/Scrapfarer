@@ -4,7 +4,8 @@ dofile "$SURVIVAL_DATA/Scripts/util.lua"
 ForceManager = class(nil)
 
 local exclusions = {}
-exclusions[tostring(obj_rock_obstacle)] = true
+exclusions[tostring(obj_rock_obstacle_01)] = true
+exclusions[tostring(obj_rock_obstacle_02)] = true
 
 function ForceManager.onCreate(self)
 	self.cells = {}
