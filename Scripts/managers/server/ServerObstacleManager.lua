@@ -77,10 +77,12 @@ function ServerObstacleManager:onFixedUpdate()
     ArrayRemove(self.obstacleSpawners[id].obstacles, function (t, i, j)
       local v = t[i];
       v.ticks = v.ticks + 1
+      if not sm.exists(v.part) then
+        return false
+      end
+
       if v.ticks >= v.life then
-        if sm.exists(v.part) then
-          v.part:destroyShape()
-        end
+        v.part:destroyShape()
         return false
       end
       return true
@@ -100,7 +102,7 @@ function ServerObstacleManager:onFixedUpdate()
         local part = sm.shape.createPart(
           obstacleSpawner.shapeUuid,
           spawnPos,
-          sm.quat.identity(),
+          sm.quat.angleAxis(math.random(0, 360), sm.vec3.new(0, 1, 0)),
           true,
           false
         )
