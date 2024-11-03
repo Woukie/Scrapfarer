@@ -75,6 +75,7 @@ function Game:client_onCreate()
   sm.game.bindChatCommand("/stop", {}, "client_onChatCommand", "Stops the game")
   sm.game.bindChatCommand("/shop", {}, "client_onChatCommand", "Opens the shop")
   sm.game.bindChatCommand("/playaudio", {{"string", "name of sound", false}}, "client_onChatCommand", "Plays audio at the location of the player")
+  sm.game.bindChatCommand("/playeffect", {{"string", "name of effect", false}}, "client_onChatCommand", "Plays effect at the location of the player")
 end
 
 function Game.server_onPlayerLeft(self, player)
@@ -92,6 +93,9 @@ function Game.client_onChatCommand(self, params)
   elseif params[1] == "/playaudio" then
     local character = sm.localPlayer.getPlayer():getCharacter()
     sm.event.sendToWorld(character:getWorld(), "client_playsound", {position = character:getWorldPosition(), name = params[2]})
+  elseif params[1] == "/playeffect" then
+    local character = sm.localPlayer.getPlayer():getCharacter()
+    sm.event.sendToWorld(character:getWorld(), "client_playeffect", {position = character:getWorldPosition(), name = params[2]})
   elseif params[1] == "/shop" then
 		g_clientShopManager:openShop()
   end

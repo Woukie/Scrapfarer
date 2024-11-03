@@ -21,6 +21,10 @@ function World.server_onCreate(self)
 	self.waterManager:sv_onCreate(self)
 end
 
+function World:client_playeffect(params)
+  sm.effect.playEffect(params.name, params.position)
+end
+
 function World:client_playsound(params)
   sm.audio.play(params.name, params.position)
 end
