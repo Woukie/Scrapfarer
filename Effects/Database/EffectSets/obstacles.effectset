@@ -71,6 +71,39 @@
         ],
         "duration": 0.1,
         "delay": 0
+      },
+      {
+        "type": "particle",
+        "name": "p_hvs_stones_big_destruct01",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "attached": true,
+        "delay": 0
+      },
+      {
+        "type": "particle",
+        "name": "p_hvs_stones_big_destruct01",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "attached": true,
+        "delay": 0
+      },
+      {
+        "type": "particle",
+        "name": "p_hvs_stones_big_destruct01",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "attached": true,
+        "delay": 0
       }
     ]
   },
@@ -145,6 +178,39 @@
           "shakeRadius"
         ],
         "duration": 0.1,
+        "delay": 0
+      },
+      {
+        "type": "particle",
+        "name": "p_destruct_wood_big",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "attached": true,
+        "delay": 0
+      },
+      {
+        "type": "particle",
+        "name": "p_destruct_wood_big",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "attached": true,
+        "delay": 0
+      },
+      {
+        "type": "particle",
+        "name": "p_destruct_wood_big",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "attached": true,
         "delay": 0
       }
     ]
