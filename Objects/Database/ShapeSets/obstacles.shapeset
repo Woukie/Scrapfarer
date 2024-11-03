@@ -11,7 +11,7 @@
       "physicsMaterial": "Rock",
       "ratings": {
         "buoyancy": 10,
-        "density": 5,
+        "density": 3,
         "durability": 10,
         "friction": 0
       },
@@ -58,7 +58,7 @@
       "physicsMaterial": "Rock",
       "ratings": {
         "buoyancy": 10,
-        "density": 5,
+        "density": 3,
         "durability": 10,
         "friction": 0
       },
@@ -97,7 +97,7 @@
     {
       "color": "cd9d71",
       "cylinder": {
-        "axis": "Z",
+        "axis": "X",
         "depth": 15,
         "diameter": 4
       },
@@ -105,7 +105,7 @@
       "physicsMaterial": "Wood",
       "ratings": {
         "buoyancy": 10,
-        "density": 5,
+        "density": 3,
         "durability": 10,
         "friction": 0
       },
@@ -130,7 +130,7 @@
       "scripted": {
         "classname": "Obstacle",
         "data": {
-          "health": 2,
+          "health": 5,
           "attackLevelMin": 3,
           "attackLevelMax": 5,
           "damageEffect": "DamageLog",
