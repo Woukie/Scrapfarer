@@ -1,87 +1,82 @@
 {
-  "DamageSmallRock": {
+  "DamageRock": {
     "parameterList": {
-      "shakeStrength": 0.5,
-      "shakeRadius": 10
+      "Material": 6,
+      "Size": 0.005,
+      "Velocity_max_50": 15,
+      "Phys_energy": 12.5
     },
     "effectList": [
       {
-        "type": "particle",
-        "name": "construct_hit_ground_big",
-        "offset": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        },
-        "attached": true,
-        "delay": 0
-      },
-      {
         "type": "audio",
-        "name": "event:/coll/impact_debris",
+        "name": "Collision - Single",
         "parameters": [
           "Size",
           "Velocity_max_50",
-          "Material"
+          "Material",
+          "Phys_energy"
         ],
-        "delay": 0
-      },
-      {
-        "type": "cameraShake",
-        "name": "",
-        "offset": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        },
-        "parameters": [
-          "shakeStrength",
-          "shakeRadius"
-        ],
-        "duration": 0.2,
         "delay": 0
       }
     ]
   },
-  "DestroySmallRock": {
+  "DestroyRock": {
     "parameterList": {
-      "size": 0.5,
-      "shakeStrength": 0.5,
-      "shakeRadius": 10
+      "Material": 6
     },
     "effectList": [
       {
-        "type": "particle",
-        "name": "p_hvs_stones_big_destruct01",
+        "type": "audio",
+        "name": "Collision - Debris",
         "offset": {
           "x": 0,
           "y": 0,
           "z": 0
         },
-        "attached": true,
+        "parameters": [
+          "Material"
+        ],
         "delay": 0
-      },
+      }
+    ]
+  },
+  "DamageLog": {
+    "parameterList": {
+      "Material": 7,
+      "Size": 0.005,
+      "Velocity_max_50": 15,
+      "Phys_energy": 12.5
+    },
+    "effectList": [
       {
         "type": "audio",
-        "name": "event:/coll/collapse/stone",
+        "name": "Collision - Single",
         "parameters": [
-          "size"
+          "Size",
+          "Velocity_max_50",
+          "Material",
+          "Phys_energy"
         ],
         "delay": 0
-      },
+      }
+    ]
+  },
+  "DestroyLog": {
+    "parameterList": {
+      "Material": 7
+    },
+    "effectList": [
       {
-        "type": "cameraShake",
-        "name": "",
+        "type": "audio",
+        "name": "Collision - Debris",
         "offset": {
           "x": 0,
           "y": 0,
           "z": 0
         },
         "parameters": [
-          "shakeStrength",
-          "shakeRadius"
+          "Material"
         ],
-        "duration": 0.2,
         "delay": 0
       }
     ]

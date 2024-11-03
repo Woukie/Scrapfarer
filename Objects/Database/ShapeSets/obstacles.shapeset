@@ -86,8 +86,8 @@
           "health": 5,
           "attackLevelMin": 2,
           "attackLevelMax": 3,
-          "damageEffect": "DestroyRock",
-          "destroyEffect": "DamageRock"
+          "damageEffect": "DamageRock",
+          "destroyEffect": "DestroyRock"
         },
         "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
       },
@@ -129,11 +129,11 @@
       "scripted": {
         "classname": "Obstacle",
         "data": {
-          "health": 3,
+          "health": 2,
           "attackLevelMin": 3,
           "attackLevelMax": 5,
-          "damageEffect": "DestroyLog",
-          "destroyEffect": "DamageLog"
+          "damageEffect": "DamageLog",
+          "destroyEffect": "DestroyLog"
         },
         "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
       },
