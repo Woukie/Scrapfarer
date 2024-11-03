@@ -17,14 +17,14 @@ function Obstacle.server_onCollision(self, other, collisionPosition, selfPointVe
       other:destroyShape(damage)
     end
 
-    if self.damageEffect then
-      sm.effect.playEffect(self.damageEffect, self.shape.worldPosition, sm.vec3.new( 0, 0, 0 ), self.shape.worldRotation)
+    if self.data.damageEffect then
+      sm.effect.playEffect(self.data.damageEffect, self.shape.worldPosition, sm.vec3.new( 0, 0, 0 ), self.shape.worldRotation)
     end
 
     self.health = self.health - 1
     if self.health <= 0 then
-      if self.destroyEffect then
-        sm.effect.playEffect(self.destroyEffect, self.shape.worldPosition, sm.vec3.new( 0, 0, 0 ), self.shape.worldRotation)
+      if self.data.destroyEffect then
+        sm.effect.playEffect(self.data.destroyEffect, self.shape.worldPosition, sm.vec3.new( 0, 0, 0 ), self.shape.worldRotation)
       end
       self.shape:destroyShape()
     end
