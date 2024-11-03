@@ -4,7 +4,9 @@
       "Material": 6,
       "Size": 0.005,
       "Velocity_max_50": 15,
-      "Phys_energy": 12.5
+      "Phys_energy": 12.5,
+      "shakeStrength": 0.03,
+      "shakeRadius": 15
     },
     "effectList": [
       {
@@ -17,12 +19,29 @@
           "Phys_energy"
         ],
         "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
       }
     ]
   },
   "DestroyRock": {
     "parameterList": {
-      "Material": 6
+      "Material": 6,
+      "shakeStrength": 0.1,
+      "shakeRadius": 15
     },
     "effectList": [
       {
@@ -36,6 +55,21 @@
         "parameters": [
           "Material"
         ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
         "delay": 0
       }
     ]
@@ -45,7 +79,9 @@
       "Material": 7,
       "Size": 0.005,
       "Velocity_max_50": 15,
-      "Phys_energy": 12.5
+      "Phys_energy": 12.5,
+      "shakeStrength": 0.03,
+      "shakeRadius": 15
     },
     "effectList": [
       {
@@ -58,12 +94,29 @@
           "Phys_energy"
         ],
         "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
       }
     ]
   },
   "DestroyLog": {
     "parameterList": {
-      "Material": 7
+      "Material": 7,
+      "shakeStrength": 0.1,
+      "shakeRadius": 15
     },
     "effectList": [
       {
@@ -77,6 +130,21 @@
         "parameters": [
           "Material"
         ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
         "delay": 0
       }
     ]
