@@ -13,7 +13,7 @@
         "buoyancy": 10,
         "density": 5,
         "durability": 10,
-        "friction": 10
+        "friction": 0
       },
       "renderable": {
         "lodList": [
@@ -60,7 +60,7 @@
         "buoyancy": 10,
         "density": 5,
         "durability": 10,
-        "friction": 10
+        "friction": 0
       },
       "renderable": {
         "lodList": [
@@ -107,7 +107,7 @@
         "buoyancy": 10,
         "density": 5,
         "durability": 10,
-        "friction": 10
+        "friction": 0
       },
       "renderable": {
         "lodList": [
