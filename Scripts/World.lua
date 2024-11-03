@@ -21,6 +21,10 @@ function World.server_onCreate(self)
 	self.waterManager:sv_onCreate(self)
 end
 
+function World:client_playsound(params)
+  sm.audio.play(params.name, params.position)
+end
+
 function World.client_onCreate(self)
   if self.forceManager == nil then
 		assert(not sm.isHost)
