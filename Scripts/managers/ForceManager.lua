@@ -6,6 +6,7 @@ ForceManager = class(nil)
 local exclusions = {}
 exclusions[tostring(obj_rock_obstacle_01)] = true
 exclusions[tostring(obj_rock_obstacle_02)] = true
+exclusions[tostring(obj_log_obstacle_01)] = true
 
 function ForceManager.onCreate(self)
 	self.cells = {}

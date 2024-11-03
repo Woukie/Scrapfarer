@@ -39,8 +39,8 @@
           "health": 1,
           "attackLevelMin": 2,
           "attackLevelMax": 3,
-          "damageEffect": "DestroySmallRock",
-          "destroyEffect": "DamageSmallRock"
+          "damageEffect": "DestroyRock",
+          "destroyEffect": "DamageRock"
         },
         "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
       },
@@ -86,13 +86,59 @@
           "health": 5,
           "attackLevelMin": 2,
           "attackLevelMax": 3,
-          "damageEffect": "DestroySmallRock",
-          "destroyEffect": "DamageSmallRock"
+          "damageEffect": "DestroyRock",
+          "destroyEffect": "DamageRock"
         },
         "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
       },
       "showInInventory": false,
       "uuid": "30d38531-6777-4a0f-bd84-9b9502f95be8"
+    },
+    {
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "color": "cd9d71",
+      "name": "obj_log_obstacle_01",
+      "physicsMaterial": "Wood",
+      "ratings": {
+        "buoyancy": 10,
+        "density": 5,
+        "durability": 10,
+        "friction": 10
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/log_01.fbx",
+            "subMeshList": [
+              {
+                "material": "DifNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Trees/bark_dif.png",
+                  "$CONTENT_DATA/Textures/Trees/bark_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "scripted": {
+        "classname": "Obstacle",
+        "data": {
+          "health": 3,
+          "attackLevelMin": 3,
+          "attackLevelMax": 5,
+          "damageEffect": "DestroyLog",
+          "destroyEffect": "DamageLog"
+        },
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
+      },
+      "showInInventory": false,
+      "uuid": "066f70f2-4493-46ca-9e54-4cfa7fa18f66"
     }
   ]
 }
