@@ -85,7 +85,7 @@
         "data": {
           "health": 5,
           "attackLevelMin": 2,
-          "attackLevelMax": 3,
+          "attackLevelMax": 5,
           "damageEffect": "DamageRock",
           "destroyEffect": "DestroyRock"
         },
