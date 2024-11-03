@@ -95,12 +95,12 @@
       "uuid": "30d38531-6777-4a0f-bd84-9b9502f95be8"
     },
     {
-      "box": {
-        "x": 2,
-        "y": 2,
-        "z": 2
-      },
       "color": "cd9d71",
+      "cylinder": {
+        "axis": "Z",
+        "depth": 15,
+        "diameter": 4
+      },
       "name": "obj_log_obstacle_01",
       "physicsMaterial": "Wood",
       "ratings": {
