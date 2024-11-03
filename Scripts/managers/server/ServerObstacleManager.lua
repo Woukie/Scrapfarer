@@ -62,6 +62,7 @@ function ServerObstacleManager:onCellLoaded(x, y)
         maxObstacles = node.params.maxObstacles,
         maxObstacleLife = node.params.maxObstacleLife,
         minObstacleLife = node.params.minObstacleLife,
+        logRotation = node.params.logRotation,
         ticks = ticks,
         obstacles = obstacles
       }
@@ -99,10 +100,17 @@ function ServerObstacleManager:onFixedUpdate()
         spawnPos = areaTrigger:getWorldMin() + sm.vec3.new(spawnPos.x * math.random(), spawnPos.y * math.random(), spawnPos.z * math.random())
         sm.areaTrigger.destroy(areaTrigger)
 
+        local rotation
+        if self.obstacleSpawners[id].logRotation then
+          rotation = sm.quat.angleAxis(math.random(-0.1, 0.1), sm.vec3.new(0, 0, 1)) * sm.quat.angleAxis(math.random(0, math.pi * 2), sm.vec3.new(1, 0, 0))
+        else
+          rotation = sm.quat.fromEuler(sm.vec3.new(math.random(0, 360), math.random(0, 360), math.random(0, 360)))
+        end
+
         local part = sm.shape.createPart(
           obstacleSpawner.shapeUuid,
           spawnPos - sm.item.getShapeSize(obstacleSpawner.shapeUuid) * 0.5,
-          sm.quat.fromEuler(sm.vec3.new(math.random(0, 360), math.random(0, 360), math.random(0, 360))),
+          rotation,
           true,
           true
         )

@@ -111,6 +111,11 @@
           "default": 5000,
           "name": "minObstacleLife",
           "type": "float"
+        },
+        {
+          "default": false,
+          "name": "logRotation",
+          "type": "bool"
         }
       ],
       "tags": [
