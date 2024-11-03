@@ -115,9 +115,10 @@
             "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/log_01.fbx",
             "subMeshList": [
               {
-                "material": "DifNor",
+                "material": "DifAsgNor",
                 "textureList": [
                   "$CONTENT_DATA/Textures/Trees/bark_dif.png",
+                  "$CONTENT_DATA/Textures/wood_asg.tga",
                   "$CONTENT_DATA/Textures/Trees/bark_nor.png"
                 ]
               }
