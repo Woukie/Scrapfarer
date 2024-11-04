@@ -47,6 +47,7 @@ function World.server_onFixedUpdate(self)
   g_serverPlotManager:onFixedUpdate()
   g_serverGameManager:onFixedUpdate(self)
   g_serverObstacleManager:onFixedUpdate()
+  self.forceManager:server_onFixedUpdate()
 	self.waterManager:sv_onFixedUpdate()
 end
 
