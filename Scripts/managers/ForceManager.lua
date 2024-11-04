@@ -8,23 +8,29 @@ exclusions[tostring(obj_rock_obstacle_01)] = true
 exclusions[tostring(obj_rock_obstacle_02)] = true
 exclusions[tostring(obj_log_obstacle_01)] = true
 
-function ForceManager.onCreate(self)
+function ForceManager:onCreate()
 	self.cells = {}
 end
 
-function ForceManager.server_onCreate(self)
+function ForceManager:server_onCreate()
 	if sm.isHost then
 		self:onCreate()
 	end
 end
 
-function ForceManager.client_onCreate(self)
+function ForceManager:client_onCreate()
 	if not sm.isHost then
 		self:onCreate()
 	end
 end
 
-function ForceManager.onCellLoaded(self, x, y)
+function ForceManager:server_onTick()
+	if not sm.isHost then
+		self:onCreate()
+	end
+end
+
+function ForceManager:onCellLoaded(x, y)
 	local nodes = sm.cell.getNodesByTag(x, y, "FORCE")
 
 	if #nodes > 0 then
@@ -36,7 +42,6 @@ function ForceManager.onCellLoaded(self, x, y)
 
     local idx = 1
     for _, node in ipairs( nodes ) do
-      
       local areaTrigger = sm.areaTrigger.createBox(node.scale * 0.5, node.position, node.rotation, nil, { force = sm.quat.getAt(node.rotation):normalize() * node.params.strength })
       areaTrigger:bindOnStay("trigger_onStay", self)
 
@@ -46,25 +51,25 @@ function ForceManager.onCellLoaded(self, x, y)
 	end
 end
 
-function ForceManager.server_onCellLoaded(self, x, y)
+function ForceManager:server_onCellLoaded(x, y)
 	if sm.isHost then
 		self:onCellLoaded(x, y)
 	end
 end
 
-function ForceManager.server_onCellReloaded(self, x, y)
+function ForceManager:server_onCellReloaded(x, y)
 	if sm.isHost then
 		self:onCellLoaded(x, y)
 	end
 end
 
-function ForceManager.client_onCellLoaded(self, x, y)
+function ForceManager:client_onCellLoaded(x, y)
 	if not sm.isHost then
 		self:onCellLoaded(x, y)
 	end
 end
 
-function ForceManager.onCellUnloaded(self, x, y)
+function ForceManager:onCellUnloaded(x, y)
 	if self.cells[x] and self.cells[x][y] then
 		for _, trigger in ipairs(self.cells[x][y]) do
 			sm.areaTrigger.destroy(trigger)
@@ -74,19 +79,19 @@ function ForceManager.onCellUnloaded(self, x, y)
 	end
 end
 
-function ForceManager.server_onCellUnloaded(self, x, y)
+function ForceManager:server_onCellUnloaded(x, y)
 	if sm.isHost then
 		self:onCellUnloaded(x, y)
 	end
 end
 
-function ForceManager.client_onCellUnloaded(self, x, y)
+function ForceManager:client_onCellUnloaded(x, y)
 	if not sm.isHost then
 		self:onCellUnloaded(x, y)
 	end
 end
 
-function ForceManager.trigger_onStay(self, trigger, results)
+function ForceManager:trigger_onStay(trigger, results)
   local params = trigger:getUserData()
 	assert(params)
 
@@ -95,12 +100,16 @@ function ForceManager.trigger_onStay(self, trigger, results)
 
     if sm.exists(result) then
       if type == "Character" then
-        -- Only apply force if fully in force field (matches behaviour of water)
-        local characterFloatOffset = 0.2 + ( result:isCrouching() and 0.4 or 0.0 )
-        local characterFloatHeight = result.worldPosition.z + characterFloatOffset
+        if result:isTumbling() then
+          ApplyCharacterImpulse(result, params.force, params.force:length() / 6)
+        else
+          -- Only apply force if fully in force field (matches behaviour of water)
+          local characterFloatOffset = 0.2 + ( result:isCrouching() and 0.4 or 0.0 )
+          local characterFloatHeight = result.worldPosition.z + characterFloatOffset
 
-        if trigger:getWorldMax().z > characterFloatHeight then
-          ApplyCharacterImpulse(result, params.force, params.force:length())
+          if trigger:getWorldMax().z > characterFloatHeight then
+            ApplyCharacterImpulse(result, params.force, params.force:length())
+          end
         end
       elseif type == "Body" then
         if not exclusions[tostring(result:getShapes()[1].uuid)] then

@@ -17,14 +17,15 @@ function Player.server_onFixedUpdate(self, dt)
   self.sv.waterDamageCooldown = math.max(self.sv.waterDamageCooldown - 1, 0)
 
   if character then
-    if character:isSwimming() and self.sv.waterDamageCooldown == 0 then
+    local tumbling = character:isTumbling()
+    if (character:isSwimming() or tumbling) and self.sv.waterDamageCooldown == 0 then
       self.sv.waterDamageCooldown = 20
       self:server_takeDamage(10)
     end
 
     if self.sv.tumbleTicks > 0 then
       self.sv.tumbleTicks = self.sv.tumbleTicks - 1
-    elseif character:isTumbling() then
+    elseif tumbling then
       character:setTumbling(false)
     end
   end
