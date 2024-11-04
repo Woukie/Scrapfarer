@@ -109,7 +109,7 @@ function ServerObstacleManager:onFixedUpdate()
 
         local part = sm.shape.createPart(
           obstacleSpawner.shapeUuid,
-          spawnPos - sm.item.getShapeSize(obstacleSpawner.shapeUuid) * 0.5,
+          spawnPos - rotation * (sm.item.getShapeSize(obstacleSpawner.shapeUuid) * 0.5 * 0.25),
           rotation,
           true,
           true
