@@ -39,8 +39,8 @@
           "health": 1,
           "attackLevelMin": 2,
           "attackLevelMax": 3,
-          "damageEffect": "DestroyRockSmall",
-          "destroyEffect": "DamageRockSmall"
+          "damageEffect": "DamageRockSmall",
+          "destroyEffect": "DestroyRockSmall"
         },
         "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
       },
