@@ -10,10 +10,6 @@ function ClientGameManager:getCoins()
   return self.coins
 end
 
-function ClientGameManager:getCurrentOffer()
-  return self.offer
-end
-
 function ClientGameManager.onCreatePlayer(self)
   if g_hud then
     g_hud:setText("Coin Text", ""..self.coins)
@@ -29,4 +25,5 @@ function ClientGameManager.syncData(self, data)
   end
 
   g_clientShopManager:refreshShopBuyButton()
+  g_clientRewardManager:refresh(self.offer)
 end

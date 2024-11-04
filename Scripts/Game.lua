@@ -7,6 +7,7 @@ dofile("$CONTENT_DATA/Scripts/managers/server/ServerGameManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/server/ServerObstacleManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/server/ServerPlotManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/client/ClientPlotManager.lua")
+dofile("$CONTENT_DATA/Scripts/managers/client/ClientRewardManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/client/ClientShopManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/client/ClientGameManager.lua")
 
@@ -67,6 +68,9 @@ function Game:client_onCreate()
   g_clientShopManager = ClientShopManager()
   g_clientShopManager:onCreate()
 
+  g_clientRewardManager = ClientRewardManager()
+  g_clientRewardManager:onCreate()
+
   g_effectManager = EffectManager()
 	g_effectManager:cl_onCreate()
 
@@ -113,6 +117,8 @@ function Game.server_stopRun(self, params)
   g_serverGameManager:stopRun(params.player)
 end
 
+-- Shop gui callbacks
+
 function Game:server_buyShopItem(params)
   local item = params.item
   g_serverGameManager:buyItem(params.player, item.itemId, item.quantity, item.cost)
@@ -134,4 +140,26 @@ end
 
 function Game:client_selectShopItem(_, _, item, _)
   g_clientShopManager:selectShopItem(item)
+end
+
+-- Reward gui callbacks
+
+function Game:client_closeRewards(_)
+  g_clientRewardManager:closeGui()
+end
+
+function Game:server_takeOffer(params)
+  g_serverGameManager:takeOffer(params.player)
+end
+
+function Game:server_takeTreasure(params)
+  g_serverGameManager:takeTreasure(params.player)
+end
+
+function Game:client_takeOffer(_)
+  self.network:sendToServer("server_takeOffer", {player = sm.localPlayer.getPlayer()})
+end
+
+function Game:client_takeTreasure(_)
+  self.network:sendToServer("server_takeTreasure", {player = sm.localPlayer.getPlayer()})
 end

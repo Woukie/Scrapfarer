@@ -42,7 +42,7 @@ local function savePlayer(self, player)
   print("Saved "..player.name.."'s player data to storage")
 end
 
-function ServerGameManager:triggerOffer(player)
+function ServerGameManager:takeOffer(player)
   local offers = sm.json.open("$CONTENT_DATA/rewards.json")
   local playerId = player:getId()
   local gameState = self.gameStates[playerId]
@@ -60,6 +60,17 @@ function ServerGameManager:triggerOffer(player)
   sm.container.beginTransaction()
   sm.container.collect(player:getInventory(), sm.uuid.new(offer.itemId), offer.quantity)
   sm.container.endTransaction()
+
+  self:stopRun(player)
+end
+
+function ServerGameManager:takeTreasure(player)
+  local gamestate = self.gameStates[player:getId()]
+  gamestate.coins = gamestate.coins + 100
+
+  savePlayer(self, player)
+
+  self:stopRun(player)
 end
 
 function ServerGameManager.onPlayerJoined(self, player)
