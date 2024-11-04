@@ -52,8 +52,8 @@ function ServerGameManager:takeOffer(player)
     return
   end
 
-  gameState.inventory[offer.itemId] = (gameState.inventory[offer.itemId] or 0) + 1
-  gameState.offer = gameState.offer + 1
+  gameState.inventory[offer.itemId] = (gameState.inventory[offer.itemId] or 0) + offer.quantity
+  gameState.offer = gameState.offer + offer.quantity
 
   savePlayer(self, player)
 
