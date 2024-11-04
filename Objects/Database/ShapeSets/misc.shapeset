@@ -1,0 +1,49 @@
+{
+  "partList": [
+    {
+      "box": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "color": "FF0000",
+      "name": "obj_scratch_off",
+      "physicsMaterial": "Wood",
+      "ratings": {
+        "buoyancy": 1,
+        "density": 1,
+        "durability": 1,
+        "friction": 4
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/scratch_off.fbx",
+            "subMeshMap": {
+              "scratchie": {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Scratch Off/scratch_off_dif.png",
+                  "$CONTENT_DATA/Textures/Scratch Off/scratch_off_asg.png",
+                  "$CONTENT_DATA/Textures/Scratch Off/scratch_off_nor.png"
+                ]
+              },
+              "duckie": {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$GAME_DATA/Objects/Textures/decor/obj_decor_babyduck_dif.tga",
+                  "$GAME_DATA/Objects/Textures/decor/obj_decor_babyduck_asg.tga",
+                  "$GAME_DATA/Objects/Textures/decor/obj_decor_babyduck_nor.tga"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "rotationSet": "PropY",
+      "sticky": "-Y",
+      "stackSize": 10000,
+      "uuid": "7c3745a1-53ac-400e-8187-8d8c4ebc6db6"
+    }
+  ]
+}
