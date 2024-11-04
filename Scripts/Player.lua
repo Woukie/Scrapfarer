@@ -93,6 +93,11 @@ function Player.client_onFixedUpdate(self)
   end
 end
 
+function Player:server_stopTumble()
+  self.sv.tumbleTicks = 0
+  self.player:getCharacter():setTumbling(false)
+end
+
 function Player:server_tumble()
   self.sv.tumbleTicks = 200
   self.player:getCharacter():setTumbling(true)

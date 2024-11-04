@@ -215,6 +215,7 @@ function ServerGameManager.stopRun(self, player)
   gamestate["checkpoints"] = {}
   g_serverPlotManager:respawnPlayer(player)
   g_serverPlotManager:loadBuild(player, true)
+  sm.event.sendToPlayer(player, "server_stopTumble")
 
   savePlayer(self, player)
   return true
