@@ -1,7 +1,6 @@
 ClientRewardManager = class(nil)
 
 function ClientRewardManager:onCreate()
-  self.category = "All"
   self.offers = sm.json.open("$CONTENT_DATA/rewards.json")
   self.rewardGui = sm.gui.createGuiFromLayout("$CONTENT_DATA/Gui/Layouts/reward_real.layout", false, {
     isHud = false,
@@ -22,11 +21,11 @@ end
 function ClientRewardManager:refresh(offer)
   if offer > #self.offers then
     self.rewardGui:setColor("NoOfferDialog", sm.color.new(1, 1, 1, 1))
+    self.rewardGui:setImage("OfferImage", "$CONTENT_DATA/Gui/Textures/offer_button_disabled.png")
   else
     self.rewardGui:setColor("NoOfferDialog", sm.color.new(1, 1, 1, 0))
+    self.rewardGui:setImage("OfferImage", "$CONTENT_DATA/Gui/Textures/offer_button_"..offer..".png")
   end
-
-  self.rewardGui:setImage("OfferImage", "$CONTENT_DATA/Gui/Textures/offer_button_"..offer..".png")
 end
 
 function ClientRewardManager:openGui()
