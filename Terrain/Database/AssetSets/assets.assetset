@@ -1,6 +1,7 @@
 {
   "assetListRenderable": [
     {
+      "col": "$CONTENT_DATA/Terrain/Mesh/cliff_04.fbx",
       "defaultColors": {
         "stone": "f0f0f0"
       },
@@ -38,6 +39,7 @@
       "uuid": "f7c5bda9-5509-4a55-beee-5712141dfb7a"
     },
     {
+      "col": "$CONTENT_DATA/Terrain/Mesh/cliff_03.fbx",
       "defaultColors": {
         "stone": "f0f0f0"
       },
@@ -75,6 +77,7 @@
       "uuid": "3b3e9b5a-1785-4429-9154-0242b819c8b9"
     },
     {
+      "col": "$CONTENT_DATA/Terrain/Mesh/cliff_02.fbx",
       "defaultColors": {
         "stone": "f0f0f0"
       },
@@ -112,6 +115,7 @@
       "uuid": "0bf524a2-5ab0-4298-b177-be4206e29823"
     },
     {
+      "col": "$CONTENT_DATA/Terrain/Mesh/cliff_01.fbx",
       "defaultColors": {
         "stone": "f0f0f0"
       },
