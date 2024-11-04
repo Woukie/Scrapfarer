@@ -7,7 +7,7 @@
             <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/no_offer_dialog.png"/>
         </Widget>
         <Widget type="ImageBox" skin="ImageBox" position="240 512 800 96" name="OfferImage">
-            <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/offer_button_01.png"/>
+            <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/offer_button_1.png"/>
         </Widget>
         <Widget type="Button" skin="Button" position="240 512 800 96" name="OfferButton">
             <Property key="Alpha" value="0"/>
