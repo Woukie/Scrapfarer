@@ -1,5 +1,102 @@
 {
-  "DamageRock": {
+  "DamageRockSmall": {
+    "parameterList": {
+      "Material": 6,
+      "Size": 0.005,
+      "Velocity_max_50": 15,
+      "Phys_energy": 12.5,
+      "shakeStrength": 0.01,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Single",
+        "parameters": [
+          "Size",
+          "Velocity_max_50",
+          "Material",
+          "Phys_energy"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      }
+    ]
+  },
+  "DestroyRockSmall": {
+    "parameterList": {
+      "Material": 6,
+      "shakeStrength": 0.05,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Debris",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "Material"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      },
+      {
+        "type": "particle",
+        "name": "p_destruct_stone_big",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "attached": true,
+        "delay": 0
+      },
+      {
+        "type": "particle",
+        "name": "p_hvs_stones_small_destruct02",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "attached": true,
+        "delay": 0
+      }
+    ]
+  },
+  "DamageRockBig": {
     "parameterList": {
       "Material": 6,
       "Size": 0.005,
@@ -37,7 +134,7 @@
       }
     ]
   },
-  "DestroyRock": {
+  "DestroyRockBig": {
     "parameterList": {
       "Material": 6,
       "shakeStrength": 0.1,
@@ -70,28 +167,6 @@
           "shakeRadius"
         ],
         "duration": 0.1,
-        "delay": 0
-      },
-      {
-        "type": "particle",
-        "name": "p_hvs_stones_big_destruct01",
-        "offset": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        },
-        "attached": true,
-        "delay": 0
-      },
-      {
-        "type": "particle",
-        "name": "p_hvs_stones_big_destruct01",
-        "offset": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        },
-        "attached": true,
         "delay": 0
       },
       {
@@ -178,28 +253,6 @@
           "shakeRadius"
         ],
         "duration": 0.1,
-        "delay": 0
-      },
-      {
-        "type": "particle",
-        "name": "p_destruct_wood_big",
-        "offset": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        },
-        "attached": true,
-        "delay": 0
-      },
-      {
-        "type": "particle",
-        "name": "p_destruct_wood_big",
-        "offset": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        },
-        "attached": true,
         "delay": 0
       },
       {
