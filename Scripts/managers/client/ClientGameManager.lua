@@ -3,10 +3,15 @@ ClientGameManager = class(nil)
 
 function ClientGameManager.onCreate(self)
   self.coins = 0
+  self.offer = 1
 end
 
 function ClientGameManager:getCoins()
   return self.coins
+end
+
+function ClientGameManager:getCurrentOffer()
+  return self.offer
 end
 
 function ClientGameManager.onCreatePlayer(self)
@@ -17,6 +22,7 @@ end
 
 function ClientGameManager.syncData(self, data)
   self.coins = data.coins
+  self.offer = data.offer
 
   if g_hud then
     g_hud:setText("Coin Text", ""..self.coins)

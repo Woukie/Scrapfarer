@@ -2,7 +2,7 @@ dofile("$CONTENT_DATA/Scripts/game/tools.lua")
 dofile("$CONTENT_DATA/Scripts/game/shapes.lua")
 dofile("$CONTENT_DATA/Scripts/game/util/Queue.lua")
 
--- Keeps track of game state for each player, a lot of data is stored on the client so this is mainly for game logic like respawning and keeping track of checkpoints
+-- Keeps track of game state for each player, also handles inventory
 ServerGameManager = class(nil)
 
 function ServerGameManager.onCreate(self)
@@ -19,6 +19,7 @@ local function loadPlayer(self, player)
     assert(playerData.inventory)
     self.gameStates[playerId].coins = playerData.coins
     self.gameStates[playerId].inventory = playerData.inventory
+    self.gameStates[playerId].offer = playerData.offer
     print("Loaded "..player.name.."'s player data from storage")
     return true
   end
@@ -30,15 +31,35 @@ local function syncPlayer(self, player)
   local playerId = player:getId()
   local gameState = self.gameStates[playerId]
 
-  self.sendToClientQueue:push({client = player, callback = "client_syncGameData", data = {coins = gameState.coins}})
+  self.sendToClientQueue:push({client = player, callback = "client_syncGameData", data = {coins = gameState.coins, offer = gameState.offer}})
 end
 
 local function savePlayer(self, player)
   local playerId = player:getId()
   local gameState = self.gameStates[playerId]
-  sm.storage.save(playerId, {coins = gameState.coins, inventory = gameState.inventory})
+  sm.storage.save(playerId, {coins = gameState.coins, inventory = gameState.inventory, offer = gameState.offer})
   syncPlayer(self, player)
   print("Saved "..player.name.."'s player data to storage")
+end
+
+function ServerGameManager:triggerOffer(player)
+  local offers = sm.json.open("$CONTENT_DATA/rewards.json")
+  local playerId = player:getId()
+  local gameState = self.gameStates[playerId]
+  local offer = offers[gameState.offer]
+
+  if not offer then
+    return
+  end
+
+  gameState.inventory[offer.itemId] = (gameState.inventory[offer.itemId] or 0) + 1
+  gameState.offer = gameState.offer + 1
+
+  savePlayer(self, player)
+
+  sm.container.beginTransaction()
+  sm.container.collect(player:getInventory(), sm.uuid.new(offer.itemId), offer.quantity)
+  sm.container.endTransaction()
 end
 
 function ServerGameManager.onPlayerJoined(self, player)
@@ -48,6 +69,7 @@ function ServerGameManager.onPlayerJoined(self, player)
     playing = false,
     checkpoints = {},
     coins = 0,
+    offer = 1,
     inventory = {}
   }
 
