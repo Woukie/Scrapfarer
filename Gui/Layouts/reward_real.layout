@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout" version="3.2.0">
+    <Widget type="ImageBox" skin="ImageBox" align="Center" name="BackgroundImage" position_real="0.16666666666666666 0.17592592592592593 0.6666666666666666 0.6481481481481481">
+        <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/reward_background.png" />
+        <Widget type="ImageBox" skin="ImageBox" name="NoOfferDialog" position_real="0.1875 0.22857142857142856 0.625 0.2742857142857143">
+            <Property key="Alpha" value="0" />
+            <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/no_offer_dialog.png" />
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" name="OfferImage" position_real="0.1875 0.7314285714285714 0.625 0.13714285714285715">
+            <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/offer_button_01.png" />
+        </Widget>
+        <Widget type="Button" skin="Button" name="OfferButton" position_real="0.1875 0.7314285714285714 0.625 0.13714285714285715">
+            <Property key="Alpha" value="0" />
+        </Widget>
+        <Widget type="Button" skin="Button" name="TreasureButton" position_real="0.1875 0.5485714285714286 0.625 0.13714285714285715">
+            <Property key="Alpha" value="0" />
+        </Widget>
+        <Widget type="Button" skin="Button" name="ExitButton" position_real="0.9125 0 0.075 0.04">
+            <Property key="Alpha" value="0" />
+        </Widget>
+    </Widget>
+    <CodeGeneratorSettings />
+</MyGUI>

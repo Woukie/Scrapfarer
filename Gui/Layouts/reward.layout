@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout" version="3.2.0">
+    <Widget type="ImageBox" skin="ImageBox" position="320 190 1280 700" align="Center" name="BackgroundImage">
+        <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/reward_background.png"/>
+        <Widget type="ImageBox" skin="ImageBox" position="240 160 800 192" name="NoOfferDialog">
+			<Property key="Alpha" value="0"/>
+            <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/no_offer_dialog.png"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position="240 512 800 96" name="OfferImage">
+            <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/offer_button_01.png"/>
+        </Widget>
+        <Widget type="Button" skin="Button" position="240 512 800 96" name="OfferButton">
+            <Property key="Alpha" value="0"/>
+        </Widget>
+        <Widget type="Button" skin="Button" position="240 384 800 96" name="TreasureButton">
+            <Property key="Alpha" value="0"/>
+        </Widget>
+        <Widget type="Button" skin="Button" position="1168 0 96 28" name="ExitButton">
+            <Property key="Alpha" value="0"/>
+        </Widget>
+    </Widget>
+    <CodeGeneratorSettings/>
+</MyGUI>
