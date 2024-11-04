@@ -4,6 +4,7 @@
     "$CONTENT_DATA/Objects/Database/ShapeSets/obstacles.shapeset",
     "$CONTENT_DATA/Objects/Database/ShapeSets/developer.shapeset",
     "$CONTENT_DATA/Objects/Database/ShapeSets/floaters.shapeset",
+    "$GAME_DATA/Objects/Database/ShapeSets/interactive.json",
     "$CONTENT_DATA/Objects/Database/ShapeSets/parts.shapeset"
   ]
 }

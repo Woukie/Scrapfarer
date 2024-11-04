@@ -1,30 +1,6 @@
 {
   "partList": [
     {
-      "bearing": {},
-      "color": "df7f01",
-      "cylinder": {
-        "axis": "Z",
-        "depth": 1,
-        "diameter": 1
-      },
-      "flammable": false,
-      "legacyId": 100,
-      "name": "jnt_bearing",
-      "physicsMaterial": "Mechanical",
-      "ratings": {
-        "buoyancy": 0,
-        "density": 4,
-        "durability": 1,
-        "friction": 4
-      },
-      "renderable": "$GAME_DATA/Objects/Renderable/Interactive/obj_interactive_bearing.rend",
-      "rotationSet": "PropZ",
-      "stackSize": 10000,
-      "sticky": "-Z",
-      "uuid": "4a1b886b-913e-4aad-b5b6-6e41b0db23a6"
-    },
-    {
       "box": {
         "x": 2,
         "y": 2,
