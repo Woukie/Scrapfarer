@@ -157,9 +157,11 @@ function Game:server_takeTreasure(params)
 end
 
 function Game:client_takeOffer(_)
+  g_clientRewardManager:closeGui()
   self.network:sendToServer("server_takeOffer", {player = sm.localPlayer.getPlayer()})
 end
 
 function Game:client_takeTreasure(_)
+  g_clientRewardManager:closeGui()
   self.network:sendToServer("server_takeTreasure", {player = sm.localPlayer.getPlayer()})
 end
