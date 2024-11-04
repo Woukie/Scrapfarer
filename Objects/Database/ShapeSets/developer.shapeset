@@ -121,6 +121,7 @@
       "restrictions": {
         "buildable": true,
         "connectable": false,
+        "paintable": false,
         "destructable": false,
         "erasable": false
       },
