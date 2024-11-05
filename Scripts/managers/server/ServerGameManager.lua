@@ -131,6 +131,12 @@ function ServerGameManager:buyItem(player, name)
     return
   end
 
+  local unlocked = gameState.shopProgress[name]
+  -- If player has not unlocked it or if we have explicitly stated that it's locked now
+  if (item.requireUnlock and not unlocked) or unlocked == false then
+    return
+  end
+
   gameState.coins = gameState.coins - item.cost
   if not gameState.inventory[item.itemId] then
     gameState.inventory[item.itemId] = item.quantity
