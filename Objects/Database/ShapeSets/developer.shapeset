@@ -1,6 +1,70 @@
 {
   "partList": [
     {
+      "uuid": "6f82896d-2448-4749-bd56-4fd695715761",
+      "name": "obj_start_button",
+      "renderable": "$CONTENT_DATA/Objects/Renderable/obj_start_button.rend",
+      "color": "00FF00",
+      "hull": {
+        "x": 2,
+        "y": 1,
+        "z": 2,
+        "col": "$CONTENT_DATA/Objects/Mesh/start_button_on.fbx"
+      },
+      "button": {},
+      "rotationSet": "PropY",
+      "sticky": "-Y",
+      "physicsMaterial": "Mechanical",
+      "ratings": {
+        "density": 2,
+        "durability": 3,
+        "friction": 5,
+        "buoyancy": 2
+      },
+      "flammable": true,
+      "stackSize": 10000
+    },
+    {
+      "uuid": "461de3a0-bb61-499a-961e-7bcdf40d89b2",
+      "name": "obj_table",
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/table.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/wood_dif.png",
+                  "$CONTENT_DATA/Textures/wood_asg.tga",
+                  "$CONTENT_DATA/Textures/wood_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "color": "DEEEEE",
+      "hull": {
+        "x": 16,
+        "y": 5,
+        "z": 7,
+        "col": "$CONTENT_DATA/Objects/Mesh/table.fbx"
+      },
+      "button": {},
+      "rotationSet": "PropY",
+      "sticky": "-Y",
+      "physicsMaterial": "Mechanical",
+      "ratings": {
+        "density": 2,
+        "durability": 3,
+        "friction": 5,
+        "buoyancy": 2
+      },
+      "flammable": true,
+      "stackSize": 10000
+    },
+    {
       "box": {
         "x": 2,
         "y": 2,
@@ -47,9 +111,9 @@
       "flammable": false,
       "hull": {
         "col": "$CONTENT_DATA/Objects/Mesh/shop.fbx",
-        "x": 2,
-        "y": 2,
-        "z": 2
+        "x": 4,
+        "y": 4,
+        "z": 4
       },
       "name": "obj_shop",
       "physicsMaterial": "Plastic",
