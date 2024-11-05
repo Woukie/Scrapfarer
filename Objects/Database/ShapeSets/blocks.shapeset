@@ -19,7 +19,7 @@
     },
     {
       "asg": "$CONTENT_DATA/Textures/wood_asg.tga",
-      "color": "D15C05",
+      "color": "89512E",
       "dif": "$CONTENT_DATA/Textures/wood_dif.png",
       "flammable": true,
       "name": "blk_wood",

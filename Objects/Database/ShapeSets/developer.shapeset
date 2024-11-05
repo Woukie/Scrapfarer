@@ -44,11 +44,11 @@
           }
         ]
       },
-      "color": "DEEEEE",
+      "color": "89512E",
       "hull": {
-        "x": 16,
-        "y": 5,
-        "z": 7,
+        "x": 10,
+        "y": 3,
+        "z": 5,
         "col": "$CONTENT_DATA/Objects/Mesh/table.fbx"
       },
       "button": {},
