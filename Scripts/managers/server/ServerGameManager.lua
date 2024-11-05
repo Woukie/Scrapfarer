@@ -8,6 +8,16 @@ ServerGameManager = class(nil)
 function ServerGameManager.onCreate(self)
   self.gameStates = {}
   self.sendToClientQueue = Queue()
+  self.shopItems = sm.json.open("$CONTENT_DATA/shop.json")
+end
+
+-- Would have been easier to index shop items by name but we're already this far lol
+local function getShopItem(self, name)
+  for _, item in ipairs(self.shopItems) do
+    if item.name == name then
+      return item
+    end
+  end
 end
 
 local function loadPlayer(self, player)
@@ -17,9 +27,12 @@ local function loadPlayer(self, player)
   if playerData then
     assert(playerData.coins)
     assert(playerData.inventory)
+    assert(playerData.offer)
+    assert(playerData.shopProgress)
     self.gameStates[playerId].coins = playerData.coins
     self.gameStates[playerId].inventory = playerData.inventory
     self.gameStates[playerId].offer = playerData.offer
+    self.gameStates[playerId].shopProgress = playerData.shopProgress
     print("Loaded "..player.name.."'s player data from storage")
     return true
   end
@@ -31,13 +44,13 @@ local function syncPlayer(self, player)
   local playerId = player:getId()
   local gameState = self.gameStates[playerId]
 
-  self.sendToClientQueue:push({client = player, callback = "client_syncGameData", data = {coins = gameState.coins, offer = gameState.offer}})
+  self.sendToClientQueue:push({client = player, callback = "client_syncGameData", data = {coins = gameState.coins, offer = gameState.offer, shopProgress = gameState.shopProgress}})
 end
 
 local function savePlayer(self, player)
   local playerId = player:getId()
   local gameState = self.gameStates[playerId]
-  sm.storage.save(playerId, {coins = gameState.coins, inventory = gameState.inventory, offer = gameState.offer})
+  sm.storage.save(playerId, {coins = gameState.coins, inventory = gameState.inventory, offer = gameState.offer, shopProgress = gameState.shopProgress})
   syncPlayer(self, player)
   print("Saved "..player.name.."'s player data to storage")
 end
@@ -81,6 +94,7 @@ function ServerGameManager.onPlayerJoined(self, player)
     checkpoints = {},
     coins = 0,
     offer = 1,
+    shopProgress = {},
     inventory = {}
   }
 
@@ -109,25 +123,44 @@ function ServerGameManager.onPlayerLeft(self, player)
   self.gameStates[player:getId()] = nil
 end
 
-function ServerGameManager:buyItem(player, itemId, quantity, cost)
+function ServerGameManager:buyItem(player, name)
   local gameState = self.gameStates[player:getId()]
+  local item = getShopItem(self, name)
 
-  if gameState.coins < cost then
+  if gameState.coins < item.cost then
     return
   end
 
-  gameState.coins = gameState.coins - cost
-  if not gameState.inventory[itemId] then
-    gameState.inventory[itemId] = quantity
+  gameState.coins = gameState.coins - item.cost
+  if not gameState.inventory[item.itemId] then
+    gameState.inventory[item.itemId] = item.quantity
   else
-    gameState.inventory[itemId] = gameState.inventory[itemId] + quantity
+    gameState.inventory[item.itemId] = gameState.inventory[item.itemId] + item.quantity
+  end
+
+  if item.lockOnBuy then
+    gameState.shopProgress[name] = false
   end
 
   savePlayer(self, player)
 
   sm.container.beginTransaction()
-  sm.container.collect(player:getInventory(), sm.uuid.new(itemId), quantity)
+  sm.container.collect(player:getInventory(), sm.uuid.new(item.itemId), item.quantity)
   sm.container.endTransaction()
+end
+
+function ServerGameManager:lockShopItem(player, name)
+  local gameState = self.gameStates[player:getId()]
+  gameState.shopProgress[name] = false
+
+  savePlayer(self, player)
+end
+
+function ServerGameManager:unlockShopItem(player, name)
+  local gameState = self.gameStates[player:getId()]
+  gameState.shopProgress[name] = true
+
+  savePlayer(self, player)
 end
 
 function ServerGameManager:disableInventory(player)

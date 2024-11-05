@@ -120,8 +120,7 @@ end
 -- Shop gui callbacks
 
 function Game:server_buyShopItem(params)
-  local item = params.item
-  g_serverGameManager:buyItem(params.player, item.itemId, item.quantity, item.cost)
+  g_serverGameManager:buyItem(params.player, params.name)
 end
 
 function Game:client_closeShop(_)
@@ -130,7 +129,7 @@ end
 
 function Game:client_buyShopItem(_)
   local item = g_clientShopManager:getSelectedItem()
-  self.network:sendToServer("server_buyShopItem", {item = item, player = sm.localPlayer.getPlayer()})
+  self.network:sendToServer("server_buyShopItem", {name = item.name, player = sm.localPlayer.getPlayer()})
 end
 
 function Game:client_setShopCategory(name)

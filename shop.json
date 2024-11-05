@@ -1,4 +1,4 @@
-// Name is used
+// Name is used to track unlocks
 [
   {
     "name": "Wood",
@@ -39,6 +39,7 @@
     "name": "Paint Tool",
     "itemId": "c60b9627-fc2b-4319-97c5-05921cb976c6",
     "quantity": 1,
+    "lockOnBuy": true,
     "category": "Functional",
     "cost": 0
   },
