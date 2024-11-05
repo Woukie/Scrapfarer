@@ -1,4 +1,4 @@
-// Name property is purely so that developers know what the item is
+// Name is used
 [
   {
     "name": "Wood",
@@ -34,6 +34,13 @@
     "quantity": 1,
     "category": "Blocks",
     "cost": 60
+  },
+  {
+    "name": "Paint Tool",
+    "itemId": "c60b9627-fc2b-4319-97c5-05921cb976c6",
+    "quantity": 1,
+    "category": "Functional",
+    "cost": 0
   },
   {
     "name": "Sport Suspension",
