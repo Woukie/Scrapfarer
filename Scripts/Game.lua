@@ -185,12 +185,32 @@ function Game:server_revertBuild(params)
 end
 
 function Game:client_deleteBuild(_)
-  g_clientRewardManager:closeGui()
-  self.network:sendToServer("server_deleteBuild", {player = sm.localPlayer.getPlayer()})
+  g_clientDangerManager:closeGui()
+  local player = sm.localPlayer.getPlayer()
+  local character = player:getCharacter()
+  self.network:sendToServer("server_deleteBuild", {player = player})
+  sm.event.sendToWorld(
+    character:getWorld(),
+    "client_playeffect",
+    {
+      position = character:getWorldPosition(),
+      name = "PropaneTank - ExplosionBig"
+    }
+  )
 end
 
 function Game:client_revertBuild(_)
-  g_clientRewardManager:closeGui()
+  g_clientDangerManager:closeGui()
+  local player = sm.localPlayer.getPlayer()
+  local character = player:getCharacter()
   self.network:sendToServer("server_revertBuild", {player = sm.localPlayer.getPlayer()})
+  sm.event.sendToWorld(
+    character:getWorld(),
+    "client_playeffect",
+    {
+      position = character:getWorldPosition(),
+      name = "PropaneTank - ExplosionSmall"
+    }
+  )
 end
 
