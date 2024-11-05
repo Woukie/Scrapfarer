@@ -140,6 +140,54 @@
       },
       "showInInventory": false,
       "uuid": "066f70f2-4493-46ca-9e54-4cfa7fa18f66"
+    },
+    {
+      "color": "AAAAFF",
+      "hull": {
+        "col": "$CONTENT_DATA/Objects/Mesh/Obstacles/gem_01.fbx",
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "name": "obj_gem_obstacle_01",
+      "physicsMaterial": "Glass",
+      "ratings": {
+        "buoyancy": 1,
+        "density": 2,
+        "durability": 10,
+        "friction": 0
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/gem_01.fbx",
+            "subMeshList": [
+              {
+                "material": "Glass",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/concrete_dif.png",
+                  "$CONTENT_DATA/Textures/concrete_asg.png",
+                  "$CONTENT_DATA/Textures/concrete_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "scripted": {
+        "classname": "Obstacle",
+        "data": {
+          "health": 1,
+          "attackLevelMin": 5,
+          "attackLevelMax": 8,
+          "damageEffect": "DamageGem",
+          "destroyEffect": "DestroyGem"
+        },
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
+      },
+      "showInInventory": false,
+      "uuid": "f068c0c0-fc7e-46be-ba90-a1bfbc6b9206"
     }
   ]
 }
