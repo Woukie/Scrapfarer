@@ -55,6 +55,24 @@ local function savePlayer(self, player)
   print("Saved "..player.name.."'s player data to storage")
 end
 
+function ServerGameManager:deleteBuild(player)
+  if self.gameStates[player:getId()]["playing"] then
+    print(player.name.." cannot delete their build as they are in a run")
+    return
+  end
+
+  g_serverPlotManager:wipeBuild(player)
+end
+
+function ServerGameManager:revertBuild(player)
+  if self.gameStates[player:getId()]["playing"] then
+    print(player.name.." cannot revert their build as they are in a run")
+    return
+  end
+
+  g_serverPlotManager:loadBuild(player, true)
+end
+
 function ServerGameManager:saveBuild(player)
   if self.gameStates[player:getId()]["playing"] then
     print(player.name.." cannot save as they are in a run")

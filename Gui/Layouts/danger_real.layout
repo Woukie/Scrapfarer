@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout" version="3.2.0">
+    <Widget type="ImageBox" skin="ImageBox" align="Center" name="BackgroundImage" position_real="0.16666666666666666 0.17592592592592593 0.6666666666666666 0.6481481481481481">
+        <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/danger_background.png" />
+        <Widget type="Button" skin="Button" name="RevertButton" position_real="0.1875 0.36 0.625 0.12">
+            <Property key="Alpha" value="0" />
+        </Widget>
+        <Widget type="Button" skin="Button" name="DeleteButton" position_real="0.1875 0.52 0.625 0.12">
+            <Property key="Alpha" value="0" />
+        </Widget>
+        <Widget type="Button" skin="Button" name="ExitButton" position_real="0.9125 0 0.075 0.04">
+            <Property key="Alpha" value="0" />
+        </Widget>
+    </Widget>
+    <CodeGeneratorSettings />
+</MyGUI>

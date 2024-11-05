@@ -50,7 +50,7 @@ local function getFloorInCreation(creation)
 end
 
 -- Get plotId for a specific player
-local function getPlotId(self, player)
+function ServerPlotManager:getPlotId(player)
   for plotId, plot in pairs(self.plots) do
     if plot.playerId == player:getId() then
       return plotId
@@ -59,7 +59,7 @@ local function getPlotId(self, player)
 end
 
 -- Destroys the build owned by the player
-local function destroyBuild(self, plotId)
+function ServerPlotManager:destroyBuild(plotId)
   local creations = getCreationsInPlot(self, plotId)
   if creations and #creations > 0 then
     for _, creation in ipairs(creations) do
@@ -79,7 +79,7 @@ end
 
 -- Saves the players build. Everything in the plots areaTrigger is saved. Save takes the form of a table with a list of blueprints (with world coordinates), along with the world position and rotation of the floor tile
 function ServerPlotManager:saveBuild(player)
-  local plotId = getPlotId(self, player)
+  local plotId = self:getPlotId(player)
   if not self.plots[plotId].build then
     print("Refusing to save "..player.name.."'s build as it doesn't exist")
     return
@@ -100,6 +100,38 @@ function ServerPlotManager:saveBuild(player)
   print("Saved "..player.name.."'s build")
 end
 
+function ServerPlotManager:wipeBuild(player)
+  if not inWorldEnvironment() then
+    self.worldFunctionQueue:push({destination = "wipeBuild", params = {self, player}})
+    return
+  end
+
+  local plotId = self:getPlotId(player)
+  if not plotId then
+    print("Can't wipe build, player has not plot")
+    return
+  end
+  local plot = self.plots[plotId]
+
+  self:destroyBuild(plotId)
+
+  plot.build = sm.shape.createPart(
+    floorShape,
+    plot.position + (plot.rotation * sm.vec3.new(-20.625, -20.625, -0.25)),
+    plot.rotation,
+    false,
+    true
+  )
+
+  local blueprintString = sm.creation.exportToString(plot.build:getBody(), true)
+  local blueprints = {sm.json.parseJsonString(blueprintString)}
+
+  self.savedBuilds[player:getId()] = {position = self.plots[plotId].position, rotation = self.plots[plotId].rotation, blueprints = blueprints}
+  sm.storage.save("builds", self.savedBuilds)
+
+  g_serverGameManager:recalculateInventory(player)
+end
+
 -- Destroys the players currently active build, loads their previously saved build (or the default one), and updates the plot build property to point to the new floor part
 function ServerPlotManager:loadBuild(player, waitForCellLoad)
   if waitForCellLoad then
@@ -117,14 +149,14 @@ function ServerPlotManager:loadBuild(player, waitForCellLoad)
     return
   end
 
-  local plotId = getPlotId(self, player)
+  local plotId = self:getPlotId(player)
   if not plotId then
     print("Can't load build, player has not plot")
     return
   end
   local plot = self.plots[plotId]
 
-  destroyBuild(self, plotId)
+  self:destroyBuild(plotId)
 
   local saveData = self.savedBuilds[player:getId()]
   if saveData then
@@ -160,16 +192,16 @@ function ServerPlotManager:loadBuild(player, waitForCellLoad)
     print("Loaded default build for "..player.name)
   end
 
-  g_serverGameManager:recalculateInventory(player)
-
   savePlots(self)
+
+  g_serverGameManager:recalculateInventory(player)
 end
 
 -- Saves the players build and destroys the root part
 function ServerPlotManager:exitBuildMode(player)
   self:saveBuild(player)
   print("Exiting build mode")
-  local plotId = getPlotId(self, player)
+  local plotId = self:getPlotId(player)
   local plot = self.plots[plotId]
   if sm.exists(plot.build) then
     for _, creation in ipairs(getCreationsInPlot(self, plotId)) do
@@ -235,7 +267,7 @@ function ServerPlotManager:respawnPlayer(player)
   end
 
   print("Respawning player "..player.name)
-  local plotId = getPlotId(self, player)
+  local plotId = self:getPlotId(player)
   if plotId then
     print(player.name.." owns plot "..plotId..", teleporting")
     local plot = self.plots[plotId]
@@ -285,7 +317,7 @@ end
 
 -- Un-registers the plot
 function ServerPlotManager:onPlayerLeft(player)
-  local plotId = getPlotId(self, player)
+  local plotId = self:getPlotId(player)
   self.plots[plotId].playerId = nil
   print("Removed "..player.name.."'s plot")
 end

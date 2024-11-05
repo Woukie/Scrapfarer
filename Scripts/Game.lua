@@ -8,6 +8,7 @@ dofile("$CONTENT_DATA/Scripts/managers/server/ServerObstacleManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/server/ServerPlotManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/client/ClientPlotManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/client/ClientRewardManager.lua")
+dofile("$CONTENT_DATA/Scripts/managers/client/ClientDangerManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/client/ClientShopManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/client/ClientGameManager.lua")
 
@@ -70,6 +71,9 @@ function Game:client_onCreate()
 
   g_clientRewardManager = ClientRewardManager()
   g_clientRewardManager:onCreate()
+
+  g_clientDangerManager = ClientDangerManager()
+  g_clientDangerManager:onCreate()
 
   g_effectManager = EffectManager()
 	g_effectManager:cl_onCreate()
@@ -167,3 +171,26 @@ function Game:client_takeTreasure(_)
   g_clientRewardManager:closeGui()
   self.network:sendToServer("server_takeTreasure", {player = sm.localPlayer.getPlayer()})
 end
+
+function Game:client_closeDangerScreen(params)
+  g_clientDangerManager:closeGui()
+end
+
+function Game:server_deleteBuild(params)
+  g_serverGameManager:deleteBuild(params.player)
+end
+
+function Game:server_revertBuild(params)
+  g_serverGameManager:revertBuild(params.player)
+end
+
+function Game:client_deleteBuild(_)
+  g_clientRewardManager:closeGui()
+  self.network:sendToServer("server_deleteBuild", {player = sm.localPlayer.getPlayer()})
+end
+
+function Game:client_revertBuild(_)
+  g_clientRewardManager:closeGui()
+  self.network:sendToServer("server_revertBuild", {player = sm.localPlayer.getPlayer()})
+end
+
