@@ -32,15 +32,41 @@
     "name": "Aerogel",
     "itemId": "d06ebc97-db48-45e4-a6b5-ccd57446e8e4",
     "quantity": 1,
-    "requireUnlock": true,
     "category": "Blocks",
     "cost": 60
+  },
+  {
+    "name": "Weld Tool",
+    "itemId": "fdb8b8be-96e7-4de0-85c7-d2f42e4f33ce",
+    "quantity": 1,
+    "lockOnBuy": true,
+    "category": "Functional",
+    "requireUnlock": true,
+    "cost": 0
+  },
+  {
+    "name": "Connect Tool",
+    "itemId": "8c7efc37-cd7c-4262-976e-39585f8527bf",
+    "quantity": 1,
+    "lockOnBuy": true,
+    "category": "Functional",
+    "cost": 15
+  },
+  {
+    "name": "Sledgehammer",
+    "itemId": "ed185725-ea12-43fc-9cd7-4295d0dbf88b",
+    "quantity": 1,
+    "lockOnBuy": true,
+    "requireUnlock": true,
+    "category": "Functional",
+    "cost": 0
   },
   {
     "name": "Paint Tool",
     "itemId": "c60b9627-fc2b-4319-97c5-05921cb976c6",
     "quantity": 1,
     "lockOnBuy": true,
+    "requireUnlock": true,
     "category": "Functional",
     "cost": 0
   },
