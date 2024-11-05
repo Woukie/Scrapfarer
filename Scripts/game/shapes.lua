@@ -6,6 +6,7 @@ blk_concrete = sm.uuid.new("71aefe40-fc76-40ad-a6a1-3c5c9301378e")
 obj_rock_obstacle_01 = sm.uuid.new("c7ae817b-dea4-4074-bd1a-c452025b3db5")
 obj_rock_obstacle_02 = sm.uuid.new("30d38531-6777-4a0f-bd84-9b9502f95be8")
 obj_log_obstacle_01 = sm.uuid.new("066f70f2-4493-46ca-9e54-4cfa7fa18f66")
+obj_gem_obstacle_01 = sm.uuid.new("f068c0c0-fc7e-46be-ba90-a1bfbc6b9206")
 
 -- Unobtainable
 obj_plot_floor = sm.uuid.new("3f8f86b2-518e-4819-a4a5-37d9c7552f53")

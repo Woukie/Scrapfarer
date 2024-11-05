@@ -152,8 +152,8 @@
       "name": "obj_gem_obstacle_01",
       "physicsMaterial": "Glass",
       "ratings": {
-        "buoyancy": 1,
-        "density": 2,
+        "buoyancy": 10,
+        "density": 6,
         "durability": 10,
         "friction": 0
       },
