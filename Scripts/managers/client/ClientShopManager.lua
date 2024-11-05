@@ -2,11 +2,21 @@ ClientShopManager = class(nil)
 
 function ClientShopManager:reloadShopGrid()
   local i = 0
+  local progress = g_clientGameManager:getShopProgress()
   for _, item in ipairs(self.shopItems) do
     if self.category == "All" or self.category == item.category then
-      self.shopGui:setGridItem("CatalogueGrid", i, item)
+      local unlocked = progress[item.name]
+      local display = true
 
-      i = i + 1
+      -- Unlocked can be nil so we must use "== false"
+      if (item.requireUnlock and not unlocked) or unlocked == false then
+        display = false
+      end
+
+      if display then
+        self.shopGui:setGridItem("CatalogueGrid", i, item)
+        i = i + 1
+      end
     end
   end
 
@@ -71,12 +81,13 @@ function ClientShopManager:selectShopItem(item)
 
   if item then
     local itemId = sm.uuid.new(item.itemId)
+    self.shopGui:setVisible("ItemImage", true)
     self.shopGui:setIconImage("ItemImage", itemId)
     self.shopGui:setText("ItemName", "x"..item.quantity.." "..sm.shape.getShapeTitle(itemId))
     self.shopGui:setText("ItemDescription", sm.shape.getShapeDescription(itemId))
     self.shopGui:setText("ItemCost", tostring(item.cost))
   else
-    self.shopGui:setImage("ItemImage", "")
+    self.shopGui:setVisible("ItemImage", false)
     self.shopGui:setText("ItemName", "")
     self.shopGui:setText("ItemDescription", "")
     self.shopGui:setText("ItemCost", "")

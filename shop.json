@@ -32,6 +32,7 @@
     "name": "Aerogel",
     "itemId": "d06ebc97-db48-45e4-a6b5-ccd57446e8e4",
     "quantity": 1,
+    "requireUnlock": true,
     "category": "Blocks",
     "cost": 60
   },

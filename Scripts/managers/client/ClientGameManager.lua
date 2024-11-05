@@ -12,7 +12,7 @@ function ClientGameManager:getCoins()
 end
 
 function ClientGameManager:getShopProgress()
-  return self.coins
+  return self.shopProgress
 end
 
 function ClientGameManager.onCreatePlayer(self)
