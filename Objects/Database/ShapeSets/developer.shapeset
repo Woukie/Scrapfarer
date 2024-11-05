@@ -51,10 +51,9 @@
         "z": 5,
         "col": "$CONTENT_DATA/Objects/Mesh/table.fbx"
       },
-      "button": {},
       "rotationSet": "PropY",
       "sticky": "-Y",
-      "physicsMaterial": "Mechanical",
+      "physicsMaterial": "Wood",
       "ratings": {
         "density": 2,
         "durability": 3,
@@ -162,9 +161,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/shop_dif.png",
-                  "$CONTENT_DATA/Textures/shop_asg.png",
-                  "$CONTENT_DATA/Textures/shop_nor.png"
+                  "$CONTENT_DATA/Textures/Monitor/shop_dif.png",
+                  "$CONTENT_DATA/Textures/Monitor/monitor_asg.png",
+                  "$CONTENT_DATA/Textures/Monitor/monitor_nor.png"
                 ]
               }
             ]
@@ -185,6 +184,92 @@
       },
       "showInInventory": false,
       "uuid": "bbab5b38-d9f0-4265-b267-e80b2d2b6bad"
+    },
+    {
+      "color": "ffffff",
+      "flammable": false,
+      "hull": {
+        "col": "$CONTENT_DATA/Objects/Mesh/monitor.fbx",
+        "x": 3,
+        "y": 3,
+        "z": 3
+      },
+      "name": "obj_save_monitor",
+      "physicsMaterial": "Plastic",
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/monitor.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Monitor/save_dif.png",
+                  "$CONTENT_DATA/Textures/Monitor/monitor_asg.png",
+                  "$CONTENT_DATA/Textures/Monitor/monitor_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "restrictions": {
+        "buildable": false,
+        "connectable": false,
+        "destructable": false,
+        "erasable": false
+      },
+      "rotationSet": "PropYZ",
+      "scripted": {
+        "classname": "SaveMonitor",
+        "data": {},
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/SaveMonitor.lua"
+      },
+      "showInInventory": false,
+      "uuid": "6d289fa6-d364-462e-9f15-059e5ed55310"
+    },
+    {
+      "color": "ffffff",
+      "flammable": false,
+      "hull": {
+        "col": "$CONTENT_DATA/Objects/Mesh/monitor.fbx",
+        "x": 3,
+        "y": 3,
+        "z": 3
+      },
+      "name": "obj_danger_monitor",
+      "physicsMaterial": "Plastic",
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/monitor.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Monitor/danger_dif.png",
+                  "$CONTENT_DATA/Textures/Monitor/monitor_asg.png",
+                  "$CONTENT_DATA/Textures/Monitor/monitor_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "restrictions": {
+        "buildable": false,
+        "connectable": false,
+        "destructable": false,
+        "erasable": false
+      },
+      "rotationSet": "PropYZ",
+      "scripted": {
+        "classname": "DangerMonitor",
+        "data": {},
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/DangerMonitor.lua"
+      },
+      "showInInventory": false,
+      "uuid": "6d229f4f-0dc2-42c6-8bf6-5fcdeb44f480"
     },
     {
       "box": {
