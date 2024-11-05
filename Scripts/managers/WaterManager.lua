@@ -10,7 +10,7 @@ function WaterManager.onCreate( self )
 	self.cells = {}
 
 	self.triggeredCharacters = {}
-	self.triggeredBodies = {}
+	self.submergedBodies = {}
 end
 
 function WaterManager.sv_onCreate( self )
@@ -91,7 +91,6 @@ end
 function WaterManager.onFixedUpdate( self )
 	-- Reset tracking of triggered objects during previous tick
 	self.triggeredCharacters = {}
-	self.triggeredBodies = {}
 end
 
 function WaterManager.sv_onFixedUpdate( self )
@@ -287,10 +286,14 @@ function WaterManager.trigger_onEnterWater( self, trigger, results )
 				end
 
 			elseif type( result ) == "Body" then
-				local triggerMax = trigger:getWorldMax()
-				local centerPos = result:getCenterOfMassPosition()
-				local splashPosition = sm.vec3.new( centerPos.x, centerPos.y, triggerMax.z )
-				PlaySplashEffect( splashPosition, result:getVelocity(), result:getMass() )
+        if not self.submergedBodies[result.id] then
+          local triggerMax = trigger:getWorldMax()
+          local centerPos = result:getCenterOfMassPosition()
+          local splashPosition = sm.vec3.new( centerPos.x, centerPos.y, triggerMax.z )
+          PlaySplashEffect( splashPosition, result:getVelocity(), result:getMass() )
+				end
+
+        self.submergedBodies[result.id] = true
 			end
 		end
 	end
@@ -321,6 +324,8 @@ function WaterManager.trigger_onExitWater( self, trigger, results )
 						end
 					end
 				end
+      elseif type(result) == "Body" then
+        self.submergedBodies[result.id] = false
 			end
 		end
 	end
