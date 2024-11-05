@@ -55,6 +55,17 @@ local function savePlayer(self, player)
   print("Saved "..player.name.."'s player data to storage")
 end
 
+function ServerGameManager:saveBuild(player)
+  if self.gameStates[player:getId()]["playing"] then
+    print(player.name.." cannot save as they are in a run")
+    return
+  end
+
+  player:removeLift()
+  g_serverPlotManager:saveBuild(player)
+  self:recalculateInventory(player)
+end
+
 function ServerGameManager:takeOffer(player)
   local offers = sm.json.open("$CONTENT_DATA/rewards.json")
   local playerId = player:getId()
