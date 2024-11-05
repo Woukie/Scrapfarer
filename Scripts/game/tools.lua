@@ -1,1 +1,6 @@
 tool_lift = sm.uuid.new("5cc12f03-275e-4c8e-b013-79fc0f913e1b")
+tool_handbook = sm.uuid.new( "3384010e-bc1c-42bb-83ef-dbc78a1f9636" )
+tool_sledgehammer = sm.uuid.new( "ed185725-ea12-43fc-9cd7-4295d0dbf88b" )
+tool_connect = sm.uuid.new( "8c7efc37-cd7c-4262-976e-39585f8527bf" )
+tool_paint = sm.uuid.new( "c60b9627-fc2b-4319-97c5-05921cb976c6" )
+tool_weld = sm.uuid.new( "fdb8b8be-96e7-4de0-85c7-d2f42e4f33ce" )
