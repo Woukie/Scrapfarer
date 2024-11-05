@@ -66,6 +66,43 @@
     },
     {
       "box": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "color": "DEEEE5",
+      "flammable": false,
+      "name": "obj_table_wires",
+      "physicsMaterial": "Mechanical",
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/table_wires.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/wood_dif.png",
+                  "$CONTENT_DATA/Textures/wood_asg.tga",
+                  "$CONTENT_DATA/Textures/wood_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "restrictions": {
+        "buildable": false,
+        "connectable": false,
+        "destructable": false,
+        "erasable": false
+      },
+      "rotationSet": "Default",
+      "showInInventory": false,
+      "uuid": "dd2227d0-b9b4-443a-a86d-1961ba44034a"
+    },
+    {
+      "box": {
         "x": 2,
         "y": 2,
         "z": 4
