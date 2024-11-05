@@ -1,0 +1,28 @@
+{
+  "partList": [
+    {
+      "uuid": "6f82896d-2448-4749-bd56-4fd695715761",
+      "name": "obj_start_button",
+      "renderable": "$CONTENT_DATA/Objects/Renderable/obj_start_button.rend",
+      "color": "00FF00",
+      "hull": {
+        "x": 2,
+        "y": 1,
+        "z": 2,
+        "col": "$CONTENT_DATA/Objects/Mesh/start_button_on.fbx"
+      },
+      "button": {},
+      "rotationSet": "PropY",
+      "sticky": "-Y",
+      "physicsMaterial": "Mechanical",
+      "ratings": {
+        "density": 2,
+        "durability": 3,
+        "friction": 5,
+        "buoyancy": 2
+      },
+      "flammable": true,
+      "stackSize": 10000
+    }
+  ]
+}

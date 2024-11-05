@@ -1,0 +1,18 @@
+{
+  "lodList": [
+    {
+      "mesh": "$CONTENT_DATA/Objects/Mesh/start_button_off.fbx",
+      "pose0": "$CONTENT_DATA/Objects/Mesh/start_button_on.fbx",
+      "subMeshMap": {
+        "button": {
+          "material": "PoseAnimDifAsgNor",
+          "textureList": [
+            "$CONTENT_DATA/Textures/Start Button/start_button_dif.png",
+            "$CONTENT_DATA/Textures/Start Button/start_button_asg.png",
+            "$CONTENT_DATA/Textures/Start Button/start_button_nor.png"
+          ]
+        }
+      }
+    }
+  ]
+}
