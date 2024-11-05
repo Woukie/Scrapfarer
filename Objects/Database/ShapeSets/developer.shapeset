@@ -110,17 +110,17 @@
       "color": "ffffff",
       "flammable": false,
       "hull": {
-        "col": "$CONTENT_DATA/Objects/Mesh/shop.fbx",
-        "x": 4,
-        "y": 4,
-        "z": 4
+        "col": "$CONTENT_DATA/Objects/Mesh/monitor.fbx",
+        "x": 3,
+        "y": 3,
+        "z": 3
       },
       "name": "obj_shop",
       "physicsMaterial": "Plastic",
       "renderable": {
         "lodList": [
           {
-            "mesh": "$CONTENT_DATA/Objects/Mesh/shop.fbx",
+            "mesh": "$CONTENT_DATA/Objects/Mesh/monitor.fbx",
             "subMeshList": [
               {
                 "material": "DifAsgNor",
