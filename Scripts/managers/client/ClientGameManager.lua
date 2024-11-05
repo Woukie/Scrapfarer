@@ -33,7 +33,11 @@ function ClientGameManager.syncData(self, data)
   self.shopProgress = data.shopProgress
 
   if shopProgressChanged then
-    g_clientShopManager:selectShopItem(nil)
+    local selectedItem = g_clientShopManager:getSelectedItem()
+    if selectedItem and data.shopProgress[selectedItem.name] == false then
+      g_clientShopManager:selectShopItem(nil)
+    end
+
     g_clientShopManager:reloadShopGrid()
   end
 
