@@ -1,6 +1,6 @@
 ClientShopManager = class(nil)
 
-local function reloadShopGrid(self)
+function ClientShopManager:reloadShopGrid()
   local i = 0
   for _, item in ipairs(self.shopItems) do
     if self.category == "All" or self.category == item.category then
@@ -55,28 +55,32 @@ function ClientShopManager:onCreate()
   self.shopGui:setButtonCallback("BuyButton", "client_buyShopItem")
   self.shopGui:setButtonCallback("ExitButton", "client_closeShop")
 
-  reloadShopGrid(self)
+  self:reloadShopGrid()
 
   self.shopGui:setGridButtonCallback("SelectItem", "client_selectShopItem")
 end
 
 function ClientShopManager:selectShopCategory(category)
   self.category = category
-  reloadShopGrid(self)
+  self:reloadShopGrid()
 end
 
 function ClientShopManager:selectShopItem(item)
-  if not item then
-    return
-  end
   self.selectedShopItem = item
   self:refreshShopBuyButton()
 
-  local itemId = sm.uuid.new(item.itemId)
-  self.shopGui:setIconImage("ItemImage", itemId)
-  self.shopGui:setText("ItemName", "x"..item.quantity.." "..sm.shape.getShapeTitle(itemId))
-  self.shopGui:setText("ItemDescription", sm.shape.getShapeDescription(itemId))
-  self.shopGui:setText("ItemCost", tostring(item.cost))
+  if item then
+    local itemId = sm.uuid.new(item.itemId)
+    self.shopGui:setIconImage("ItemImage", itemId)
+    self.shopGui:setText("ItemName", "x"..item.quantity.." "..sm.shape.getShapeTitle(itemId))
+    self.shopGui:setText("ItemDescription", sm.shape.getShapeDescription(itemId))
+    self.shopGui:setText("ItemCost", tostring(item.cost))
+  else
+    self.shopGui:setImage("ItemImage", "")
+    self.shopGui:setText("ItemName", "")
+    self.shopGui:setText("ItemDescription", "")
+    self.shopGui:setText("ItemCost", "")
+  end
 end
 
 function ClientShopManager:getSelectedItem()
@@ -84,6 +88,11 @@ function ClientShopManager:getSelectedItem()
 end
 
 function ClientShopManager:refreshShopBuyButton()
+  if not self.selectedShopItem then
+    self.shopGui:setImage("BuyImage", "$CONTENT_DATA/Gui/Textures/buy_button_disabled.png")
+    return
+  end
+
   local coins = g_clientGameManager:getCoins()
   if self.selectedShopItem and coins and coins >= self.selectedShopItem.cost then
     self.shopGui:setImage("BuyImage", "$CONTENT_DATA/Gui/Textures/buy_button.png")

@@ -129,6 +129,9 @@ end
 
 function Game:client_buyShopItem(_)
   local item = g_clientShopManager:getSelectedItem()
+  if not item then
+    return
+  end
   self.network:sendToServer("server_buyShopItem", {name = item.name, player = sm.localPlayer.getPlayer()})
 end
 
