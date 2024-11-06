@@ -10,9 +10,9 @@
       "name": "obj_rock",
       "physicsMaterial": "Rock",
       "ratings": {
+        "durability": 2,
         "buoyancy": 2,
-        "density": 3,
-        "durability": 5,
+        "density": 5,
         "friction": 5
       },
       "renderable": {
@@ -35,6 +35,294 @@
       "rotationSet": "Default",
       "stackSize": 10000,
       "uuid": "a8ed08de-6bc8-4b8d-abdb-84f47b3fd32e"
+    },
+    {
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "color": "777777",
+      "name": "obj_marble",
+      "physicsMaterial": "Rock",
+      "ratings": {
+        "durability": 3,
+        "buoyancy": 3,
+        "density": 5,
+        "friction": 5
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "stackSize": 10000,
+      "uuid": "256183f5-ea0d-4261-9ce6-c95d6ee74226"
+    },
+    {
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "color": "777777",
+      "name": "obj_coal",
+      "physicsMaterial": "Rock",
+      "ratings": {
+        "durability": 4,
+        "buoyancy": 3,
+        "density": 5,
+        "friction": 5
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "stackSize": 10000,
+      "uuid": "c5bf8e61-010f-4293-94b7-9c89c68aa6b3"
+    },
+    {
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "color": "777777",
+      "name": "obj_concrete",
+      "physicsMaterial": "Rock",
+      "ratings": {
+        "durability": 5,
+        "buoyancy": 4,
+        "density": 6,
+        "friction": 5
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "stackSize": 10000,
+      "uuid": "13ffc292-2ff8-4c5e-820b-5c55af916908"
+    },
+    {
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "color": "777777",
+      "name": "obj_molten_rock",
+      "physicsMaterial": "Rock",
+      "ratings": {
+        "durability": 5,
+        "buoyancy": 4,
+        "density": 6,
+        "friction": 5
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "stackSize": 10000,
+      "uuid": "a0c9c2de-f261-4448-b99c-4ab303f048d1"
+    },
+    {
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "color": "777777",
+      "name": "obj_frozen_rock",
+      "physicsMaterial": "Rock",
+      "ratings": {
+        "durability": 7,
+        "buoyancy": 5,
+        "density": 7,
+        "friction": 5
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "stackSize": 10000,
+      "uuid": "65e3587f-bb5d-41aa-acfb-d418f272b6b8"
+    },
+    {
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "color": "777777",
+      "name": "obj_gobstopper",
+      "physicsMaterial": "Rock",
+      "ratings": {
+        "durability": 8,
+        "buoyancy": 5,
+        "density": 7,
+        "friction": 5
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "stackSize": 10000,
+      "uuid": "66e9fff6-71ed-4409-9bca-eaee699e3025"
+    },
+    {
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "color": "777777",
+      "name": "obj_metal",
+      "physicsMaterial": "Rock",
+      "ratings": {
+        "durability": 9,
+        "buoyancy": 6,
+        "density": 8,
+        "friction": 5
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "stackSize": 10000,
+      "uuid": "13a48b44-2a1f-45aa-8c59-a3c4937946f6"
+    },
+    {
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "color": "777777",
+      "name": "obj_gold",
+      "physicsMaterial": "Rock",
+      "ratings": {
+        "durability": 10,
+        "buoyancy": 0,
+        "density": 10,
+        "friction": 5
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "stackSize": 10000,
+      "uuid": "5654e554-c373-470a-bf22-0bf39a2bdff9"
     }
   ]
 }
