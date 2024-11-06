@@ -1,19 +1,56 @@
 {
   "partList": [
     {
+      "color": "ff6aff",
+      "cylinder": {
+        "axis": "Y",
+        "depth": 2,
+        "diameter": 6
+      },
+      "flammable": false,
+      "name": "obj_donut",
+      "physicsMaterial": "Plastic",
+      "ratings": {
+        "buoyancy": 7,
+        "density": 3,
+        "durability": 0,
+        "friction": 5
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/donut.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/donut_dif.png",
+                  "",
+                  "$CONTENT_DATA/Textures/donut_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "stackSize": 10000,
+      "uuid": "b5161316-7ed0-494d-a0d0-d830fc1aceae"
+    },
+    {
       "box": {
         "x": 2,
         "y": 2,
         "z": 2
       },
       "color": "C0FFEE",
-      "name": "obj_aerogel",
+      "name": "obj_bubble_wrap",
       "physicsMaterial": "Plastic",
       "ratings": {
-        "buoyancy": 9,
-        "density": 1,
-        "durability": 5,
-        "friction": 6
+        "buoyancy": 7,
+        "density": 3,
+        "durability": 1,
+        "friction": 5
       },
       "renderable": {
         "lodList": [
@@ -34,7 +71,79 @@
       },
       "rotationSet": "Default",
       "stackSize": 10000,
-      "uuid": "d06ebc97-db48-45e4-a6b5-ccd57446e8e4"
+      "uuid": "e7fa5494-153e-4858-89ff-e589d4517752"
+    },
+    {
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "color": "C0FFEE",
+      "name": "obj_mushroom",
+      "physicsMaterial": "Plastic",
+      "ratings": {
+        "buoyancy": 8,
+        "density": 3,
+        "durability": 2,
+        "friction": 5
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
+            "subMeshList": [
+              {
+                "material": "Glass",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Aerogel/aerogel_dif.png",
+                  "$CONTENT_DATA/Textures/Aerogel/aerogel_asg.png",
+                  "$CONTENT_DATA/Textures/Aerogel/aerogel_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "stackSize": 10000,
+      "uuid": "dfdc42b1-deb5-4193-8b9a-a0d077eb409b"
+    },
+    {
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "color": "C0FFEE",
+      "name": "obj_plastic",
+      "physicsMaterial": "Plastic",
+      "ratings": {
+        "buoyancy": 8,
+        "density": 2,
+        "durability": 2,
+        "friction": 5
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Aerogel/aerogel_dif.png",
+                  "$CONTENT_DATA/Textures/Aerogel/aerogel_asg.png",
+                  "$CONTENT_DATA/Textures/Aerogel/aerogel_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "stackSize": 10000,
+      "uuid": "39cc9ce6-31e9-4ca8-9c74-121102813466"
     },
     {
       "box": {
@@ -46,10 +155,10 @@
       "name": "obj_styrofoam",
       "physicsMaterial": "Plastic",
       "ratings": {
-        "buoyancy": 7,
-        "density": 1,
-        "durability": 2,
-        "friction": 4
+        "buoyancy": 8,
+        "density": 2,
+        "durability": 3,
+        "friction": 5
       },
       "renderable": {
         "lodList": [
@@ -73,32 +182,31 @@
       "uuid": "21111cf8-3782-4f2f-8c3f-ff1bb5ec67df"
     },
     {
-      "color": "ff6aff",
-      "cylinder": {
-        "axis": "Y",
-        "depth": 2,
-        "diameter": 6
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 2
       },
-      "flammable": false,
-      "name": "obj_donut",
+      "color": "ADADAD",
+      "name": "obj_ice_cube",
       "physicsMaterial": "Plastic",
       "ratings": {
-        "buoyancy": 6,
+        "buoyancy": 9,
         "density": 2,
-        "durability": 1,
+        "durability": 3,
         "friction": 5
       },
       "renderable": {
         "lodList": [
           {
-            "mesh": "$CONTENT_DATA/Objects/Mesh/donut.fbx",
+            "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
             "subMeshList": [
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/donut_dif.png",
-                  "",
-                  "$CONTENT_DATA/Textures/donut_nor.png"
+                  "$CONTENT_DATA/Textures/Styrofoam/styrofoam_dif.png",
+                  "$CONTENT_DATA/Textures/Styrofoam/styrofoam_asg.png",
+                  "$CONTENT_DATA/Textures/Styrofoam/styrofoam_nor.png"
                 ]
               }
             ]
@@ -107,7 +215,79 @@
       },
       "rotationSet": "Default",
       "stackSize": 10000,
-      "uuid": "b5161316-7ed0-494d-a0d0-d830fc1aceae"
+      "uuid": "57d23389-e13f-473d-9b07-02be9b14cb70"
+    },
+    {
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "color": "ADADAD",
+      "name": "obj_ice_cube",
+      "physicsMaterial": "Plastic",
+      "ratings": {
+        "buoyancy": 10,
+        "density": 2,
+        "durability": 4,
+        "friction": 5
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Styrofoam/styrofoam_dif.png",
+                  "$CONTENT_DATA/Textures/Styrofoam/styrofoam_asg.png",
+                  "$CONTENT_DATA/Textures/Styrofoam/styrofoam_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "stackSize": 10000,
+      "uuid": "0da435c3-2d5c-4540-941d-b3d926773aa7"
+    },
+    {
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "color": "C0FFEE",
+      "name": "obj_aerogel",
+      "physicsMaterial": "Plastic",
+      "ratings": {
+        "buoyancy": 10,
+        "density": 1,
+        "durability": 4,
+        "friction": 5
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
+            "subMeshList": [
+              {
+                "material": "Glass",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Aerogel/aerogel_dif.png",
+                  "$CONTENT_DATA/Textures/Aerogel/aerogel_asg.png",
+                  "$CONTENT_DATA/Textures/Aerogel/aerogel_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "stackSize": 10000,
+      "uuid": "d06ebc97-db48-45e4-a6b5-ccd57446e8e4"
     }
   ]
 }
