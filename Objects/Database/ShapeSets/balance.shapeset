@@ -78,7 +78,7 @@
         "y": 2,
         "z": 2
       },
-      "color": "89512E",
+      "color": "C2ECF0",
       "name": "obj_crystal_wood",
       "physicsMaterial": "Wood",
       "ratings": {
@@ -93,11 +93,11 @@
             "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
             "subMeshList": [
               {
-                "material": "DifAsgNor",
+                "material": "Glass",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/rock_dif.png",
-                  "$CONTENT_DATA/Textures/rock_asg.tga",
-                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                  "$CONTENT_DATA/Textures/Crystal Wood/crystal_wood_dif.png",
+                  "$CONTENT_DATA/Textures/Crystal Wood/crystal_wood_asg.png",
+                  "$CONTENT_DATA/Textures/Crystal Wood/crystal_wood_nor.png"
                 ]
               }
             ]
