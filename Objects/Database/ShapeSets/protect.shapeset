@@ -6,42 +6,6 @@
         "y": 2,
         "z": 2
       },
-      "color": "89512E",
-      "name": "obj_wood",
-      "physicsMaterial": "Wood",
-      "ratings": {
-        "buoyancy": 3,
-        "density": 2,
-        "durability": 2,
-        "friction": 5
-      },
-      "renderable": {
-        "lodList": [
-          {
-            "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
-            "subMeshList": [
-              {
-                "material": "DifAsgNor",
-                "textureList": [
-                  "$CONTENT_DATA/Textures/wood_dif.png",
-                  "$CONTENT_DATA/Textures/wood_asg.tga",
-                  "$CONTENT_DATA/Textures/wood_nor.tga"
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      "rotationSet": "Default",
-      "stackSize": 10000,
-      "uuid": "c45be799-94d1-4ab1-8fb4-52c9bd3d94a9"
-    },
-    {
-      "box": {
-        "x": 2,
-        "y": 2,
-        "z": 2
-      },
       "color": "777777",
       "name": "obj_rock",
       "physicsMaterial": "Rock",
