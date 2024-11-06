@@ -1,3 +1,5 @@
+dofile("$CONTENT_DATA/Scripts/game/util/Random.lua")
+
 Obstacle = class(nil)
 
 function Obstacle.server_onCollision(self, other, collisionPosition, selfPointVelocity, otherPointVelocity, collisionNormal)
@@ -10,7 +12,7 @@ function Obstacle.server_onCollision(self, other, collisionPosition, selfPointVe
       return
     end
 
-    local damage = math.random(self.data.attackLevelMin, self.data.attackLevelMax)
+    local damage = RandomNormal(self.data.damageMean, self.data.damageRange)
     if other.isBlock then
       other:destroyBlock(other:getClosestBlockLocalPosition(collisionPosition), sm.vec3.one(), damage)
     else

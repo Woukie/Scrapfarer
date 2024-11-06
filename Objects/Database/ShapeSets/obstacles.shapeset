@@ -37,8 +37,8 @@
         "classname": "Obstacle",
         "data": {
           "health": 1,
-          "attackLevelMin": 2,
-          "attackLevelMax": 3,
+          "damageMean": 5,
+          "damageRange": 5,
           "damageEffect": "DamageRockSmall",
           "destroyEffect": "DestroyRockSmall"
         },
