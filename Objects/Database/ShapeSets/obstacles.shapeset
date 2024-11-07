@@ -217,9 +217,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/concrete_dif.png",
-                  "$CONTENT_DATA/Textures/concrete_asg.png",
-                  "$CONTENT_DATA/Textures/concrete_nor.png"
+                  "$CONTENT_DATA/Textures/Rock Spiky/rock_spiky_dif.png",
+                  "$CONTENT_DATA/Textures/Rock Spiky/rock_spiky_asg.png",
+                  "$CONTENT_DATA/Textures/Rock Spiky/rock_spiky_nor.png"
                 ]
               }
             ]
