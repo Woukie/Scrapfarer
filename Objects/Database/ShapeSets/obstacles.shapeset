@@ -293,11 +293,11 @@
       "box": {
         "x": 4,
         "y": 1,
-        "z": 4
+        "z": 2
       },
       "color": "FFFFFF",
       "name": "obj_obstacle_fish",
-      "physicsMaterial": "Glass",
+      "physicsMaterial": "Potato",
       "ratings": {
         "buoyancy": 10,
         "density": 6,
@@ -310,11 +310,11 @@
             "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/fish_01.fbx",
             "subMeshList": [
               {
-                "material": "Glass",
+                "material": "DifAsgAlphaFlip",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/concrete_dif.png",
-                  "$CONTENT_DATA/Textures/concrete_asg.png",
-                  "$CONTENT_DATA/Textures/concrete_nor.png"
+                  "$CONTENT_DATA/Textures/Fishy/fishy_dif.png",
+                  "$CONTENT_DATA/Textures/Fishy/fishy_asg.png",
+                  "$CONTENT_DATA/Textures/Fishy/fishy_nor.png"
                 ]
               }
             ]
@@ -325,10 +325,10 @@
       "scripted": {
         "classname": "Obstacle",
         "data": {
-          "damageEffect": "DamageRockSmall",
+          "damageEffect": "DamageFishy",
           "damageMean": 4,
           "damageRange": 4,
-          "destroyEffect": "DestroyRockSmall",
+          "destroyEffect": "DestroyFishy",
           "health": 2
         },
         "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
