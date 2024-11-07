@@ -148,7 +148,7 @@
       "uuid": "efd0ab4f-3b06-4eb7-bc03-288e564e9710"
     },
     {
-      "color": "cd9d71",
+      "color": "C6AA91",
       "cylinder": {
         "axis": "X",
         "depth": 15,
@@ -337,7 +337,7 @@
       "uuid": "3aa01ef6-328a-4e5a-9eb1-d9a2704a599e"
     },
     {
-      "color": "cd9d71",
+      "color": "3F3F3F",
       "cylinder": {
         "axis": "X",
         "depth": 15,
@@ -431,7 +431,7 @@
       "uuid": "ca75fd7f-9575-4f5d-bbf9-ac4f11a9c9ab"
     },
     {
-      "color": "cd9d71",
+      "color": "C6AA91",
       "cylinder": {
         "axis": "X",
         "depth": 15,
