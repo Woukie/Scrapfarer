@@ -556,9 +556,9 @@
     },
     {
       "box": {
-        "x": 16,
-        "y": 4,
-        "z": 16
+        "x": 12,
+        "y": 2,
+        "z": 12
       },
       "color": "FFFFFF",
       "name": "obj_obstacle_ice_sheet",
@@ -577,9 +577,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/rock_dif.png",
-                  "$CONTENT_DATA/Textures/rock_asg.tga",
-                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                  "$CONTENT_DATA/Textures/Ice Sheet/ice_sheet_dif.png",
+                  "$CONTENT_DATA/Textures/Ice Sheet/ice_sheet_asg.tga",
+                  "$CONTENT_DATA/Textures/Ice Sheet/ice_sheet_nor.tga"
                 ]
               }
             ]
