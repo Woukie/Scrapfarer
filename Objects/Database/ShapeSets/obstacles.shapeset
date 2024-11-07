@@ -204,9 +204,9 @@
     },
     {
       "box": {
-        "x": 2,
-        "y": 2,
-        "z": 2
+        "x": 4,
+        "y": 4,
+        "z": 4
       },
       "color": "FFFFFF",
       "name": "obj_obstacle_rock_spiky",
@@ -392,14 +392,9 @@
       "uuid": "3f486c1f-b6d7-47d6-8e18-bbf422875dec"
     },
     {
-      "box": {
-        "x": 2,
-        "y": 2,
-        "z": 2
-      },
       "color": "FFFFFF",
       "name": "obj_obstacle_fireball",
-      "physicsMaterial": "Wood",
+      "physicsMaterial": "Sand",
       "ratings": {
         "buoyancy": 10,
         "density": 6,
@@ -410,16 +405,30 @@
         "lodList": [
           {
             "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/fireball_01.fbx",
-            "subMeshList": [
-              {
+            "subMeshMap": {
+              "ball": {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/concrete_dif.png",
-                  "$CONTENT_DATA/Textures/concrete_asg.png",
-                  "$CONTENT_DATA/Textures/concrete_nor.png"
+                  "$CONTENT_DATA/Textures/Fireball/fireball_dif.png",
+                  "$CONTENT_DATA/Textures/Fireball/fireball_asg.png",
+                  "$CONTENT_DATA/Textures/Fireball/fireball_nor.png"
                 ]
+              },
+              "fire": {
+                "material": "UVAnimDifAsgNorAlphaFlip",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Fireball/fire_dif.png",
+                  "$CONTENT_DATA/Textures/Fireball/fire_asg.png",
+                  "$CONTENT_DATA/Textures/Fireball/fire_nor.png"
+                ],
+                "custom": {
+                  "uv0": {
+                    "u": 0.25,
+                    "v": 0.25
+                  }
+                }
               }
-            ]
+            }
           }
         ]
       },
@@ -427,15 +436,20 @@
       "scripted": {
         "classname": "Obstacle",
         "data": {
-          "damageEffect": "DamageLog",
+          "damageEffect": "DamageRockSmall",
+          "uvFrames": 16,
+          "uvSpeed": 10,
           "damageMean": 4,
           "damageRange": 4,
-          "destroyEffect": "DestroyLog",
-          "health": 2
+          "destroyEffect": "DestroyRockSmall",
+          "health": 1
         },
         "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
       },
       "showInInventory": false,
+      "sphere": {
+        "diameter": 4
+      },
       "uuid": "ca75fd7f-9575-4f5d-bbf9-ac4f11a9c9ab"
     },
     {
