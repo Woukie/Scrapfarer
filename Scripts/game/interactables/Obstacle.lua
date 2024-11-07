@@ -2,7 +2,13 @@ dofile("$CONTENT_DATA/Scripts/game/util/Random.lua")
 
 Obstacle = class(nil)
 
-function Obstacle.server_onCollision(self, other, collisionPosition, selfPointVelocity, otherPointVelocity, collisionNormal)
+function Obstacle:client_onCreate()
+  if self.data.uvFrames then
+    self.frame = 0
+  end
+end
+
+function Obstacle:server_onCollision(other, collisionPosition, selfPointVelocity, otherPointVelocity, collisionNormal)
   if not self.health then
     self.health = self.data.health
   end
@@ -38,4 +44,14 @@ function Obstacle:destroy()
   end
 
   self.shape:destroyShape()
+end
+
+function Obstacle:client_onUpdate(dt)
+  if self.data.uvFrames then
+    self.frame = self.frame + dt * (self.data.uvSpeed or 1)
+    if self.frame > self.data.uvFrames then
+      self.frame = self.frame - self.data.uvFrames
+    end
+    self.interactable:setUvFrameIndex(math.floor(self.frame))
+  end
 end
