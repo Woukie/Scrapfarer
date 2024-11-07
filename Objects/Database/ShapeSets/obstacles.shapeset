@@ -113,16 +113,24 @@
         "lodList": [
           {
             "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/mud_ball_01.fbx",
-            "subMeshList": [
-              {
+            "subMeshMap": {
+              "mudball": {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/rock_dif.png",
-                  "$CONTENT_DATA/Textures/rock_asg.tga",
-                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                  "$CONTENT_DATA/Textures/Mud Ball/mud_ball_dif.png",
+                  "$CONTENT_DATA/Textures/Mud Ball/mud_ball_asg.png",
+                  "$CONTENT_DATA/Textures/Mud Ball/mud_ball_nor.png"
+                ]
+              },
+              "mudflow": {
+                "material": "DifAsgAlpha",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Mud Ball/mud_flow_dif.png",
+                  "$CONTENT_DATA/Textures/Mud Ball/mud_flow_asg.png",
+                  "$CONTENT_DATA/Textures/Mud Ball/mud_flow_nor.png"
                 ]
               }
-            ]
+            }
           }
         ]
       },
