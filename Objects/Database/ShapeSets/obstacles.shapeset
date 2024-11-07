@@ -518,16 +518,24 @@
         "lodList": [
           {
             "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/ice_cube_01.fbx",
-            "subMeshList": [
-              {
-                "material": "DifAsgNor",
+            "subMeshMap": {
+              "icecube": {
+                "material": "Glass",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/rock_dif.png",
-                  "$CONTENT_DATA/Textures/rock_asg.tga",
-                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                  "$CONTENT_DATA/Textures/Ice Cube/ice_cube_dif.png",
+                  "$CONTENT_DATA/Textures/Ice Cube/ice_cube_asg.png",
+                  "$CONTENT_DATA/Textures/Ice Cube/ice_cube_nor.png"
+                ]
+              },
+              "snow": {
+                "material": "DifAsgAlphaFlip",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Ice Cube/snow_dif.png",
+                  "$CONTENT_DATA/Textures/Ice Cube/snow_asg.png",
+                  "$CONTENT_DATA/Textures/Ice Cube/snow_nor.png"
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -535,10 +543,10 @@
       "scripted": {
         "classname": "Obstacle",
         "data": {
-          "damageEffect": "DamageRockSmall",
+          "damageEffect": "DamageIceCube",
           "damageMean": 5,
           "damageRange": 4,
-          "destroyEffect": "DestroyRockSmall",
+          "destroyEffect": "DestroyIceCube",
           "health": 1
         },
         "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
