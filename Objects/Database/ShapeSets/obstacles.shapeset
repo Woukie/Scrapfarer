@@ -118,12 +118,18 @@
                 ]
               },
               "mudflow": {
-                "material": "DifAsgAlpha",
+                "material": "UVAnimDifAsgNorAlphaFlip",
                 "textureList": [
                   "$CONTENT_DATA/Textures/Mud Ball/mud_flow_dif.png",
                   "$CONTENT_DATA/Textures/Mud Ball/mud_flow_asg.png",
                   "$CONTENT_DATA/Textures/Mud Ball/mud_flow_nor.png"
-                ]
+                ],
+                "custom": {
+                  "uv0": {
+                    "u": 0.25,
+                    "v": 0.25
+                  }
+                }
               }
             }
           }
@@ -134,6 +140,8 @@
         "classname": "Obstacle",
         "data": {
           "damageEffect": "DamageRockSmall",
+          "uvFrames": 16,
+          "uvSpeed": 10,
           "damageMean": 2,
           "damageRange": 2,
           "destroyEffect": "DestroyRockSmall",
