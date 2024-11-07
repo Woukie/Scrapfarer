@@ -620,8 +620,8 @@
                 "material": "DifAsgNor",
                 "textureList": [
                   "$CONTENT_DATA/Textures/Gumball/gumball_dif.png",
-                  "$CONTENT_DATA/Textures/Gumball/gumball_asg.tga",
-                  "$CONTENT_DATA/Textures/Gumball/gumball_nor.tga"
+                  "$CONTENT_DATA/Textures/Gumball/gumball_asg.png",
+                  "$CONTENT_DATA/Textures/Gumball/gumball_nor.png"
                 ]
               }
             ]
@@ -647,11 +647,11 @@
       "uuid": "a2786a64-24e7-4836-9c0a-12c90506aea0"
     },
     {
-      "color": "FFFFFF",
+      "color": "FF3333",
       "cylinder": {
         "axis": "X",
-        "depth": 15,
-        "diameter": 4
+        "depth": 16,
+        "diameter": 2
       },
       "name": "obj_obstacle_rock_candy",
       "physicsMaterial": "Rock",
@@ -664,14 +664,14 @@
       "renderable": {
         "lodList": [
           {
-            "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/rock_candy.fbx",
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/rock_candy_01.fbx",
             "subMeshList": [
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/rock_dif.png",
-                  "$CONTENT_DATA/Textures/rock_asg.tga",
-                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                  "$CONTENT_DATA/Textures/Rock Candy/rock_candy_dif.png",
+                  "$CONTENT_DATA/Textures/Rock Candy/rock_candy_asg.png",
+                  "$CONTENT_DATA/Textures/Rock Candy/rock_candy_nor.png"
                 ]
               }
             ]
@@ -682,10 +682,10 @@
       "scripted": {
         "classname": "Obstacle",
         "data": {
-          "damageEffect": "DamageRockSmall",
+          "damageEffect": "DamageRockBig",
           "damageMean": 8,
           "damageRange": 4,
-          "destroyEffect": "DestroyRockSmall",
+          "destroyEffect": "DestroyRockBig",
           "health": 5
         },
         "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
