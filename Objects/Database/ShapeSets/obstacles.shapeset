@@ -7,7 +7,7 @@
         "z": 4
       },
       "color": "cd9d71",
-      "name": "obj_rock_obstacle_01",
+      "name": "obj_obstacle_small_rock",
       "physicsMaterial": "Rock",
       "ratings": {
         "buoyancy": 10,
@@ -37,8 +37,8 @@
         "classname": "Obstacle",
         "data": {
           "health": 1,
-          "damageMean": 5,
-          "damageRange": 5,
+          "damageMean": 1,
+          "damageRange": 1,
           "damageEffect": "DamageRockSmall",
           "destroyEffect": "DestroyRockSmall"
         },
@@ -54,7 +54,7 @@
         "z": 16
       },
       "color": "cd9d71",
-      "name": "obj_rock_obstacle_02",
+      "name": "obj_obstacle_large_rock",
       "physicsMaterial": "Rock",
       "ratings": {
         "buoyancy": 10,
@@ -84,8 +84,8 @@
         "classname": "Obstacle",
         "data": {
           "health": 5,
-          "attackLevelMin": 2,
-          "attackLevelMax": 5,
+          "damageMean": 2,
+          "damageRange": 2,
           "damageEffect": "DamageRockBig",
           "destroyEffect": "DestroyRockBig"
         },
@@ -95,13 +95,60 @@
       "uuid": "30d38531-6777-4a0f-bd84-9b9502f95be8"
     },
     {
+      "box": {
+        "x": 4,
+        "y": 4,
+        "z": 4
+      },
+      "color": "cd9d71",
+      "name": "obj_obstacle_mud",
+      "physicsMaterial": "Dirt",
+      "ratings": {
+        "buoyancy": 10,
+        "density": 3,
+        "durability": 10,
+        "friction": 0
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/mud_ball_01.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "scripted": {
+        "classname": "Obstacle",
+        "data": {
+          "health": 1,
+          "damageMean": 2,
+          "damageRange": 2,
+          "damageEffect": "DamageRockSmall",
+          "destroyEffect": "DestroyRockSmall"
+        },
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
+      },
+      "showInInventory": false,
+      "uuid": "efd0ab4f-3b06-4eb7-bc03-288e564e9710"
+    },
+    {
       "color": "cd9d71",
       "cylinder": {
         "axis": "X",
         "depth": 15,
         "diameter": 4
       },
-      "name": "obj_log_obstacle_01",
+      "name": "obj_obstacle_log",
       "physicsMaterial": "Wood",
       "ratings": {
         "buoyancy": 10,
@@ -131,8 +178,8 @@
         "classname": "Obstacle",
         "data": {
           "health": 5,
-          "attackLevelMin": 3,
-          "attackLevelMax": 5,
+          "damageMean": 3,
+          "damageRange": 2,
           "damageEffect": "DamageLog",
           "destroyEffect": "DestroyLog"
         },
@@ -142,6 +189,53 @@
       "uuid": "066f70f2-4493-46ca-9e54-4cfa7fa18f66"
     },
     {
+      "color": "FFFFFF",
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "name": "obj_obstacle_rock_spiky",
+      "physicsMaterial": "Rock",
+      "ratings": {
+        "buoyancy": 10,
+        "density": 6,
+        "durability": 10,
+        "friction": 0
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/rock_spiky_01.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/concrete_dif.png",
+                  "$CONTENT_DATA/Textures/concrete_asg.png",
+                  "$CONTENT_DATA/Textures/concrete_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "scripted": {
+        "classname": "Obstacle",
+        "data": {
+          "health": 1,
+          "damageMean": 3,
+          "damageRange": 2,
+          "damageEffect": "DamageRockSmall",
+          "destroyEffect": "DestroyRockSmall"
+        },
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
+      },
+      "showInInventory": false,
+      "uuid": "727e4e21-156d-4b08-979b-57f3352ff527"
+    },
+    {
       "color": "AAAAFF",
       "hull": {
         "col": "$CONTENT_DATA/Objects/Mesh/Obstacles/gem_01.fbx",
@@ -149,7 +243,7 @@
         "y": 2,
         "z": 2
       },
-      "name": "obj_gem_obstacle_01",
+      "name": "obj_obstacle_gem",
       "physicsMaterial": "Glass",
       "ratings": {
         "buoyancy": 10,
@@ -179,8 +273,8 @@
         "classname": "Obstacle",
         "data": {
           "health": 1,
-          "attackLevelMin": 5,
-          "attackLevelMax": 8,
+          "damageMean": 4,
+          "damageRange": 2,
           "damageEffect": "DamageGem",
           "destroyEffect": "DestroyGem"
         },
@@ -188,6 +282,476 @@
       },
       "showInInventory": false,
       "uuid": "f068c0c0-fc7e-46be-ba90-a1bfbc6b9206"
+    },
+    {
+      "color": "FFFFFF",
+      "box": {
+        "x": 4,
+        "y": 1,
+        "z": 4
+      },
+      "name": "obj_obstacle_fish",
+      "physicsMaterial": "Glass",
+      "ratings": {
+        "buoyancy": 10,
+        "density": 6,
+        "durability": 10,
+        "friction": 0
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/fish_01.fbx",
+            "subMeshList": [
+              {
+                "material": "Glass",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/concrete_dif.png",
+                  "$CONTENT_DATA/Textures/concrete_asg.png",
+                  "$CONTENT_DATA/Textures/concrete_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "scripted": {
+        "classname": "Obstacle",
+        "data": {
+          "health": 2,
+          "damageMean": 4,
+          "damageRange": 4,
+          "damageEffect": "DamageRockSmall",
+          "destroyEffect": "DestroyRockSmall"
+        },
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
+      },
+      "showInInventory": false,
+      "uuid": "3aa01ef6-328a-4e5a-9eb1-d9a2704a599e"
+    },
+    {
+      "color": "cd9d71",
+      "cylinder": {
+        "axis": "X",
+        "depth": 15,
+        "diameter": 4
+      },
+      "name": "obj_obstacle_log_dead",
+      "physicsMaterial": "Wood",
+      "ratings": {
+        "buoyancy": 10,
+        "density": 6,
+        "durability": 10,
+        "friction": 0
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/log_01.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Trees/bark_dif.png",
+                  "$CONTENT_DATA/Textures/wood_asg.tga",
+                  "$CONTENT_DATA/Textures/Trees/bark_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "scripted": {
+        "classname": "Obstacle",
+        "data": {
+          "health": 6,
+          "damageMean": 5,
+          "damageRange": 3,
+          "damageEffect": "DamageLog",
+          "destroyEffect": "DestroyLog"
+        },
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
+      },
+      "showInInventory": false,
+      "uuid": "3f486c1f-b6d7-47d6-8e18-bbf422875dec"
+    },
+    {
+      "color": "FFFFFF",
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "name": "obj_obstacle_fireball",
+      "physicsMaterial": "Wood",
+      "ratings": {
+        "buoyancy": 10,
+        "density": 6,
+        "durability": 10,
+        "friction": 0
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/fireball_01.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/concrete_dif.png",
+                  "$CONTENT_DATA/Textures/concrete_asg.png",
+                  "$CONTENT_DATA/Textures/concrete_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "scripted": {
+        "classname": "Obstacle",
+        "data": {
+          "health": 2,
+          "damageMean": 4,
+          "damageRange": 4,
+          "damageEffect": "DamageLog",
+          "destroyEffect": "DestroyLog"
+        },
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
+      },
+      "showInInventory": false,
+      "uuid": "ca75fd7f-9575-4f5d-bbf9-ac4f11a9c9ab"
+    },
+    {
+      "color": "cd9d71",
+      "cylinder": {
+        "axis": "X",
+        "depth": 15,
+        "diameter": 4
+      },
+      "name": "obj_obstacle_log_infernal",
+      "physicsMaterial": "Wood",
+      "ratings": {
+        "buoyancy": 10,
+        "density": 6,
+        "durability": 10,
+        "friction": 0
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/fireball_01.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/concrete_dif.png",
+                  "$CONTENT_DATA/Textures/concrete_asg.png",
+                  "$CONTENT_DATA/Textures/concrete_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "scripted": {
+        "classname": "Obstacle",
+        "data": {
+          "health": 6,
+          "damageMean": 6,
+          "damageRange": 3,
+          "damageEffect": "DamageLog",
+          "destroyEffect": "DestroyLog"
+        },
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
+      },
+      "showInInventory": false,
+      "uuid": "8577c84e-9fc3-4420-b65f-856666e8f88d"
+    },
+    {
+      "box": {
+        "x": 4,
+        "y": 4,
+        "z": 4
+      },
+      "color": "FFFFFF",
+      "name": "obj_obstacle_ice_cube",
+      "physicsMaterial": "Rock",
+      "ratings": {
+        "buoyancy": 10,
+        "density": 3,
+        "durability": 10,
+        "friction": 0
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/ice_cube_01.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "scripted": {
+        "classname": "Obstacle",
+        "data": {
+          "health": 1,
+          "damageMean": 5,
+          "damageRange": 4,
+          "damageEffect": "DamageRockSmall",
+          "destroyEffect": "DestroyRockSmall"
+        },
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
+      },
+      "showInInventory": false,
+      "uuid": "6d2c75c5-cb52-48c5-8d14-94c3b632b683"
+    },
+    {
+      "box": {
+        "x": 16,
+        "y": 4,
+        "z": 16
+      },
+      "color": "FFFFFF",
+      "name": "obj_obstacle_ice_sheet",
+      "physicsMaterial": "Rock",
+      "ratings": {
+        "buoyancy": 10,
+        "density": 3,
+        "durability": 10,
+        "friction": 0
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/ice_sheet_01.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "scripted": {
+        "classname": "Obstacle",
+        "data": {
+          "health": 5,
+          "damageMean": 7,
+          "damageRange": 4,
+          "damageEffect": "DamageRockSmall",
+          "destroyEffect": "DestroyRockSmall"
+        },
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
+      },
+      "showInInventory": false,
+      "uuid": "38e15cf0-3d9a-4327-be4a-bdf704ee8553"
+    },
+    {
+      "box": {
+        "x": 4,
+        "y": 4,
+        "z": 4
+      },
+      "color": "FFFFFF",
+      "name": "obj_obstacle_gumball",
+      "physicsMaterial": "Rock",
+      "ratings": {
+        "buoyancy": 10,
+        "density": 3,
+        "durability": 10,
+        "friction": 0
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/gumball_01.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "scripted": {
+        "classname": "Obstacle",
+        "data": {
+          "health": 1,
+          "damageMean": 5,
+          "damageRange": 2,
+          "damageEffect": "DamageRockSmall",
+          "destroyEffect": "DestroyRockSmall"
+        },
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
+      },
+      "showInInventory": false,
+      "uuid": "a2786a64-24e7-4836-9c0a-12c90506aea0"
+    },
+    {
+      "cylinder": {
+        "axis": "X",
+        "depth": 15,
+        "diameter": 4
+      },
+      "color": "FFFFFF",
+      "name": "obj_obstacle_rock_candy",
+      "physicsMaterial": "Rock",
+      "ratings": {
+        "buoyancy": 10,
+        "density": 3,
+        "durability": 10,
+        "friction": 0
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/rock_candy.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "scripted": {
+        "classname": "Obstacle",
+        "data": {
+          "health": 5,
+          "damageMean": 8,
+          "damageRange": 4,
+          "damageEffect": "DamageRockSmall",
+          "destroyEffect": "DestroyRockSmall"
+        },
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
+      },
+      "showInInventory": false,
+      "uuid": "deaeedbe-3cfa-41d3-87dd-7fbe1cd936b5"
+    },
+    {
+      "cylinder": {
+        "axis": "Y",
+        "depth": 2,
+        "diameter": 6
+      },
+      "color": "FFFFFF",
+      "name": "obj_obstacle_coin",
+      "physicsMaterial": "Rock",
+      "ratings": {
+        "buoyancy": 10,
+        "density": 3,
+        "durability": 10,
+        "friction": 0
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/coin_01.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "scripted": {
+        "classname": "Obstacle",
+        "data": {
+          "health": 5,
+          "damageMean": 6,
+          "damageRange": 4,
+          "damageEffect": "DamageRockSmall",
+          "destroyEffect": "DestroyRockSmall"
+        },
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
+      },
+      "showInInventory": false,
+      "uuid": "680d3ebc-b7bc-4c35-904b-483e6ae5f53f"
+    },
+    {
+      "box": {
+        "x": 8,
+        "y": 8,
+        "z": 16
+      },
+      "color": "FFFFFF",
+      "name": "obj_obstacle_wave",
+      "physicsMaterial": "Rock",
+      "ratings": {
+        "buoyancy": 10,
+        "density": 3,
+        "durability": 10,
+        "friction": 0
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/wave_01.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/rock_dif.png",
+                  "$CONTENT_DATA/Textures/rock_asg.tga",
+                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rotationSet": "Default",
+      "scripted": {
+        "classname": "Obstacle",
+        "data": {
+          "health": 6,
+          "damageMean": 9,
+          "damageRange": 5,
+          "damageEffect": "DamageRockSmall",
+          "destroyEffect": "DestroyRockSmall"
+        },
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
+      },
+      "showInInventory": false,
+      "uuid": "2a350a1d-d25e-468c-b9fb-df803118ee25"
     }
   ]
 }
