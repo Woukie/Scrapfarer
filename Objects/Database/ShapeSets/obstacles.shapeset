@@ -602,11 +602,6 @@
       "uuid": "38e15cf0-3d9a-4327-be4a-bdf704ee8553"
     },
     {
-      "box": {
-        "x": 4,
-        "y": 4,
-        "z": 4
-      },
       "color": "FFFFFF",
       "name": "obj_obstacle_gumball",
       "physicsMaterial": "Rock",
@@ -624,9 +619,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/rock_dif.png",
-                  "$CONTENT_DATA/Textures/rock_asg.tga",
-                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                  "$CONTENT_DATA/Textures/Gumball/gumball_dif.png",
+                  "$CONTENT_DATA/Textures/Gumball/gumball_asg.tga",
+                  "$CONTENT_DATA/Textures/Gumball/gumball_nor.tga"
                 ]
               }
             ]
@@ -646,6 +641,9 @@
         "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
       },
       "showInInventory": false,
+      "sphere": {
+        "diameter": 4
+      },
       "uuid": "a2786a64-24e7-4836-9c0a-12c90506aea0"
     },
     {
