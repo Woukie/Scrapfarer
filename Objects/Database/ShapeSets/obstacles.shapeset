@@ -453,7 +453,7 @@
       "uuid": "ca75fd7f-9575-4f5d-bbf9-ac4f11a9c9ab"
     },
     {
-      "color": "C6AA91",
+      "color": "3F3F3F",
       "cylinder": {
         "axis": "X",
         "depth": 15,
@@ -470,14 +470,14 @@
       "renderable": {
         "lodList": [
           {
-            "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/fireball_01.fbx",
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/log_01.fbx",
             "subMeshList": [
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/concrete_dif.png",
-                  "$CONTENT_DATA/Textures/concrete_asg.png",
-                  "$CONTENT_DATA/Textures/concrete_nor.png"
+                  "$CONTENT_DATA/Textures/Infernal Log/infernal_log_dif.png",
+                  "$CONTENT_DATA/Textures/Infernal Log/infernal_log_asg.png",
+                  "$CONTENT_DATA/Textures/Infernal Log/infernal_log_nor.png"
                 ]
               }
             ]
@@ -488,10 +488,10 @@
       "scripted": {
         "classname": "Obstacle",
         "data": {
-          "damageEffect": "DamageLog",
+          "damageEffect": "DamageInfernalLog",
           "damageMean": 6,
           "damageRange": 3,
-          "destroyEffect": "DestroyLog",
+          "destroyEffect": "DestroyInfernalLog",
           "health": 6
         },
         "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
