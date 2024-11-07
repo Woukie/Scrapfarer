@@ -742,9 +742,9 @@
     },
     {
       "box": {
-        "x": 8,
-        "y": 8,
-        "z": 16
+        "x": 16,
+        "y": 5,
+        "z": 6
       },
       "color": "FFFFFF",
       "name": "obj_obstacle_wave",
@@ -761,11 +761,12 @@
             "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/wave_01.fbx",
             "subMeshList": [
               {
-                "material": "DifAsgNor",
+                "material": "Water",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/rock_dif.png",
-                  "$CONTENT_DATA/Textures/rock_asg.tga",
-                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                  "$SURVIVAL_DATA/Effects/Textures/Water/water_color_dif.tga",
+                  "$SURVIVAL_DATA/Effects/Textures/Water/water_high_nor.tga",
+                  "$SURVIVAL_DATA/Effects/Textures/Water/water_high_nor.tga",
+                  "$SURVIVAL_DATA/Effects/Textures/Water/water_caustics_gra.tga"
                 ]
               }
             ]
@@ -776,10 +777,10 @@
       "scripted": {
         "classname": "Obstacle",
         "data": {
-          "damageEffect": "DamageRockSmall",
+          "damageEffect": "DamageWave",
           "damageMean": 9,
           "damageRange": 5,
-          "destroyEffect": "DestroyRockSmall",
+          "destroyEffect": "DestroyWave",
           "health": 6
         },
         "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
