@@ -697,8 +697,8 @@
       "color": "FFFFFF",
       "cylinder": {
         "axis": "Y",
-        "depth": 2,
-        "diameter": 6
+        "depth": 1,
+        "diameter": 4
       },
       "name": "obj_obstacle_coin",
       "physicsMaterial": "Rock",
@@ -716,9 +716,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/rock_dif.png",
-                  "$CONTENT_DATA/Textures/rock_asg.tga",
-                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                  "$CONTENT_DATA/Textures/Coin/coin_dif.png",
+                  "$CONTENT_DATA/Textures/Coin/coin_asg.png",
+                  "$CONTENT_DATA/Textures/Coin/coin_nor.png"
                 ]
               }
             ]
