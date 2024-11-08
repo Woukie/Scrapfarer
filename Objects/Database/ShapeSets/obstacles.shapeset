@@ -299,9 +299,9 @@
     },
     {
       "box": {
-        "x": 4,
+        "x": 8,
         "y": 1,
-        "z": 2
+        "z": 3
       },
       "color": "FFFFFF",
       "name": "obj_obstacle_fish",
