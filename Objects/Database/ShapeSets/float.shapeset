@@ -60,9 +60,9 @@
               {
                 "material": "Glass",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/Aerogel/aerogel_dif.png",
-                  "$CONTENT_DATA/Textures/Aerogel/aerogel_asg.png",
-                  "$CONTENT_DATA/Textures/Aerogel/aerogel_nor.png"
+                  "$SURVIVAL_DATA/Objects/Textures/Blocks/blk_bubblewrap_dif.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/Blocks/blk_bubblewrap_asg.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/Blocks/blk_bubblewrap_nor.tga"
                 ]
               }
             ]
@@ -79,8 +79,8 @@
         "y": 2,
         "z": 2
       },
-      "color": "C0FFEE",
-      "name": "obj_mushroom",
+      "color": "7F7976",
+      "name": "obj_cobwebs",
       "physicsMaterial": "Plastic",
       "ratings": {
         "buoyancy": 8,
@@ -94,11 +94,11 @@
             "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
             "subMeshList": [
               {
-                "material": "Glass",
+                "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/Aerogel/aerogel_dif.png",
-                  "$CONTENT_DATA/Textures/Aerogel/aerogel_asg.png",
-                  "$CONTENT_DATA/Textures/Aerogel/aerogel_nor.png"
+                  "$CONTENT_DATA/Textures/Cobwebs/cobwebs_dif.png",
+                  "$CONTENT_DATA/Textures/Cobwebs/cobwebs_asg.png",
+                  "$CONTENT_DATA/Textures/Cobwebs/cobwebs_nor.png"
                 ]
               }
             ]
@@ -132,9 +132,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/Aerogel/aerogel_dif.png",
-                  "$CONTENT_DATA/Textures/Aerogel/aerogel_asg.png",
-                  "$CONTENT_DATA/Textures/Aerogel/aerogel_nor.png"
+                  "$SURVIVAL_DATA/Objects/Textures/Blocks/blk_plastic_dif.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/Blocks/blk_plastic_asg.tga",
+                  "$SURVIVAL_DATA/Objects/Textures/Blocks/blk_plastic_nor.tga"
                 ]
               }
             ]
@@ -231,9 +231,9 @@
         "y": 2,
         "z": 2
       },
-      "color": "ADADAD",
-      "name": "obj_ice_cube",
-      "physicsMaterial": "Plastic",
+      "color": "F287DC",
+      "name": "obj_marshmallow",
+      "physicsMaterial": "Fruit",
       "ratings": {
         "buoyancy": 10,
         "density": 2,
@@ -248,9 +248,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/Styrofoam/styrofoam_dif.png",
-                  "$CONTENT_DATA/Textures/Styrofoam/styrofoam_asg.png",
-                  "$CONTENT_DATA/Textures/Styrofoam/styrofoam_nor.png"
+                  "$CONTENT_DATA/Textures/Marshmallow/marshmallow_dif.png",
+                  "$CONTENT_DATA/Textures/Marshmallow/marshmallow_asg.png",
+                  "$CONTENT_DATA/Textures/Marshmallow/marshmallow_nor.png"
                 ]
               }
             ]
