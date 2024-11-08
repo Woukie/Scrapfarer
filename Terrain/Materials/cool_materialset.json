@@ -21,10 +21,10 @@
         "normalMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_2_nor.tga"
       },
       {
-        "asgMap": "$CONTENT_DATA/Textures/dirt_asg.png",
-        "diffuse": "$CONTENT_DATA/Textures/dirt_dif.png",
+        "asgMap": "$CONTENT_DATA/Textures/Dirt/dirt_asg.png",
+        "diffuse": "$CONTENT_DATA/Textures/Dirt/dirt_dif.png",
         "name": "Dirt",
-        "normalMap": "$CONTENT_DATA/Textures/dirt_nor.png"
+        "normalMap": "$CONTENT_DATA/Textures/Dirt/dirt_nor.png"
       },
       {
         "asgMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_4_asg.tga",
@@ -33,10 +33,10 @@
         "normalMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_4_nor.tga"
       },
       {
-        "asgMap": "$CONTENT_DATA/Textures/rock_asg.tga",
-        "diffuse": "$CONTENT_DATA/Textures/rock_dif.png",
+        "asgMap": "$CONTENT_DATA/Textures/Rock/rock_asg.png",
+        "diffuse": "$CONTENT_DATA/Textures/Rock/rock_dif.png",
         "name": "Rough Stone",
-        "normalMap": "$CONTENT_DATA/Textures/rock_nor.tga"
+        "normalMap": "$CONTENT_DATA/Textures/Rock/rock_nor.png"
       },
       {
         "asgMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_6_asg.tga",
@@ -51,10 +51,10 @@
         "normalMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_7_nor.tga"
       },
       {
-        "asgMap": "$CONTENT_DATA/Textures/grass_asg.png",
-        "diffuse": "$CONTENT_DATA/Textures/grass_dif.png",
+        "asgMap": "$CONTENT_DATA/Textures/Grass/grass_asg.png",
+        "diffuse": "$CONTENT_DATA/Textures/Grass/grass_dif.png",
         "name": "Grass",
-        "normalMap": "$CONTENT_DATA/Textures/grass_nor.png"
+        "normalMap": "$CONTENT_DATA/Textures/Grass/grass_nor.png"
       }
     ],
     "width": 1024

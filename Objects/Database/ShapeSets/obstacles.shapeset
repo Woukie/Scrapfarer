@@ -23,9 +23,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/rock_dif.png",
-                  "$CONTENT_DATA/Textures/rock_asg.tga",
-                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
                 ]
               }
             ]
@@ -70,9 +70,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/rock_dif.png",
-                  "$CONTENT_DATA/Textures/rock_asg.tga",
-                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
                 ]
               }
             ]
@@ -179,7 +179,7 @@
                 "material": "DifAsgNor",
                 "textureList": [
                   "$CONTENT_DATA/Textures/Trees/bark_dif.png",
-                  "$CONTENT_DATA/Textures/wood_asg.tga",
+                  "$CONTENT_DATA/Textures/Wood/wood_asg.png",
                   "$CONTENT_DATA/Textures/Trees/bark_nor.png"
                 ]
               }
@@ -368,7 +368,7 @@
                 "material": "DifAsgNor",
                 "textureList": [
                   "$CONTENT_DATA/Textures/Trees/bark_dif.png",
-                  "$CONTENT_DATA/Textures/wood_asg.tga",
+                  "$CONTENT_DATA/Textures/Wood/wood_asg.png",
                   "$CONTENT_DATA/Textures/Trees/bark_nor.png"
                 ]
               }
@@ -578,8 +578,8 @@
                 "material": "DifAsgNor",
                 "textureList": [
                   "$CONTENT_DATA/Textures/Ice Sheet/ice_sheet_dif.png",
-                  "$CONTENT_DATA/Textures/Ice Sheet/ice_sheet_asg.tga",
-                  "$CONTENT_DATA/Textures/Ice Sheet/ice_sheet_nor.tga"
+                  "$CONTENT_DATA/Textures/Ice Sheet/ice_sheet_asg.png",
+                  "$CONTENT_DATA/Textures/Ice Sheet/ice_sheet_nor.png"
                 ]
               }
             ]

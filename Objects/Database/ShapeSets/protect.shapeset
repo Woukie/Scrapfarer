@@ -23,9 +23,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/rock_dif.png",
-                  "$CONTENT_DATA/Textures/rock_asg.tga",
-                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
                 ]
               }
             ]
@@ -59,9 +59,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/rock_dif.png",
-                  "$CONTENT_DATA/Textures/rock_asg.tga",
-                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
                 ]
               }
             ]
@@ -95,9 +95,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/rock_dif.png",
-                  "$CONTENT_DATA/Textures/rock_asg.tga",
-                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
                 ]
               }
             ]
@@ -131,9 +131,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/rock_dif.png",
-                  "$CONTENT_DATA/Textures/rock_asg.tga",
-                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
                 ]
               }
             ]
@@ -167,9 +167,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/rock_dif.png",
-                  "$CONTENT_DATA/Textures/rock_asg.tga",
-                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
                 ]
               }
             ]
@@ -203,9 +203,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/rock_dif.png",
-                  "$CONTENT_DATA/Textures/rock_asg.tga",
-                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
                 ]
               }
             ]
@@ -239,9 +239,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/rock_dif.png",
-                  "$CONTENT_DATA/Textures/rock_asg.tga",
-                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
                 ]
               }
             ]
@@ -275,9 +275,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/rock_dif.png",
-                  "$CONTENT_DATA/Textures/rock_asg.tga",
-                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
                 ]
               }
             ]
@@ -311,9 +311,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/rock_dif.png",
-                  "$CONTENT_DATA/Textures/rock_asg.tga",
-                  "$CONTENT_DATA/Textures/rock_nor.tga"
+                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
                 ]
               }
             ]

@@ -1,12 +1,12 @@
 {
   "blockList": [
     {
-      "asg": "$CONTENT_DATA/Textures/concrete_asg.png",
+      "asg": "$CONTENT_DATA/Textures/Concrete/concrete_asg.png",
       "color": "FEEDED",
-      "dif": "$CONTENT_DATA/Textures/concrete_dif.png",
+      "dif": "$CONTENT_DATA/Textures/Concrete/concrete_dif.png",
       "flammable": false,
       "name": "blk_concrete",
-      "nor": "$CONTENT_DATA/Textures/concrete_nor.png",
+      "nor": "$CONTENT_DATA/Textures/Concrete/concrete_nor.png",
       "physicsMaterial": "Stone",
       "ratings": {
         "buoyancy": 0,
@@ -18,12 +18,12 @@
       "uuid": "71aefe40-fc76-40ad-a6a1-3c5c9301378e"
     },
     {
-      "asg": "$CONTENT_DATA/Textures/wood_asg.tga",
+      "asg": "$CONTENT_DATA/Textures/Wood/wood_asg.png",
       "color": "89512E",
-      "dif": "$CONTENT_DATA/Textures/wood_dif.png",
+      "dif": "$CONTENT_DATA/Textures/Wood/wood_dif.png",
       "flammable": true,
       "name": "blk_wood",
-      "nor": "$CONTENT_DATA/Textures/wood_nor.tga",
+      "nor": "$CONTENT_DATA/Textures/Wood/wood_nor.png",
       "physicsMaterial": "Wood",
       "ratings": {
         "buoyancy": 6,

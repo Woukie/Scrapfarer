@@ -39,9 +39,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/wood_dif.png",
-                  "$CONTENT_DATA/Textures/wood_asg.tga",
-                  "$CONTENT_DATA/Textures/wood_nor.tga"
+                  "$CONTENT_DATA/Textures/Wood/wood_dif.png",
+                  "$CONTENT_DATA/Textures/Wood/wood_asg.png",
+                  "$CONTENT_DATA/Textures/Wood/wood_nor.png"
                 ]
               }
             ]
@@ -85,9 +85,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/wood_dif.png",
-                  "$CONTENT_DATA/Textures/wood_asg.tga",
-                  "$CONTENT_DATA/Textures/wood_nor.tga"
+                  "$CONTENT_DATA/Textures/Wood/wood_dif.png",
+                  "$CONTENT_DATA/Textures/Wood/wood_asg.png",
+                  "$CONTENT_DATA/Textures/Wood/wood_nor.png"
                 ]
               }
             ]
@@ -122,9 +122,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/wood_dif.png",
-                  "$CONTENT_DATA/Textures/wood_asg.tga",
-                  "$CONTENT_DATA/Textures/wood_nor.tga"
+                  "$CONTENT_DATA/Textures/Wood/wood_dif.png",
+                  "$CONTENT_DATA/Textures/Wood/wood_asg.png",
+                  "$CONTENT_DATA/Textures/Wood/wood_nor.png"
                 ]
               }
             ]
@@ -299,9 +299,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/grass_dif.png",
-                  "$CONTENT_DATA/Textures/grass_asg.png",
-                  "$CONTENT_DATA/Textures/grass_nor.png"
+                  "$CONTENT_DATA/Textures/Grass/grass_dif.png",
+                  "$CONTENT_DATA/Textures/Grass/grass_asg.png",
+                  "$CONTENT_DATA/Textures/Grass/grass_nor.png"
                 ]
               }
             ]

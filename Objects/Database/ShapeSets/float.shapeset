@@ -8,7 +8,7 @@
         "diameter": 6
       },
       "flammable": false,
-      "name": "obj_donut",
+      "name": "obj_doughnut",
       "physicsMaterial": "Plastic",
       "ratings": {
         "buoyancy": 7,
@@ -19,14 +19,14 @@
       "renderable": {
         "lodList": [
           {
-            "mesh": "$CONTENT_DATA/Objects/Mesh/donut.fbx",
+            "mesh": "$CONTENT_DATA/Objects/Mesh/doughnut.fbx",
             "subMeshList": [
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/donut_dif.png",
+                  "$CONTENT_DATA/Textures/Doughnut/doughnut_dif.png",
                   "",
-                  "$CONTENT_DATA/Textures/donut_nor.png"
+                  "$CONTENT_DATA/Textures/Doughnut/doughnut_nor.png"
                 ]
               }
             ]
