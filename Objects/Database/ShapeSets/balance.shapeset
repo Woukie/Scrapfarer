@@ -187,7 +187,7 @@
         "z": 2
       },
       "color": "89512E",
-      "name": "obj_ice_cube",
+      "name": "obj_frozen_wood",
       "physicsMaterial": "Wood",
       "ratings": {
         "buoyancy": 5,
@@ -198,25 +198,17 @@
       "renderable": {
         "lodList": [
           {
-            "mesh": "$CONTENT_DATA/Objects/Mesh/ice_cube_small_01.fbx",
-            "subMeshMap": {
-              "icecube": {
-                "material": "Glass",
+            "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/Ice Cube/ice_cube_dif.png",
-                  "$CONTENT_DATA/Textures/Ice Cube/ice_cube_asg.png",
-                  "$CONTENT_DATA/Textures/Ice Cube/ice_cube_nor.png"
-                ]
-              },
-              "snow": {
-                "material": "DifAsgAlphaFlip",
-                "textureList": [
-                  "$CONTENT_DATA/Textures/Ice Cube/snow_dif.png",
-                  "$CONTENT_DATA/Textures/Ice Cube/snow_asg.png",
-                  "$CONTENT_DATA/Textures/Ice Cube/snow_nor.png"
+                  "$CONTENT_DATA/Textures/Frozen Wood/frozen_wood_dif.png",
+                  "$CONTENT_DATA/Textures/Frozen Wood/frozen_wood_asg.png",
+                  "$CONTENT_DATA/Textures/Frozen Wood/frozen_wood_nor.png"
                 ]
               }
-            }
+            ]
           }
         ]
       },

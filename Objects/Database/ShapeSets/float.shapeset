@@ -187,7 +187,7 @@
         "y": 2,
         "z": 2
       },
-      "color": "ADADAD",
+      "color": "89512E",
       "name": "obj_ice_cube",
       "physicsMaterial": "Plastic",
       "ratings": {
@@ -199,17 +199,25 @@
       "renderable": {
         "lodList": [
           {
-            "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
-            "subMeshList": [
-              {
-                "material": "DifAsgNor",
+            "mesh": "$CONTENT_DATA/Objects/Mesh/ice_cube_small_01.fbx",
+            "subMeshMap": {
+              "icecube": {
+                "material": "Glass",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/Styrofoam/styrofoam_dif.png",
-                  "$CONTENT_DATA/Textures/Styrofoam/styrofoam_asg.png",
-                  "$CONTENT_DATA/Textures/Styrofoam/styrofoam_nor.png"
+                  "$CONTENT_DATA/Textures/Ice Cube/ice_cube_dif.png",
+                  "$CONTENT_DATA/Textures/Ice Cube/ice_cube_asg.png",
+                  "$CONTENT_DATA/Textures/Ice Cube/ice_cube_nor.png"
+                ]
+              },
+              "snow": {
+                "material": "DifAsgAlphaFlip",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Ice Cube/snow_dif.png",
+                  "$CONTENT_DATA/Textures/Ice Cube/snow_asg.png",
+                  "$CONTENT_DATA/Textures/Ice Cube/snow_nor.png"
                 ]
               }
-            ]
+            }
           }
         ]
       },
