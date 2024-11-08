@@ -114,7 +114,7 @@
         "y": 2,
         "z": 2
       },
-      "color": "89512E",
+      "color": "7c7c7c",
       "name": "obj_dead_wood",
       "physicsMaterial": "Wood",
       "ratings": {
@@ -131,9 +131,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
+                  "$CONTENT_DATA/Textures/Dead Wood/dead_wood_dif.png",
+                  "$CONTENT_DATA/Textures/Dead Wood/dead_wood_asg.png",
+                  "$CONTENT_DATA/Textures/Dead Wood/dead_wood_nor.png"
                 ]
               }
             ]
@@ -167,9 +167,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
+                  "$CONTENT_DATA/Textures/Infernal Wood/infernal_wood_dif.png",
+                  "$CONTENT_DATA/Textures/Infernal Wood/infernal_wood_asg.png",
+                  "$CONTENT_DATA/Textures/Infernal Wood/infernal_wood_nor.png"
                 ]
               }
             ]
@@ -198,23 +198,31 @@
       "renderable": {
         "lodList": [
           {
-            "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
-            "subMeshList": [
-              {
-                "material": "DifAsgNor",
+            "mesh": "$CONTENT_DATA/Objects/Mesh/ice_cube_small_01.fbx",
+            "subMeshMap": {
+              "icecube": {
+                "material": "Glass",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
+                  "$CONTENT_DATA/Textures/Ice Cube/ice_cube_dif.png",
+                  "$CONTENT_DATA/Textures/Ice Cube/ice_cube_asg.png",
+                  "$CONTENT_DATA/Textures/Ice Cube/ice_cube_nor.png"
+                ]
+              },
+              "snow": {
+                "material": "DifAsgAlphaFlip",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Ice Cube/snow_dif.png",
+                  "$CONTENT_DATA/Textures/Ice Cube/snow_asg.png",
+                  "$CONTENT_DATA/Textures/Ice Cube/snow_nor.png"
                 ]
               }
-            ]
+            }
           }
         ]
       },
       "rotationSet": "Default",
       "stackSize": 10000,
-      "uuid": "dfc8c8c7-fe66-420a-86b6-de8d3921c604"
+      "uuid": "299655d3-4222-44e1-b403-c674aae96068"
     },
     {
       "box": {
@@ -222,7 +230,7 @@
         "y": 2,
         "z": 2
       },
-      "color": "89512E",
+      "color": "FF0000",
       "name": "obj_candy_wood",
       "physicsMaterial": "Wood",
       "ratings": {
@@ -239,9 +247,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
+                  "$CONTENT_DATA/Textures/Candy Wood/candy_wood_dif.png",
+                  "$CONTENT_DATA/Textures/Candy Wood/candy_wood_asg.png",
+                  "$CONTENT_DATA/Textures/Candy Wood/candy_wood_nor.png"
                 ]
               }
             ]
@@ -258,7 +266,7 @@
         "y": 2,
         "z": 2
       },
-      "color": "89512E",
+      "color": "FFD000",
       "name": "obj_glittering_wood",
       "physicsMaterial": "Wood",
       "ratings": {
@@ -275,9 +283,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
+                  "$CONTENT_DATA/Textures/Glittering Wood/glittering_wood_dif.png",
+                  "$CONTENT_DATA/Textures/Glittering Wood/glittering_wood_asg.png",
+                  "$CONTENT_DATA/Textures/Glittering Wood/glittering_wood_nor.png"
                 ]
               }
             ]
