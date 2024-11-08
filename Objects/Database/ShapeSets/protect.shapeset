@@ -42,7 +42,7 @@
         "y": 2,
         "z": 2
       },
-      "color": "777777",
+      "color": "FFFFFF",
       "name": "obj_marble",
       "physicsMaterial": "Rock",
       "ratings": {
@@ -59,9 +59,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
+                  "$CONTENT_DATA/Textures/Marble/marble_dif.png",
+                  "$CONTENT_DATA/Textures/Marble/marble_asg.png",
+                  "$CONTENT_DATA/Textures/Marble/marble_nor.png"
                 ]
               }
             ]
@@ -78,7 +78,7 @@
         "y": 2,
         "z": 2
       },
-      "color": "777777",
+      "color": "1E1E1E",
       "name": "obj_coal",
       "physicsMaterial": "Rock",
       "ratings": {
@@ -95,9 +95,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
+                  "$CONTENT_DATA/Textures/Coal/coal_dif.png",
+                  "$CONTENT_DATA/Textures/Coal/coal_asg.png",
+                  "$CONTENT_DATA/Textures/Coal/coal_nor.png"
                 ]
               }
             ]
@@ -114,7 +114,7 @@
         "y": 2,
         "z": 2
       },
-      "color": "777777",
+      "color": "FEEDED",
       "name": "obj_concrete",
       "physicsMaterial": "Rock",
       "ratings": {
@@ -131,9 +131,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
+                  "$CONTENT_DATA/Textures/Concrete/concrete_dif.png",
+                  "$CONTENT_DATA/Textures/Concrete/concrete_asg.png",
+                  "$CONTENT_DATA/Textures/Concrete/concrete_nor.png"
                 ]
               }
             ]
@@ -150,7 +150,7 @@
         "y": 2,
         "z": 2
       },
-      "color": "777777",
+      "color": "FFFF00",
       "name": "obj_molten_rock",
       "physicsMaterial": "Rock",
       "ratings": {
@@ -167,9 +167,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
+                  "$CONTENT_DATA/Textures/Molten Rock/molten_rock_dif.png",
+                  "$CONTENT_DATA/Textures/Molten Rock/molten_rock_asg.png",
+                  "$CONTENT_DATA/Textures/Molten Rock/molten_rock_nor.png"
                 ]
               }
             ]
@@ -203,9 +203,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
+                  "$CONTENT_DATA/Textures/Frozen Rock/frozen_rock_dif.png",
+                  "$CONTENT_DATA/Textures/Frozen Rock/frozen_rock_asg.png",
+                  "$CONTENT_DATA/Textures/Frozen Rock/frozen_rock_nor.png"
                 ]
               }
             ]
@@ -217,13 +217,8 @@
       "uuid": "65e3587f-bb5d-41aa-acfb-d418f272b6b8"
     },
     {
-      "box": {
-        "x": 2,
-        "y": 2,
-        "z": 2
-      },
-      "color": "777777",
-      "name": "obj_gobstopper",
+      "color": "FFFFFF",
+      "name": "obj_gumball",
       "physicsMaterial": "Rock",
       "ratings": {
         "durability": 8,
@@ -234,14 +229,14 @@
       "renderable": {
         "lodList": [
           {
-            "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
+            "mesh": "$CONTENT_DATA/Objects/Mesh/gumball_small_01.fbx",
             "subMeshList": [
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
+                  "$CONTENT_DATA/Textures/Gumball/gumball_dif.png",
+                  "$CONTENT_DATA/Textures/Gumball/gumball_asg.png",
+                  "$CONTENT_DATA/Textures/Gumball/gumball_nor.png"
                 ]
               }
             ]
@@ -250,6 +245,9 @@
       },
       "rotationSet": "Default",
       "stackSize": 10000,
+      "sphere": {
+        "diameter": 2
+      },
       "uuid": "66e9fff6-71ed-4409-9bca-eaee699e3025"
     },
     {
@@ -258,9 +256,9 @@
         "y": 2,
         "z": 2
       },
-      "color": "777777",
+      "color": "7F7F7F",
       "name": "obj_metal",
-      "physicsMaterial": "Rock",
+      "physicsMaterial": "Metal",
       "ratings": {
         "durability": 9,
         "buoyancy": 6,
@@ -275,9 +273,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
+                  "$CONTENT_DATA/Textures/Metal/metal_dif.png",
+                  "$CONTENT_DATA/Textures/Metal/metal_asg.png",
+                  "$CONTENT_DATA/Textures/Metal/metal_nor.png"
                 ]
               }
             ]
@@ -294,9 +292,9 @@
         "y": 2,
         "z": 2
       },
-      "color": "777777",
+      "color": "FFE44A",
       "name": "obj_gold",
-      "physicsMaterial": "Rock",
+      "physicsMaterial": "Metal",
       "ratings": {
         "durability": 10,
         "buoyancy": 0,
@@ -311,9 +309,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/Rock/rock_dif.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
-                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
+                  "$CONTENT_DATA/Textures/Gold/gold_dif.png",
+                  "$CONTENT_DATA/Textures/Gold/gold_asg.png",
+                  "$CONTENT_DATA/Textures/Gold/gold_nor.png"
                 ]
               }
             ]
