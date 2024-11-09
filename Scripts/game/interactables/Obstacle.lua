@@ -18,11 +18,13 @@ function Obstacle:server_onCollision(other, collisionPosition, selfPointVelocity
       return
     end
 
-    local damage = RandomNormal(self.data.damageMean, self.data.damageRange)
-    if other.isBlock then
-      other:destroyBlock(other:getClosestBlockLocalPosition(collisionPosition), sm.vec3.one(), damage)
-    else
-      other:destroyShape(damage)
+    local damage = math.floor(RandomNormal(self.data.damageMean, self.data.damageRange))
+    if damage > 0 then
+      if other.isBlock then
+        other:destroyBlock(other:getClosestBlockLocalPosition(collisionPosition), sm.vec3.one(), damage)
+      else
+        other:destroyShape(damage)
+      end
     end
 
     if self.data.damageEffect then
