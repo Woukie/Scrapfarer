@@ -134,6 +134,11 @@
           "default": false,
           "name": "logRotation",
           "type": "bool"
+        },
+        {
+          "default": false,
+          "name": "noRotation",
+          "type": "bool"
         }
       ],
       "tags": [

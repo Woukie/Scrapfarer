@@ -63,6 +63,7 @@ function ServerObstacleManager:onCellLoaded(x, y)
         maxObstacleLife = node.params.maxObstacleLife,
         minObstacleLife = node.params.minObstacleLife,
         logRotation = node.params.logRotation,
+        noRotation = node.params.noRotation,
         ticks = ticks,
         obstacles = obstacles
       }
@@ -103,6 +104,8 @@ function ServerObstacleManager:onFixedUpdate()
         local rotation
         if self.obstacleSpawners[id].logRotation then
           rotation = sm.quat.angleAxis(math.random(-0.1, 0.1), sm.vec3.new(0, 0, 1)) * sm.quat.angleAxis(math.random(0, math.pi * 2), sm.vec3.new(1, 0, 0))
+        elseif self.obstacleSpawners[id].noRotation then
+          rotation = sm.quat.angleAxis(math.pi / 2, sm.vec3.new(1, 0, 0))
         else
           rotation = sm.quat.fromEuler(sm.vec3.new(math.random(0, 360), math.random(0, 360), math.random(0, 360)))
         end
