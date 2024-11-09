@@ -6345,34 +6345,34 @@
          "y" : 8
       },
       {
-         "offsetX" : 0,
+         "offsetX" : 3,
          "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
+         "rotation" : 3,
          "x" : 9,
          "y" : 8
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetX" : 3,
+         "offsetY" : 1,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
+         "rotation" : 3,
          "x" : 10,
          "y" : 8
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetX" : 3,
+         "offsetY" : 2,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
+         "rotation" : 3,
          "x" : 11,
          "y" : 8
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetX" : 3,
+         "offsetY" : 3,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
+         "rotation" : 3,
          "x" : 12,
          "y" : 8
       },
@@ -6601,34 +6601,34 @@
          "y" : 9
       },
       {
-         "offsetX" : 1,
+         "offsetX" : 2,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River End.tile",
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
          "rotation" : 3,
          "x" : 9,
          "y" : 9
       },
       {
-         "offsetX" : 1,
+         "offsetX" : 2,
          "offsetY" : 1,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River End.tile",
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
          "rotation" : 3,
          "x" : 10,
          "y" : 9
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetX" : 2,
+         "offsetY" : 2,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
+         "rotation" : 3,
          "x" : 11,
          "y" : 9
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetX" : 2,
+         "offsetY" : 3,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
+         "rotation" : 3,
          "x" : 12,
          "y" : 9
       },
@@ -6857,34 +6857,34 @@
          "y" : 10
       },
       {
-         "offsetX" : 0,
+         "offsetX" : 1,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River End.tile",
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
          "rotation" : 3,
          "x" : 9,
          "y" : 10
       },
       {
-         "offsetX" : 0,
+         "offsetX" : 1,
          "offsetY" : 1,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River End.tile",
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
          "rotation" : 3,
          "x" : 10,
          "y" : 10
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetX" : 1,
+         "offsetY" : 2,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
+         "rotation" : 3,
          "x" : 11,
          "y" : 10
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetX" : 1,
+         "offsetY" : 3,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
+         "rotation" : 3,
          "x" : 12,
          "y" : 10
       },
@@ -7115,32 +7115,32 @@
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
+         "rotation" : 3,
          "x" : 9,
          "y" : 11
       },
       {
          "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetY" : 1,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
+         "rotation" : 3,
          "x" : 10,
          "y" : 11
       },
       {
          "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetY" : 2,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
+         "rotation" : 3,
          "x" : 11,
          "y" : 11
       },
       {
          "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetY" : 3,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
+         "rotation" : 3,
          "x" : 12,
          "y" : 11
       },
