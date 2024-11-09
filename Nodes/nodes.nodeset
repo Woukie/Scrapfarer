@@ -137,6 +137,11 @@
         },
         {
           "default": false,
+          "name": "mudRotation",
+          "type": "bool"
+        },
+        {
+          "default": false,
           "name": "noRotation",
           "type": "bool"
         }
