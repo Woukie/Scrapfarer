@@ -13,6 +13,7 @@ exclusions[tostring(obj_obstacle_gem)] = true
 exclusions[tostring(obj_obstacle_fish)] = true
 exclusions[tostring(obj_obstacle_log_dead)] = true
 exclusions[tostring(obj_obstacle_fireball)] = true
+exclusions[tostring(obj_obstacle_log_infernal)] = true
 exclusions[tostring(obj_obstacle_ice_cube)] = true
 exclusions[tostring(obj_obstacle_ice_sheet)] = true
 exclusions[tostring(obj_obstacle_gumball)] = true
