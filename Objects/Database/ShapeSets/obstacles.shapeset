@@ -213,7 +213,7 @@
       "physicsMaterial": "Rock",
       "ratings": {
         "buoyancy": 10,
-        "density": 6,
+        "density": 3,
         "durability": 10,
         "friction": 0
       },
@@ -260,8 +260,8 @@
       "name": "obj_obstacle_gem",
       "physicsMaterial": "Glass",
       "ratings": {
-        "buoyancy": 15,
-        "density": 8,
+        "buoyancy": 10,
+        "density": 3,
         "durability": 10,
         "friction": 0
       },
@@ -308,7 +308,7 @@
       "physicsMaterial": "Potato",
       "ratings": {
         "buoyancy": 10,
-        "density": 6,
+        "density": 3,
         "durability": 10,
         "friction": 0
       },
@@ -355,7 +355,7 @@
       "physicsMaterial": "Wood",
       "ratings": {
         "buoyancy": 10,
-        "density": 6,
+        "density": 3,
         "durability": 10,
         "friction": 0
       },
@@ -397,7 +397,7 @@
       "physicsMaterial": "Sand",
       "ratings": {
         "buoyancy": 10,
-        "density": 6,
+        "density": 3,
         "durability": 10,
         "friction": 0
       },
@@ -463,7 +463,7 @@
       "physicsMaterial": "Wood",
       "ratings": {
         "buoyancy": 10,
-        "density": 6,
+        "density": 3,
         "durability": 10,
         "friction": 0
       },
@@ -507,7 +507,7 @@
       },
       "color": "FFFFFF",
       "name": "obj_obstacle_ice_cube",
-      "physicsMaterial": "Rock",
+      "physicsMaterial": "Glass",
       "ratings": {
         "buoyancy": 10,
         "density": 3,
@@ -562,7 +562,7 @@
       },
       "color": "FFFFFF",
       "name": "obj_obstacle_ice_sheet",
-      "physicsMaterial": "Rock",
+      "physicsMaterial": "Glass",
       "ratings": {
         "buoyancy": 10,
         "density": 3,
@@ -748,7 +748,7 @@
       },
       "color": "FFFFFF",
       "name": "obj_obstacle_wave",
-      "physicsMaterial": "Rock",
+      "physicsMaterial": "Glass",
       "ratings": {
         "buoyancy": 10,
         "density": 3,

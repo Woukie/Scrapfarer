@@ -106,7 +106,7 @@ function ServerObstacleManager:onFixedUpdate()
         if self.obstacleSpawners[id].logRotation then
           rotation = sm.quat.angleAxis(math.random(-0.1, 0.1), sm.vec3.new(0, 0, 1)) * sm.quat.angleAxis(math.random(0, math.pi * 2), sm.vec3.new(1, 0, 0))
         elseif self.obstacleSpawners[id].mudRotation then
-          rotation = sm.quat.angleAxis(math.pi * 2 * math.random(), sm.vec3.new(0, 1, 0))
+          rotation = sm.quat.angleAxis(math.pi / 2, sm.vec3.new(1, 0, 0)) * sm.quat.angleAxis(math.pi * 2 * math.random(), sm.vec3.new(0, 1, 0))
         elseif self.obstacleSpawners[id].noRotation then
           rotation = sm.quat.angleAxis(math.pi / 2, sm.vec3.new(1, 0, 0))
         else
