@@ -1,13 +1,24 @@
-dofile "$CONTENT_DATA/Scripts/game/shapes.lua"
+dofile "$CONTENT_DATA/Scripts/game/obstacles.lua"
 dofile "$SURVIVAL_DATA/Scripts/util.lua"
 
 ForceManager = class(nil)
 
 local exclusions = {}
-exclusions[tostring(obj_rock_obstacle_01)] = true
-exclusions[tostring(obj_rock_obstacle_02)] = true
-exclusions[tostring(obj_log_obstacle_01)] = true
-exclusions[tostring(obj_gem_obstacle_01)] = true
+exclusions[tostring(obj_obstacle_small_rock)] = true
+exclusions[tostring(obj_obstacle_large_rock)] = true
+exclusions[tostring(obj_obstacle_mud)] = true
+exclusions[tostring(obj_obstacle_log)] = true
+exclusions[tostring(obj_obstacle_rock_spiky)] = true
+exclusions[tostring(obj_obstacle_gem)] = true
+exclusions[tostring(obj_obstacle_fish)] = true
+exclusions[tostring(obj_obstacle_log_dead)] = true
+exclusions[tostring(obj_obstacle_fireball)] = true
+exclusions[tostring(obj_obstacle_ice_cube)] = true
+exclusions[tostring(obj_obstacle_ice_sheet)] = true
+exclusions[tostring(obj_obstacle_gumball)] = true
+exclusions[tostring(obj_obstacle_rock_candy)] = true
+exclusions[tostring(obj_obstacle_coin)] = true
+exclusions[tostring(obj_obstacle_wave)] = true
 
 function ForceManager:onCreate()
 	self.cells = {}
