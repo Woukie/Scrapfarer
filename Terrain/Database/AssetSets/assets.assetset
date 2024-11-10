@@ -852,6 +852,43 @@
         ]
       },
       "uuid": "92e180c7-a3ae-4ae4-b90e-adfd92201864"
+    },
+    {
+      "name": "env_candy_cane_01",
+      "physics": {
+        "mass": 10000,
+        "material": "Wood"
+      },
+      "defaultColors": {
+        "stripe": "FF0000"
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "includes": [
+              "POSITION",
+              "NORMAL",
+              "UV0",
+              "TANGENT"
+            ],
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/candy_cane_01.fbx",
+            "subMeshList": [
+              {
+                "custom": {
+                  "color": "stripe"
+                },
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Candy Cane/candy_cane_dif.png",
+                  "$CONTENT_DATA/Textures/Candy Cane/candy_cane_asg.png",
+                  "$CONTENT_DATA/Textures/Candy Cane/candy_cane_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "uuid": "bad33568-8e1e-4d22-a864-87cd1ac6d268"
     }
   ]
 }

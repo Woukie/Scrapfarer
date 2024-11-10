@@ -647,7 +647,7 @@
       "uuid": "a2786a64-24e7-4836-9c0a-12c90506aea0"
     },
     {
-      "color": "FF3333",
+      "color": "FF0000",
       "cylinder": {
         "axis": "X",
         "depth": 16,
