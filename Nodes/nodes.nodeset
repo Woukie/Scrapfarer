@@ -144,6 +144,11 @@
           "default": false,
           "name": "noRotation",
           "type": "bool"
+        },
+        {
+          "default": false,
+          "name": "rotate90Y",
+          "type": "bool"
         }
       ],
       "tags": [

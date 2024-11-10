@@ -113,6 +113,10 @@ function ServerObstacleManager:onFixedUpdate()
           rotation = sm.quat.fromEuler(sm.vec3.new(math.random(0, 360), math.random(0, 360), math.random(0, 360)))
         end
 
+        if self.obstacleSpawners[id].rotate90Y then
+          rotation = sm.quat.angleAxis(math.pi / 2, sm.vec3.new(0, 1, 0)) * rotation
+        end
+
         local part = sm.shape.createPart(
           obstacleSpawner.shapeUuid,
           spawnPos - rotation * (sm.item.getShapeSize(obstacleSpawner.shapeUuid) * 0.5 * 0.25),
