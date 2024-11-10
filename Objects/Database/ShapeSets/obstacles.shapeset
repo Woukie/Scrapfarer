@@ -602,7 +602,7 @@
       "uuid": "38e15cf0-3d9a-4327-be4a-bdf704ee8553"
     },
     {
-      "color": "FFFFFF",
+      "color": "FF0000",
       "name": "obj_obstacle_gumball",
       "physicsMaterial": "Rock",
       "ratings": {

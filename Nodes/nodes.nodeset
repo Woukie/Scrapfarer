@@ -149,6 +149,11 @@
           "default": false,
           "name": "rotate90Y",
           "type": "bool"
+        },
+        {
+          "default": false,
+          "name": "randomColor",
+          "type": "bool"
         }
       ],
       "tags": [

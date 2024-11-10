@@ -65,6 +65,8 @@ function ServerObstacleManager:onCellLoaded(x, y)
         logRotation = node.params.logRotation,
         mudRotation = node.params.mudRotation,
         noRotation = node.params.noRotation,
+        rotate90Y = node.params.rotate90Y,
+        randomColor = node.params.randomColor,
         ticks = ticks,
         obstacles = obstacles
       }
@@ -108,13 +110,13 @@ function ServerObstacleManager:onFixedUpdate()
         elseif self.obstacleSpawners[id].mudRotation then
           rotation = sm.quat.angleAxis(math.pi / 2, sm.vec3.new(1, 0, 0)) * sm.quat.angleAxis(math.pi * 2 * math.random(), sm.vec3.new(0, 1, 0))
         elseif self.obstacleSpawners[id].noRotation then
-          rotation = sm.quat.angleAxis(math.pi / 2, sm.vec3.new(1, 0, 0))
+          rotation = sm.quat.angleAxis(math.pi / 2, sm.vec3.new(0, 0, 1))
         else
           rotation = sm.quat.fromEuler(sm.vec3.new(math.random(0, 360), math.random(0, 360), math.random(0, 360)))
         end
 
         if self.obstacleSpawners[id].rotate90Y then
-          rotation = sm.quat.angleAxis(math.pi / 2, sm.vec3.new(0, 1, 0)) * rotation
+          rotation = sm.quat.fromEuler(sm.vec3.new(0, 0, 90)) * rotation
         end
 
         local part = sm.shape.createPart(
@@ -124,6 +126,23 @@ function ServerObstacleManager:onFixedUpdate()
           true,
           true
         )
+
+        -- Fully saturated color generation
+        if self.obstacleSpawners[id].randomColor then
+          local color={[0] = 1, 1, 1}
+
+          local start = math.floor(math.random() * 3 % 3)
+
+          color[start % 3] = 0
+          if math.random() < 0.5 then
+            color[(start + 1) % 3] = math.random()
+          else
+            color[(start + 2) % 3] = math.random()
+          end
+
+          part:setColor(sm.color.new(color[0], color[1], color[2]))
+        end
+
         local body = part:getBody()
         body:setBuildable(false)
         body:setErasable(false)

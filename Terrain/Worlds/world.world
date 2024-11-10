@@ -3171,17 +3171,9 @@
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : -4,
-         "y" : -4
-      },
-      {
-         "offsetX" : 0,
-         "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
          "rotation" : 0,
-         "x" : -3,
+         "x" : -4,
          "y" : -4
       },
       {
@@ -3189,7 +3181,7 @@
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
          "rotation" : 0,
-         "x" : -2,
+         "x" : -3,
          "y" : -4
       },
       {
@@ -3197,13 +3189,21 @@
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
          "rotation" : 0,
-         "x" : -1,
+         "x" : -2,
          "y" : -4
       },
       {
          "offsetX" : 3,
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
+         "rotation" : 0,
+         "x" : -1,
+         "y" : -4
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
          "rotation" : 0,
          "x" : 0,
          "y" : -4
@@ -3265,19 +3265,11 @@
          "y" : -4
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : 8,
-         "y" : -4
-      },
-      {
          "offsetX" : 3,
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Candy.tile",
          "rotation" : 2,
-         "x" : 9,
+         "x" : 8,
          "y" : -4
       },
       {
@@ -3285,11 +3277,19 @@
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Candy.tile",
          "rotation" : 2,
-         "x" : 10,
+         "x" : 9,
          "y" : -4
       },
       {
          "offsetX" : 1,
+         "offsetY" : 3,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Candy.tile",
+         "rotation" : 2,
+         "x" : 10,
+         "y" : -4
+      },
+      {
+         "offsetX" : 0,
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Candy.tile",
          "rotation" : 2,
@@ -3298,9 +3298,9 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 3,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Candy.tile",
-         "rotation" : 2,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
          "x" : 12,
          "y" : -4
       },
@@ -3426,14 +3426,14 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
+         "offsetY" : 1,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
          "rotation" : 0,
          "x" : -4,
          "y" : -3
       },
       {
-         "offsetX" : 0,
+         "offsetX" : 1,
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
          "rotation" : 0,
@@ -3441,19 +3441,11 @@
          "y" : -3
       },
       {
-         "offsetX" : 1,
-         "offsetY" : 1,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
-         "rotation" : 0,
-         "x" : -2,
-         "y" : -3
-      },
-      {
          "offsetX" : 2,
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
          "rotation" : 0,
-         "x" : -1,
+         "x" : -2,
          "y" : -3
       },
       {
@@ -3461,6 +3453,14 @@
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
          "rotation" : 0,
+         "x" : -1,
+         "y" : -3
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
          "x" : 0,
          "y" : -3
       },
@@ -3521,19 +3521,11 @@
          "y" : -3
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : 8,
-         "y" : -3
-      },
-      {
          "offsetX" : 3,
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Candy.tile",
          "rotation" : 2,
-         "x" : 9,
+         "x" : 8,
          "y" : -3
       },
       {
@@ -3541,11 +3533,19 @@
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Candy.tile",
          "rotation" : 2,
-         "x" : 10,
+         "x" : 9,
          "y" : -3
       },
       {
          "offsetX" : 1,
+         "offsetY" : 2,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Candy.tile",
+         "rotation" : 2,
+         "x" : 10,
+         "y" : -3
+      },
+      {
+         "offsetX" : 0,
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Candy.tile",
          "rotation" : 2,
@@ -3554,9 +3554,9 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 2,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Candy.tile",
-         "rotation" : 2,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
          "x" : 12,
          "y" : -3
       },
@@ -3678,14 +3678,6 @@
          "path" : "",
          "rotation" : 0,
          "x" : -5,
-         "y" : -2
-      },
-      {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : -4,
          "y" : -2
       },
       {
@@ -3693,7 +3685,7 @@
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
          "rotation" : 0,
-         "x" : -3,
+         "x" : -4,
          "y" : -2
       },
       {
@@ -3701,7 +3693,7 @@
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
          "rotation" : 0,
-         "x" : -2,
+         "x" : -3,
          "y" : -2
       },
       {
@@ -3709,7 +3701,7 @@
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
          "rotation" : 0,
-         "x" : -1,
+         "x" : -2,
          "y" : -2
       },
       {
@@ -3717,6 +3709,14 @@
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
          "rotation" : 0,
+         "x" : -1,
+         "y" : -2
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
          "x" : 0,
          "y" : -2
       },
@@ -3777,19 +3777,11 @@
          "y" : -2
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : 8,
-         "y" : -2
-      },
-      {
          "offsetX" : 3,
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Candy.tile",
          "rotation" : 2,
-         "x" : 9,
+         "x" : 8,
          "y" : -2
       },
       {
@@ -3797,11 +3789,19 @@
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Candy.tile",
          "rotation" : 2,
-         "x" : 10,
+         "x" : 9,
          "y" : -2
       },
       {
          "offsetX" : 1,
+         "offsetY" : 1,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Candy.tile",
+         "rotation" : 2,
+         "x" : 10,
+         "y" : -2
+      },
+      {
+         "offsetX" : 0,
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Candy.tile",
          "rotation" : 2,
@@ -3810,9 +3810,9 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 1,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Candy.tile",
-         "rotation" : 2,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
          "x" : 12,
          "y" : -2
       },
@@ -3934,14 +3934,6 @@
          "path" : "",
          "rotation" : 0,
          "x" : -5,
-         "y" : -1
-      },
-      {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : -4,
          "y" : -1
       },
       {
@@ -3949,7 +3941,7 @@
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
          "rotation" : 0,
-         "x" : -3,
+         "x" : -4,
          "y" : -1
       },
       {
@@ -3957,7 +3949,7 @@
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
          "rotation" : 0,
-         "x" : -2,
+         "x" : -3,
          "y" : -1
       },
       {
@@ -3965,7 +3957,7 @@
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
          "rotation" : 0,
-         "x" : -1,
+         "x" : -2,
          "y" : -1
       },
       {
@@ -3973,6 +3965,14 @@
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Plot.tile",
          "rotation" : 0,
+         "x" : -1,
+         "y" : -1
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
          "x" : 0,
          "y" : -1
       },
@@ -4030,14 +4030,6 @@
          "path" : "",
          "rotation" : 0,
          "x" : 7,
-         "y" : -1
-      },
-      {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : 8,
          "y" : -1
       },
       {
@@ -4045,7 +4037,7 @@
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Candy.tile",
          "rotation" : 2,
-         "x" : 9,
+         "x" : 8,
          "y" : -1
       },
       {
@@ -4053,11 +4045,19 @@
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Candy.tile",
          "rotation" : 2,
-         "x" : 10,
+         "x" : 9,
          "y" : -1
       },
       {
          "offsetX" : 1,
+         "offsetY" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Candy.tile",
+         "rotation" : 2,
+         "x" : 10,
+         "y" : -1
+      },
+      {
+         "offsetX" : 0,
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Candy.tile",
          "rotation" : 2,
@@ -4067,8 +4067,8 @@
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Candy.tile",
-         "rotation" : 2,
+         "path" : "",
+         "rotation" : 0,
          "x" : 12,
          "y" : -1
       },
@@ -4195,17 +4195,9 @@
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : -4,
-         "y" : 0
-      },
-      {
-         "offsetX" : 0,
-         "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
-         "x" : -3,
+         "x" : -4,
          "y" : 0
       },
       {
@@ -4213,7 +4205,7 @@
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
-         "x" : -2,
+         "x" : -3,
          "y" : 0
       },
       {
@@ -4221,13 +4213,21 @@
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
-         "x" : -1,
+         "x" : -2,
          "y" : 0
       },
       {
          "offsetX" : 3,
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
+         "rotation" : 0,
+         "x" : -1,
+         "y" : 0
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
          "rotation" : 0,
          "x" : 0,
          "y" : 0
@@ -4289,19 +4289,11 @@
          "y" : 0
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : 8,
-         "y" : 0
-      },
-      {
          "offsetX" : 3,
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
          "rotation" : 2,
-         "x" : 9,
+         "x" : 8,
          "y" : 0
       },
       {
@@ -4309,11 +4301,19 @@
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
          "rotation" : 2,
-         "x" : 10,
+         "x" : 9,
          "y" : 0
       },
       {
          "offsetX" : 1,
+         "offsetY" : 3,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
+         "rotation" : 2,
+         "x" : 10,
+         "y" : 0
+      },
+      {
+         "offsetX" : 0,
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
          "rotation" : 2,
@@ -4322,9 +4322,9 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 3,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
-         "rotation" : 2,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
          "x" : 12,
          "y" : 0
       },
@@ -4450,18 +4450,10 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : -4,
-         "y" : 1
-      },
-      {
-         "offsetX" : 0,
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
-         "x" : -3,
+         "x" : -4,
          "y" : 1
       },
       {
@@ -4469,7 +4461,7 @@
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
-         "x" : -2,
+         "x" : -3,
          "y" : 1
       },
       {
@@ -4477,13 +4469,21 @@
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
-         "x" : -1,
+         "x" : -2,
          "y" : 1
       },
       {
          "offsetX" : 3,
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
+         "rotation" : 0,
+         "x" : -1,
+         "y" : 1
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
          "rotation" : 0,
          "x" : 0,
          "y" : 1
@@ -4545,19 +4545,11 @@
          "y" : 1
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : 8,
-         "y" : 1
-      },
-      {
          "offsetX" : 3,
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
          "rotation" : 2,
-         "x" : 9,
+         "x" : 8,
          "y" : 1
       },
       {
@@ -4565,11 +4557,19 @@
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
          "rotation" : 2,
-         "x" : 10,
+         "x" : 9,
          "y" : 1
       },
       {
          "offsetX" : 1,
+         "offsetY" : 2,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
+         "rotation" : 2,
+         "x" : 10,
+         "y" : 1
+      },
+      {
+         "offsetX" : 0,
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
          "rotation" : 2,
@@ -4578,9 +4578,9 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 2,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
-         "rotation" : 2,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
          "x" : 12,
          "y" : 1
       },
@@ -4706,14 +4706,14 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
+         "offsetY" : 2,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
          "x" : -4,
          "y" : 2
       },
       {
-         "offsetX" : 0,
+         "offsetX" : 1,
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
@@ -4721,19 +4721,11 @@
          "y" : 2
       },
       {
-         "offsetX" : 1,
-         "offsetY" : 2,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
-         "rotation" : 0,
-         "x" : -2,
-         "y" : 2
-      },
-      {
          "offsetX" : 2,
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
-         "x" : -1,
+         "x" : -2,
          "y" : 2
       },
       {
@@ -4741,6 +4733,14 @@
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
+         "x" : -1,
+         "y" : 2
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
          "x" : 0,
          "y" : 2
       },
@@ -4801,19 +4801,11 @@
          "y" : 2
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : 8,
-         "y" : 2
-      },
-      {
          "offsetX" : 3,
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
          "rotation" : 2,
-         "x" : 9,
+         "x" : 8,
          "y" : 2
       },
       {
@@ -4821,11 +4813,19 @@
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
          "rotation" : 2,
-         "x" : 10,
+         "x" : 9,
          "y" : 2
       },
       {
          "offsetX" : 1,
+         "offsetY" : 1,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
+         "rotation" : 2,
+         "x" : 10,
+         "y" : 2
+      },
+      {
+         "offsetX" : 0,
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
          "rotation" : 2,
@@ -4834,9 +4834,9 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 1,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
-         "rotation" : 2,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
          "x" : 12,
          "y" : 2
       },
@@ -4958,14 +4958,6 @@
          "path" : "",
          "rotation" : 0,
          "x" : -5,
-         "y" : 3
-      },
-      {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : -4,
          "y" : 3
       },
       {
@@ -4973,7 +4965,7 @@
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
-         "x" : -3,
+         "x" : -4,
          "y" : 3
       },
       {
@@ -4981,7 +4973,7 @@
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
-         "x" : -2,
+         "x" : -3,
          "y" : 3
       },
       {
@@ -4989,7 +4981,7 @@
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
-         "x" : -1,
+         "x" : -2,
          "y" : 3
       },
       {
@@ -4997,6 +4989,14 @@
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/River Start.tile",
          "rotation" : 0,
+         "x" : -1,
+         "y" : 3
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
          "x" : 0,
          "y" : 3
       },
@@ -5054,14 +5054,6 @@
          "path" : "",
          "rotation" : 0,
          "x" : 7,
-         "y" : 3
-      },
-      {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : 8,
          "y" : 3
       },
       {
@@ -5069,7 +5061,7 @@
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
          "rotation" : 2,
-         "x" : 9,
+         "x" : 8,
          "y" : 3
       },
       {
@@ -5077,11 +5069,19 @@
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
          "rotation" : 2,
-         "x" : 10,
+         "x" : 9,
          "y" : 3
       },
       {
          "offsetX" : 1,
+         "offsetY" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
+         "rotation" : 2,
+         "x" : 10,
+         "y" : 3
+      },
+      {
+         "offsetX" : 0,
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
          "rotation" : 2,
@@ -5091,8 +5091,8 @@
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
-         "rotation" : 2,
+         "path" : "",
+         "rotation" : 0,
          "x" : 12,
          "y" : 3
       },
@@ -5219,17 +5219,9 @@
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : -4,
-         "y" : 4
-      },
-      {
-         "offsetX" : 0,
-         "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Forrest.tile",
          "rotation" : 0,
-         "x" : -3,
+         "x" : -4,
          "y" : 4
       },
       {
@@ -5237,7 +5229,7 @@
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Forrest.tile",
          "rotation" : 0,
-         "x" : -2,
+         "x" : -3,
          "y" : 4
       },
       {
@@ -5245,13 +5237,21 @@
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Forrest.tile",
          "rotation" : 0,
-         "x" : -1,
+         "x" : -2,
          "y" : 4
       },
       {
          "offsetX" : 3,
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Forrest.tile",
+         "rotation" : 0,
+         "x" : -1,
+         "y" : 4
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
          "rotation" : 0,
          "x" : 0,
          "y" : 4
@@ -5313,19 +5313,11 @@
          "y" : 4
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : 8,
-         "y" : 4
-      },
-      {
          "offsetX" : 3,
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal.tile",
          "rotation" : 2,
-         "x" : 9,
+         "x" : 8,
          "y" : 4
       },
       {
@@ -5333,11 +5325,19 @@
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal.tile",
          "rotation" : 2,
-         "x" : 10,
+         "x" : 9,
          "y" : 4
       },
       {
          "offsetX" : 1,
+         "offsetY" : 3,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal.tile",
+         "rotation" : 2,
+         "x" : 10,
+         "y" : 4
+      },
+      {
+         "offsetX" : 0,
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal.tile",
          "rotation" : 2,
@@ -5346,9 +5346,9 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 3,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal.tile",
-         "rotation" : 2,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
          "x" : 12,
          "y" : 4
       },
@@ -5474,18 +5474,10 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : -4,
-         "y" : 5
-      },
-      {
-         "offsetX" : 0,
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Forrest.tile",
          "rotation" : 0,
-         "x" : -3,
+         "x" : -4,
          "y" : 5
       },
       {
@@ -5493,7 +5485,7 @@
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Forrest.tile",
          "rotation" : 0,
-         "x" : -2,
+         "x" : -3,
          "y" : 5
       },
       {
@@ -5501,13 +5493,21 @@
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Forrest.tile",
          "rotation" : 0,
-         "x" : -1,
+         "x" : -2,
          "y" : 5
       },
       {
          "offsetX" : 3,
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Forrest.tile",
+         "rotation" : 0,
+         "x" : -1,
+         "y" : 5
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
          "rotation" : 0,
          "x" : 0,
          "y" : 5
@@ -5569,19 +5569,11 @@
          "y" : 5
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : 8,
-         "y" : 5
-      },
-      {
          "offsetX" : 3,
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal.tile",
          "rotation" : 2,
-         "x" : 9,
+         "x" : 8,
          "y" : 5
       },
       {
@@ -5589,11 +5581,19 @@
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal.tile",
          "rotation" : 2,
-         "x" : 10,
+         "x" : 9,
          "y" : 5
       },
       {
          "offsetX" : 1,
+         "offsetY" : 2,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal.tile",
+         "rotation" : 2,
+         "x" : 10,
+         "y" : 5
+      },
+      {
+         "offsetX" : 0,
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal.tile",
          "rotation" : 2,
@@ -5602,9 +5602,9 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 2,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal.tile",
-         "rotation" : 2,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
          "x" : 12,
          "y" : 5
       },
@@ -5730,18 +5730,10 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : -4,
-         "y" : 6
-      },
-      {
-         "offsetX" : 0,
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Forrest.tile",
          "rotation" : 0,
-         "x" : -3,
+         "x" : -4,
          "y" : 6
       },
       {
@@ -5749,7 +5741,7 @@
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Forrest.tile",
          "rotation" : 0,
-         "x" : -2,
+         "x" : -3,
          "y" : 6
       },
       {
@@ -5757,13 +5749,21 @@
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Forrest.tile",
          "rotation" : 0,
-         "x" : -1,
+         "x" : -2,
          "y" : 6
       },
       {
          "offsetX" : 3,
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Forrest.tile",
+         "rotation" : 0,
+         "x" : -1,
+         "y" : 6
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
          "rotation" : 0,
          "x" : 0,
          "y" : 6
@@ -5825,19 +5825,11 @@
          "y" : 6
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : 8,
-         "y" : 6
-      },
-      {
          "offsetX" : 3,
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal.tile",
          "rotation" : 2,
-         "x" : 9,
+         "x" : 8,
          "y" : 6
       },
       {
@@ -5845,11 +5837,19 @@
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal.tile",
          "rotation" : 2,
-         "x" : 10,
+         "x" : 9,
          "y" : 6
       },
       {
          "offsetX" : 1,
+         "offsetY" : 1,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal.tile",
+         "rotation" : 2,
+         "x" : 10,
+         "y" : 6
+      },
+      {
+         "offsetX" : 0,
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal.tile",
          "rotation" : 2,
@@ -5858,9 +5858,9 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 1,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal.tile",
-         "rotation" : 2,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
          "x" : 12,
          "y" : 6
       },
@@ -5986,18 +5986,10 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : -4,
-         "y" : 7
-      },
-      {
-         "offsetX" : 0,
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Forrest.tile",
          "rotation" : 0,
-         "x" : -3,
+         "x" : -4,
          "y" : 7
       },
       {
@@ -6005,7 +5997,7 @@
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Forrest.tile",
          "rotation" : 0,
-         "x" : -2,
+         "x" : -3,
          "y" : 7
       },
       {
@@ -6013,13 +6005,21 @@
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Forrest.tile",
          "rotation" : 0,
-         "x" : -1,
+         "x" : -2,
          "y" : 7
       },
       {
          "offsetX" : 3,
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Forrest.tile",
+         "rotation" : 0,
+         "x" : -1,
+         "y" : 7
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
          "rotation" : 0,
          "x" : 0,
          "y" : 7
@@ -6081,19 +6081,11 @@
          "y" : 7
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : 8,
-         "y" : 7
-      },
-      {
          "offsetX" : 3,
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal.tile",
          "rotation" : 2,
-         "x" : 9,
+         "x" : 8,
          "y" : 7
       },
       {
@@ -6101,11 +6093,19 @@
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal.tile",
          "rotation" : 2,
-         "x" : 10,
+         "x" : 9,
          "y" : 7
       },
       {
          "offsetX" : 1,
+         "offsetY" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal.tile",
+         "rotation" : 2,
+         "x" : 10,
+         "y" : 7
+      },
+      {
+         "offsetX" : 0,
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal.tile",
          "rotation" : 2,
@@ -6115,8 +6115,8 @@
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal.tile",
-         "rotation" : 2,
+         "path" : "",
+         "rotation" : 0,
          "x" : 12,
          "y" : 7
       },
@@ -6243,17 +6243,9 @@
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : -4,
-         "y" : 8
-      },
-      {
-         "offsetX" : 0,
-         "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave Entrance.tile",
          "rotation" : 0,
-         "x" : -3,
+         "x" : -4,
          "y" : 8
       },
       {
@@ -6261,11 +6253,19 @@
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave Entrance.tile",
          "rotation" : 0,
-         "x" : -2,
+         "x" : -3,
          "y" : 8
       },
       {
          "offsetX" : 2,
+         "offsetY" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Cave Entrance.tile",
+         "rotation" : 0,
+         "x" : -2,
+         "y" : 8
+      },
+      {
+         "offsetX" : 3,
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave Entrance.tile",
          "rotation" : 0,
@@ -6275,14 +6275,14 @@
       {
          "offsetX" : 3,
          "offsetY" : 0,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Cave Entrance.tile",
-         "rotation" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Cave.tile",
+         "rotation" : 3,
          "x" : 0,
          "y" : 8
       },
       {
          "offsetX" : 3,
-         "offsetY" : 0,
+         "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave.tile",
          "rotation" : 3,
          "x" : 1,
@@ -6290,7 +6290,7 @@
       },
       {
          "offsetX" : 3,
-         "offsetY" : 1,
+         "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave.tile",
          "rotation" : 3,
          "x" : 2,
@@ -6298,7 +6298,7 @@
       },
       {
          "offsetX" : 3,
-         "offsetY" : 2,
+         "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave.tile",
          "rotation" : 3,
          "x" : 3,
@@ -6306,15 +6306,15 @@
       },
       {
          "offsetX" : 3,
-         "offsetY" : 3,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Cave.tile",
+         "offsetY" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Wastes.tile",
          "rotation" : 3,
          "x" : 4,
          "y" : 8
       },
       {
          "offsetX" : 3,
-         "offsetY" : 0,
+         "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Wastes.tile",
          "rotation" : 3,
          "x" : 5,
@@ -6322,7 +6322,7 @@
       },
       {
          "offsetX" : 3,
-         "offsetY" : 1,
+         "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Wastes.tile",
          "rotation" : 3,
          "x" : 6,
@@ -6330,7 +6330,7 @@
       },
       {
          "offsetX" : 3,
-         "offsetY" : 2,
+         "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Wastes.tile",
          "rotation" : 3,
          "x" : 7,
@@ -6338,18 +6338,10 @@
       },
       {
          "offsetX" : 3,
-         "offsetY" : 3,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Wastes.tile",
-         "rotation" : 3,
-         "x" : 8,
-         "y" : 8
-      },
-      {
-         "offsetX" : 3,
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
          "rotation" : 3,
-         "x" : 9,
+         "x" : 8,
          "y" : 8
       },
       {
@@ -6357,7 +6349,7 @@
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
          "rotation" : 3,
-         "x" : 10,
+         "x" : 9,
          "y" : 8
       },
       {
@@ -6365,7 +6357,7 @@
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
          "rotation" : 3,
-         "x" : 11,
+         "x" : 10,
          "y" : 8
       },
       {
@@ -6373,6 +6365,14 @@
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
          "rotation" : 3,
+         "x" : 11,
+         "y" : 8
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
          "x" : 12,
          "y" : 8
       },
@@ -6498,18 +6498,10 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : -4,
-         "y" : 9
-      },
-      {
-         "offsetX" : 0,
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave Entrance.tile",
          "rotation" : 0,
-         "x" : -3,
+         "x" : -4,
          "y" : 9
       },
       {
@@ -6517,7 +6509,7 @@
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave Entrance.tile",
          "rotation" : 0,
-         "x" : -2,
+         "x" : -3,
          "y" : 9
       },
       {
@@ -6525,7 +6517,7 @@
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave Entrance.tile",
          "rotation" : 0,
-         "x" : -1,
+         "x" : -2,
          "y" : 9
       },
       {
@@ -6533,12 +6525,20 @@
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave Entrance.tile",
          "rotation" : 0,
-         "x" : 0,
+         "x" : -1,
          "y" : 9
       },
       {
          "offsetX" : 2,
          "offsetY" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Cave.tile",
+         "rotation" : 3,
+         "x" : 0,
+         "y" : 9
+      },
+      {
+         "offsetX" : 2,
+         "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave.tile",
          "rotation" : 3,
          "x" : 1,
@@ -6546,7 +6546,7 @@
       },
       {
          "offsetX" : 2,
-         "offsetY" : 1,
+         "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave.tile",
          "rotation" : 3,
          "x" : 2,
@@ -6554,7 +6554,7 @@
       },
       {
          "offsetX" : 2,
-         "offsetY" : 2,
+         "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave.tile",
          "rotation" : 3,
          "x" : 3,
@@ -6562,15 +6562,15 @@
       },
       {
          "offsetX" : 2,
-         "offsetY" : 3,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Cave.tile",
+         "offsetY" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Wastes.tile",
          "rotation" : 3,
          "x" : 4,
          "y" : 9
       },
       {
          "offsetX" : 2,
-         "offsetY" : 0,
+         "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Wastes.tile",
          "rotation" : 3,
          "x" : 5,
@@ -6578,7 +6578,7 @@
       },
       {
          "offsetX" : 2,
-         "offsetY" : 1,
+         "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Wastes.tile",
          "rotation" : 3,
          "x" : 6,
@@ -6586,7 +6586,7 @@
       },
       {
          "offsetX" : 2,
-         "offsetY" : 2,
+         "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Wastes.tile",
          "rotation" : 3,
          "x" : 7,
@@ -6594,18 +6594,10 @@
       },
       {
          "offsetX" : 2,
-         "offsetY" : 3,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Wastes.tile",
-         "rotation" : 3,
-         "x" : 8,
-         "y" : 9
-      },
-      {
-         "offsetX" : 2,
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
          "rotation" : 3,
-         "x" : 9,
+         "x" : 8,
          "y" : 9
       },
       {
@@ -6613,7 +6605,7 @@
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
          "rotation" : 3,
-         "x" : 10,
+         "x" : 9,
          "y" : 9
       },
       {
@@ -6621,7 +6613,7 @@
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
          "rotation" : 3,
-         "x" : 11,
+         "x" : 10,
          "y" : 9
       },
       {
@@ -6629,6 +6621,14 @@
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
          "rotation" : 3,
+         "x" : 11,
+         "y" : 9
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
          "x" : 12,
          "y" : 9
       },
@@ -6754,14 +6754,14 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
+         "offsetY" : 2,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Cave Entrance.tile",
          "rotation" : 0,
          "x" : -4,
          "y" : 10
       },
       {
-         "offsetX" : 0,
+         "offsetX" : 1,
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave Entrance.tile",
          "rotation" : 0,
@@ -6769,7 +6769,7 @@
          "y" : 10
       },
       {
-         "offsetX" : 1,
+         "offsetX" : 2,
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave Entrance.tile",
          "rotation" : 0,
@@ -6777,7 +6777,7 @@
          "y" : 10
       },
       {
-         "offsetX" : 2,
+         "offsetX" : 3,
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave Entrance.tile",
          "rotation" : 0,
@@ -6785,16 +6785,16 @@
          "y" : 10
       },
       {
-         "offsetX" : 3,
-         "offsetY" : 2,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Cave Entrance.tile",
-         "rotation" : 0,
+         "offsetX" : 1,
+         "offsetY" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Cave.tile",
+         "rotation" : 3,
          "x" : 0,
          "y" : 10
       },
       {
          "offsetX" : 1,
-         "offsetY" : 0,
+         "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave.tile",
          "rotation" : 3,
          "x" : 1,
@@ -6802,7 +6802,7 @@
       },
       {
          "offsetX" : 1,
-         "offsetY" : 1,
+         "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave.tile",
          "rotation" : 3,
          "x" : 2,
@@ -6810,7 +6810,7 @@
       },
       {
          "offsetX" : 1,
-         "offsetY" : 2,
+         "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave.tile",
          "rotation" : 3,
          "x" : 3,
@@ -6818,15 +6818,15 @@
       },
       {
          "offsetX" : 1,
-         "offsetY" : 3,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Cave.tile",
+         "offsetY" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Wastes.tile",
          "rotation" : 3,
          "x" : 4,
          "y" : 10
       },
       {
          "offsetX" : 1,
-         "offsetY" : 0,
+         "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Wastes.tile",
          "rotation" : 3,
          "x" : 5,
@@ -6834,7 +6834,7 @@
       },
       {
          "offsetX" : 1,
-         "offsetY" : 1,
+         "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Wastes.tile",
          "rotation" : 3,
          "x" : 6,
@@ -6842,7 +6842,7 @@
       },
       {
          "offsetX" : 1,
-         "offsetY" : 2,
+         "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Wastes.tile",
          "rotation" : 3,
          "x" : 7,
@@ -6850,18 +6850,10 @@
       },
       {
          "offsetX" : 1,
-         "offsetY" : 3,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Wastes.tile",
-         "rotation" : 3,
-         "x" : 8,
-         "y" : 10
-      },
-      {
-         "offsetX" : 1,
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
          "rotation" : 3,
-         "x" : 9,
+         "x" : 8,
          "y" : 10
       },
       {
@@ -6869,7 +6861,7 @@
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
          "rotation" : 3,
-         "x" : 10,
+         "x" : 9,
          "y" : 10
       },
       {
@@ -6877,7 +6869,7 @@
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
          "rotation" : 3,
-         "x" : 11,
+         "x" : 10,
          "y" : 10
       },
       {
@@ -6885,6 +6877,14 @@
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
          "rotation" : 3,
+         "x" : 11,
+         "y" : 10
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
          "x" : 12,
          "y" : 10
       },
@@ -7010,18 +7010,10 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
-         "x" : -4,
-         "y" : 11
-      },
-      {
-         "offsetX" : 0,
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave Entrance.tile",
          "rotation" : 0,
-         "x" : -3,
+         "x" : -4,
          "y" : 11
       },
       {
@@ -7029,7 +7021,7 @@
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave Entrance.tile",
          "rotation" : 0,
-         "x" : -2,
+         "x" : -3,
          "y" : 11
       },
       {
@@ -7037,7 +7029,7 @@
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave Entrance.tile",
          "rotation" : 0,
-         "x" : -1,
+         "x" : -2,
          "y" : 11
       },
       {
@@ -7045,12 +7037,20 @@
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave Entrance.tile",
          "rotation" : 0,
-         "x" : 0,
+         "x" : -1,
          "y" : 11
       },
       {
          "offsetX" : 0,
          "offsetY" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Cave.tile",
+         "rotation" : 3,
+         "x" : 0,
+         "y" : 11
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave.tile",
          "rotation" : 3,
          "x" : 1,
@@ -7058,7 +7058,7 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 1,
+         "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave.tile",
          "rotation" : 3,
          "x" : 2,
@@ -7066,7 +7066,7 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 2,
+         "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Cave.tile",
          "rotation" : 3,
          "x" : 3,
@@ -7074,15 +7074,15 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 3,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Cave.tile",
+         "offsetY" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Wastes.tile",
          "rotation" : 3,
          "x" : 4,
          "y" : 11
       },
       {
          "offsetX" : 0,
-         "offsetY" : 0,
+         "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Wastes.tile",
          "rotation" : 3,
          "x" : 5,
@@ -7090,7 +7090,7 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 1,
+         "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Wastes.tile",
          "rotation" : 3,
          "x" : 6,
@@ -7098,7 +7098,7 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 2,
+         "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Wastes.tile",
          "rotation" : 3,
          "x" : 7,
@@ -7106,18 +7106,10 @@
       },
       {
          "offsetX" : 0,
-         "offsetY" : 3,
-         "path" : "$CONTENT_DATA/Terrain/Tiles/Wastes.tile",
-         "rotation" : 3,
-         "x" : 8,
-         "y" : 11
-      },
-      {
-         "offsetX" : 0,
          "offsetY" : 0,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
          "rotation" : 3,
-         "x" : 9,
+         "x" : 8,
          "y" : 11
       },
       {
@@ -7125,7 +7117,7 @@
          "offsetY" : 1,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
          "rotation" : 3,
-         "x" : 10,
+         "x" : 9,
          "y" : 11
       },
       {
@@ -7133,7 +7125,7 @@
          "offsetY" : 2,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
          "rotation" : 3,
-         "x" : 11,
+         "x" : 10,
          "y" : 11
       },
       {
@@ -7141,6 +7133,14 @@
          "offsetY" : 3,
          "path" : "$CONTENT_DATA/Terrain/Tiles/Infernal Entrance.tile",
          "rotation" : 3,
+         "x" : 11,
+         "y" : 11
+      },
+      {
+         "offsetX" : 0,
+         "offsetY" : 0,
+         "path" : "",
+         "rotation" : 0,
          "x" : 12,
          "y" : 11
       },
