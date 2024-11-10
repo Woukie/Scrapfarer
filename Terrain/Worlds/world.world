@@ -4297,34 +4297,34 @@
          "y" : 0
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetX" : 3,
+         "offsetY" : 3,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
+         "rotation" : 2,
          "x" : 9,
          "y" : 0
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetX" : 2,
+         "offsetY" : 3,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
+         "rotation" : 2,
          "x" : 10,
          "y" : 0
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetX" : 1,
+         "offsetY" : 3,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
+         "rotation" : 2,
          "x" : 11,
          "y" : 0
       },
       {
          "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetY" : 3,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
+         "rotation" : 2,
          "x" : 12,
          "y" : 0
       },
@@ -4553,34 +4553,34 @@
          "y" : 1
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetX" : 3,
+         "offsetY" : 2,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
+         "rotation" : 2,
          "x" : 9,
          "y" : 1
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetX" : 2,
+         "offsetY" : 2,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
+         "rotation" : 2,
          "x" : 10,
          "y" : 1
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetX" : 1,
+         "offsetY" : 2,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
+         "rotation" : 2,
          "x" : 11,
          "y" : 1
       },
       {
          "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetY" : 2,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
+         "rotation" : 2,
          "x" : 12,
          "y" : 1
       },
@@ -4809,34 +4809,34 @@
          "y" : 2
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetX" : 3,
+         "offsetY" : 1,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
+         "rotation" : 2,
          "x" : 9,
          "y" : 2
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetX" : 2,
+         "offsetY" : 1,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
+         "rotation" : 2,
          "x" : 10,
          "y" : 2
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetX" : 1,
+         "offsetY" : 1,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
+         "rotation" : 2,
          "x" : 11,
          "y" : 2
       },
       {
          "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetY" : 1,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
+         "rotation" : 2,
          "x" : 12,
          "y" : 2
       },
@@ -5065,34 +5065,34 @@
          "y" : 3
       },
       {
-         "offsetX" : 0,
+         "offsetX" : 3,
          "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
+         "rotation" : 2,
          "x" : 9,
          "y" : 3
       },
       {
-         "offsetX" : 0,
+         "offsetX" : 2,
          "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
+         "rotation" : 2,
          "x" : 10,
          "y" : 3
       },
       {
-         "offsetX" : 0,
+         "offsetX" : 1,
          "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
+         "rotation" : 2,
          "x" : 11,
          "y" : 3
       },
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/Frozen.tile",
+         "rotation" : 2,
          "x" : 12,
          "y" : 3
       },

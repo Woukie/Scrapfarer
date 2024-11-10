@@ -3,10 +3,10 @@
     "height": 1024,
     "textures": [
       {
-        "asgMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_1_asg.tga",
-        "diffuse": "$GAME_DATA/Terrain/Textures/Ground/gnd_1_dif.tga",
-        "name": "Concrete",
-        "normalMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_1_nor.tga"
+        "asgMap": "$CONTENT_DATA/Textures/Snow/snow_asg.png",
+        "diffuse": "$CONTENT_DATA/Textures/Snow/snow_dif.png",
+        "name": "Snow",
+        "normalMap": "$CONTENT_DATA/Textures/Snow/snow_nor.png"
       },
       {
         "asgMap": "$GAME_DATA/Terrain/Textures/Ground/gnd_1_asg.tga",

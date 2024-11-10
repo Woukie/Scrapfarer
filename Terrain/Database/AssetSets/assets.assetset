@@ -705,6 +705,153 @@
         ]
       },
       "uuid": "a022df15-87a8-4ba7-ac91-aa2b70684f2a"
+    },
+    {
+      "defaultColors": {
+        "leaves": "FFFFFF",
+        "trunk": "030303"
+      },
+      "name": "env_snowy_tree_01",
+      "physics": {
+        "mass": 10000,
+        "material": "Wood"
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "includes": [
+              "POSITION",
+              "NORMAL",
+              "UV0",
+              "TANGENT"
+            ],
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/tree_01.fbx",
+            "subMeshMap": {
+              "leaves": {
+                "custom": {
+                  "color": "leaves"
+                },
+                "material": "DifAsgAlphaFlip",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Trees/snowy_leaves_dif.png",
+                  "$CONTENT_DATA/Textures/Trees/snowy_leaves_asg.png",
+                  ""
+                ]
+              },
+              "treetrunk": {
+                "custom": {
+                  "color": "trunk"
+                },
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Trees/bark_dif.png",
+                  "$GAME_DATA/Terrain/Textures/Forest/env_forest_oak_asg.tga",
+                  "$CONTENT_DATA/Textures/Trees/bark_nor.png"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "uuid": "f3858288-7ffd-4d6d-bf78-3fd3c99d20ce"
+    },
+    {
+      "defaultColors": {
+        "leaves": "FFFFFF",
+        "trunk": "030303"
+      },
+      "name": "env_snowy_tree_02",
+      "physics": {
+        "mass": 10000,
+        "material": "Wood"
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "includes": [
+              "POSITION",
+              "NORMAL",
+              "UV0",
+              "TANGENT"
+            ],
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/tree_02.fbx",
+            "subMeshMap": {
+              "leaves": {
+                "custom": {
+                  "color": "leaves"
+                },
+                "material": "DifAsgAlphaFlip",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Trees/snowy_leaves_dif.png",
+                  "$CONTENT_DATA/Textures/Trees/snowy_leaves_asg.png",
+                  ""
+                ]
+              },
+              "treetrunk": {
+                "custom": {
+                  "color": "trunk"
+                },
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Trees/bark_dif.png",
+                  "$GAME_DATA/Terrain/Textures/Forest/env_forest_oak_asg.tga",
+                  "$CONTENT_DATA/Textures/Trees/bark_nor.png"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "uuid": "d5de14fb-7fb5-47a0-a09b-da3d5af6f7d6"
+    },
+    {
+      "defaultColors": {
+        "leaves": "FFFFFF",
+        "trunk": "030303"
+      },
+      "name": "env_snowy_tree_03",
+      "physics": {
+        "mass": 10000,
+        "material": "Wood"
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "includes": [
+              "POSITION",
+              "NORMAL",
+              "UV0",
+              "TANGENT"
+            ],
+            "mesh": "$CONTENT_DATA/Terrain/Mesh/tree_03.fbx",
+            "subMeshMap": {
+              "leaves": {
+                "custom": {
+                  "color": "leaves"
+                },
+                "material": "DifAsgAlphaFlip",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Trees/snowy_leaves_dif.png",
+                  "$CONTENT_DATA/Textures/Trees/snowy_leaves_asg.png",
+                  ""
+                ]
+              },
+              "treetrunk": {
+                "custom": {
+                  "color": "trunk"
+                },
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Trees/bark_dif.png",
+                  "$GAME_DATA/Terrain/Textures/Forest/env_forest_oak_asg.tga",
+                  "$CONTENT_DATA/Textures/Trees/bark_nor.png"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "uuid": "92e180c7-a3ae-4ae4-b90e-adfd92201864"
     }
   ]
 }

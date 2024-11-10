@@ -556,12 +556,12 @@
     },
     {
       "box": {
-        "x": 12,
-        "y": 2,
-        "z": 12
+        "x": 16,
+        "y": 16,
+        "z": 16
       },
       "color": "FFFFFF",
-      "name": "obj_obstacle_ice_sheet",
+      "name": "obj_obstacle_ice_burg",
       "physicsMaterial": "Glass",
       "ratings": {
         "buoyancy": 10,
@@ -572,14 +572,14 @@
       "renderable": {
         "lodList": [
           {
-            "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/ice_sheet_01.fbx",
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/ice_burg_01.fbx",
             "subMeshList": [
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/Ice Sheet/ice_sheet_dif.png",
-                  "$CONTENT_DATA/Textures/Ice Sheet/ice_sheet_asg.png",
-                  "$CONTENT_DATA/Textures/Ice Sheet/ice_sheet_nor.png"
+                  "$CONTENT_DATA/Textures/Ice Burg/ice_burg_dif.png",
+                  "$CONTENT_DATA/Textures/Ice Burg/ice_burg_asg.png",
+                  "$CONTENT_DATA/Textures/Ice Burg/ice_burg_nor.png"
                 ]
               }
             ]
