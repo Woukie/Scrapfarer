@@ -2761,18 +2761,18 @@
          "y" : -6
       },
       {
-         "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetX" : 1,
+         "offsetY" : 1,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River End.tile",
+         "rotation" : 2,
          "x" : 9,
          "y" : -6
       },
       {
          "offsetX" : 0,
-         "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "offsetY" : 1,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River End.tile",
+         "rotation" : 2,
          "x" : 10,
          "y" : -6
       },
@@ -3017,18 +3017,18 @@
          "y" : -5
       },
       {
-         "offsetX" : 0,
+         "offsetX" : 1,
          "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River End.tile",
+         "rotation" : 2,
          "x" : 9,
          "y" : -5
       },
       {
          "offsetX" : 0,
          "offsetY" : 0,
-         "path" : "",
-         "rotation" : 0,
+         "path" : "$CONTENT_DATA/Terrain/Tiles/River End.tile",
+         "rotation" : 2,
          "x" : 10,
          "y" : -5
       },
