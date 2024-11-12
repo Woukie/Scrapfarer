@@ -12,38 +12,182 @@
     "itemId": "a8ed08de-6bc8-4b8d-abdb-84f47b3fd32e",
     "quantity": 1,
     "category": "Protect",
-    "cost": 2
+    "cost": 3
   },
   {
     "name": "Doughnut",
     "itemId": "b5161316-7ed0-494d-a0d0-d830fc1aceae",
     "quantity": 1,
     "category": "Float",
-    "cost": 5
+    "cost": 3
   },
   {
-    "name": "Wood",
-    "itemId": "c45be799-94d1-4ab1-8fb4-52c9bd3d94a9",
+    "name": "Bark",
+    "itemId": "2b6bf1e5-8e3a-417a-9f53-d349b9a42334",
     "quantity": 1,
     "category": "Balance",
     "requireUnlock": true,
-    "cost": 2
+    "cost": 4
   },
   {
-    "name": "Rock",
-    "itemId": "a8ed08de-6bc8-4b8d-abdb-84f47b3fd32e",
+    "name": "Marble",
+    "itemId": "256183f5-ea0d-4261-9ce6-c95d6ee74226",
     "quantity": 1,
     "category": "Protect",
     "requireUnlock": true,
-    "cost": 2
+    "cost": 6
   },
   {
-    "name": "Doughnut",
-    "itemId": "b5161316-7ed0-494d-a0d0-d830fc1aceae",
+    "name": "Bubble Wrap",
+    "itemId": "e7fa5494-153e-4858-89ff-e589d4517752",
     "quantity": 1,
     "category": "Float",
     "requireUnlock": true,
-    "cost": 5
+    "cost": 6
+  },
+  {
+    "name": "Crystal Wood",
+    "itemId": "ebed6239-900b-47e1-8738-b012bcddc479",
+    "quantity": 1,
+    "category": "Balance",
+    "requireUnlock": true,
+    "cost": 6
+  },
+  {
+    "name": "Coal",
+    "itemId": "c5bf8e61-010f-4293-94b7-9c89c68aa6b3",
+    "quantity": 1,
+    "category": "Protect",
+    "requireUnlock": true,
+    "cost": 8
+  },
+  {
+    "name": "Cobwebs",
+    "itemId": "dfdc42b1-deb5-4193-8b9a-a0d077eb409b",
+    "quantity": 1,
+    "category": "Float",
+    "requireUnlock": true,
+    "cost": 8
+  },
+  {
+    "name": "Dead Wood",
+    "itemId": "f311919e-2b54-495f-99ad-403082946873",
+    "quantity": 1,
+    "category": "Balance",
+    "requireUnlock": true,
+    "cost": 7
+  },
+  {
+    "name": "Concrete",
+    "itemId": "13ffc292-2ff8-4c5e-820b-5c55af916908",
+    "quantity": 1,
+    "category": "Protect",
+    "requireUnlock": true,
+    "cost": 11
+  },
+  {
+    "name": "Plastic",
+    "itemId": "39cc9ce6-31e9-4ca8-9c74-121102813466",
+    "quantity": 1,
+    "category": "Float",
+    "requireUnlock": true,
+    "cost": 11
+  },
+  {
+    "name": "Infernal Wood",
+    "itemId": "0a70dc4a-b272-4f7c-a1ac-f6995f380c6f",
+    "quantity": 1,
+    "category": "Balance",
+    "requireUnlock": true,
+    "cost": 9
+  },
+  {
+    "name": "Molten Rock",
+    "itemId": "a0c9c2de-f261-4448-b99c-4ab303f048d1",
+    "quantity": 1,
+    "category": "Protect",
+    "requireUnlock": true,
+    "cost": 14
+  },
+  {
+    "name": "Styrofoam",
+    "itemId": "21111cf8-3782-4f2f-8c3f-ff1bb5ec67df",
+    "quantity": 1,
+    "category": "Float",
+    "requireUnlock": true,
+    "cost": 14
+  },
+  {
+    "name": "Frozen Wood",
+    "itemId": "299655d3-4222-44e1-b403-c674aae96068",
+    "quantity": 1,
+    "category": "Balance",
+    "requireUnlock": true,
+    "cost": 11
+  },
+  {
+    "name": "Frozen Rock",
+    "itemId": "65e3587f-bb5d-41aa-acfb-d418f272b6b8",
+    "quantity": 1,
+    "category": "Protect",
+    "requireUnlock": true,
+    "cost": 17
+  },
+  {
+    "name": "Ice Cube",
+    "itemId": "57d23389-e13f-473d-9b07-02be9b14cb70",
+    "quantity": 1,
+    "category": "Float",
+    "requireUnlock": true,
+    "cost": 17
+  },
+  {
+    "name": "Candy Wood",
+    "itemId": "dfc8c8c7-fe66-420a-86b6-de8d3921c604",
+    "quantity": 1,
+    "category": "Balance",
+    "requireUnlock": true,
+    "cost": 13
+  },
+  {
+    "name": "Gumball",
+    "itemId": "66e9fff6-71ed-4409-9bca-eaee699e3025",
+    "quantity": 1,
+    "category": "Protect",
+    "requireUnlock": true,
+    "cost": 19
+  },
+  {
+    "name": "Marshmallow",
+    "itemId": "0da435c3-2d5c-4540-941d-b3d926773aa7",
+    "quantity": 1,
+    "category": "Float",
+    "requireUnlock": true,
+    "cost": 19
+  },
+  {
+    "name": "Glittering Wood",
+    "itemId": "1973a3b3-0579-4265-9139-9fcf516bc4de",
+    "quantity": 1,
+    "category": "Balance",
+    "requireUnlock": true,
+    "cost": 15
+  },
+  {
+    "name": "Metal",
+    "itemId": "13a48b44-2a1f-45aa-8c59-a3c4937946f6",
+    "quantity": 1,
+    "category": "Protect",
+    "requireUnlock": true,
+    "cost": 22
+  },
+  {
+    "name": "Aerogel",
+    "itemId": "d06ebc97-db48-45e4-a6b5-ccd57446e8e4",
+    "quantity": 1,
+    "category": "Float",
+    "requireUnlock": true,
+    "cost": 22
   },
   {
     "name": "Weld Tool",
