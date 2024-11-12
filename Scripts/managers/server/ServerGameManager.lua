@@ -198,6 +198,21 @@ function ServerGameManager:unlockShopItem(player, name)
   savePlayer(self, player)
 end
 
+function ServerGameManager:unlockShopItems(player, items)
+  local gameState = self.gameStates[player:getId()]
+  local changed = false
+  for _, name in ipairs(items) do
+    if not gameState.shopProgress[name] then
+      gameState.shopProgress[name] = true
+      changed = true
+    end
+  end
+
+  if changed then
+    savePlayer(self, player)
+  end
+end
+
 function ServerGameManager:disableInventory(player)
   player:getInventory():setAllowCollect(false)
   player:getInventory():setAllowSpend(false)

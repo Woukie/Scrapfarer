@@ -81,6 +81,7 @@ function World.server_onCellLoaded(self, x, y)
   g_serverPlotManager:onCellLoaded(x, y)
   g_serverObstacleManager:onCellLoaded(x, y)
   g_serverDestructionManager:onCellLoaded(x, y)
+  g_serverUnlockManager:onCellLoaded(x, y)
   self.forceManager:server_onCellReloaded(x, y)
   self.waterManager:sv_onCellReloaded(x, y)
 end
