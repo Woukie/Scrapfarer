@@ -19,7 +19,7 @@ exclusions[tostring(obj_obstacle_ice_burg)] = true
 exclusions[tostring(obj_obstacle_gumball)] = true
 exclusions[tostring(obj_obstacle_rock_candy)] = true
 exclusions[tostring(obj_obstacle_coin)] = true
-exclusions[tostring(obj_obstacle_wave)] = true
+exclusions[tostring(obj_obstacle_gem_big)] = true
 
 function ForceManager:onCreate()
 	self.cells = {}
