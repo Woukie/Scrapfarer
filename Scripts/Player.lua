@@ -69,11 +69,7 @@ function Player.client_onCreate( self )
     backgroundAlpha = 0.0,
   })
 
-	if self.player == sm.localPlayer.getPlayer() then
-		if g_hud then
-			g_hud:open()
-		end
-	end
+  g_hud:open()
 
   g_clientGameManager:onCreatePlayer()
 end
