@@ -43,8 +43,8 @@
       "name": "Unlock Shop Items",
       "params": [
         {
-          "default": "Plastic, Bark, ",
-          "name": "shapeUuid",
+          "default": "Bark,Marble,Bubble Wrap",
+          "name": "unlocks",
           "type": "string"
         }
       ],

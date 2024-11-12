@@ -64,6 +64,7 @@ function World.server_onCellCreated(self, x, y)
   g_serverPlotManager:onCellLoaded(x, y)
   g_serverDestructionManager:onCellLoaded(x, y)
   g_serverObstacleManager:onCellLoaded(x, y)
+  g_serverUnlockManager:onCellLoaded(x, y)
   self.forceManager:server_onCellLoaded(x, y)
   self.waterManager:sv_onCellLoaded(x, y)
 end
@@ -87,6 +88,7 @@ end
 function World.server_onCellUnloaded(self, x, y)
   g_checkpointManager:onCellUnloaded(x, y)
   g_serverDestructionManager:onCellUnloaded(x, y)
+  g_serverUnlockManager:onCellUnloaded(x, y)
   self.forceManager:server_onCellUnloaded(x, y)
   self.waterManager:sv_onCellUnloaded(x, y)
 end
