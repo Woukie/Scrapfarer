@@ -29,6 +29,31 @@
     },
     {
       "billboardColor": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "color": [
+        0,
+        1,
+        0,
+        0.6
+      ],
+      "name": "Unlock Shop Items",
+      "params": [
+        {
+          "default": "Plastic, Bark, ",
+          "name": "shapeUuid",
+          "type": "string"
+        }
+      ],
+      "tags": [
+        "UNLOCK"
+      ]
+    },
+    {
+      "billboardColor": [
         0.2,
         0.5,
         1,

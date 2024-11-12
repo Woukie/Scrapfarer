@@ -25,16 +25,12 @@ function ClientShopManager:reloadShopGrid()
   end
 
   self.shopGui:setImage("AllImage", "$CONTENT_DATA/Gui/Textures/all_button.png")
-  self.shopGui:setImage("BlocksImage", "$CONTENT_DATA/Gui/Textures/blocks_button.png")
-  self.shopGui:setImage("FunctionalImage", "$CONTENT_DATA/Gui/Textures/functional_button.png")
+  self.shopGui:setImage("FloatImage", "$CONTENT_DATA/Gui/Textures/float_button.png")
+  self.shopGui:setImage("ProtectImage", "$CONTENT_DATA/Gui/Textures/protect_button.png")
+  self.shopGui:setImage("BalanceImage", "$CONTENT_DATA/Gui/Textures/balance_button.png")
+  self.shopGui:setImage("PartsImage", "$CONTENT_DATA/Gui/Textures/parts_button.png")
 
-  if self.category == "All" then
-    self.shopGui:setImage("AllImage", "$CONTENT_DATA/Gui/Textures/all_button_active.png")
-  elseif self.category == "Blocks" then
-    self.shopGui:setImage("BlocksImage", "$CONTENT_DATA/Gui/Textures/blocks_button_active.png")
-  elseif self.category == "Functional" then
-    self.shopGui:setImage("FunctionalImage", "$CONTENT_DATA/Gui/Textures/functional_button_active.png")
-  end
+  self.shopGui:setImage(self.category.."Image", "$CONTENT_DATA/Gui/Textures/"..self.category:lower().."_button_active.png")
 end
 
 function ClientShopManager:onCreate()
@@ -59,8 +55,10 @@ function ClientShopManager:onCreate()
 	})
 
   self.shopGui:setButtonCallback("AllButton", "client_setShopCategory")
-  self.shopGui:setButtonCallback("BlocksButton", "client_setShopCategory")
-  self.shopGui:setButtonCallback("FunctionalButton", "client_setShopCategory")
+  self.shopGui:setButtonCallback("FloatButton", "client_setShopCategory")
+  self.shopGui:setButtonCallback("ProtectButton", "client_setShopCategory")
+  self.shopGui:setButtonCallback("BalanceButton", "client_setShopCategory")
+  self.shopGui:setButtonCallback("PartsButton", "client_setShopCategory")
 
   self.shopGui:setButtonCallback("BuyButton", "client_buyShopItem")
   self.shopGui:setButtonCallback("ExitButton", "client_closeShop")

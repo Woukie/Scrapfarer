@@ -33,16 +33,28 @@
         <Widget type="Button" skin="Button" position="32 56 80 28" name="AllButton">
             <Property key="Alpha" value="0"/>
         </Widget>
-        <Widget type="ImageBox" skin="ImageBox" position="128 56 128 28" name="BlocksImage">
-            <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/blocks_button.png"/>
+        <Widget type="ImageBox" skin="ImageBox" position="128 56 144 28" name="BalanceImage">
+            <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/balance_button.png"/>
         </Widget>
-        <Widget type="Button" skin="Button" position="128 56 128 28" name="BlocksButton">
+        <Widget type="Button" skin="Button" position="128 56 144 28" name="BalanceButton">
             <Property key="Alpha" value="0"/>
         </Widget>
-        <Widget type="ImageBox" skin="ImageBox" position="272 56 192 28" name="FunctionalImage">
-            <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/functional_button.png"/>
+        <Widget type="ImageBox" skin="ImageBox" position="288 56 144 28" name="ProtectImage">
+            <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/protect_button.png"/>
         </Widget>
-        <Widget type="Button" skin="Button" position="272 56 192 28" name="FunctionalButton">
+        <Widget type="Button" skin="Button" position="288 56 144 28" name="ProtectButton">
+            <Property key="Alpha" value="0"/>
+        </Widget>
+        <Widget type="ImageBox" skin="ImageBox" position="448 56 112 28" name="FloatImage">
+            <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/float_button.png"/>
+        </Widget>
+        <Widget type="Button" skin="Button" position="448 56 112 28" name="FloatButton">
+            <Property key="Alpha" value="0"/>
+        </Widget>
+		<Widget type="ImageBox" skin="ImageBox" position="576 56 112 28" name="PartsImage">
+            <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/parts_button.png"/>
+        </Widget>
+        <Widget type="Button" skin="Button" position="576 56 112 28" name="PartsButton">
             <Property key="Alpha" value="0"/>
         </Widget>
         <Widget type="Button" skin="Button" position="1168 0 96 28" name="ExitButton">
