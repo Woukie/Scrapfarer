@@ -6,8 +6,7 @@
     "$CONTENT_DATA/Objects/Database/ShapeSets/balance.shapeset",
     "$CONTENT_DATA/Objects/Database/ShapeSets/float.shapeset",
     "$CONTENT_DATA/Objects/Database/ShapeSets/protect.shapeset",
-    "$CONTENT_DATA/Objects/Database/ShapeSets/functional.shapeset",
-    "$CONTENT_DATA/Objects/Database/ShapeSets/misc.shapeset",
-    "$GAME_DATA/Objects/Database/ShapeSets/interactive.json"
+    "$CONTENT_DATA/Objects/Database/ShapeSets/parts.shapeset",
+    "$CONTENT_DATA/Objects/Database/ShapeSets/misc.shapeset"
   ]
 }
