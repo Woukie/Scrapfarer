@@ -182,6 +182,92 @@
       }
     ]
   },
+  "DamageMud": {
+    "parameterList": {
+      "Material": 6,
+      "Size": 0.005,
+      "Velocity_max_50": 15,
+      "Phys_energy": 12.5,
+      "shakeStrength": 0.01,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Single",
+        "parameters": [
+          "Size",
+          "Velocity_max_50",
+          "Material",
+          "Phys_energy"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      }
+    ]
+  },
+  "DestroyMud": {
+    "parameterList": {
+      "Material": 6,
+      "shakeStrength": 0.05,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Debris",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "Material"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      },
+      {
+        "type": "particle",
+        "name": "p_destruct_stone_big",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "attached": true,
+        "delay": 0
+      }
+    ]
+  },
   "DamageLog": {
     "parameterList": {
       "Material": 7,
@@ -258,6 +344,866 @@
       {
         "type": "particle",
         "name": "p_destruct_wood_big",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "attached": true,
+        "delay": 0
+      }
+    ]
+  },
+  "DamageGem": {
+    "parameterList": {
+      "Material": 6,
+      "Size": 0.005,
+      "Velocity_max_50": 15,
+      "Phys_energy": 12.5,
+      "shakeStrength": 0.01,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Single",
+        "parameters": [
+          "Size",
+          "Velocity_max_50",
+          "Material",
+          "Phys_energy"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      }
+    ]
+  },
+  "DestroyGem": {
+    "parameterList": {
+      "Material": 6,
+      "shakeStrength": 0.05,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Debris",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "Material"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      },
+      {
+        "type": "particle",
+        "name": "p_destruct_stone_big",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "attached": true,
+        "delay": 0
+      }
+    ]
+  },
+  "DamageFishy": {
+    "parameterList": {
+      "Material": 6,
+      "Size": 0.005,
+      "Velocity_max_50": 15,
+      "Phys_energy": 12.5,
+      "shakeStrength": 0.01,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Single",
+        "parameters": [
+          "Size",
+          "Velocity_max_50",
+          "Material",
+          "Phys_energy"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      }
+    ]
+  },
+  "DestroyFishy": {
+    "parameterList": {
+      "Material": 6,
+      "shakeStrength": 0.05,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Debris",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "Material"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      },
+      {
+        "type": "particle",
+        "name": "p_destruct_stone_big",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "attached": true,
+        "delay": 0
+      }
+    ]
+  },
+  "DamageFireBall": {
+    "parameterList": {
+      "Material": 6,
+      "Size": 0.005,
+      "Velocity_max_50": 15,
+      "Phys_energy": 12.5,
+      "shakeStrength": 0.01,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Single",
+        "parameters": [
+          "Size",
+          "Velocity_max_50",
+          "Material",
+          "Phys_energy"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      }
+    ]
+  },
+  "DestroyFireBall": {
+    "parameterList": {
+      "Material": 6,
+      "shakeStrength": 0.05,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Debris",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "Material"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      },
+      {
+        "type": "particle",
+        "name": "p_destruct_stone_big",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "attached": true,
+        "delay": 0
+      }
+    ]
+  },
+  "DamageInfernalLog": {
+    "parameterList": {
+      "Material": 6,
+      "Size": 0.005,
+      "Velocity_max_50": 15,
+      "Phys_energy": 12.5,
+      "shakeStrength": 0.01,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Single",
+        "parameters": [
+          "Size",
+          "Velocity_max_50",
+          "Material",
+          "Phys_energy"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      }
+    ]
+  },
+  "DestroyInfernalLog": {
+    "parameterList": {
+      "Material": 6,
+      "shakeStrength": 0.05,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Debris",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "Material"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      },
+      {
+        "type": "particle",
+        "name": "p_destruct_stone_big",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "attached": true,
+        "delay": 0
+      }
+    ]
+  },
+  "DamageIceCube": {
+    "parameterList": {
+      "Material": 6,
+      "Size": 0.005,
+      "Velocity_max_50": 15,
+      "Phys_energy": 12.5,
+      "shakeStrength": 0.01,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Single",
+        "parameters": [
+          "Size",
+          "Velocity_max_50",
+          "Material",
+          "Phys_energy"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      }
+    ]
+  },
+  "DestroyIceCube": {
+    "parameterList": {
+      "Material": 6,
+      "shakeStrength": 0.05,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Debris",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "Material"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      },
+      {
+        "type": "particle",
+        "name": "p_destruct_stone_big",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "attached": true,
+        "delay": 0
+      }
+    ]
+  },
+  "DamageIceBurg": {
+    "parameterList": {
+      "Material": 6,
+      "Size": 0.005,
+      "Velocity_max_50": 15,
+      "Phys_energy": 12.5,
+      "shakeStrength": 0.01,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Single",
+        "parameters": [
+          "Size",
+          "Velocity_max_50",
+          "Material",
+          "Phys_energy"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      }
+    ]
+  },
+  "DestroyIceBurg": {
+    "parameterList": {
+      "Material": 6,
+      "shakeStrength": 0.05,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Debris",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "Material"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      },
+      {
+        "type": "particle",
+        "name": "p_destruct_stone_big",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "attached": true,
+        "delay": 0
+      }
+    ]
+  },
+  "DamageGumball": {
+    "parameterList": {
+      "Material": 6,
+      "Size": 0.005,
+      "Velocity_max_50": 15,
+      "Phys_energy": 12.5,
+      "shakeStrength": 0.01,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Single",
+        "parameters": [
+          "Size",
+          "Velocity_max_50",
+          "Material",
+          "Phys_energy"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      }
+    ]
+  },
+  "DestroyGumball": {
+    "parameterList": {
+      "Material": 6,
+      "shakeStrength": 0.05,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Debris",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "Material"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      },
+      {
+        "type": "particle",
+        "name": "p_destruct_stone_big",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "attached": true,
+        "delay": 0
+      }
+    ]
+  },
+  "DamageRockCandy": {
+    "parameterList": {
+      "Material": 6,
+      "Size": 0.005,
+      "Velocity_max_50": 15,
+      "Phys_energy": 12.5,
+      "shakeStrength": 0.01,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Single",
+        "parameters": [
+          "Size",
+          "Velocity_max_50",
+          "Material",
+          "Phys_energy"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      }
+    ]
+  },
+  "DestroyRockCandy": {
+    "parameterList": {
+      "Material": 6,
+      "shakeStrength": 0.05,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Debris",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "Material"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      },
+      {
+        "type": "particle",
+        "name": "p_destruct_stone_big",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "attached": true,
+        "delay": 0
+      }
+    ]
+  },
+  "DamageCoin": {
+    "parameterList": {
+      "Material": 6,
+      "Size": 0.005,
+      "Velocity_max_50": 15,
+      "Phys_energy": 12.5,
+      "shakeStrength": 0.01,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Single",
+        "parameters": [
+          "Size",
+          "Velocity_max_50",
+          "Material",
+          "Phys_energy"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      }
+    ]
+  },
+  "DestroyCoin": {
+    "parameterList": {
+      "Material": 6,
+      "shakeStrength": 0.05,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Debris",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "Material"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      },
+      {
+        "type": "particle",
+        "name": "p_destruct_stone_big",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "attached": true,
+        "delay": 0
+      }
+    ]
+  },
+  "DamageGemBig": {
+    "parameterList": {
+      "Material": 6,
+      "Size": 0.005,
+      "Velocity_max_50": 15,
+      "Phys_energy": 12.5,
+      "shakeStrength": 0.01,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Single",
+        "parameters": [
+          "Size",
+          "Velocity_max_50",
+          "Material",
+          "Phys_energy"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      }
+    ]
+  },
+  "DestroyGemBig": {
+    "parameterList": {
+      "Material": 6,
+      "shakeStrength": 0.05,
+      "shakeRadius": 15
+    },
+    "effectList": [
+      {
+        "type": "audio",
+        "name": "Collision - Debris",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "Material"
+        ],
+        "delay": 0
+      },
+      {
+        "type": "cameraShake",
+        "name": "",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "parameters": [
+          "shakeStrength",
+          "shakeRadius"
+        ],
+        "duration": 0.1,
+        "delay": 0
+      },
+      {
+        "type": "particle",
+        "name": "p_destruct_stone_big",
         "offset": {
           "x": 0,
           "y": 0,
