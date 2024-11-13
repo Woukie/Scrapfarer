@@ -1,6 +1,20 @@
 // Name is used to track unlocks
 [
   {
+    "name": "Propeller Left",
+    "itemId": "bc6010c4-b018-4d83-a87f-05d7dce963b6",
+    "quantity": 1,
+    "category": "Parts",
+    "cost": 0
+  },
+  {
+    "name": "Propeller Right",
+    "itemId": "b2e51672-abaf-4f47-b734-fb83011892fd",
+    "quantity": 1,
+    "category": "Parts",
+    "cost": 0
+  },
+  {
     "name": "Wood",
     "itemId": "c45be799-94d1-4ab1-8fb4-52c9bd3d94a9",
     "quantity": 1,
@@ -204,8 +218,8 @@
     "quantity": 1,
     "lockOnBuy": true,
     "category": "Parts",
-    "requireUnlock": true,
-    "cost": 15
+    "requireUnlock": false,
+    "cost": 0
   },
   {
     "name": "Paint Tool",
@@ -213,7 +227,7 @@
     "quantity": 1,
     "lockOnBuy": true,
     "category": "Parts",
-    "requireUnlock": true,
+    "requireUnlock": false,
     "cost": 0
   },
   {
@@ -237,8 +251,8 @@
     "itemId": "d5e36413-b3c1-4636-8447-3410c352ec7b",
     "quantity": 1,
     "category": "Parts",
-    "requireUnlock": true,
-    "cost": 45
+    "requireUnlock": false,
+    "cost": 0
   },
   {
     "name": "Electric Engine",
@@ -381,7 +395,7 @@
     "itemId": "4a1b886b-913e-4aad-b5b6-6e41b0db23a6",
     "quantity": 1,
     "category": "Parts",
-    "requireUnlock": true,
-    "cost": 35
+    "requireUnlock": false,
+    "cost": 0
   }
 ]

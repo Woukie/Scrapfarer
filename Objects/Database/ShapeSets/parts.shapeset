@@ -1066,6 +1066,96 @@
       },
       "stackSize": 10000,
       "flammable": true
+    },
+    {
+      "uuid": "b2e51672-abaf-4f47-b734-fb83011892fd",
+      "name": "obj_interactive_propeller_right",
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/propeller_right.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Propeller/propeller_dif.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "color": "FF962D",
+      "rotationSet": "PropY",
+      "sticky": "-Y",
+      "physicsMaterial": "Mechanical",
+      "ratings": {
+        "density": 2,
+        "durability": 2,
+        "friction": 5,
+        "buoyancy": 7
+      },
+      "cylinder": {
+        "diameter": 3,
+        "depth": 1,
+        "axis": "Y"
+      },
+      "scripted": {
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/Propeller.lua",
+        "data": {
+          "force": 0.1
+        },
+        "classname": "Propeller"
+      },
+      "stackSize": 10000,
+      "flammable": true
+    },
+    {
+      "uuid": "bc6010c4-b018-4d83-a87f-05d7dce963b6",
+      "name": "obj_interactive_propeller_left",
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/propeller_left.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Propeller/propeller_dif.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "color": "FF962D",
+      "rotationSet": "PropY",
+      "sticky": "-Y",
+      "physicsMaterial": "Mechanical",
+      "ratings": {
+        "density": 2,
+        "durability": 2,
+        "friction": 5,
+        "buoyancy": 7
+      },
+      "cylinder": {
+        "diameter": 3,
+        "depth": 1,
+        "axis": "Y"
+      },
+      "scripted": {
+        "filename": "$CONTENT_DATA/Scripts/game/interactables/Propeller.lua",
+        "data": {
+          "force": -0.1
+        },
+        "classname": "Propeller"
+      },
+      "stackSize": 10000,
+      "flammable": true
     }
   ]
 }

@@ -22,3 +22,4 @@ obj_interactive_robotbliphead01 = sm.uuid.new("1c04327f-1de4-4b06-92a8-2c9b40e49
 obj_interactive_bathtub = sm.uuid.new("3efe715f-8745-475f-a609-5e7cbe09a8ef")
 jnt_interactive_piston_creative = sm.uuid.new("260b4597-f1ac-409c-8e6b-90c998c5fe94")
 obj_interactive_raftshark = sm.uuid.new("4152ce33-9b43-4c51-80a3-e0b4fe38841d")
+obj_interactive_propeller = sm.uuid.new("b2e51672-abaf-4f47-b734-fb83011892fd")
