@@ -86,8 +86,10 @@ function ServerObstacleManager:onFixedUpdate()
         return false
       end
 
-      if v.ticks >= v.life and sm.exists(v.part) then
-        sm.event.sendToInteractable(v.part.interactable, "destroy")
+      if v.ticks >= v.life then
+        if sm.exists(v.part) then
+          sm.event.sendToInteractable(v.part.interactable, "destroy")
+        end
         return false
       end
       return true
