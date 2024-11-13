@@ -139,12 +139,12 @@
       "scripted": {
         "classname": "Obstacle",
         "data": {
-          "damageEffect": "DamageRockSmall",
+          "damageEffect": "DamageMud",
           "uvFrames": 16,
           "uvSpeed": 10,
           "damageMean": 2,
           "damageRange": 2,
-          "destroyEffect": "DestroyRockSmall",
+          "destroyEffect": "DestroyMud",
           "health": 1
         },
         "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
@@ -436,12 +436,12 @@
       "scripted": {
         "classname": "Obstacle",
         "data": {
-          "damageEffect": "DamageRockSmall",
+          "damageEffect": "DamageFireBall",
           "uvFrames": 16,
           "uvSpeed": 10,
           "damageMean": 4,
           "damageRange": 4,
-          "destroyEffect": "DestroyRockSmall",
+          "destroyEffect": "DestroyFireBall",
           "health": 1
         },
         "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
@@ -590,10 +590,10 @@
       "scripted": {
         "classname": "Obstacle",
         "data": {
-          "damageEffect": "DamageRockSmall",
+          "damageEffect": "DamageIceBurg",
           "damageMean": 7,
           "damageRange": 4,
-          "destroyEffect": "DestroyRockSmall",
+          "destroyEffect": "DestroyIceBurg",
           "health": 5
         },
         "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
@@ -632,10 +632,10 @@
       "scripted": {
         "classname": "Obstacle",
         "data": {
-          "damageEffect": "DamageRockSmall",
+          "damageEffect": "DamageGumball",
           "damageMean": 5,
           "damageRange": 2,
-          "destroyEffect": "DestroyRockSmall",
+          "destroyEffect": "DestroyGumball",
           "health": 1
         },
         "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
@@ -682,10 +682,10 @@
       "scripted": {
         "classname": "Obstacle",
         "data": {
-          "damageEffect": "DamageRockBig",
+          "damageEffect": "DamageRockCandy",
           "damageMean": 8,
           "damageRange": 4,
-          "destroyEffect": "DestroyRockBig",
+          "destroyEffect": "DestroyRockCandy",
           "health": 5
         },
         "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
@@ -729,10 +729,10 @@
       "scripted": {
         "classname": "Obstacle",
         "data": {
-          "damageEffect": "DamageRockSmall",
+          "damageEffect": "DamageCoin",
           "damageMean": 6,
           "damageRange": 4,
-          "destroyEffect": "DestroyRockSmall",
+          "destroyEffect": "DestroyCoin",
           "health": 5
         },
         "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
@@ -777,10 +777,10 @@
       "scripted": {
         "classname": "Obstacle",
         "data": {
-          "damageEffect": "DamageGem",
+          "damageEffect": "DamageGemBig",
           "damageMean": 9,
           "damageRange": 5,
-          "destroyEffect": "DestroyGem",
+          "destroyEffect": "DestroyGemBig",
           "health": 6
         },
         "filename": "$CONTENT_DATA/Scripts/game/interactables/Obstacle.lua"
