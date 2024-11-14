@@ -121,7 +121,7 @@ function ServerGameManager.onPlayerJoined(self, player)
   self.gameStates[playerId] = {
     playing = false,
     checkpoints = {},
-    coins = 1000,
+    coins = 0,
     offer = 1,
     shopProgress = {},
     inventory = {}
