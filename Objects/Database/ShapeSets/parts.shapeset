@@ -1491,6 +1491,125 @@
       },
       "stackSize": 10000,
       "flammable": true
+    },
+    {
+      "uuid": "80bc2b9f-98a9-44e4-9cb8-d4ec7e95b40f",
+      "name": "obj_decor_babyduck",
+      "legacyId": 807,
+      "renderable": "$GAME_DATA/Objects/Renderable/decor/obj_decor_babyduck.rend",
+      "color": "ffd504",
+      "cylinder": {
+        "diameter": 1,
+        "depth": 1,
+        "margin": 0.1,
+        "axis": "Y"
+      },
+      "rotationSet": "PropY",
+      "sticky": "-Y",
+      "physicsMaterial": "Plastic",
+      "ratings": {
+        "density": 2,
+        "durability": 1,
+        "friction": 5,
+        "buoyancy": 8
+      },
+      "stackSize": 10000,
+      "flammable": true
+    },
+    {
+      "uuid": "a6ec1dcc-07e9-418a-819e-904e28a32f63",
+      "name": "obj_decor_mug",
+      "renderable": "$GAME_DATA/Objects/Renderable/decor/obj_decor_mug.rend",
+      "color": "3e9ffe",
+      "cylinder": {
+        "diameter": 1,
+        "depth": 1,
+        "margin": 0.1,
+        "axis": "Y"
+      },
+      "rotationSet": "PropY",
+      "sticky": "-Y+Y",
+      "physicsMaterial": "Metal",
+      "ratings": {
+        "density": 2,
+        "durability": 1,
+        "friction": 3,
+        "buoyancy": 3
+      },
+      "stackSize": 10000,
+      "flammable": true
+    },
+    {
+      "uuid": "c89f7bc8-5720-474d-989d-761916a411b2",
+      "name": "obj_decor_boot",
+      "legacyId": 806,
+      "renderable": "$GAME_DATA/Objects/Renderable/decor/obj_decor_boot.rend",
+      "color": "8d4104",
+      "hull": {
+        "x": 1,
+        "y": 2,
+        "z": 2,
+        "col": "$GAME_DATA/Objects/Collision/obj_decor_boot.obj"
+      },
+      "rotationSet": "PropYNegY",
+      "sticky": "-Y+Y",
+      "physicsMaterial": "Plastic",
+      "ratings": {
+        "density": 2,
+        "durability": 1,
+        "friction": 7,
+        "buoyancy": 1
+      },
+      "stackSize": 10000,
+      "flammable": true
+    },
+    {
+      "uuid": "c5e56da5-bc3f-4519-91c2-b307d36e15aa",
+      "name": "obj_decor_screw01",
+      "legacyId": 808,
+      "renderable": "$GAME_DATA/Objects/Renderable/decor/obj_decor_screw01.rend",
+      "color": "59615c",
+      "hull": {
+        "x": 1,
+        "y": 1,
+        "z": 1,
+        "col": "$GAME_DATA/Objects/Collision/obj_decor_screw01.obj"
+      },
+      "rotationSet": "PropY",
+      "sticky": "-Y",
+      "physicsMaterial": "Metal",
+      "ratings": {
+        "density": 2,
+        "durability": 1,
+        "friction": 6,
+        "buoyancy": 1
+      },
+      "flammable": false,
+      "stackSize": 10000
+    },
+    {
+      "uuid": "edd445cc-c298-4ce3-9a58-745c1bee1bc7",
+      "name": "obj_decor_screw02",
+      "legacyId": 809,
+      "renderable": "$GAME_DATA/Objects/Renderable/decor/obj_decor_screw02.rend",
+      "color": "59615c",
+      "hull": {
+        "x": 1,
+        "y": 1,
+        "z": 1,
+        "col": "$GAME_DATA/Objects/Collision/obj_decor_screw02.obj"
+      },
+      "rotationSet": "PropY",
+      "sticky": "-Y",
+      "physicsMaterial": "Metal",
+      "ratings": {
+        "density": 2,
+        "durability": 1,
+        "friction": 6,
+        "buoyancy": 1
+      },
+      "flammable": false,
+      "stackSize": 10000
     }
   ]
 }

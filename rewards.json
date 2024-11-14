@@ -6,13 +6,33 @@
     "quantity": 50
   },
   {
-    "name": "Pirate hat",
-    "itemId": "a8ed08de-6bc8-4b8d-abdb-84f47b3fd32e",
+    "name": "Screws 01",
+    "itemId": "c5e56da5-bc3f-4519-91c2-b307d36e15aa",
+    "quantity": 5
+  },
+  {
+    "name": "Boot",
+    "itemId": "c89f7bc8-5720-474d-989d-761916a411b2",
     "quantity": 1
   },
   {
-    "name": "Rubber duck",
-    "itemId": "b5161316-7ed0-494d-a0d0-d830fc1aceae",
+    "name": "Screws 02",
+    "itemId": "edd445cc-c298-4ce3-9a58-745c1bee1bc7",
+    "quantity": 3
+  },
+  {
+    "name": "Mug",
+    "itemId": "a6ec1dcc-07e9-418a-819e-904e28a32f63",
+    "quantity": 1
+  },
+  {
+    "name": "Baby duck",
+    "itemId": "80bc2b9f-98a9-44e4-9cb8-d4ec7e95b40f",
+    "quantity": 1
+  },
+  {
+    "name": "Giant duck",
+    "itemId": "80bc2b9f-98a9-44e4-9cb8-d4ec7e95b40f",
     "quantity": 1
   }
 ]
