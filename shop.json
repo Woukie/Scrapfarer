@@ -195,16 +195,7 @@
     "quantity": 1,
     "lockOnBuy": true,
     "category": "Parts",
-    "cost": 0
-  },
-  {
-    "name": "Weld Tool",
-    "itemId": "fdb8b8be-96e7-4de0-85c7-d2f42e4f33ce",
-    "quantity": 1,
-    "lockOnBuy": true,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
+    "cost": 15
   },
   {
     "name": "Paint Tool",
@@ -213,215 +204,25 @@
     "lockOnBuy": true,
     "category": "Parts",
     "requireUnlock": true,
-    "cost": 0
+    "cost": 25
   },
   {
-    "name": "jnt_bearing",
-    "itemId": "4a1b886b-913e-4aad-b5b6-6e41b0db23a6",
+    "name": "Weld Tool",
+    "itemId": "fdb8b8be-96e7-4de0-85c7-d2f42e4f33ce",
+    "quantity": 1,
+    "lockOnBuy": true,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 100
+  },
+  // Wheels
+  {
+    "name": "obj_scrap_smallwheel",
+    "itemId": "59f6951a-a450-42bf-ad03-54567cb70245",
     "quantity": 1,
     "category": "Parts",
     "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "jnt_suspensionsport_creative",
-    "itemId": "aa8d89eb-919b-42f4-8b58-af6f0d5856bc",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "jnt_suspensionoffroad_creative",
-    "itemId": "a481138b-fae9-47c9-9bc2-91b6d2e2bf52",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "obj_interactive_driverseat_creative",
-    "itemId": "cf3fdcfc-a7e5-4497-b000-ffda67dd8db7",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "obj_interactive_seat_creative",
-    "itemId": "42786777-c148-4e13-9bab-e460564e79c3",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "obj_interactive_driversaddle_creative",
-    "itemId": "38ee0516-abc5-4e46-9195-c763610d7ec4",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "obj_interactive_saddle_creative",
-    "itemId": "20f59114-5964-451f-bb47-820da3ebbc3b",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "obj_interactive_gasengine_creative",
-    "itemId": "d5e36413-b3c1-4636-8447-3410c352ec7b",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "obj_interactive_electricengine_creative",
-    "itemId": "6546c293-a5aa-4442-80d5-a2819f077746",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "obj_interactive_controller_creative",
-    "itemId": "12862001-666c-4bdd-8326-a1f43610d28b",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "obj_interactive_switch",
-    "itemId": "7cf717d7-d167-4f2d-a6e7-6b2c70aa3986",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "obj_interactive_button",
-    "itemId": "1e8d93a4-506b-470d-9ada-9c0a321e2db5",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "obj_interactive_sensor_creative",
-    "itemId": "add3acc6-a6fd-44e8-a384-a7a16ce13c81",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "obj_interactive_radio",
-    "itemId": "dfefc9d7-db03-4d25-ad85-eae1d824d8c0",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "obj_interactive_horn",
-    "itemId": "818f4e15-ff51-4fed-b874-723a25d62e1c",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "obj_interactive_logicgate",
-    "itemId": "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "obj_interactive_timer",
-    "itemId": "8f7fd0e7-c46e-4944-a414-7ce2437bb30f",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "obj_interactive_robotbasshead",
-    "itemId": "161786c1-1290-4817-8f8b-7f80de755a06",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "obj_interactive_robotdrumhead",
-    "itemId": "4c6e27a2-4c35-4df3-9794-5e206fef9012",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "obj_interactive_robotsynthhead",
-    "itemId": "a052e116-f273-4d73-872c-924a97b86720",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "obj_interactive_robotbliphead01",
-    "itemId": "1c04327f-1de4-4b06-92a8-2c9b40e491aa",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "obj_interactive_bathtub",
-    "itemId": "3efe715f-8745-475f-a609-5e7cbe09a8ef",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "jnt_interactive_piston_creative",
-    "itemId": "260b4597-f1ac-409c-8e6b-90c998c5fe94",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "obj_interactive_raftshark",
-    "itemId": "4152ce33-9b43-4c51-80a3-e0b4fe38841d",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "obj_interactive_propeller_right",
-    "itemId": "b2e51672-abaf-4f47-b734-fb83011892fd",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "obj_interactive_propeller_left",
-    "itemId": "bc6010c4-b018-4d83-a87f-05d7dce963b6",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
+    "cost": 30
   },
   {
     "name": "obj_spaceship_cranewheel",
@@ -429,15 +230,7 @@
     "quantity": 1,
     "category": "Parts",
     "requireUnlock": true,
-    "cost": 0
-  },
-  {
-    "name": "obj_scrap_smallwheel",
-    "itemId": "59f6951a-a450-42bf-ad03-54567cb70245",
-    "quantity": 1,
-    "category": "Parts",
-    "requireUnlock": true,
-    "cost": 0
+    "cost": 35
   },
   {
     "name": "obj_vehicle_smallwheel",
@@ -445,7 +238,7 @@
     "quantity": 1,
     "category": "Parts",
     "requireUnlock": true,
-    "cost": 0
+    "cost": 40
   },
   {
     "name": "obj_vehicle_bigwheel",
@@ -453,15 +246,16 @@
     "quantity": 1,
     "category": "Parts",
     "requireUnlock": true,
-    "cost": 0
+    "cost": 50
   },
+  // Seats
   {
-    "name": "obj_scrap_gasengine",
-    "itemId": "c96ab903-f238-4bae-a614-28a758716d00",
+    "name": "obj_scrap_seat",
+    "itemId": "847daf20-02bf-4170-8699-9ab106acd29a",
     "quantity": 1,
     "category": "Parts",
     "requireUnlock": true,
-    "cost": 0
+    "cost": 15
   },
   {
     "name": "obj_scrap_driverseat",
@@ -469,14 +263,228 @@
     "quantity": 1,
     "category": "Parts",
     "requireUnlock": true,
-    "cost": 0
+    "cost": 60
   },
   {
-    "name": "obj_scrap_seat",
-    "itemId": "847daf20-02bf-4170-8699-9ab106acd29a",
+    "name": "obj_interactive_saddle_creative",
+    "itemId": "20f59114-5964-451f-bb47-820da3ebbc3b",
     "quantity": 1,
     "category": "Parts",
     "requireUnlock": true,
-    "cost": 0
+    "cost": 18
+  },
+  {
+    "name": "obj_interactive_driversaddle_creative",
+    "itemId": "38ee0516-abc5-4e46-9195-c763610d7ec4",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 55
+  },
+  {
+    "name": "obj_interactive_seat_creative",
+    "itemId": "42786777-c148-4e13-9bab-e460564e79c3",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 20
+  },
+  {
+    "name": "obj_interactive_driverseat_creative",
+    "itemId": "cf3fdcfc-a7e5-4497-b000-ffda67dd8db7",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 60
+  },
+  // Logistic
+  {
+    "name": "obj_interactive_switch",
+    "itemId": "7cf717d7-d167-4f2d-a6e7-6b2c70aa3986",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 5
+  },
+  {
+    "name": "obj_interactive_button",
+    "itemId": "1e8d93a4-506b-470d-9ada-9c0a321e2db5",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 5
+  },
+  {
+    "name": "obj_interactive_sensor_creative",
+    "itemId": "add3acc6-a6fd-44e8-a384-a7a16ce13c81",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 10
+  },
+  {
+    "name": "obj_interactive_timer",
+    "itemId": "8f7fd0e7-c46e-4944-a414-7ce2437bb30f",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 10
+  },
+  {
+    "name": "obj_interactive_logicgate",
+    "itemId": "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 10
+  },
+  {
+    "name": "obj_interactive_controller_creative",
+    "itemId": "12862001-666c-4bdd-8326-a1f43610d28b",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 25
+  },
+  {
+    "name": "jnt_bearing",
+    "itemId": "4a1b886b-913e-4aad-b5b6-6e41b0db23a6",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 10
+  },
+  {
+    "name": "jnt_interactive_piston_creative",
+    "itemId": "260b4597-f1ac-409c-8e6b-90c998c5fe94",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 20
+  },
+  // Suspension
+  {
+    "name": "jnt_suspensionsport_creative",
+    "itemId": "aa8d89eb-919b-42f4-8b58-af6f0d5856bc",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 6
+  },
+  {
+    "name": "jnt_suspensionoffroad_creative",
+    "itemId": "a481138b-fae9-47c9-9bc2-91b6d2e2bf52",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 6
+  },
+  // Music
+  {
+    "name": "obj_interactive_robotbasshead",
+    "itemId": "161786c1-1290-4817-8f8b-7f80de755a06",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 5
+  },
+  {
+    "name": "obj_interactive_robotdrumhead",
+    "itemId": "4c6e27a2-4c35-4df3-9794-5e206fef9012",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 5
+  },
+  {
+    "name": "obj_interactive_robotsynthhead",
+    "itemId": "a052e116-f273-4d73-872c-924a97b86720",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 5
+  },
+  {
+    "name": "obj_interactive_robotbliphead01",
+    "itemId": "1c04327f-1de4-4b06-92a8-2c9b40e491aa",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 5
+  },
+  {
+    "name": "obj_interactive_horn",
+    "itemId": "818f4e15-ff51-4fed-b874-723a25d62e1c",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 6
+  },
+  {
+    "name": "obj_interactive_radio",
+    "itemId": "dfefc9d7-db03-4d25-ad85-eae1d824d8c0",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 75
+  },
+  // Propellers
+  {
+    "name": "obj_interactive_propeller_right",
+    "itemId": "b2e51672-abaf-4f47-b734-fb83011892fd",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 35
+  },
+  {
+    "name": "obj_interactive_propeller_left",
+    "itemId": "bc6010c4-b018-4d83-a87f-05d7dce963b6",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 35
+  },
+  // Engines
+  {
+    "name": "obj_scrap_gasengine",
+    "itemId": "c96ab903-f238-4bae-a614-28a758716d00",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 25
+  },
+  {
+    "name": "obj_interactive_electricengine_creative",
+    "itemId": "6546c293-a5aa-4442-80d5-a2819f077746",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 65
+  },
+  {
+    "name": "obj_interactive_gasengine_creative",
+    "itemId": "d5e36413-b3c1-4636-8447-3410c352ec7b",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 65
+  },
+  // Decorative
+  {
+    "name": "obj_interactive_raftshark",
+    "itemId": "4152ce33-9b43-4c51-80a3-e0b4fe38841d",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 15
+  },
+  {
+    "name": "obj_interactive_bathtub",
+    "itemId": "3efe715f-8745-475f-a609-5e7cbe09a8ef",
+    "quantity": 1,
+    "category": "Parts",
+    "requireUnlock": true,
+    "cost": 100000
   }
 ]
