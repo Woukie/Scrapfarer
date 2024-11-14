@@ -16,6 +16,39 @@
         "durability": 0,
         "friction": 5
       },
+      "seat": {
+        "bones": [
+          {
+            "name": "Hips",
+            "offset": {
+              "x": 0,
+              "y": -0.5,
+              "z": -0.5
+            }
+          },
+          {
+            "name": "LeftForeArm",
+            "offset": {
+              "x": 2,
+              "y": 1,
+              "z": -0.5
+            },
+            "freeRotation": true
+          },
+          {
+            "name": "RightForeArm",
+            "offset": {
+              "x": -2,
+              "y": 1,
+              "z": -0.5
+            },
+            "freeRotation": true
+          }
+        ],
+        "ragdollFile": "$GAME_DATA/Character/bath_ragdoll.json",
+        "enterAudio": "Seat seated",
+        "exitAudio": "Seat unseated"
+      },
       "renderable": {
         "lodList": [
           {
