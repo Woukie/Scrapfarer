@@ -889,6 +889,39 @@
         ]
       },
       "uuid": "bad33568-8e1e-4d22-a864-87cd1ac6d268"
+    },
+    {
+      "name": "env_coin_01",
+      "cylinder": {
+        "axis": "Y",
+        "depth": 1,
+        "diameter": 6
+      },
+      "physics": {
+        "mass": 10000,
+        "material": "Metal"
+      },
+      "defaultColors": {
+        "stripe": "FFFFFF"
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/Obstacles/coin_01.fbx",
+            "subMeshList": [
+              {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Coin/coin_dif.png",
+                  "$CONTENT_DATA/Textures/Coin/coin_asg.png",
+                  "$CONTENT_DATA/Textures/Coin/coin_nor.png"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "uuid": "6379b428-4e65-4e5a-a07f-561dacb22695"
     }
   ]
 }
