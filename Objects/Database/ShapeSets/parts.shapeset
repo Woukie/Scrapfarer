@@ -1193,6 +1193,7 @@
         "friction": 5,
         "buoyancy": 1
       },
+      "stackSize": 10000,
       "flammable": false
     },
     {
@@ -1232,6 +1233,7 @@
         "friction": 6,
         "buoyancy": 4
       },
+      "stackSize": 10000,
       "flammable": true
     },
     {
@@ -1255,6 +1257,7 @@
         "friction": 5,
         "buoyancy": 6
       },
+      "stackSize": 10000,
       "flammable": true
     },
     {
@@ -1278,6 +1281,7 @@
         "friction": 5,
         "buoyancy": 6
       },
+      "stackSize": 10000,
       "flammable": false
     },
     {
@@ -1321,6 +1325,7 @@
         "friction": 5,
         "buoyancy": 2
       },
+      "stackSize": 10000,
       "flammable": true
     },
     {
@@ -1350,6 +1355,7 @@
         ]
       },
       "color": "df7f01",
+      "stackSize": 10000,
       "hull": {
         "x": 4,
         "y": 4,
@@ -1483,6 +1489,7 @@
         "friction": 5,
         "buoyancy": 2
       },
+      "stackSize": 10000,
       "flammable": true
     }
   ]
