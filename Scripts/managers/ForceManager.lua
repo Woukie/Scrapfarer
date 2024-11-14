@@ -132,20 +132,22 @@ function ForceManager:trigger_onStay(trigger, results)
     local force
 
     local type = type(result)
-    if type == "Character" then
-      if result:isTumbling() then
-        force = params.force / 6
-      else
-        -- Only apply force if fully in force field (matches behaviour of water)
-        local characterFloatOffset = 0.2 + ( result:isCrouching() and 0.4 or 0.0 )
-        local characterFloatHeight = result.worldPosition.z + characterFloatOffset
+    if sm.exists(result) then
+      if type == "Character" then
+        if result:isTumbling() then
+          force = params.force / 6
+        else
+          -- Only apply force if fully in force field (matches behaviour of water)
+          local characterFloatOffset = 0.2 + ( result:isCrouching() and 0.4 or 0.0 )
+          local characterFloatHeight = result.worldPosition.z + characterFloatOffset
 
-        if trigger:getWorldMax().z > characterFloatHeight then
-          force = params.force
+          if trigger:getWorldMax().z > characterFloatHeight then
+            force = params.force
+          end
         end
-      end
-    elseif type == "Body" then
-      force = params.force
+      elseif type == "Body" then
+        force = params.force
+      end      
     end
 
     if force then

@@ -258,13 +258,10 @@ function ServerPlotManager:respawnPlayer(player)
     return
   end
 
-  local character = player:getCharacter()
-  if not character then
-    print("Player has no character yet, creating one")
+  print("Creating new character for "..player.name)
 
-    character = sm.character.createCharacter(player, sm.world.getCurrentWorld(), sm.vec3.new( 32, 32, 5 ), 0, 0)
-    player:setCharacter(character)
-  end
+  local character = sm.character.createCharacter(player, sm.world.getCurrentWorld(), sm.vec3.new( 32, 32, 5 ), 0, 0)
+  player:setCharacter(character)
 
   print("Respawning player "..player.name)
   local plotId = self:getPlotId(player)
@@ -405,7 +402,7 @@ function ServerPlotManager:plot_onExit(trigger, results)
 
   local plot = self.plots[ud.plotId]
   for _, result in ipairs(results) do
-    if (type(result) == "Character") then
+    if (type(result) == "Character" and sm.exists(result)) then
       local player = result:getPlayer()
       if plot and plot.playerId == player:getId() then
         g_serverGameManager:disableInventory(player)
