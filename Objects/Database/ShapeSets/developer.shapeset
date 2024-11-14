@@ -105,12 +105,13 @@
       "uuid": "dd2227d0-b9b4-443a-a86d-1961ba44034a"
     },
     {
-      "box": {
-        "x": 2,
-        "y": 2,
-        "z": 4
+      "hull": {
+        "col": "$CONTENT_DATA/Objects/Mesh/treasure_chest.fbx",
+        "x": 4,
+        "y": 3,
+        "z": 2
       },
-      "color": "ffee01",
+      "color": "89512E",
       "flammable": false,
       "name": "obj_treasure_chest",
       "physicsMaterial": "Wood",
