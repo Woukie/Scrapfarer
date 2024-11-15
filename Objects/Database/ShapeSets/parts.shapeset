@@ -1610,6 +1610,79 @@
       },
       "flammable": false,
       "stackSize": 10000
+    },
+    {
+      "uuid": "1d708c6e-0cd6-4528-9a6e-15779fe2b7c3",
+      "name": "obj_biggus_duckus",
+      "legacyId": 809,
+      "steering": {
+        "bones": [
+          {
+            "name": "Hips",
+            "offset": {
+              "x": 0,
+              "y": 3.3,
+              "z": -2
+            }
+          },
+          {
+            "name": "LeftForeArm",
+            "offset": {
+              "x": 2,
+              "y": 4.4,
+              "z": 0
+            },
+            "freeRotation": true
+          },
+          {
+            "name": "RightForeArm",
+            "offset": {
+              "x": -2,
+              "y": 4.4,
+              "z": 0
+            },
+            "freeRotation": true
+          }
+        ],
+        "ragdollFile": "$GAME_DATA/Character/seat_ragdoll.json",
+        "enterAudio": "Seat seated",
+        "exitAudio": "Seat unseated"
+      },
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/biggus_duckus.fbx",
+            "subMeshMap": {
+              "ducky": {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$GAME_DATA/Objects/Textures/decor/obj_decor_babyduck_dif.tga",
+                  "$GAME_DATA/Objects/Textures/decor/obj_decor_babyduck_asg.tga",
+                  "$GAME_DATA/Objects/Textures/decor/obj_decor_babyduck_nor.tga"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "color": "ffd504",
+      "hull": {
+        "x": 16,
+        "y": 16,
+        "z": 16,
+        "col": "$CONTENT_DATA/Objects/Mesh/biggus_duckus_col.fbx"
+      },
+      "rotationSet": "PropY",
+      "sticky": "-Y",
+      "physicsMaterial": "Metal",
+      "ratings": {
+        "density": 2,
+        "durability": 1,
+        "friction": 6,
+        "buoyancy": 1
+      },
+      "flammable": false,
+      "stackSize": 10000
     }
   ]
 }
