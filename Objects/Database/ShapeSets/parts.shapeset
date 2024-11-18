@@ -1676,10 +1676,10 @@
       "sticky": "-Y",
       "physicsMaterial": "Metal",
       "ratings": {
-        "density": 2,
-        "durability": 1,
+        "density": 3,
+        "durability": 12,
         "friction": 6,
-        "buoyancy": 1
+        "buoyancy": 10
       },
       "flammable": false,
       "stackSize": 10000
