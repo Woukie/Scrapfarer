@@ -107,8 +107,16 @@ function ServerGameManager:takeOffer(player)
 end
 
 function ServerGameManager:takeTreasure(player)
-  local gamestate = self.gameStates[player:getId()]
-  gamestate.coins = gamestate.coins + 100
+  local gameState = self.gameStates[player:getId()]
+  gameState.coins = gameState.coins + 100
+
+
+  gameState.inventory["5654e554-c373-470a-bf22-0bf39a2bdff9"] = (gameState.inventory["5654e554-c373-470a-bf22-0bf39a2bdff9"] or 0) + 1
+  gameState.offer = gameState.offer + 1
+
+  sm.container.beginTransaction()
+  sm.container.collect(player:getInventory(), sm.uuid.new("5654e554-c373-470a-bf22-0bf39a2bdff9"), 1)
+  sm.container.endTransaction()
 
   savePlayer(self, player)
 
