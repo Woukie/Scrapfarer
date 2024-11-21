@@ -13,31 +13,33 @@ function Obstacle:server_onCollision(other, collisionPosition, selfPointVelocity
     self.health = self.data.health
   end
 
-	if type(other) == "Shape" and sm.exists(other) then
-    if tostring(other:getShapeUuid()) == tostring(self.shape:getShapeUuid()) then
-      return
-    end
-
-    local damage = math.floor(RandomNormal(self.data.damageMean, self.data.damageRange))
-    if damage > 0 then
-      if other.isBlock then
-        other:destroyBlock(other:getClosestBlockLocalPosition(collisionPosition), sm.vec3.one(), damage)
-      else
-        other:destroyShape(damage)
+  if sm.exists(other) then
+    if type(other) == "Shape" then
+      if tostring(other:getShapeUuid()) == tostring(self.shape:getShapeUuid()) then
+        return
       end
-    end
 
-    if self.data.damageEffect then
-      sm.effect.playEffect(self.data.damageEffect, self.shape.worldPosition, sm.vec3.new(0, 0, 0), self.shape.worldRotation)
-    end
+      local damage = math.floor(RandomNormal(self.data.damageMean, self.data.damageRange))
+      if damage > 0 then
+        if other.isBlock then
+          other:destroyBlock(other:getClosestBlockLocalPosition(collisionPosition), sm.vec3.one(), damage)
+        else
+          other:destroyShape(damage)
+        end
+      end
 
-    self.health = self.health - 1
-    if self.health <= 0 then
-      self:destroy()
+      if self.data.damageEffect then
+        sm.effect.playEffect(self.data.damageEffect, self.shape.worldPosition, sm.vec3.new(0, 0, 0), self.shape.worldRotation)
+      end
+
+      self.health = self.health - 1
+      if self.health <= 0 then
+        self:destroy()
+      end
+    elseif type(other) == "Character" then
+      sm.event.sendToPlayer(other:getPlayer(), "server_tumble")
     end
-  elseif type(other) == "Character" then
-    sm.event.sendToPlayer(other:getPlayer(), "server_tumble")
-	end
+  end
 end
 
 function Obstacle:destroy()

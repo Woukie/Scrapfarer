@@ -35,12 +35,23 @@ end
 
 function ClientShopManager:onCreate()
   self.category = "All"
+  self.notificationTick = 0
+  self.notifications = {}
   self.shopItems = sm.json.open("$CONTENT_DATA/shop.json")
   self.selectedShopItem = nil
   self.shopGui = sm.gui.createGuiFromLayout("$CONTENT_DATA/Gui/Layouts/shop_real.layout", false, {
     isHud = false,
     isInteractive = true,
     needsCursor = true,
+    hidesHotbar = false,
+    isOverlapped = false,
+    backgroundAlpha = 0.0,
+  })
+
+  self.notificationGui = sm.gui.createGuiFromLayout("$CONTENT_DATA/Gui/Layouts/unlock_notification_real.layout", false, {
+    isHud = true,
+    isInteractive = false,
+    needsCursor = false,
     hidesHotbar = false,
     isOverlapped = false,
     backgroundAlpha = 0.0,
@@ -66,6 +77,37 @@ function ClientShopManager:onCreate()
   self:reloadShopGrid()
 
   self.shopGui:setGridButtonCallback("SelectItem", "client_selectShopItem")
+end
+
+function ClientShopManager:onUpdate()
+  if self.notificationTick <= 0 then
+    if #self.notifications > 0 then
+      self.notificationTick = 200
+      self.notificationGui:setIconImage("Icon", self.notifications[1])
+      self.notificationGui:open()
+      sm.effect.playEffect("Loot - Logentryactivate", sm.localPlayer.getPlayer():getCharacter():getWorldPosition())
+      table.remove(self.notifications, 1)
+    else
+      self.notificationGui:close()
+    end
+
+  else
+    self.notificationTick = self.notificationTick - 1
+  end
+end
+
+function ClientShopManager:showUnlock(itemName)
+  self.notificationGui:open()
+
+  local uuid = ""
+  for _, shopItem in ipairs(self.shopItems) do
+    if itemName == shopItem.name then
+      uuid = shopItem.itemId
+      break
+    end
+  end
+
+  table.insert(self.notifications, sm.uuid.new(uuid))
 end
 
 function ClientShopManager:selectShopCategory(category)

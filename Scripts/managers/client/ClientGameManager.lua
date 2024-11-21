@@ -25,14 +25,26 @@ function ClientGameManager.syncData(self, data)
   self.coins = data.coins
   self.offer = data.offer
 
-  local shopProgressChanged = false
-  if not (self.shopProgress == data.shopProgress) then
-    shopProgressChanged = true
-  end
+  if self.shopProgress ~= data.shopProgress then
+    local newItems = {}
+    for newItem, newUnlocked in pairs(data.shopProgress) do
+      if newUnlocked then
+        for oldItem, _ in pairs(self.shopProgress) do
+          if oldItem == newItem then
+            goto nextUnlock
+          end
+        end
+        table.insert(newItems, newItem)
+      end
 
-  self.shopProgress = data.shopProgress
+      ::nextUnlock::
+    end
+    print(newItems)
+    for _, newItem in ipairs(newItems) do
+      g_clientShopManager:showUnlock(newItem)
+    end
 
-  if shopProgressChanged then
+    self.shopProgress = data.shopProgress
     local selectedItem = g_clientShopManager:getSelectedItem()
     if selectedItem and data.shopProgress[selectedItem.name] == false then
       g_clientShopManager:selectShopItem(nil)

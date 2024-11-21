@@ -55,8 +55,9 @@ function World.client_onFixedUpdate(self)
   self.waterManager:cl_onFixedUpdate()
 end
 
-function World.client_onUpdate(self, _)
+function World:client_onUpdate(_)
 	g_effectManager:cl_onWorldUpdate(self)
+	g_clientShopManager:onUpdate()
 end
 
 function World.server_onCellCreated(self, x, y)
