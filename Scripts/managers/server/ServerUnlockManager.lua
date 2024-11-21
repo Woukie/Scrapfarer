@@ -22,8 +22,6 @@ function ServerUnlockManager:onCellLoaded(x, y)
         table.insert(unlocks, str)
       end
 
-      print(unlocks)
-
       local areaTrigger = sm.areaTrigger.createBox(node.scale * 0.5, node.position, node.rotation, nil, {unlocks = unlocks})
       areaTrigger:bindOnEnter("trigger_onEnter", self)
 
