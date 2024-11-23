@@ -39,7 +39,7 @@ function ClientGameManager.syncData(self, data)
 
       ::nextUnlock::
     end
-    print(newItems)
+
     for _, newItem in ipairs(newItems) do
       g_clientShopManager:showUnlock(newItem)
     end
