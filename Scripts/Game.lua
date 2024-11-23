@@ -175,11 +175,19 @@ end
 
 function Game:client_takeOffer(_)
   g_clientRewardManager:closeGui()
+
+  local character = sm.localPlayer.getPlayer():getCharacter()
+  sm.event.sendToWorld(character:getWorld(), "client_playeffect", {position = character:getWorldPosition(), name = "Gui - DressbotCollect"})
+
   self.network:sendToServer("server_takeOffer", {player = sm.localPlayer.getPlayer()})
 end
 
 function Game:client_takeTreasure(_)
   g_clientRewardManager:closeGui()
+
+  local character = sm.localPlayer.getPlayer():getCharacter()
+  sm.event.sendToWorld(character:getWorld(), "client_playeffect", {position = character:getWorldPosition(), name = "Gui - DressbotCollect"})
+
   self.network:sendToServer("server_takeTreasure", {player = sm.localPlayer.getPlayer()})
 end
 
