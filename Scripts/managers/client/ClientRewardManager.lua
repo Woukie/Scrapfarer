@@ -29,6 +29,8 @@ function ClientRewardManager:refresh(offer)
 end
 
 function ClientRewardManager:openGui()
+  local character = sm.localPlayer.getPlayer():getCharacter()
+  sm.event.sendToWorld(character:getWorld(), "client_playsound", {position = character:getWorldPosition(), name = "GUI Backpack opened"})
   self.rewardGui:open()
 end
 

@@ -153,7 +153,9 @@ function ClientShopManager:refreshShopBuyButton()
 end
 
 function ClientShopManager:openShop()
-  self.shopGui:open()
+  local character = sm.localPlayer.getPlayer():getCharacter()
+  sm.event.sendToWorld(character:getWorld(), "client_playsound", {position = character:getWorldPosition(), name = "GUI Backpack opened"})
+self.shopGui:open()
 end
 
 function ClientShopManager:closeShop()
