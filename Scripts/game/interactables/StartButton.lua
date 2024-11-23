@@ -14,6 +14,7 @@ function StartButton.client_onInteract(self, character, state)
   if state then
     self.interactable:setPoseWeight(0, 1)
   else
+    sm.gui.chatMessage("Next time use /start to start from anywhere!")
     self.interactable:setPoseWeight(0, 0)
   end
 end
