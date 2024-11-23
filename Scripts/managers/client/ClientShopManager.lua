@@ -112,12 +112,19 @@ end
 
 function ClientShopManager:selectShopCategory(category)
   self.category = category
+
+  local character = sm.localPlayer.getPlayer():getCharacter()
+  sm.event.sendToWorld(character:getWorld(), "client_playsound", {position = character:getWorldPosition(), name = "Blueprint - Select"})
+
   self:reloadShopGrid()
 end
 
 function ClientShopManager:selectShopItem(item)
   self.selectedShopItem = item
   self:refreshShopBuyButton()
+
+  local character = sm.localPlayer.getPlayer():getCharacter()
+  sm.event.sendToWorld(character:getWorld(), "client_playsound", {position = character:getWorldPosition(), name = "Blueprint - Select"})
 
   if item then
     local itemId = sm.uuid.new(item.itemId)

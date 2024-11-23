@@ -140,9 +140,13 @@ end
 
 function Game:client_buyShopItem(_)
   local item = g_clientShopManager:getSelectedItem()
-  if not item then
+  if not item or item.cost > g_clientGameManager:getCoins() then
     return
   end
+
+  local character = sm.localPlayer.getPlayer():getCharacter()
+  sm.event.sendToWorld(character:getWorld(), "client_playeffect", {position = character:getWorldPosition(), name = "Gui - DressbotCollect"})
+
   self.network:sendToServer("server_buyShopItem", {name = item.name, player = sm.localPlayer.getPlayer()})
 end
 
