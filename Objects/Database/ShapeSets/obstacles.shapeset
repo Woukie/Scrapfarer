@@ -367,9 +367,9 @@
               {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/Trees/bark_dif.png",
-                  "$CONTENT_DATA/Textures/Wood/wood_asg.png",
-                  "$CONTENT_DATA/Textures/Trees/bark_nor.png"
+                  "$CONTENT_DATA/Textures/Dead Bark/dead_bark_dif.png",
+                  "$CONTENT_DATA/Textures/Dead Bark/dead_bark_asg.png",
+                  "$CONTENT_DATA/Textures/Dead Bark/dead_bark_nor.png"
                 ]
               }
             ]
