@@ -264,7 +264,7 @@
         "y": 2,
         "z": 2
       },
-      "color": "F287DC",
+      "color": "FFAFF5",
       "name": "obj_marshmallow",
       "physicsMaterial": "Fruit",
       "ratings": {
