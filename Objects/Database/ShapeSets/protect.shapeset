@@ -42,7 +42,7 @@
         "y": 2,
         "z": 2
       },
-      "color": "FFFFFF",
+      "color": "D3D3D3",
       "name": "obj_marble",
       "physicsMaterial": "Rock",
       "ratings": {
