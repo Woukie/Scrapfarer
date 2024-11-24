@@ -93,7 +93,7 @@
             "mesh": "$CONTENT_DATA/Objects/Mesh/box.fbx",
             "subMeshList": [
               {
-                "material": "Glass",
+                "material": "DifAsgNor",
                 "textureList": [
                   "$CONTENT_DATA/Textures/Crystal Wood/crystal_wood_dif.png",
                   "$CONTENT_DATA/Textures/Crystal Wood/crystal_wood_asg.png",
