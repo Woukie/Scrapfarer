@@ -292,7 +292,7 @@
         "y": 2,
         "z": 2
       },
-      "color": "FFE44A",
+      "color": "FFD700",
       "name": "obj_gold",
       "physicsMaterial": "Metal",
       "ratings": {
