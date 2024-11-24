@@ -217,7 +217,7 @@
       "uuid": "65e3587f-bb5d-41aa-acfb-d418f272b6b8"
     },
     {
-      "color": "FFFFFF",
+      "color": "FF0000",
       "name": "obj_gumball",
       "physicsMaterial": "Rock",
       "ratings": {
