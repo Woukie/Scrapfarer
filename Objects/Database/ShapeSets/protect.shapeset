@@ -6,7 +6,7 @@
         "y": 2,
         "z": 2
       },
-      "color": "5D5D5D",
+      "color": "5b5b5b",
       "name": "obj_rock",
       "physicsMaterial": "Rock",
       "ratings": {
@@ -150,7 +150,7 @@
         "y": 2,
         "z": 2
       },
-      "color": "FFFF00",
+      "color": "5b5b5b",
       "name": "obj_molten_rock",
       "physicsMaterial": "Rock",
       "ratings": {
@@ -186,7 +186,7 @@
         "y": 2,
         "z": 2
       },
-      "color": "777777",
+      "color": "5b5b5b",
       "name": "obj_frozen_rock",
       "physicsMaterial": "Rock",
       "ratings": {
