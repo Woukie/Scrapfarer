@@ -112,9 +112,9 @@
               "mudball": {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$CONTENT_DATA/Textures/Mud Ball/mud_ball_dif.png",
-                  "$CONTENT_DATA/Textures/Mud Ball/mud_ball_asg.png",
-                  "$CONTENT_DATA/Textures/Mud Ball/mud_ball_nor.png"
+                  "$CONTENT_DATA/Textures/Dirt/dirt_dif.png",
+                  "$CONTENT_DATA/Textures/Dirt/dirt_asg.png",
+                  "$CONTENT_DATA/Textures/Dirt/dirt_nor.png"
                 ]
               },
               "mudflow": {
