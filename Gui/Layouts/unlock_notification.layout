@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout" version="3.2.0">
-    <Widget type="ImageBox" skin="ImageBox" position="1680 890 240 112" align="Center" name="BackgroundImage">
+    <Widget type="ImageBox" skin="ImageBox" position="1664 890 240 112" align="Center" name="BackgroundImage">
         <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/unlock_notification.png"/>
         <Widget type="ImageBox" skin="ImageBox" position="13 16 54 54" name="Icon">
             <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/unlock_notification.png"/>

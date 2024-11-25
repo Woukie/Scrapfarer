@@ -6,15 +6,15 @@
     <Widget type="ImageBox" skin="ImageBox" position_real="0 0 1 1" name="Throb">
         <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/throb.png"/>
     </Widget>
-    <Widget type="ImageBox" skin="ImageBox" position="30 30 512 128" name="Coin Image">
-        <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/coin.png"/>
+    <Widget type="ImageBox" skin="ImageBox" name="Coin Image" position_real="0.009375 0.025925925925925925 0.15 0.1037037037037037">
+        <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/coin.png" />
     </Widget>
-    <Widget type="TextBox" skin="TextBox" position="175 60 365 68" name="Coin Text">
-        <Property key="FontName" value="SM_Button"/>
-        <Property key="Caption" value="0"/>
-        <Property key="FontHeight" value="68"/>
-        <Property key="TextAlign" value="Left VCenter"/>
-        <Property key="TextColour" value="0.960784 0.917647 0.670588"/>
+    <Widget type="TextBox" skin="TextBox" name="Coin Text" position_real="0.046875 0.05185185185185185 0.14166666666666666 0.025925925925925925">
+        <Property key="FontName" value="SM_Button" />
+        <Property key="Caption" value="0" />
+        <Property key="FontHeight" value="28" />
+        <Property key="TextAlign" value="Left VCenter" />
+        <Property key="TextColour" value="0.960784 0.917647 0.670588" />
     </Widget>
     <CodeGeneratorSettings/>
 </MyGUI>
