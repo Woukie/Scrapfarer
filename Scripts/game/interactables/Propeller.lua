@@ -17,8 +17,8 @@ function Propeller:server_onFixedUpdate()
           local shape = self.interactable:getShape()
           local body = shape:getBody()
           local angularVelocity = (sm.quat.inverse(shape:getWorldRotation()) * body:getAngularVelocity()).y
-          local force = -angularVelocity * self.data.force
-          sm.physics.applyImpulse(shape, shape:getZAxis() * force)
+          local force = angularVelocity * self.data.force
+          sm.physics.applyImpulse(shape, sm.vec3.new(0, 1, 0) * force)
 
           -- Max resistance from one engine is 24ish
           local resistance = angularVelocity / 3
