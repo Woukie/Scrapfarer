@@ -1,7 +1,7 @@
 {
    "allow_add_mods" : true,
    "custom_icons" : false,
-   "description" : "Get to the end and find the treasure! Most testers NEVER EVEN GOT CLOSE. First person to send me a legit screenshot of the giant duck AND the treasure chest in THE SAME IMAGE will get their username inscribed\nin the waterfall cave. (leave comment on here first and I'll add you on steam)\n\nIt's a whole new game, good luck :)\n\nWorks in multiplayer as well, put bugs on the github.\n\n[MODDERS] If you fork the mod, change the mod id. And actually add something cool don't just re-upload it. https://github.com/Woukie/Scrapfarer\n\nThis is my last mod.",
+   "description" : "Get to the end and find the treasure! Most testers NEVER EVEN GOT CLOSE. First person to send me a legit screenshot of the giant duck AND the treasure chest in THE SAME IMAGE will get their username inscribed\nin the waterfall cave. (leave comment on here first and I'll add you on steam)\n\nIt's a whole new game, good luck :)\n\nWorks in multiplayer as well, put bugs on the github.\n\n[MODDERS] If you fork the mod, change the mod id. And actually add something cool don't just re-upload it. https://github.com/Woukie/Scrapfarer\n\nRussian translation: https://www.youtube.com/watch?v=-2LaVuvCj-I\n\nThis is my last mod.",
    "localId" : "1d42c34f-760d-40d1-ae0e-c814ac774f82",
    "name" : "Scrapfarer",
    "type" : "Custom Game",
