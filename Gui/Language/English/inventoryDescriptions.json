@@ -1,102 +1,158 @@
 {
   "c45be799-94d1-4ab1-8fb4-52c9bd3d94a9": {
-    "description": "It's wood\nBalanced",
+    "description": "It's wood\n\n:)",
     "title": "Wood"
   },
   "2b6bf1e5-8e3a-417a-9f53-d349b9a42334": {
-    "description": "",
+    "description": "Special wood from the forrest",
     "title": "Bark"
   },
   "ebed6239-900b-47e1-8738-b012bcddc479": {
-    "description": "",
+    "description": "Strage crystal wood from the caves",
     "title": "Crystal Wood"
   },
   "f311919e-2b54-495f-99ad-403082946873": {
-    "description": "",
+    "description": "This wood looks weak but it's actually stronger than crystal wood.\n\nDon't question it...",
     "title": "Dead Wood"
   },
   "0a70dc4a-b272-4f7c-a1ac-f6995f380c6f": {
-    "description": "",
+    "description": "Just like dead wood, except it's in the process of dying. And it's a bit stronger.",
     "title": "Infernal Wood"
   },
   "299655d3-4222-44e1-b403-c674aae96068": {
-    "description": "",
+    "description": "Much cooler than infernal wood",
     "title": "Frozen Wood"
   },
   "dfc8c8c7-fe66-420a-86b6-de8d3921c604": {
-    "description": "",
+    "description": "Tastier than frozen wood",
     "title": "Candy Wood"
   },
   "1973a3b3-0579-4265-9139-9fcf516bc4de": {
-    "description": "",
+    "description": "Sparkly...\n\nYou can't beat it!",
     "title": "Glittering"
   },
   "b5161316-7ed0-494d-a0d0-d830fc1aceae": {
-    "description": "",
+    "description": "Yummy",
     "title": "Doughnut"
   },
   "e7fa5494-153e-4858-89ff-e589d4517752": {
-    "description": "",
+    "description": "It's literally packaged buoyancy!",
     "title": "Bubble Wrap"
   },
   "dfdc42b1-deb5-4193-8b9a-a0d077eb409b": {
-    "description": "",
+    "description": "I don't know why this floats, but it does.",
     "title": "Cobwebs"
   },
   "39cc9ce6-31e9-4ca8-9c74-121102813466": {
-    "description": "",
+    "description": "There must be air inside?",
     "title": "Plastic"
   },
   "21111cf8-3782-4f2f-8c3f-ff1bb5ec67df": {
-    "description": "",
+    "description": "This one actually makes sense.",
     "title": "Styrofoam"
   },
   "57d23389-e13f-473d-9b07-02be9b14cb70": {
-    "description": "",
+    "description": "A very bouyant ice cube, please don't eat it",
     "title": "Ice Cube"
   },
   "0da435c3-2d5c-4540-941d-b3d926773aa7": {
-    "description": "",
+    "description": "Fluffy\n\n:)",
     "title": "Marshmallow"
   },
   "d06ebc97-db48-45e4-a6b5-ccd57446e8e4": {
-    "description": "",
+    "description": "Not edible. Do not eat.\n\nYou can't beat it!",
     "title": "Aerogel"
   },
   "a8ed08de-6bc8-4b8d-abdb-84f47b3fd32e": {
-    "description": "",
+    "description": "Just a normal rock",
     "title": "Rock"
   },
   "256183f5-ea0d-4261-9ce6-c95d6ee74226": {
-    "description": "",
+    "description": "Actually a re-purposed countertop",
     "title": "Marble"
   },
   "c5bf8e61-010f-4293-94b7-9c89c68aa6b3": {
-    "description": "",
+    "description": "It's coal. So it's stronger than marble. Duh.",
     "title": "Coal"
   },
   "13ffc292-2ff8-4c5e-820b-5c55af916908": {
-    "description": "",
+    "description": "Concrete! Perfectly matching the wasteland theme",
     "title": "Concrete"
   },
   "a0c9c2de-f261-4448-b99c-4ab303f048d1": {
-    "description": "",
+    "description": "How does this not light stuff on fire?",
     "title": "Infernal Rock"
   },
   "65e3587f-bb5d-41aa-acfb-d418f272b6b8": {
-    "description": "",
+    "description": "Please don't confuse this with an ice cube",
     "title": "Frozen Rock"
   },
   "66e9fff6-71ed-4409-9bca-eaee699e3025": {
-    "description": "",
+    "description": "Tastier than a frozen rock",
     "title": "Gumball"
   },
   "13a48b44-2a1f-45aa-8c59-a3c4937946f6": {
-    "description": "",
+    "description": "It's metal\n\nYou can't beat it!",
     "title": "Metal"
   },
   "5654e554-c373-470a-bf22-0bf39a2bdff9": {
-    "description": "This probably won't help me float",
+    "description": "This isn't actually that usefull...",
     "title": "Gold"
+  },
+  "bbc5cc77-443d-4aa7-a175-ebdeb09c2df3": {
+    "description": "",
+    "title": "Big Pipe Short"
+  },
+  "07232236-22eb-4912-8774-ab185f368bb9": {
+    "description": "",
+    "title": "Big Pipe Long"
+  },
+  "4f1c0036-389b-432e-81de-8261cb9f9d57": {
+    "description": "",
+    "title": "Big Pipe Bend"
+  },
+  "dffc6e8f-c100-43dc-94ce-94cf00c36fe1": {
+    "description": "",
+    "title": "Big Pipe Tee"
+  },
+  "37217430-1ec7-43af-b369-b703206115d3": {
+    "description": "",
+    "title": "Big Pipe Corner"
+  },
+  "7538354e-a62a-48df-975d-bc75c1fee5bd": {
+    "description": "",
+    "title": "Big Pipe Four Way"
+  },
+  "e4388270-7007-4747-af62-7dd447479276": {
+    "description": "",
+    "title": "Big Pipe Four Way Tee"
+  },
+  "9d1fef41-328b-46bd-aae1-d58d42a1912a": {
+    "description": "",
+    "title": "Big Pipe Five Way"
+  },
+  "b34e9b5b-f9c2-4e26-95ca-bdb8b4896573": {
+    "description": "",
+    "title": "Big Pipe Six Way"
+  },
+  "3efe715f-8745-475f-a609-5e7cbe09a8ef": {
+    "description": "Used for maximum relaxation. Sit down and relax or add it to your vehicle to stay nice and clean on the go. Can be connected to triggers which can activate other interactive parts from the bathtub.\n\nI really hope no-one ever actually buys this item.",
+    "title": "Bathtub"
+  },
+  "b2e51672-abaf-4f47-b734-fb83011892fd": {
+    "description": "",
+    "title": "Propeller Right"
+  },
+  "bc6010c4-b018-4d83-a87f-05d7dce963b6": {
+    "description": "",
+    "title": "Propeller Left"
+  },
+  "c4aa3807-0806-4202-a36d-b5fa254d3046": {
+    "description": "",
+    "title": "Crane Wheel"
+  },
+  "7c3745a1-53ac-400e-8187-8d8c4ebc6db6": {
+    "description": "",
+    "title": "Scratch Ticket"
   }
 }
