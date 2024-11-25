@@ -113,7 +113,7 @@
       },
       "qualityLevel": 2,
       "stackSize": 10000,
-      "showInInventory": false
+      "showInInventory": true
     },
     {
       "uuid": "a481138b-fae9-47c9-9bc2-91b6d2e2bf52",
@@ -204,7 +204,7 @@
       },
       "qualityLevel": 2,
       "stackSize": 10000,
-      "showInInventory": false
+      "showInInventory": true
     },
     {
       "uuid": "cf3fdcfc-a7e5-4497-b000-ffda67dd8db7",
@@ -265,7 +265,7 @@
       },
       "qualityLevel": 4,
       "stackSize": 10000,
-      "showInInventory": false
+      "showInInventory": true
     },
     {
       "uuid": "42786777-c148-4e13-9bab-e460564e79c3",
@@ -323,7 +323,7 @@
       },
       "qualityLevel": 4,
       "stackSize": 10000,
-      "showInInventory": false
+      "showInInventory": true
     },
     {
       "uuid": "38ee0516-abc5-4e46-9195-c763610d7ec4",
@@ -384,7 +384,7 @@
       },
       "qualityLevel": 4,
       "stackSize": 10000,
-      "showInInventory": false
+      "showInInventory": true
     },
     {
       "uuid": "20f59114-5964-451f-bb47-820da3ebbc3b",
@@ -443,7 +443,7 @@
       "density": 250,
       "qualityLevel": 4,
       "stackSize": 10000,
-      "showInInventory": false
+      "showInInventory": true
     },
     {
       "uuid": "d5e36413-b3c1-4636-8447-3410c352ec7b",
@@ -509,7 +509,7 @@
       "density": 1250,
       "qualityLevel": 5,
       "stackSize": 10000,
-      "showInInventory": false
+      "showInInventory": true
     },
     {
       "uuid": "6546c293-a5aa-4442-80d5-a2819f077746",
@@ -574,7 +574,7 @@
       "density": 1250,
       "qualityLevel": 5,
       "stackSize": 10000,
-      "showInInventory": false
+      "showInInventory": true
     },
     {
       "uuid": "12862001-666c-4bdd-8326-a1f43610d28b",
@@ -601,7 +601,7 @@
       "density": 250,
       "qualityLevel": 3,
       "stackSize": 10000,
-      "showInInventory": false
+      "showInInventory": true
     },
     {
       "uuid": "7cf717d7-d167-4f2d-a6e7-6b2c70aa3986",
@@ -680,7 +680,7 @@
       "density": 250,
       "qualityLevel": 3,
       "stackSize": 10000,
-      "showInInventory": false
+      "showInInventory": true
     },
     {
       "uuid": "dfefc9d7-db03-4d25-ad85-eae1d824d8c0",
@@ -1038,7 +1038,7 @@
       },
       "qualityLevel": 2,
       "stackSize": 10000,
-      "showInInventory": false
+      "showInInventory": true
     },
     {
       "uuid": "4152ce33-9b43-4c51-80a3-e0b4fe38841d",
