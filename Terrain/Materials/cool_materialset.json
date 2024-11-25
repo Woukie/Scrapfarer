@@ -34,7 +34,7 @@
       },
       {
         "asgMap": "$CONTENT_DATA/Textures/Rock/rock_asg.png",
-        "diffuse": "$CONTENT_DATA/Textures/Rock/rock_dif.png",
+        "diffuse": "$CONTENT_DATA/Textures/Rock/rock_alt_dif.png",
         "name": "Rough Stone",
         "normalMap": "$CONTENT_DATA/Textures/Rock/rock_nor.png"
       },
