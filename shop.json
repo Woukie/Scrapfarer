@@ -1,5 +1,6 @@
 // Name is used to track unlocks
 [
+  // Blocks
   {
     "name": "Wood",
     "itemId": "c45be799-94d1-4ab1-8fb4-52c9bd3d94a9",
@@ -471,6 +472,158 @@
     "cost": 65
   },
   // Decorative
+  {
+    "itemId": "0dba257b-b907-4919-baaf-2fefe19f4e24",
+    "name": "small_2way_pipe",
+    "cost": 3,
+    "quantity": 1,
+    "requireUnlock": true,
+    "category": "Parts"
+  },
+  {
+    "itemId": "927d80d8-84ee-44f0-9d8b-cb7a688e0b6c",
+    "name": "small_long_pipe",
+    "cost": 3,
+    "quantity": 1,
+    "requireUnlock": true,
+    "category": "Parts"
+  },
+  {
+    "itemId": "8024db09-9147-4fe3-a747-00bc30ab724b",
+    "name": "small_2wayb_pipe",
+    "cost": 3,
+    "quantity": 1,
+    "requireUnlock": true,
+    "category": "Parts"
+  },
+  {
+    "itemId": "e1273b8a-945b-4080-81eb-cbf79961cccb",
+    "name": "small_3way_pipe",
+    "cost": 3,
+    "quantity": 1,
+    "requireUnlock": true,
+    "category": "Parts"
+  },
+  {
+    "itemId": "203fdf06-b311-49fd-933d-a1c6b671a017",
+    "name": "small_3wayb_pipe",
+    "cost": 3,
+    "quantity": 1,
+    "requireUnlock": true,
+    "category": "Parts"
+  },
+  {
+    "itemId": "387095d6-5aba-45e3-abd0-098710c268f8",
+    "name": "small_4way_pipe",
+    "cost": 3,
+    "quantity": 1,
+    "requireUnlock": true,
+    "category": "Parts"
+  },
+  {
+    "itemId": "5a106512-9284-40de-be68-2c186e903097",
+    "name": "small_4wayb_pipe",
+    "cost": 3,
+    "quantity": 1,
+    "requireUnlock": true,
+    "category": "Parts"
+  },
+  {
+    "itemId": "c6ebae46-8e69-4ddd-a3c0-895d887027bd",
+    "name": "small_5way_pipe",
+    "cost": 3,
+    "quantity": 1,
+    "requireUnlock": true,
+    "category": "Parts"
+  },
+  {
+    "itemId": "9c6d8dba-1783-4c42-8a02-6af1c5d63ec6",
+    "name": "small_6way_pipe",
+    "cost": 3,
+    "quantity": 1,
+    "requireUnlock": true,
+    "category": "Parts"
+  },
+  {
+    "itemId": "bbc5cc77-443d-4aa7-a175-ebdeb09c2df3",
+    "name": "big_2way_pipe",
+    "cost": 6,
+    "quantity": 1,
+    "requireUnlock": true,
+    "category": "Parts"
+  },
+  {
+    "itemId": "07232236-22eb-4912-8774-ab185f368bb9",
+    "name": "big_long_pipe",
+    "cost": 6,
+    "quantity": 1,
+    "requireUnlock": true,
+    "category": "Parts"
+  },
+  {
+    "itemId": "4f1c0036-389b-432e-81de-8261cb9f9d57",
+    "name": "big_2wayb_pipe",
+    "cost": 6,
+    "quantity": 1,
+    "requireUnlock": true,
+    "category": "Parts"
+  },
+  {
+    "itemId": "dffc6e8f-c100-43dc-94ce-94cf00c36fe1",
+    "name": "big_3way_pipe",
+    "cost": 6,
+    "quantity": 1,
+    "requireUnlock": true,
+    "category": "Parts"
+  },
+  {
+    "itemId": "37217430-1ec7-43af-b369-b703206115d3",
+    "name": "big_3wayb_pipe",
+    "cost": 6,
+    "quantity": 1,
+    "requireUnlock": true,
+    "category": "Parts"
+  },
+  {
+    "itemId": "7538354e-a62a-48df-975d-bc75c1fee5bd",
+    "name": "big_4way_pipe",
+    "cost": 6,
+    "quantity": 1,
+    "requireUnlock": true,
+    "category": "Parts"
+  },
+  {
+    "itemId": "e4388270-7007-4747-af62-7dd447479276",
+    "name": "big_4wayb_pipe",
+    "cost": 6,
+    "quantity": 1,
+    "requireUnlock": true,
+    "category": "Parts"
+  },
+  {
+    "itemId": "9d1fef41-328b-46bd-aae1-d58d42a1912a",
+    "name": "big_5way_pipe",
+    "cost": 6,
+    "quantity": 1,
+    "requireUnlock": true,
+    "category": "Parts"
+  },
+  {
+    "itemId": "b34e9b5b-f9c2-4e26-95ca-bdb8b4896573",
+    "name": "big_6way_pipe",
+    "cost": 6,
+    "quantity": 1,
+    "requireUnlock": true,
+    "category": "Parts"
+  },
+  {
+    "itemId": "04782466-eca1-4ed9-8502-036ea269aed9",
+    "name": "obj_fittings_pipevalve",
+    "cost": 6,
+    "quantity": 1,
+    "requireUnlock": true,
+    "category": "Parts"
+  },
   {
     "name": "obj_interactive_raftshark",
     "itemId": "4152ce33-9b43-4c51-80a3-e0b4fe38841d",

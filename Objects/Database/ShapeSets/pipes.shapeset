@@ -1,0 +1,926 @@
+// parts.shapeset got too long
+{
+  "partList": [
+		{
+			"uuid": "bbc5cc77-443d-4aa7-a175-ebdeb09c2df3",
+			"name": "big_2way_pipe",
+			"legacyId": 511,
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshList": [
+							{
+								"textureList": [
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_dif.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_asg.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_nor.tga"
+								],
+								"material": "DifAsgNor"
+							}
+						],
+						"mesh": "$GAME_DATA/Objects/Mesh/fittings/obj_fittings_pipe.mesh"
+					}
+				]
+			},
+			"color": "1c8687",
+			"cylinder": {
+				"diameter": 1,
+				"depth": 1,
+				"margin": 0.04,
+				"axis": "Y"
+			},
+			"rotationSet": "PropY",
+			"sticky": "-Y+Y",
+			"physicsMaterial": "Metal",
+			"ratings": {
+				"density": 4,
+				"durability": 5,
+				"friction": 3,
+				"buoyancy": 3
+			},
+			"flammable": false,
+			"stackSize": 10000
+		},
+		{
+			"uuid": "07232236-22eb-4912-8774-ab185f368bb9",
+			"name": "big_long_pipe",
+			"legacyId": 512,
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshList": [
+							{
+								"textureList": [
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_dif.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_asg.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_nor.tga"
+								],
+								"material": "DifAsgNor"
+							}
+						],
+						"mesh": "$GAME_DATA/Objects/Mesh/fittings/obj_fittings_pipelong.mesh"
+					}
+				]
+			},
+			"color": "1c8687",
+			"cylinder": {
+				"diameter": 1,
+				"depth": 3,
+				"margin": 0.04,
+				"axis": "Y"
+			},
+			"rotationSet": "PropY",
+			"sticky": "-Y+Y",
+			"physicsMaterial": "Metal",
+			"ratings": {
+				"density": 4,
+				"durability": 5,
+				"friction": 3,
+				"buoyancy": 3
+			},
+			"flammable": false,
+			"stackSize": 10000
+		},
+		{
+			"uuid": "4f1c0036-389b-432e-81de-8261cb9f9d57",
+			"name": "big_2wayb_pipe",
+			"legacyId": 513,
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshList": [
+							{
+								"textureList": [
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_dif.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_asg.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_nor.tga"
+								],
+								"material": "DifAsgNor"
+							}
+						],
+						"mesh": "$GAME_DATA/Objects/Mesh/fittings/obj_fittings_pipebend.mesh"
+					}
+				]
+			},
+			"color": "565656",
+			"hull": {
+				"x": 1,
+				"y": 1,
+				"z": 1,
+				"col": "$GAME_DATA/Objects/Collision/obj_fittings_pipebend.obj"
+			},
+			"rotationSet": "PropY",
+			"sticky": "-Y-Z",
+			"physicsMaterial": "Metal",
+			"ratings": {
+				"density": 4,
+				"durability": 5,
+				"friction": 3,
+				"buoyancy": 3
+			},
+			"flammable": false,
+			"stackSize": 10000
+		},
+		{
+			"uuid": "dffc6e8f-c100-43dc-94ce-94cf00c36fe1",
+			"name": "big_3way_pipe",
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshList": [
+							{
+								"textureList": [
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_dif.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_asg.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_nor.tga"
+								],
+								"material": "DifAsgNor"
+							}
+						],
+						"mesh": "$CONTENT_DATA/Objects/Mesh/Fittings/big_3way_pipe.fbx",
+            "includes": [
+              "POSITION",
+              "UV0",
+              "UV1",
+              "NORMAL",
+              "TANGENTS"
+            ]
+					}
+				]
+			},
+      "previewRotation": [
+				0,
+				0,
+				-1,
+				1,
+				0,
+				0,
+				0,
+				1,
+				0
+			],
+			"color": "1c8687",
+			"hull": {
+				"x": 1,
+				"y": 1,
+				"z": 1,
+				"col": "$CONTENT_DATA/Objects/Mesh/Fittings/big_3way_pipe.fbx"
+			},
+			"rotationSet": "PropXNegZm",
+			"sticky": "-X+X+Z",
+			"physicsMaterial": "Metal",
+			"ratings": {
+				"density": 4,
+				"durability": 5,
+				"friction": 3,
+				"buoyancy": 3
+			},
+			"flammable": false,
+			"stackSize": 10000
+		},
+		{
+			"uuid": "37217430-1ec7-43af-b369-b703206115d3",
+			"name": "big_3wayb_pipe",
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshList": [
+							{
+								"textureList": [
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_dif.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_asg.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_nor.tga"
+								],
+								"material": "DifAsgNor"
+							}
+						],
+						"mesh": "$CONTENT_DATA/Objects/Mesh/Fittings/big_3wayb_pipe.fbx",
+            "includes": [
+              "POSITION",
+              "UV0",
+              "UV1",
+              "NORMAL",
+              "TANGENTS"
+            ]    
+					}
+				]
+			},
+			"color": "1c8687",
+			"hull": {
+				"x": 1,
+				"y": 1,
+				"z": 1,
+				"col": "$CONTENT_DATA/Objects/Mesh/Fittings/big_3wayb_pipe.fbx"
+			},
+			"rotationSet": "PropNegY",
+			"sticky": "-X+Z+Y",
+			"physicsMaterial": "Metal",
+			"ratings": {
+				"density": 4,
+				"durability": 5,
+				"friction": 3,
+				"buoyancy": 3
+			},
+			"flammable": false,
+			"stackSize": 10000
+		},
+		{
+			"uuid": "7538354e-a62a-48df-975d-bc75c1fee5bd",
+			"name": "big_4way_pipe",
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshList": [
+							{
+								"textureList": [
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_dif.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_asg.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_nor.tga"
+								],
+								"material": "DifAsgNor"
+							}
+						],
+            "includes": [
+							"POSITION",
+							"UV0",
+							"UV1",
+							"NORMAL",
+							"TANGENTS"
+						],
+						"mesh": "$CONTENT_DATA/Objects/Mesh/Fittings/big_4way_pipe.fbx"
+					}
+				]
+			},
+			"color": "1c8687",
+			"hull": {
+				"x": 1,
+				"y": 1,
+				"z": 1,
+				"col": "$CONTENT_DATA/Objects/Mesh/Fittings/big_4way_pipe.fbx"
+			},
+			"rotationSet": "PropZ",
+			"sticky": "-X+X-Z+Z",
+			"physicsMaterial": "Metal",
+			"ratings": {
+				"density": 4,
+				"durability": 5,
+				"friction": 3,
+				"buoyancy": 3
+			},
+			"flammable": false,
+			"stackSize": 10000
+		},
+		{
+			"uuid": "e4388270-7007-4747-af62-7dd447479276",
+			"name": "big_4wayb_pipe",
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshList": [
+							{
+								"textureList": [
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_dif.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_asg.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_nor.tga"
+								],
+								"material": "DifAsgNor"
+							}
+						],
+            "includes": [
+							"POSITION",
+							"UV0",
+							"UV1",
+							"NORMAL",
+							"TANGENTS"
+						],
+						"mesh": "$CONTENT_DATA/Objects/Mesh/Fittings/big_4wayb_pipe.fbx"
+					}
+				]
+			},
+			"color": "1c8687",
+			"hull": {
+				"x": 1,
+				"y": 1,
+				"z": 1,
+				"col": "$CONTENT_DATA/Objects/Mesh/Fittings/big_4wayb_pipe.fbx"
+			},
+			"rotationSet": "PropNegYX",
+			"sticky": "-X+X+Z+Y",
+			"physicsMaterial": "Metal",
+			"ratings": {
+				"density": 4,
+				"durability": 5,
+				"friction": 3,
+				"buoyancy": 3
+			},
+			"flammable": false,
+			"stackSize": 10000
+		},
+		{
+			"uuid": "9d1fef41-328b-46bd-aae1-d58d42a1912a",
+			"name": "big_5way_pipe",
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshList": [
+							{
+								"textureList": [
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_dif.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_asg.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_nor.tga"
+								],
+								"material": "DifAsgNor"
+							}
+						],
+            "includes": [
+							"POSITION",
+							"UV0",
+							"UV1",
+							"NORMAL",
+							"TANGENTS"
+						],
+						"mesh": "$CONTENT_DATA/Objects/Mesh/Fittings/big_5way_pipe.fbx"
+					}
+				]
+			},
+			"color": "1c8687",
+			"hull": {
+				"x": 1,
+				"y": 1,
+				"z": 1,
+				"col": "$CONTENT_DATA/Objects/Mesh/Fittings/big_5way_pipe.fbx"
+			},
+			"rotationSet": "PropNegYmmX",
+			"sticky": "-X+X-Z+Z+Y",
+			"physicsMaterial": "Metal",
+			"ratings": {
+				"density": 4,
+				"durability": 5,
+				"friction": 3,
+				"buoyancy": 3
+			},
+			"flammable": false,
+			"stackSize": 10000
+		},
+		{
+			"uuid": "b34e9b5b-f9c2-4e26-95ca-bdb8b4896573",
+			"name": "big_6way_pipe",
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshList": [
+							{
+								"textureList": [
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_dif.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_asg.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_nor.tga"
+								],
+								"material": "DifAsgNor"
+							}
+						],
+            "includes": [
+							"POSITION",
+							"UV0",
+							"UV1",
+							"NORMAL",
+							"TANGENTS"
+						],
+						"mesh": "$CONTENT_DATA/Objects/Mesh/Fittings/big_6way_pipe.fbx"
+					}
+				]
+			},
+			"color": "1c8687",
+			"hull": {
+				"x": 1,
+				"y": 1,
+				"z": 1,
+				"col": "$CONTENT_DATA/Objects/Mesh/Fittings/big_6way_pipe.fbx"
+			},
+			"rotationSet": "PropXmm",
+			"physicsMaterial": "Metal",
+			"ratings": {
+				"density": 4,
+				"durability": 5,
+				"friction": 3,
+				"buoyancy": 3
+			},
+			"flammable": false,
+			"stackSize": 10000
+		},
+		{
+			"uuid": "04782466-eca1-4ed9-8502-036ea269aed9",
+			"name": "obj_fittings_pipevalve",
+			"legacyId": 515,
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshList": [
+							{
+								"textureList": [
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_dif.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_asg.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_pipes_nor.tga"
+								],
+								"material": "DifAsgNor"
+							}
+						],
+						"mesh": "$GAME_DATA/Objects/Mesh/fittings/obj_fittings_pipevalve.mesh"
+					}
+				]
+			},
+			"color": "a41717",
+			"cylinder": {
+				"diameter": 1,
+				"depth": 1,
+				"margin": 0.04,
+				"axis": "Y"
+			},
+			"rotationSet": "PropY",
+			"sticky": "-Y",
+			"physicsMaterial": "Metal",
+			"ratings": {
+				"density": 5,
+				"durability": 1,
+				"friction": 4,
+				"buoyancy": 1
+			},
+			"flammable": false,
+			"stackSize": 10000
+		},
+    {
+			"uuid": "0dba257b-b907-4919-baaf-2fefe19f4e24",
+			"name": "small_2way_pipe",
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshList": [
+							{
+								"textureList": [
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_dif.tga",
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_asg.tga",
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_nor.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_small_pipe_ao.tga"
+								],
+								"material": "DifAsgNorAo"
+							}
+						],
+						"mesh": "$GAME_DATA/Objects/Mesh/fittings/small_2way_pipe.fbx",
+						"includes": [
+							"POSITION",
+							"UV0",
+							"UV1",
+							"NORMAL",
+							"TANGENTS"
+						]
+					}
+				]
+			},
+			"previewRotation": [
+				0,
+				0,
+				-1,
+				1,
+				0,
+				0,
+				0,
+				1,
+				0
+			],
+			"color": "7a7a7a",
+			"hull": {
+				"x": 1,
+				"y": 1,
+				"z": 1,
+				"margin": 0.25,
+				"col": "$GAME_DATA/Objects/Collision/small_2way_pipe.obj"
+			},
+			"rotationSet": "PropXmm",
+			"sticky": "-X+X",
+			"physicsMaterial": "Metal",
+			"ratings": {
+				"density": 2,
+				"durability": 1,
+				"friction": 3,
+				"buoyancy": 3
+			},
+			"flammable": false,
+			"stackSize": 10000
+		},
+		{
+			"uuid": "927d80d8-84ee-44f0-9d8b-cb7a688e0b6c",
+			"name": "small_long_pipe",
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshList": [
+							{
+								"textureList": [
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_dif.tga",
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_asg.tga",
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_nor.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_small_pipe_ao.tga"
+								],
+								"material": "DifAsgNorAo"
+							}
+						],
+						"mesh": "$GAME_DATA/Objects/Mesh/fittings/small_long_pipe.fbx",
+						"includes": [
+							"POSITION",
+							"UV0",
+							"UV1",
+							"NORMAL",
+							"TANGENTS"
+						]
+					}
+				]
+			},
+			"previewRotation": [
+				0,
+				0,
+				-1,
+				1,
+				0,
+				0,
+				0,
+				1,
+				0
+			],
+			"color": "7a7a7a",
+			"hull": {
+				"x": 4,
+				"y": 1,
+				"z": 1,
+				"margin": 0.25,
+				"col": "$GAME_DATA/Objects/Collision/small_long_pipe.obj"
+			},
+			"rotationSet": "PropXmm",
+			"sticky": "-X+X",
+			"physicsMaterial": "Metal",
+			"ratings": {
+				"density": 2,
+				"durability": 1,
+				"friction": 3,
+				"buoyancy": 3
+			},
+			"flammable": false,
+			"stackSize": 10000
+		},
+		{
+			"uuid": "8024db09-9147-4fe3-a747-00bc30ab724b",
+			"name": "small_2wayb_pipe",
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshList": [
+							{
+								"textureList": [
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_dif.tga",
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_asg.tga",
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_nor.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_small_pipe_ao.tga"
+								],
+								"material": "DifAsgNorAo"
+							}
+						],
+						"mesh": "$GAME_DATA/Objects/Mesh/fittings/small_2wayb_pipe.fbx",
+						"includes": [
+							"POSITION",
+							"UV0",
+							"UV1",
+							"NORMAL",
+							"TANGENTS"
+						]
+					}
+				]
+			},
+			"previewRotation": [
+				0,
+				0,
+				1,
+				1,
+				0,
+				0,
+				0,
+				1,
+				0
+			],
+			"color": "7a7a7a",
+			"hull": {
+				"x": 1,
+				"y": 1,
+				"z": 1,
+				"margin": 0.25,
+				"col": "$GAME_DATA/Objects/Collision/small_2wayb_pipe.obj"
+			},
+			"rotationSet": "PropY",
+			"sticky": "+X-Y",
+			"physicsMaterial": "Metal",
+			"ratings": {
+				"density": 2,
+				"durability": 1,
+				"friction": 3,
+				"buoyancy": 3
+			},
+			"flammable": false,
+			"stackSize": 10000
+		},
+		{
+			"uuid": "e1273b8a-945b-4080-81eb-cbf79961cccb",
+			"name": "small_3way_pipe",
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshList": [
+							{
+								"textureList": [
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_dif.tga",
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_asg.tga",
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_nor.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_small_pipe_ao.tga"
+								],
+								"material": "DifAsgNorAo"
+							}
+						],
+						"mesh": "$GAME_DATA/Objects/Mesh/fittings/small_3way_pipe.fbx",
+						"includes": [
+							"POSITION",
+							"UV0",
+							"UV1",
+							"NORMAL",
+							"TANGENTS"
+						]
+					}
+				]
+			},
+			"previewRotation": [
+				0,
+				0,
+				-1,
+				1,
+				0,
+				0,
+				0,
+				1,
+				0
+			],
+			"color": "7a7a7a",
+			"hull": {
+				"x": 1,
+				"y": 1,
+				"z": 1,
+				"margin": 0.25,
+				"col": "$GAME_DATA/Objects/Collision/small_3way_pipe.obj"
+			},
+			"rotationSet": "PropXNegZm",
+			"sticky": "-X+X+Z",
+			"physicsMaterial": "Metal",
+			"ratings": {
+				"density": 2,
+				"durability": 1,
+				"friction": 3,
+				"buoyancy": 3
+			},
+			"flammable": false,
+			"stackSize": 10000
+		},
+		{
+			"uuid": "203fdf06-b311-49fd-933d-a1c6b671a017",
+			"name": "small_3wayb_pipe",
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshList": [
+							{
+								"textureList": [
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_dif.tga",
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_asg.tga",
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_nor.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_small_pipe_ao.tga"
+								],
+								"material": "DifAsgNorAo"
+							}
+						],
+						"mesh": "$GAME_DATA/Objects/Mesh/fittings/small_3wayb_pipe.fbx",
+						"includes": [
+							"POSITION",
+							"UV0",
+							"UV1",
+							"NORMAL",
+							"TANGENTS"
+						]
+					}
+				]
+			},
+			"color": "7a7a7a",
+			"hull": {
+				"x": 1,
+				"y": 1,
+				"z": 1,
+				"margin": 0.25,
+				"col": "$GAME_DATA/Objects/Collision/small_3wayb_pipe.obj"
+			},
+			"rotationSet": "PropNegY",
+			"sticky": "-X+Z+Y",
+			"physicsMaterial": "Metal",
+			"ratings": {
+				"density": 2,
+				"durability": 1,
+				"friction": 3,
+				"buoyancy": 3
+			},
+			"flammable": false,
+			"stackSize": 10000
+		},
+		{
+			"uuid": "387095d6-5aba-45e3-abd0-098710c268f8",
+			"name": "small_4way_pipe",
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshList": [
+							{
+								"textureList": [
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_dif.tga",
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_asg.tga",
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_nor.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_small_pipe_ao.tga"
+								],
+								"material": "DifAsgNorAo"
+							}
+						],
+						"mesh": "$GAME_DATA/Objects/Mesh/fittings/small_4way_pipe.fbx",
+						"includes": [
+							"POSITION",
+							"UV0",
+							"UV1",
+							"NORMAL",
+							"TANGENTS"
+						]
+					}
+				]
+			},
+			"color": "7a7a7a",
+			"hull": {
+				"x": 1,
+				"y": 1,
+				"z": 1,
+				"margin": 0.25,
+				"col": "$GAME_DATA/Objects/Collision/small_4way_pipe.obj"
+			},
+			"rotationSet": "PropZ",
+			"sticky": "-X+X-Z+Z",
+			"physicsMaterial": "Metal",
+			"ratings": {
+				"density": 2,
+				"durability": 1,
+				"friction": 3,
+				"buoyancy": 3
+			},
+			"flammable": false,
+			"stackSize": 10000
+		},
+		{
+			"uuid": "5a106512-9284-40de-be68-2c186e903097",
+			"name": "small_4wayb_pipe",
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshList": [
+							{
+								"textureList": [
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_dif.tga",
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_asg.tga",
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_nor.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_small_pipe_ao.tga"
+								],
+								"material": "DifAsgNorAo"
+							}
+						],
+						"mesh": "$GAME_DATA/Objects/Mesh/fittings/small_4wayb_pipe.fbx",
+						"includes": [
+							"POSITION",
+							"UV0",
+							"UV1",
+							"NORMAL",
+							"TANGENTS"
+						]
+					}
+				]
+			},
+			"color": "7a7a7a",
+			"hull": {
+				"x": 1,
+				"y": 1,
+				"z": 1,
+				"margin": 0.25,
+				"col": "$GAME_DATA/Objects/Collision/small_4wayb_pipe.obj"
+			},
+			"rotationSet": "PropNegYX",
+			"sticky": "-X+X+Z+Y",
+			"physicsMaterial": "Metal",
+			"ratings": {
+				"density": 2,
+				"durability": 1,
+				"friction": 3,
+				"buoyancy": 3
+			},
+			"flammable": false,
+			"stackSize": 10000
+		},
+		{
+			"uuid": "c6ebae46-8e69-4ddd-a3c0-895d887027bd",
+			"name": "small_5way_pipe",
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshList": [
+							{
+								"textureList": [
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_dif.tga",
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_asg.tga",
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_nor.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_small_pipe_ao.tga"
+								],
+								"material": "DifAsgNorAo"
+							}
+						],
+						"mesh": "$GAME_DATA/Objects/Mesh/fittings/small_5way_pipe.fbx",
+						"includes": [
+							"POSITION",
+							"UV0",
+							"UV1",
+							"NORMAL",
+							"TANGENTS"
+						]
+					}
+				]
+			},
+			"color": "7a7a7a",
+			"hull": {
+				"x": 1,
+				"y": 1,
+				"z": 1,
+				"margin": 0.25,
+				"col": "$GAME_DATA/Objects/Collision/small_5way_pipe.obj"
+			},
+			"rotationSet": "PropNegYmmX",
+			"sticky": "-X+X-Z+Z+Y",
+			"physicsMaterial": "Metal",
+			"ratings": {
+				"density": 2,
+				"durability": 1,
+				"friction": 3,
+				"buoyancy": 3
+			},
+			"flammable": false,
+			"stackSize": 10000
+		},
+		{
+			"uuid": "9c6d8dba-1783-4c42-8a02-6af1c5d63ec6",
+			"name": "small_6way_pipe",
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshList": [
+							{
+								"textureList": [
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_dif.tga",
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_asg.tga",
+									"$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_nor.tga",
+									"$GAME_DATA/Objects/Textures/fittings/obj_fittings_small_pipe_ao.tga"
+								],
+								"material": "DifAsgNorAo"
+							}
+						],
+						"mesh": "$GAME_DATA/Objects/Mesh/fittings/small_6way_pipe.fbx",
+						"includes": [
+							"POSITION",
+							"UV0",
+							"UV1",
+							"NORMAL",
+							"TANGENTS"
+						]
+					}
+				]
+			},
+			"color": "7a7a7a",
+			"hull": {
+				"x": 1,
+				"y": 1,
+				"z": 1,
+				"margin": 0.25,
+				"col": "$GAME_DATA/Objects/Collision/small_6way_pipe.obj"
+			},
+			"rotationSet": "PropXmm",
+			"physicsMaterial": "Metal",
+			"ratings": {
+				"density": 2,
+				"durability": 1,
+				"friction": 3,
+				"buoyancy": 3
+			},
+			"flammable": false,
+			"stackSize": 10000
+		}
+  ]
+}

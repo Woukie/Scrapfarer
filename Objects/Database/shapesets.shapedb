@@ -7,6 +7,7 @@
     "$CONTENT_DATA/Objects/Database/ShapeSets/float.shapeset",
     "$CONTENT_DATA/Objects/Database/ShapeSets/protect.shapeset",
     "$CONTENT_DATA/Objects/Database/ShapeSets/parts.shapeset",
+    "$CONTENT_DATA/Objects/Database/ShapeSets/pipes.shapeset",
     "$CONTENT_DATA/Objects/Database/ShapeSets/misc.shapeset"
   ]
 }
