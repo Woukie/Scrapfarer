@@ -60,8 +60,8 @@ function ClientShopManager:onCreate()
   self.shopGui:createGridFromJson("CatalogueGrid", {
     type = "materialGrid",
 		layout = "$CONTENT_DATA/Gui/Layouts/shop_item.layout",
-		itemWidth = 784/16,
-		itemHeight = 784/16,
+		itemWidth = 44,
+		itemHeight = 44,
 		itemCount = #self.shopItems,
 	})
 

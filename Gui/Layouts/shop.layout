@@ -2,7 +2,7 @@
 <MyGUI type="Layout" version="3.2.0">
     <Widget type="ImageBox" skin="ImageBox" position="320 190 1280 700" align="Center" name="BackgroundImage">
         <Property key="ImageTexture" value="$CONTENT_1d42c34f-760d-40d1-ae0e-c814ac774f82/Gui/Textures/shop_background.png"/>
-        <Widget type="ItemBox" skin="ItemBox" position="16 84 816 560" name="CatalogueGrid">
+        <Widget type="ItemBox" skin="ItemBox" position="16 84 800 560" name="CatalogueGrid">
             <Property key="Alpha" value="0"/>
             <Property key="VisibleVScroll" value="false"/>
         </Widget>
