@@ -55,6 +55,10 @@ local function savePlayer(self, player)
   print("Saved "..player.name.."'s player data to storage")
 end
 
+function ServerGameManager:inRun(player)
+  return self.gameStates[player:getId()]["playing"]
+end
+
 function ServerGameManager:deleteBuild(player)
   if self.gameStates[player:getId()]["playing"] then
     print(player.name.." cannot delete their build as they are in a run")
@@ -306,7 +310,6 @@ function ServerGameManager.stopRun(self, player)
   gamestate["checkpoints"] = {}
   g_serverPlotManager:respawnPlayer(player)
   g_serverPlotManager:loadBuild(player, true)
-  sm.event.sendToPlayer(player, "server_stopTumble")
 
   savePlayer(self, player)
   return true

@@ -269,6 +269,7 @@ function ServerPlotManager:respawnPlayer(player)
     print(player.name.." owns plot "..plotId..", teleporting")
     local plot = self.plots[plotId]
     character:setWorldPosition(plot.position + sm.vec3.new(0, 0, 3))
+    sm.event.sendToPlayer(player, "server_stopTumble")
     return plotId
   else
     print(player.name.." has no plot, assigning plot")
@@ -277,6 +278,7 @@ function ServerPlotManager:respawnPlayer(player)
         plot.playerId = player:getId()
         print("Assigned plot "..plotId.." to "..player.name..", teleporting")
         character:setWorldPosition(plot.position + sm.vec3.new(0, 0, 3))
+        sm.event.sendToPlayer(player, "server_stopTumble")
         self:loadBuild(player, true)
         return plotId
       end
@@ -387,7 +389,7 @@ function ServerPlotManager:plot_onEnter(trigger, results)
 
   local plot = self.plots[ud.plotId]
   for _, result in ipairs(results) do
-    if (type(result) == "Character") then
+    if (type(result) == "Character" and sm.exists(result)) then
       local player = result:getPlayer()
       if plot and plot.playerId == player:getId() then
         g_serverGameManager:enableInventory(player)

@@ -21,6 +21,10 @@ function Player.server_onFixedUpdate(self, dt)
     if (character:isSwimming() or tumbling) and self.sv.waterDamageCooldown == 0 then
       self.sv.waterDamageCooldown = 20
       self:server_takeDamage(10)
+
+      if not g_serverGameManager:inRun(self.player) then
+        g_serverPlotManager:respawnPlayer(self.player)
+      end
     end
 
     if self.sv.tumbleTicks > 0 then
