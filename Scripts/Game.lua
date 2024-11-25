@@ -89,6 +89,7 @@ function Game:client_onCreate()
   sm.game.bindChatCommand("/start", {}, "client_onChatCommand", "Starts the game")
   sm.game.bindChatCommand("/stop", {}, "client_onChatCommand", "Stops the game")
   sm.game.bindChatCommand("/shop", {}, "client_onChatCommand", "Opens the shop")
+  sm.game.bindChatCommand("/teleport", {{"number", "x", false}, {"number", "y", false}, {"number", "z", false}}, "client_onChatCommand", "Teleport")
   sm.game.bindChatCommand("/playaudio", {{"string", "name of sound", false}}, "client_onChatCommand", "Plays audio at the location of the player")
   sm.game.bindChatCommand("/playeffect", {{"string", "name of effect", false}}, "client_onChatCommand", "Plays effect at the location of the player")
 end
@@ -103,6 +104,8 @@ function Game.client_onChatCommand(self, params)
 		self.network:sendToServer("server_respawn", {player = sm.localPlayer.getPlayer()})
   elseif params[1] == "/start" then
 		self.network:sendToServer("server_startRun", {player = sm.localPlayer.getPlayer()})
+  -- elseif params[1] == "/teleport" then
+	-- 	self.network:sendToServer("server_teleport", {player = sm.localPlayer.getPlayer(), x = params[2], y = params[3], z = params[4]})
   elseif params[1] == "/stop" then
 		self.network:sendToServer("server_stopRun", {player = sm.localPlayer.getPlayer()})
   elseif params[1] == "/playaudio" then
@@ -123,6 +126,10 @@ end
 function Game.server_startRun(self, params)
   g_serverGameManager:startRun(params.player)
 end
+
+-- function Game.server_teleport(self, params)
+--   params.player.character:setWorldPosition(sm.vec3.new(params.x, params.y, params.z))
+-- end
 
 function Game.server_stopRun(self, params)
   g_serverGameManager:stopRun(params.player)
