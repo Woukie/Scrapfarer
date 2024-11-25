@@ -64,7 +64,7 @@ end
 function Player.client_onCreate( self )
 	self.cl = self.cl or {}
 
-  g_hud = sm.gui.createGuiFromLayout("$CONTENT_DATA/Gui/Layouts/Hud.layout", false, {
+  g_hud = sm.gui.createGuiFromLayout("$CONTENT_DATA/Gui/Layouts/hud_real.layout", false, {
     isHud = true,
     isInteractive = false,
     needsCursor = false,
