@@ -2,9 +2,32 @@ dofile("$CONTENT_DATA/Scripts/game/util/Random.lua")
 
 Obstacle = class(nil)
 
+function Obstacle:server_onCreate()
+  self.destructTicks = 10
+  self.keepAlive = true
+end
+
 function Obstacle:client_onCreate()
   if self.data.uvFrames then
     self.frame = 0
+  end
+end
+
+function Obstacle:refreshKeepAlive()
+  self.keepAlive = true
+end
+
+-- Called by iterating bodies in world
+function Obstacle:onFixedUpdate()
+  if self.keepAlive then
+    self.destructTicks = 10
+    self.keepAlive = false
+    return
+  end
+
+  self.destructTicks = self.destructTicks - 1
+  if self.destructTicks <= 0 then
+    self:destroy()
   end
 end
 

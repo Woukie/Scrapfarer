@@ -15,7 +15,7 @@ dofile("$CONTENT_DATA/Scripts/managers/client/ClientGameManager.lua")
 
 Game = class(nil)
 
-Game.enableLimitedInventory = true
+Game.enableLimitedInventory = false
 Game.enableRestrictions = true
 Game.enableFuelConsumption = false
 Game.enableAmmoConsumption = false

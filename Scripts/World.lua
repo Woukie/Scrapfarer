@@ -1,3 +1,4 @@
+dofile "$CONTENT_DATA/Scripts/game/obstacles.lua"
 dofile("$CONTENT_DATA/Scripts/managers/ForceManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/WaterManager.lua")
 
@@ -49,6 +50,20 @@ function World.server_onFixedUpdate(self)
   g_serverObstacleManager:onFixedUpdate()
   self.forceManager:server_onFixedUpdate()
 	self.waterManager:sv_onFixedUpdate()
+
+  -- Tick obstacles
+  for _, body in ipairs(sm.body.getAllBodies()) do
+    local shapes = body:getShapes()
+
+    -- Obstacles are never mult-part
+    if #shapes == 1 then
+      for _, shape in ipairs(shapes) do
+        if obstacles[tostring(shape.uuid)] then
+          sm.event.sendToInteractable(shape.interactable, "onFixedUpdate")
+        end
+      end
+    end
+  end
 end
 
 function World.client_onFixedUpdate(self)
@@ -91,6 +106,7 @@ function World.server_onCellUnloaded(self, x, y)
   g_checkpointManager:onCellUnloaded(x, y)
   g_serverDestructionManager:onCellUnloaded(x, y)
   g_serverUnlockManager:onCellUnloaded(x, y)
+  g_serverObstacleManager:onCellUnloaded(x, y)
   self.forceManager:server_onCellUnloaded(x, y)
   self.waterManager:sv_onCellUnloaded(x, y)
 end

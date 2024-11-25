@@ -3,24 +3,6 @@ dofile "$SURVIVAL_DATA/Scripts/util.lua"
 
 ForceManager = class(nil)
 
-local exclusions = {}
-exclusions[tostring(obj_obstacle_small_rock)] = true
-exclusions[tostring(obj_obstacle_large_rock)] = true
-exclusions[tostring(obj_obstacle_mud)] = true
-exclusions[tostring(obj_obstacle_log)] = true
-exclusions[tostring(obj_obstacle_rock_spiky)] = true
-exclusions[tostring(obj_obstacle_gem)] = true
-exclusions[tostring(obj_obstacle_fish)] = true
-exclusions[tostring(obj_obstacle_log_dead)] = true
-exclusions[tostring(obj_obstacle_fireball)] = true
-exclusions[tostring(obj_obstacle_log_infernal)] = true
-exclusions[tostring(obj_obstacle_ice_cube)] = true
-exclusions[tostring(obj_obstacle_ice_burg)] = true
-exclusions[tostring(obj_obstacle_gumball)] = true
-exclusions[tostring(obj_obstacle_rock_candy)] = true
-exclusions[tostring(obj_obstacle_coin)] = true
-exclusions[tostring(obj_obstacle_gem_big)] = true
-
 function ForceManager:onCreate()
 	self.cells = {}
   self.forceRequests = {}
@@ -53,7 +35,7 @@ function ForceManager:server_onFixedUpdate()
       if type == "Character" then
         ApplyCharacterImpulse(target, force, force:length())
       elseif type == "Body" then
-        if not exclusions[tostring(target:getShapes()[1].uuid)] then
+        if not obstacles[tostring(target:getShapes()[1].uuid)] then
           sm.physics.applyImpulse(target, force * target.mass * 0.0003, true)
         end
       end
