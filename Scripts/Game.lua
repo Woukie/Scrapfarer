@@ -60,9 +60,11 @@ function Game.loadBuild(self, world, x, y, player, params)
   g_serverPlotManager:loadBuild(player, false)
 end
 
-function Game.server_onPlayerJoined(self, player, isNewPlayer)
-  self.world:loadCell(0, 0, player)
+function Game.server_onPlayerJoined(self, player)
+  self.world:loadCell(0, 0, player, "server_joinWhenLoaded")
+end
 
+function Game:server_joinWhenLoaded(world, x, y, player, params, handle)
   g_serverGameManager:onPlayerJoined(player)
 end
 
