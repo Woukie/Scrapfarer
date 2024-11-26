@@ -1714,9 +1714,9 @@
       },
       "color": "FFD504",
       "box": {
-        "x": 2,
-        "y": 2,
-        "z": 1
+        "x": 4,
+        "y": 4,
+        "z": 2
       },
       "rotationSet": "PropY",
       "sticky": "-Y",
