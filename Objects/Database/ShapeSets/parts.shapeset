@@ -1656,9 +1656,9 @@
               "ducky": {
                 "material": "DifAsgNor",
                 "textureList": [
-                  "$GAME_DATA/Objects/Textures/decor/obj_decor_babyduck_dif.tga",
+                  "$CONTENT_DATA/Textures/Baby Duck/babyduck_dif.tga",
                   "$GAME_DATA/Objects/Textures/decor/obj_decor_babyduck_asg.tga",
-                  "$GAME_DATA/Objects/Textures/decor/obj_decor_babyduck_nor.tga"
+                  "$CONTENT_DATA/Textures/Baby Duck/babyduck_nor.tga"
                 ]
               }
             }
@@ -1677,6 +1677,52 @@
       "physicsMaterial": "Metal",
       "ratings": {
         "density": 10,
+        "durability": 1,
+        "friction": 6,
+        "buoyancy": 1
+      },
+      "flammable": false,
+      "stackSize": 10000
+    },
+    {
+      "uuid": "d558439c-3e76-4eb8-ac6e-c6ab178e745e",
+      "name": "obj_quack_plaque",
+      "renderable": {
+        "lodList": [
+          {
+            "mesh": "$CONTENT_DATA/Objects/Mesh/quack_plaque.fbx",
+            "subMeshMap": {
+              "duck_plaque": {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Quack Plaque/quack_plaque_dif.png",
+                  "$CONTENT_DATA/Textures/Glittering Wood/glittering_wood_asg.png",
+                  "$CONTENT_DATA/Textures/Glittering Wood/glittering_wood_nor.png"
+                ]
+              },
+              "rock": {
+                "material": "DifAsgNor",
+                "textureList": [
+                  "$CONTENT_DATA/Textures/Rock/rock_alt_dif.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_asg.png",
+                  "$CONTENT_DATA/Textures/Rock/rock_nor.png"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "color": "FFD504",
+      "box": {
+        "x": 2,
+        "y": 2,
+        "z": 1
+      },
+      "rotationSet": "PropY",
+      "sticky": "-Y",
+      "physicsMaterial": "Metal",
+      "ratings": {
+        "density": 2,
         "durability": 1,
         "friction": 6,
         "buoyancy": 1
