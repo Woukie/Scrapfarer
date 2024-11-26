@@ -17,6 +17,7 @@ Straight from my 'future features' todo list
 - Effects (there are ~28 damage and hit effects in `Effects/Database/EffectSets/obstacles.effectset` that need changing, just diddn't get round to it for release)
 - If some genius can add part mod support that would be so awesome (as in, another mod maker could add shop items. Maybe have them include a json file in their mod that specifies unlock area positions/sizes, cost etc...)
 - More priate mission rewards
+- Day/night cycle
 - Better water shader
 - Better skybox
 - Visualise coins earned in-game
