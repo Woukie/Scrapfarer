@@ -50,8 +50,10 @@ function Player.server_takeDamage( self, damage, source )
   end
 
   self.sv.stats.hp = math.max(self.sv.stats.hp - damage, 0)
+  sm.effect.playEffect("Mechanic - Hurt", character:getWorldPosition())
 
   if self.sv.stats.hp <= 0 then
+    sm.effect.playEffect("Mechanic - Ko", character:getWorldPosition())
     if not g_serverGameManager:stopRun(self.player) then
       g_serverPlotManager:respawnPlayer(self.player)
     end

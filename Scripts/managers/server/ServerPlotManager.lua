@@ -260,8 +260,11 @@ function ServerPlotManager:respawnPlayer(player)
 
   print("Creating new character for "..player.name)
 
-  local character = sm.character.createCharacter(player, sm.world.getCurrentWorld(), sm.vec3.new( 32, 32, 5 ), 0, 0)
-  player:setCharacter(character)
+  local character = player:getCharacter()
+  if not character then
+    character = sm.character.createCharacter(player, sm.world.getCurrentWorld(), sm.vec3.new( 32, 32, 5 ), 0, 0)
+    player:setCharacter(character)
+  end
 
   print("Respawning player "..player.name)
   local plotId = self:getPlotId(player)
