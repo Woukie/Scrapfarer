@@ -40,8 +40,10 @@ function ClientGameManager.syncData(self, data)
       ::nextUnlock::
     end
 
-    for _, newItem in ipairs(newItems) do
-      g_clientShopManager:showUnlock(newItem)
+    if not data.silent then
+      for _, newItem in ipairs(newItems) do
+        g_clientShopManager:showUnlock(newItem)
+      end
     end
 
     self.shopProgress = data.shopProgress

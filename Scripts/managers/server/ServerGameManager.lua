@@ -40,11 +40,11 @@ local function loadPlayer(self, player)
   return false
 end
 
-local function syncPlayer(self, player)
+local function syncPlayer(self, player, silent)
   local playerId = player:getId()
   local gameState = self.gameStates[playerId]
 
-  self.sendToClientQueue:push({client = player, callback = "client_syncGameData", data = {coins = gameState.coins, offer = gameState.offer, shopProgress = gameState.shopProgress}})
+  self.sendToClientQueue:push({client = player, callback = "client_syncGameData", data = {coins = gameState.coins, offer = gameState.offer, shopProgress = gameState.shopProgress, silent = silent}})
 end
 
 local function savePlayer(self, player)
@@ -157,7 +157,7 @@ function ServerGameManager.onPlayerJoined(self, player)
     sm.event.sendToGame("loadPlotWhenReady", player)
   end
 
-  syncPlayer(self, player)
+  syncPlayer(self, player, true)
 end
 
 function ServerGameManager.onPlayerLeft(self, player)
