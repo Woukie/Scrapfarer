@@ -1,7 +1,13 @@
+dofile("$CONTENT_DATA/Scripts/game/parts.lua")
+dofile("$CONTENT_DATA/Scripts/game/shapes.lua")
+
 ServerDestructionManager = class(nil)
 
 function ServerDestructionManager.onCreate(self)
 	self.areaTriggers = {}
+  self.exclusions = {}
+  self.exclusions[tostring(obj_treasure_chest)] = true
+  self.exclusions[tostring(obj_biggus_duckus)] = true
 end
 
 function ServerDestructionManager:getAreaId(position)
@@ -42,7 +48,7 @@ function ServerDestructionManager:trigger_onStay(trigger, results)
     if sm.exists(result) then
       if type == "Body" then
         for _, shape in ipairs(result:getShapes()) do
-          if math.random(0, 1000) == 3 and shape.buildable then
+          if math.random(0, 1000) == 3 and shape.buildable and not self.exclusions[tostring(shape.uuid)] then
             shape:destroyPart()
           end
         end
