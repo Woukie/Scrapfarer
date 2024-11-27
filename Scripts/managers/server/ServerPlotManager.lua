@@ -135,7 +135,7 @@ end
 -- Destroys the players currently active build, loads their previously saved build (or the default one), and updates the plot build property to point to the new floor part
 function ServerPlotManager:loadBuild(player, waitForCellLoad)
   if waitForCellLoad then
-    sm.event.sendToGame("loadPlotWhenReady", player)
+    sm.event.sendToGame("loadPlotWhenReady", {player = player, character = player.character})
     return
   end
 
@@ -252,7 +252,7 @@ function ServerPlotManager:getBuildCost(player)
 end
 
 -- Teleports a player to their plot. Assigns plots to players and creates characters if needed, will re-call itself with world environment if not in one, loads builds for new players
-function ServerPlotManager:respawnPlayer(player)
+function ServerPlotManager:respawnPlayer(player, character)
   if not inWorldEnvironment() then
     self.worldFunctionQueue:push({destination = "respawnPlayer", params = {self, player}})
     return
@@ -260,7 +260,9 @@ function ServerPlotManager:respawnPlayer(player)
 
   print("Creating new character for "..player.name)
 
-  local character = sm.character.createCharacter(player, sm.world.getCurrentWorld(), sm.vec3.new( 32, 32, 5 ), 0, 0)
+  if not character then
+    character = sm.character.createCharacter(player, sm.world.getCurrentWorld(), sm.vec3.new( 32, 32, 5 ), 0, 0)
+  end
   player:setCharacter(character)
 
   print("Respawning player "..player.name)
