@@ -46,7 +46,7 @@ function ServerUnlockManager:trigger_onEnter(trigger, results)
   for _, result in ipairs(results) do
     local type = type(result)
 
-    if type == "Character" then
+    if type == "Character" and sm.exists(result) then
       g_serverGameManager:unlockShopItems(result:getPlayer(), trigger:getUserData().unlocks)
     end
   end
