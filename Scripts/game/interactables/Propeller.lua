@@ -19,15 +19,6 @@ function Propeller:server_onFixedUpdate()
           local angularVelocity = (sm.quat.inverse(shape:getWorldRotation()) * body:getAngularVelocity()).y
           local force = angularVelocity * self.data.force
           sm.physics.applyImpulse(shape, sm.vec3.new(0, 1, 0) * force)
-
-          -- Max resistance from one engine is 24ish
-          local resistance = angularVelocity / 3
-          resistance = math.min(50, math.max(-50, resistance))
-
-          sm.physics.applyTorque(
-            body,
-            sm.vec3.new(-resistance, 0, 0)
-          )
           break
         end
       end
