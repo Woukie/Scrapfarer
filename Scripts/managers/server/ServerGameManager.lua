@@ -153,10 +153,7 @@ function ServerGameManager.onPlayerJoined(self, player, world)
     sm.container.endTransaction()
   end
 
-  local character = sm.character.createCharacter(player, world, sm.vec3.new( 32, 32, 5 ), 0, 0)
-  player:setCharacter(character)
-
-  sm.event.sendToGame("loadPlotWhenReady", player)
+  g_serverPlotManager:respawnPlayer(player)
 
   syncPlayer(self, player, true)
 end

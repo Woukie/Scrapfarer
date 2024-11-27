@@ -15,7 +15,7 @@ dofile("$CONTENT_DATA/Scripts/managers/client/ClientGameManager.lua")
 
 Game = class(nil)
 
-Game.enableLimitedInventory = false
+Game.enableLimitedInventory = true
 Game.enableRestrictions = true
 Game.enableFuelConsumption = false
 Game.enableAmmoConsumption = false
@@ -58,7 +58,6 @@ function Game:loadPlotWhenReady(player)
   end
 
   local position = character.worldPosition
-  g_serverPlotManager:respawnPlayer(player, character)
   self.world:loadCell(math.floor(position.x / CELL_SIZE), math.floor(position.z / CELL_SIZE), player, "loadBuild", nil, self)
 end
 
