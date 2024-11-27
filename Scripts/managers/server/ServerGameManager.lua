@@ -153,9 +153,8 @@ function ServerGameManager.onPlayerJoined(self, player)
     sm.container.endTransaction()
   end
 
-  if g_serverPlotManager:respawnPlayer(player) then
-    sm.event.sendToGame("loadPlotWhenReady", player)
-  end
+  g_serverPlotManager:respawnPlayer(player)
+  sm.event.sendToGame("loadPlotWhenReady", player)
 
   syncPlayer(self, player, true)
 end
