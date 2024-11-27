@@ -26,7 +26,7 @@ local function getCreationsInPlot(self, plotId)
   end
 
   for _, body in ipairs(self.areaTriggers[plotId]:getContents()) do
-    if type(body) == "Body" and body:isBuildable() then
+    if sm.exists(body) and type(body) == "Body" and body:isBuildable() then
       bodies[#bodies + 1] = body
     end
   end
