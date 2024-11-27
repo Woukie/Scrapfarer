@@ -57,7 +57,7 @@ function Game:loadPlotWhenReady(params)
     params.player:setCharacter(character)
   end
 
-  local position = params.character.worldPosition
+  local position = character.worldPosition
   self.world:loadCell(math.floor(position.x / CELL_SIZE), math.floor(position.z / CELL_SIZE), params.player, "loadBuild", nil, self)
 end
 
