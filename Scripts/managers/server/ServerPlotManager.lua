@@ -135,7 +135,7 @@ end
 -- Destroys the players currently active build, loads their previously saved build (or the default one), and updates the plot build property to point to the new floor part
 function ServerPlotManager:loadBuild(player, waitForCellLoad)
   if waitForCellLoad then
-    sm.event.sendToGame("loadPlotWhenReady", {player = player, character = player.character})
+    sm.event.sendToGame("loadPlotWhenReady", player)
     return
   end
 

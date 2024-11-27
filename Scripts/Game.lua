@@ -50,15 +50,16 @@ function Game.server_onCreate(self)
 end
 
 -- Event triggered by the plot manager to make sure a plots cell is loaded
-function Game:loadPlotWhenReady(params)
-  local character = params.character
+function Game:loadPlotWhenReady(player)
+  local character = player.character
   if not character then
-    character = sm.character.createCharacter(params.player, self.world, sm.vec3.new( 32, 32, 5 ), 0, 0)
-    params.player:setCharacter(character)
+    character = sm.character.createCharacter(player, self.world, sm.vec3.new( 32, 32, 5 ), 0, 0)
+    player:setCharacter(character)
   end
 
   local position = character.worldPosition
-  self.world:loadCell(math.floor(position.x / CELL_SIZE), math.floor(position.z / CELL_SIZE), params.player, "loadBuild", nil, self)
+  g_serverPlotManager:respawnPlayer(player, character)
+  self.world:loadCell(math.floor(position.x / CELL_SIZE), math.floor(position.z / CELL_SIZE), player, "loadBuild", nil, self)
 end
 
 -- Soley used to pass on callback in loadPlotWhenReady
