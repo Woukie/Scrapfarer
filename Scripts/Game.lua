@@ -98,8 +98,8 @@ function Game:client_onCreate()
   sm.game.bindChatCommand("/stop", {}, "client_onChatCommand", "Stops the game")
   sm.game.bindChatCommand("/shop", {}, "client_onChatCommand", "Opens the shop")
   -- sm.game.bindChatCommand("/teleport", {{"number", "x", false}, {"number", "y", false}, {"number", "z", false}}, "client_onChatCommand", "Teleport")
-  sm.game.bindChatCommand("/playaudio", {{"string", "name of sound", false}}, "client_onChatCommand", "Plays audio at the location of the player")
-  sm.game.bindChatCommand("/playeffect", {{"string", "name of effect", false}}, "client_onChatCommand", "Plays effect at the location of the player")
+  -- sm.game.bindChatCommand("/playaudio", {{"string", "name of sound", false}}, "client_onChatCommand", "Plays audio at the location of the player")
+  -- sm.game.bindChatCommand("/playeffect", {{"string", "name of effect", false}}, "client_onChatCommand", "Plays effect at the location of the player")
 end
 
 function Game.server_onPlayerLeft(self, player)
