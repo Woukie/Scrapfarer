@@ -127,7 +127,7 @@ function ServerGameManager:takeTreasure(player)
   self:stopRun(player)
 end
 
-function ServerGameManager.onPlayerJoined(self, player)
+function ServerGameManager.onPlayerJoined(self, player, world)
   local playerId = player:getId()
 
   self.gameStates[playerId] = {
@@ -153,7 +153,7 @@ function ServerGameManager.onPlayerJoined(self, player)
     sm.container.endTransaction()
   end
 
-  local character = sm.character.createCharacter(player, sm.world.getCurrentWorld(), sm.vec3.new( 32, 32, 5 ), 0, 0)
+  local character = sm.character.createCharacter(player, world, sm.vec3.new( 32, 32, 5 ), 0, 0)
   player:setCharacter(character)
 
   g_serverPlotManager:respawnPlayer(player, character)

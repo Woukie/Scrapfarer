@@ -15,7 +15,7 @@ dofile("$CONTENT_DATA/Scripts/managers/client/ClientGameManager.lua")
 
 Game = class(nil)
 
-Game.enableLimitedInventory = true
+Game.enableLimitedInventory = false
 Game.enableRestrictions = true
 Game.enableFuelConsumption = false
 Game.enableAmmoConsumption = false
@@ -65,7 +65,7 @@ function Game.server_onPlayerJoined(self, player)
 end
 
 function Game:server_joinWhenLoaded(world, x, y, player, params, handle)
-  g_serverGameManager:onPlayerJoined(player)
+  g_serverGameManager:onPlayerJoined(player, self.world)
 end
 
 function Game:client_onCreate()
