@@ -53,7 +53,7 @@ end
 function Game:loadPlotWhenReady(params)
   local character = params.character
   if not character then
-    character = sm.character.createCharacter(player, self.world, sm.vec3.new( 32, 32, 5 ), 0, 0)
+    character = sm.character.createCharacter(params.player, self.world, sm.vec3.new( 32, 32, 5 ), 0, 0)
     params.player:setCharacter(character)
   end
 
