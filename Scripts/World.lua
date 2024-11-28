@@ -1,4 +1,5 @@
 dofile "$CONTENT_DATA/Scripts/game/obstacles.lua"
+dofile "$CONTENT_DATA/Scripts/game/despawnables.lua"
 dofile("$CONTENT_DATA/Scripts/managers/ForceManager.lua")
 dofile("$CONTENT_DATA/Scripts/managers/WaterManager.lua")
 
@@ -51,18 +52,42 @@ function World.server_onFixedUpdate(self)
   self.forceManager:server_onFixedUpdate()
 	self.waterManager:sv_onFixedUpdate()
 
-  -- Tick obstacles
+  -- Despawn decay and obstacle ticking
   for _, body in ipairs(sm.body.getAllBodies()) do
     local shapes = body:getShapes()
 
     -- Obstacles are never mult-part
     if #shapes == 1 then
+      if obstacles[tostring(shapes[1].uuid)] then
+        sm.event.sendToInteractable(shapes[1].interactable, "onFixedUpdate")
+      end
+    end
+
+    -- Despawn decay
+    local players = sm.player.getAllPlayers()
+    if not body.liftable then
       for _, shape in ipairs(shapes) do
-        if obstacles[tostring(shape.uuid)] then
-          sm.event.sendToInteractable(shape.interactable, "onFixedUpdate")
+        if sm.exists(shape) and math.random() < 0.05 and despawnables[tostring(shape.uuid)] and not shape.liftable then
+          -- Don't decay if distance to any player is less than 50
+          for _, player in ipairs(players) do
+            local character = player.character
+
+            if character and sm.exists(character) then
+                local playerPosition = character:getWorldPosition()
+                local shapePosition = shape:getWorldPosition()
+                local distance = (playerPosition - shapePosition):length()
+                if distance < 50 then
+                  goto nextBody
+                end
+            end
+          end
+
+          shape:destroyShape()
         end
       end
     end
+
+    ::nextBody::
   end
 end
 
