@@ -51,13 +51,7 @@ end
 
 -- Event triggered by the plot manager to make sure a plots cell is loaded
 function Game:loadPlotWhenReady(player)
-  local character = player.character
-  if not character then
-    character = sm.character.createCharacter(player, self.world, sm.vec3.new( 32, 32, 5 ), 0, 0)
-    player:setCharacter(character)
-  end
-
-  local position = character.worldPosition
+  local position = player.character.worldPosition
   self.world:loadCell(math.floor(position.x / CELL_SIZE), math.floor(position.z / CELL_SIZE), player, "loadBuild", nil, self)
 end
 
