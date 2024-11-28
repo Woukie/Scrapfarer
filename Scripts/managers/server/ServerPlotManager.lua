@@ -252,22 +252,15 @@ function ServerPlotManager:getBuildCost(player)
 end
 
 -- Teleports a player to their plot. Assigns plots to players and creates characters if needed, will re-call itself with world environment if not in one, loads builds for new players
-function ServerPlotManager:respawnPlayer(player, character)
+function ServerPlotManager:respawnPlayer(player)
   if not inWorldEnvironment() then
     self.worldFunctionQueue:push({destination = "respawnPlayer", params = {self, player}})
     return
   end
 
   print("Creating new character for "..player.name)
-
-  if not character then
-    character = player.character
-
-    if not character then
-      character = sm.character.createCharacter(player, sm.world.getCurrentWorld(), sm.vec3.new( 32, 32, 5 ), 0, 0)
-      player:setCharacter(character)
-    end
-  end
+  local character = sm.character.createCharacter(player, sm.world.getCurrentWorld(), sm.vec3.new( 32, 32, 5 ), 0, 0)
+  player:setCharacter(character)
 
   print("Respawning player "..player.name)
   local plotId = self:getPlotId(player)
