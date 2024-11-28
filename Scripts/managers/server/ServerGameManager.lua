@@ -203,6 +203,7 @@ end
 
 function ServerGameManager:unlockShopItem(player, name)
   local gameState = self.gameStates[player:getId()]
+  -- If it's false, we don't want them to be able to unlock it
   gameState.shopProgress[name] = true
 
   savePlayer(self, player)
@@ -212,7 +213,8 @@ function ServerGameManager:unlockShopItems(player, items)
   local gameState = self.gameStates[player:getId()]
   local changed = false
   for _, name in ipairs(items) do
-    if not gameState.shopProgress[name] then
+    -- If it's false, we don't want them to be able to unlock it
+    if gameState.shopProgress[name] == nil then
       gameState.shopProgress[name] = true
       changed = true
     end
